@@ -1,0 +1,72 @@
+---
+title: "Aula 05: Medidas I"
+subtitle: "Tipos de variáveis e Tabela de frequência"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["css/xaringan-themer.css", "default", "css/custom-css.css"]
+    nature:
+      ratio: "16:12"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+# knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+xaringanExtra::use_panelset()
+```
+
+
+# Objetivos de aula
+#### 1. Aprender os diferentes tipos de variáveis e a importância dessa classificação: __<span style="color:#3B0F70;">marca azul</span>__
+
+#### 2. Aprender como se constrói uma tabela de frequência: __<span style="color:#7AD151;">marca verde</span>__
+
+---
+class: middle, center, tema1
+# Tipos de variáveis
+
+---
+class: tema1
+# Tipos de variáveis
+
+### Variáveis categóricas
+
+#### Variáveis ordinais
+
+#### Variáveis nominais
+
+### Variáveis numéricas
+
+#### Variáveis discretas
+
+#### Variáveis contínuas
+
+...
+
+---
+class: middle, center, tema2
+# Processo de geração de dados
+
+
+---
+class: tema2
+
+# Como os dados foram gerados?
+
+##### Ver: King, Keohane e Verba. Designing Social Inquiry. 
+
+--- 
+class: middle, center
+
+# Exercícios
+
+Vamos fazer exercícios para testar isso.

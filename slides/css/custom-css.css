@@ -1,0 +1,24 @@
+.center {
+  text-align: center;
+}
+
+.tema1 {
+  border-right-width: 10px;
+  border-right-style: solid;
+  padding-right: 10px;
+  border-color: #3B0F70;
+}
+
+.stats {
+  border-right-width: 10px;
+  border-right-style: solid;
+  padding-right: 10px;
+  border-color: #DE4968;
+}
+
+.tema2 {
+  border-right-width: 10px;
+  border-right-style: solid;
+  padding-right: 10px;
+  border-color: #7AD151;
+}

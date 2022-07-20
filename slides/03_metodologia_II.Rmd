@@ -1,0 +1,59 @@
+---
+title: "Aula 03: Metodologia II"
+subtitle: "Perguntas de pesquisa e Processo de geração de dados"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["css/xaringan-themer.css", "default", "css/custom-css.css"]
+    nature:
+      ratio: "16:12"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+# knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+xaringanExtra::use_panelset()
+```
+
+
+# Objetivos de aula
+#### 1. Aprender as diferenças das perguntas no Direito para as perguntas na Estatística: __<span style="color:#3B0F70;">marca azul</span>__
+
+#### 2. Aprender a discutir criticamente os processos de geração de dados: __<span style="color:#7AD151;">marca verde</span>__
+
+---
+class: middle, center, tema1
+# Pergunta de pesquisa
+
+---
+class: tema1
+# Pergunta de pesquisa
+...
+
+---
+class: middle, center, tema2
+# Processo de geração de dados
+
+
+---
+class: tema2
+
+# Como os dados foram gerados?
+
+##### Ver: King, Keohane e Verba. Designing Social Inquiry. 
+
+--- 
+class: middle, center
+
+# Exercícios
+
+Vamos fazer exercícios para testar isso.
