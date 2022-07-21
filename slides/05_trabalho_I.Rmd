@@ -1,0 +1,20 @@
+---
+title: "Aula 05: Trabalho final (parte I)"
+subtitle: "Produção da metodologia do trabalho"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["css/xaringan-themer.css", "default", "css/custom-css.css"]
+    nature:
+      ratio: "16:12"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+# knit: pagedown::chrome_print
+---
+class: middle, center
+
+# Trabalho final
+
+---
+O trabalho final será a entrega de uma análise jurimétrica. A entrega final será dividida em 2 partes. A primeira parte será simplesmente criar a metodologia do trabalho, e será realizada hoje. A última parte será feita inteiramente na última semana de aula. 
