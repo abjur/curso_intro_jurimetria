@@ -1,0 +1,67 @@
+---
+title: "Aula 06: Medidas I"
+subtitle: "Tipos de variáveis e Tabela de frequência"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["css/xaringan-themer.css", "default", "css/custom-css.css"]
+    nature:
+      ratio: "16:12"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+# knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+xaringanExtra::use_panelset()
+```
+
+
+# Objetivos de aula
+#### 1. Aprender os diferentes tipos de variáveis e a importância dessa classificação: __<span style="color:#3B0F70;">marca azul</span>__
+
+#### 2. Aprender como se constrói uma tabela de frequência: __<span style="color:#7AD151;">marca verde</span>__
+
+---
+class: middle, center, tema1
+# Tipos de variáveis
+
+---
+class: tema1
+# Tipos de variáveis
+
+### Variáveis qualitativas/categóricas
+
+#### Variáveis ordinais: As categorias possuem uma ordenação universal entre si
+
+#### Variáveis nominais: As categorias não possuem uma ordenação universal entre si
+
+### Variáveis quantitativas/numéricas
+
+#### Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
+
+#### Variáveis contínuas: Representa números reais
+
+---
+class: middle, center, tema2
+# Medidas de Variáveis Categóricas
+
+---
+class: tema2
+# Tabela de frequência
+
+|variável $x_i$  |frequência $n_i$|frequência acumulada $N_i$|proporção $f_i$     |proporção acumulada $F_i$|porcentagem $100 f_i$|
+|:--------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:|:---------------------:|
+|resposta 1 $x_1$| $n_1$          | $N_1=n_1$                | $f_1=\frac{n_1}{n}$| $F_1=f_1$               | $100f_1$              |
+|resposta 2 $x_2$| $n_2$          | $N_2=N_1+n_2$            | $f_2=\frac{n_2}{n}$| $F_2=F_1+f_2$           | $100f_2$              |
+|resposta 3 $x_3$| $n_3$          | $N_3=N_2+n_3$            | $f_3=\frac{n_3}{n}$| $F_3=F_2+f_3$           | $100f_3$              |
+| $...$          | $...$          | $...$                    | $...$              | $...$                   | $...$                 |
+|resposta k $x_k$| $n_k$          | $N_k=N_1+n_k$            | $f_k=\frac{n_k}{n}$| $F_k=F_{k-1}+f_k$       | $100f_k$              |
