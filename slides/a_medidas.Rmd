@@ -1,6 +1,5 @@
 ---
-title: "Aula 06: Medidas I"
-subtitle: "Tipos de variáveis e Tabela de frequência"
+title: "Medidas"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -24,12 +23,24 @@ knitr::opts_chunk$set(
 xaringanExtra::use_panelset()
 ```
 
+---
+# Roteiro geral das aulas
 
-# Objetivos de aula
-#### 1. Aprender os diferentes tipos de variáveis e a importância dessa classificação: __<span style="color:#3B0F70;">marca azul</span>__
+Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. 
 
-#### 2. Aprender como se constrói uma tabela de frequência: __<span style="color:#7AD151;">marca verde</span>__
-
+Depois, vamos ver as medidas desses tipos de variáveis:
+1. Medidas de variáveis categóricas: Tabelas de frequência
+2. Medidas de variáveis numéricas:
+  1. Medidas de centro:
+      1. Moda
+      1. Média
+      1. Mediana
+  1. Medidas de dispersão:
+      1. Desvio médio
+      1. Variância
+      1. Desvio padrão
+      1. Amplitude
+      1. IQR
 ---
 class: middle, center, tema1
 # Tipos de variáveis
@@ -40,15 +51,15 @@ class: tema1
 
 ### Variáveis qualitativas/categóricas
 
-#### Variáveis ordinais: As categorias possuem uma ordenação universal entre si
+Variáveis ordinais: As categorias possuem uma ordenação universal entre si
 
-#### Variáveis nominais: As categorias não possuem uma ordenação universal entre si
+Variáveis nominais: As categorias não possuem uma ordenação universal entre si
 
 ### Variáveis quantitativas/numéricas
 
-#### Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
+Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
 
-#### Variáveis contínuas: Representa números reais
+Variáveis contínuas: Representa números reais
 
 ---
 class: middle, center, tema2
@@ -65,3 +76,21 @@ class: tema2
 |resposta 3 $x_3$| $n_3$          | $N_3=N_2+n_3$            | $f_3=\frac{n_3}{n}$| $F_3=F_2+f_3$           | $100f_3$              |
 | $...$          | $...$          | $...$                    | $...$              | $...$                   | $...$                 |
 |resposta k $x_k$| $n_k$          | $N_k=N_1+n_k$            | $f_k=\frac{n_k}{n}$| $F_k=F_{k-1}+f_k$       | $100f_k$              |
+
+---
+class: middle, center
+
+# Medidas para variáveis numéricas
+
+---
+# Medidas de centro - Média
+
+---
+# Medidas de centro - Mediana
+
+---
+# Medidas de centro - Moda
+
+---
+# Medidas de dispersão
+

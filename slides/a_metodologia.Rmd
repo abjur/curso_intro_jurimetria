@@ -1,6 +1,5 @@
 ---
-title: "Aula 03: Metodologia II"
-subtitle: "Perguntas de pesquisa e Processo de geração de dados"
+title: "Metodologia"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -22,12 +21,100 @@ knitr::opts_chunk$set(
   warning = FALSE
 )
 xaringanExtra::use_panelset()
-
-cores_abj <-  viridis::viridis(2, 1, .2, .8)
-
 ```
 
+class: middle, center
 
+# Aula I de Metodologia
+## Definição de escopo e operacionalização de conceitos
+
+---
+# Objetivos de aula
+#### 1. Aprender as questões envolvidas na definição de escopo: __<span style="color:#3B0F70;">marca azul</span>__
+
+#### 2. Aprender a discutir criticamente a operacionalização de conceitos: __<span style="color:#7AD151;">marca verde</span>__
+
+---
+class: middle, center, tema1
+# Definição de escopo
+
+---
+class: tema1
+# Escopo temporal
+
+```{r, out.width="90%"}
+knitr::include_graphics("img/tempos.png")
+```
+
+(1) Prospectivo e retrospectivo
+
+(2) Apenas prospectivo
+
+(3) Apenas retrospectivo
+
+---
+class: tema1
+# Escopo temporal
+
+```{r, out.width="90%"}
+knitr::include_graphics("img/tempos.png")
+```
+
+(4) Nenhum dos dois, mas poderia ser capturado por atividade no período.
+
+(5 e 6) fora do escopo.
+
+(7) Nenhum dos dois tipos e não poderia ser capturado (ficou inativo no período).
+
+---
+class: tema1
+
+# Escopo geográfico
+
+Está ligado à escolha do tribunal a se estudar, ou da instituição. 
+- TJs
+- STJ
+- JF
+- TRF
+- STF
+- TRT
+
+Não precisamos estudar sempre tribunais judiciais, podemos estudar tribunais administrativos também:
+- Conselho dos Contribuintes
+- Tribunal de Impostos e Taxas
+- CARF
+- CVM
+- CRSFN
+
+E não precisamos nem estuar tribunais, podemos estudar instituições, tais como a Defensoria Pública ou o Ministério Público
+
+---
+class: middle, center, tema2
+# Operacionalização de conceitos
+
+
+---
+class: tema2
+
+# Do plano abstrato ao empírico
+
+```{r, out.width="90%"}
+knitr::include_graphics("img/operacionalizacao.png")
+```
+##### Fonte: SILVA, Glauco Peres. Desenho de Pesquisa. Brasília: Enap. 2018
+
+---
+class: middle, center
+
+# Exercícios
+
+---
+class: middle, center
+
+# Aula II de Metodologia
+## Perguntas de pesquisa e Processo de geração de dados
+
+---
 # Objetivos de aula
 #### 1. Aprender as diferenças das perguntas no Direito para as perguntas na Estatística: __<span style="color:#3B0F70;">marca azul</span>__
 
@@ -39,19 +126,19 @@ class: middle, center, tema1
 
 ---
 class: tema1
-## Perguntas normativas x Perguntas descritivas
+## Diferença 1: Perguntas normativas x Perguntas descritivas
 
 #### Perguntas normativas
 1. Quem controla jurisdicionalmente a discricionariedade no Brasil? Qual é o objeto do controle? Como deve ser a discricionariedade controlada?
 2. O que é o interesse público? 
-3. Como devemos tratar as demandas em direito à saúde, elas “devem  ser  consideradas  como  ações  individuais  e  sujeitas  às  regras  estabelecidas  no  Código  de  Processo  Civil  ou  deveriam  ser  tratadas  como  coletivas  e  sujeitas  às normas  do  Código  de  Defesa  do  Consumidor  e  da  Lei  da  Ação  Civil  Pública? Ou deveriam receber um regime legal intermediário mais adequado?”
+3. Como devemos tratar as demandas em direito à saúde, elas "devem  ser  consideradas  como  ações  individuais  e  sujeitas  às  regras  estabelecidas  no  Código  de  Processo  Civil  ou  deveriam  ser  tratadas  como  coletivas  e  sujeitas  às normas  do  Código  de  Defesa  do  Consumidor  e  da  Lei  da  Ação  Civil  Pública? Ou deveriam receber um regime legal intermediário mais adequado?"
 
 #### Perguntas descritivas
-1. Quais os “impactos da MPV 1.040/2021 no tempo de abertura de empresas”?
-2. “Como os agentes tomadores de decisão reagiram à lei 11.343/2006? O padrão das apreensões mudou depois de 2006?”
+1. Quais os "impactos da MPV 1.040/2021 no tempo de abertura de empresas"?
+2. "Como os agentes tomadores de decisão reagiram à lei 11.343/2006? O padrão das apreensões mudou depois de 2006?"
 ---
 class: tema1
-## Tese x Hipótese
+## Diferença 2: Tese x Hipótese
 
 ### Tese
 
@@ -121,5 +208,3 @@ KING, G.; KEOHANE, R. O.; VERBA, S. **Designing Social Inquiry: Scientific Infer
 class: middle, center
 
 # Exercícios
-
-Vamos fazer exercícios para testar isso.

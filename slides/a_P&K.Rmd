@@ -1,6 +1,5 @@
 ---
-title: "Aula 04: Metodologia III"
-subtitle: "Viés de seleção e o teorema de Priest & Klein"
+title: "Viés de seleção e o Teorema de Priest & Klein"
 output:
   xaringan::moon_reader:
     lib_dir: libs
