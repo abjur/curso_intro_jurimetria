@@ -11,7 +11,7 @@ output: pdf_document
 - Um único aluno será encarregado de anotar as questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
 - Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas;
-- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: https://drive.google.com/file/d/17G9XRHePcq6rlq9w061Yj5HQ3JxJKsoh/view?usp=sharing
+- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing
 - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
 
 ## I) Exercícios referentes ao texto "Sundfeld et al, 2011". 
@@ -131,3 +131,46 @@ Já o resultado pró-credor dos conflitos entre Instituições Financeiras (Reco
 #### c) O que a conclusão do item (b) nos diz sobre a operacionalização do conceito?
 
 A operacionalização do conceito foi a operacionalização de utilizar a proporção de decisões pró-devedor (plano empírico) para dizer que há um viés judicial pró-devedor (plano abstrato). Essa operacionalização apresenta algumas fragilidades, pois as conclusões que tiramos sobre o viés judicial (conceito abstrato) a partir das decisões (variável) estão contaminadas com os viéses de fato e legislativo. 
+
+## III) Exercícios referentes ao texto "Galanter, 2018 (1941)"
+
+### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que "Quem tem" Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as 7 características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
+
+### Exercício 1. Descreve as características de um JH e de um PE
+
+Um JH é aquele tipo de parte que está indo para a arena judicial pela primeira vez (é o “primeiro tiro” dele no mundo jurídico). Assim sendo, ele não possui familiaridade com as regras jurídicas, com as leis, as normas, os princípios e regulamentos. Mesmo sem esse conhecimento, ele acaba, por algum infortúnio, tendo que resolver seus problemas judicialmente. Tanto o requerente quanto o requerido podem assumir a tipologia do JH.
+
+Já o PE é o exato oposto do JH, ele é aquele tipo de parte que está reiteradamente envolvido em algum conflito judicial. Isso lhe garante maior expertise nos embates jurídicos. Outras características importantes dos PEs são que, por estarem constantemente na frente dos juízes, eles acabam desenvolvendo relacionamentos informais com as autoridades do mundo do direito. Esses relacionamentos podem lhe conferir fama e status dentro dos tribunais, bem como lhe possibilitam tornar-se amigos íntimos ou, na pior das hipóteses, rivais dos juízes. Isso também é um fator que acaba influenciando a capacidade desses agentes em ganhar uma disputa. Outro elemento importante na caracterização dos PEs é que, além de relacionamentos com o Poder Judiciário e expertise técnica, eles dispõem de recursos que são inimagináveis, muitas vezes, para os JHs. É claro que pessoas ricas podem ser one-shooters, mas mesmo as pessoas ricas não se comparam com a quantidade de recursos que grandes agentes jurídicos possuem.
+
+Mas de todas as diferenças entre JH e PE, existe um fator decisivo para distinguí-los, que é a questão do interesse. Sempre que os one-shooters se apresentam no Judiciário, eles possuem um único interesse: ganhar o máximo possível de um processo que eles começaram, ou perder o mínimo possível de um processo no qual eles estão sendo acusados. No fim, o que essa estratégia está buscando é resguardar os interesses materiais da parte, seja o de maximizar os ganhos (no caso de o OS ser parte autora), seja minimizar suas perdas (no case de o JH ser parte réu). Isso é o que caracteriza o interesse dos JHs nas disputas judiciais.
+
+Os PEs, por outro lado, possuem um outro interesse. É claro que eles buscam também proteger seus interesses materiais, mas, justamente por estarem envolvidos na mesma disputa judicial repetidas vezes, eles acabam desenvolvendo um segundo tipo de interesse: o interesse normativo. A ideia é que, como esses agentes sabem que eles vão voltar para o Judiciário outras vezes, então, a fim de otimizar os seus ganhos e perdas materiais no longo prazo, eles buscam criar decisões jurídicas favoráveis a eles, isto é, criar uma jurisprudência favroável a eles. No curto prazo, isso pode dar a impressão de que os PEs estão realizando uma estratégia irracional. Mas, no longo prazo, isso não se mostra verdadeiro. A fim de evitar decisões contrárias aos PEs, esses agentes evadem do Judiciário às vezes, comprometendo-se até com acordos extrajudiciais que são mais custosos do que os danos, sanções ou reparações que eles seriam condenados a pagar se realizassem aquela disputa na frente do juiz. Esses esforços evitam que se consolidem entendimentos jurisprudenciais contrários aos interesses dos PEs.
+
+Então, de um lado, temos JHs caracterizados por um desconhecimento e falta de familiaridade com o Judiciário, que entra nele somente para maximizar seus ganhos ou minimizar suas perdas; e, do outro, temos PEs, caracterizados por um relacionamento íntimo e prolongado com os agentes do sistema jurídico, que buscam, além de satisfazer seus interesses materiais, proteger também seus interesses normativos.
+
+### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, uma etapa da metodologia perpassa pela necessidade de se operacionalizar os conceitos de JH e de PE. A seguir, discuta algumas possibilidades de operacionalização. 
+
+### a) O CNJ, em 2012, realizou um estudo a respeito dos grandes litigantes, elencando quem são os 100 maiores litigantes dos Tribunais de Justiça. Depois, em 2015, a Associação Brasileira de Magistrados atualizou os dados (mas apenas para alguns estados). A partir destes estudos, a pesquisadora decidiu operacionalizar os JHs como as partes que aparecem nestes dois estudos [não é preciso ler os relatórios para responder a essa questão].
+
+Há várias considerações a se fazer a respeito dessa operacionalização:
+
+1. O nome dos litigantes que consta nas listas pode variar a sua escrita ao longo dos processos. Então é possível que um litigante considerado como LH para essa pesquisa fique de fora na hora da operacionalização, simplesmente porque a grafia de seu nome está diferente do que consta nos relatórios. 
+2. Por mais que essas listas dos 100 maiores litigantes apresentem partes muito frequentes no Judiciário, não é em todo processo que elas aparecerem que elas serão consideradas como JHs Em alguns processos, uma parte frequente no Judiciário pode ser uma parte inédia, meramente incidental, não possuindo qualquer expertise ou interesse normativo nela. 
+3. Existem mais partes que os litigantes apresentados na lista que poderiam ser considerados como JhH. 
+
+### b) A pesquisadora coletou todos os dados para realizar a sua pesquisa, de forma que uma das informações que ela tinha era o nome de cada uma das partes. A partir disso, ela contou o número de vezes que cada um dos nomes apareciam ao longo dos processos. Como ela estava analisando apenas a Justiça Estadual, ela achou que seria razoável dizer que as partes que apareciam mais de 100 vezes seriam consideradas LHs. 
+
+Há várias considerações a se fazer a respeito dessa operacionalização:
+
+1. É muito arbitrário estabelecer um corte de que se uma parte aparecer mais de 100 vezes ela será um litigante habitual. Por que não 30? Ou 1000?
+2. É razoável supor que, quanto mais processos uma parte aparece, mais expertise ela tem nesse tipo de judicialização. 
+
+### c) A pesquisadora, a partir do nome das partes, percebeu que era possível classificá-las como pessoas jurídicas de direito público, pessoas jurídicas de direito privado e pessoas físicas, sendo que as pessoas físicas seriam sempre as partes residuais (ou seja, as que não se enquadram em nenhum critério). A partir disso, ela estabeleceu que todas as pessoas jurídicas, seja de direito público, seja de direito privado, seriam consideradas como JHs
+
+Há várias considerações a se fazer a respeito dessa operacionalização:
+
+1. Existem pequenas empresas, tais como MEs e EPPs que definitivamente não poderiam ser consideradas como JHs. 
+2. Nem toda empresa possui interesse normativo nas judicializações. 
+3. As empresas podem aparecer nos processos de forma meramente incidental, não podendo ser consideradas como JH em muitas judicializações. 
+4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
+
