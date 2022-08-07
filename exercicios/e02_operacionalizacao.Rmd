@@ -6,17 +6,17 @@ output: pdf_document
 
 # Orientações gerais
 
-- Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+- Formem grupos de 5 pessoas. Todas as questões deverão ser respondidas nestes grupos;
 - Os grupos terão de 40 minutos a 1 hora para responder às questões;
-- Um único aluno será encarregado de anotar as questões discutidas no grupo;
+- Uma única pessoa será encarregada de anotar os pontos discutidos no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas;
-- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing
+- Outra pessoa, que não aquela encarregada de anotar, deverá ler as respostas;
+- Para responder aos exercícios, os alunos deverão acessar dois textos que estão nos materiais de aula;
 - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
 
 ## I) Exercícios referentes ao texto "Sundfeld et al, 2011". 
 
-**Ler páginas 12 a 17 do texto, começando em "II. Escolhas metodológicas e justificativas" e acabando em "II.2 Desenho de pesquisa". Não precisa ler a partir de "II.2.1 Análise quantitativa: o que chega e o que faz o STF".**
+**Ler páginas 12 a 17 do texto, começando em "II. Escolhas metodológicas e justificativas" e acabando em "II.2 Desenho de pesquisa". Não precisa ler o que vem a partir de "II.2.1 Análise quantitativa: o que chega e o que faz o STF".**
 
 #### Exercício 1. Qual é o conceito que está sendo estudado? 
 
@@ -89,7 +89,7 @@ Por hora, como ainda não vimos o teorema, podemos afirmar que a comparação co
 
 #### Exercício 4. Yeung e Azevedo, 2017, na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão para-além da decisão do juiz. 
 
-#### a) Quais são os viéses que os autores reconhecem? Descreva os seus funcionamentos.
+#### a) Quais são os vieses que os autores reconhecem? Descreva os seus funcionamentos.
 
 Viés do fato: "Pode, contudo, acontecer de os recursos chegarem ao STJ de maneira *não-aleatória*. Por exemplo, eles poderiam ser 'naturalmente' mais favoráveis ao devedor. Neste caso, mesmo que os magistrados consistentemente decidissem a favor do devedor, isso não poderia ser considerado um viés da decisão, mas sim um *viés do fato*. Em outras palavras, se a maior parte dos processos que chegassem ao STJ contivessem fatos que favorecessem o devedor, mesmo magistrados neutros tenderiam a decidir dando ganho de causa a esta parte. Infelizmente, este é um problema a que estão sujeitos todos os estudos de decisões judiciais que somente observam os casos levados ao judiciário. Espera-se que trabalhos futuros consigam lidar com este assunto de forma mais adequada." (p. 330)
 
