@@ -8,9 +8,9 @@ output: pdf_document
 
 - Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
 - Os grupos terão de 40 minutos a 1 hora para responder às questões;
-- Um único aluno será encarregado de anotar as questões discutidas no grupo;
+- Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas;
+- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo;
 - Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing
 - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
 
@@ -30,8 +30,7 @@ Por meio de ações constitucionais que versem sobre a separação dos poderes.
 
 #### Exercício 3. Como os autores justificam essa operacionalização? 
 
-"Por mais que seja problemático o conteúdo semântico da judicialização da política,
-parece razoável assumir que problemas de ordem constitucional (ainda que não em todos os casos) possam, em geral, ser caracterizados como questões de natureza política. Dessa forma, acredita-se que, com esse recorte ex ante, por mais que muitos casos relevantes para a judicialização fiquem de fora, abarca-se uma parte expressiva das questões e problemas levados ao STF que tenham a configuração de disputas políticas. Em outras palavras, parte-se da premissa de que o controle de constitucionalidade seria um âmbito privilegiado para observação da interação entre Poderes e também do suposto fenômeno da judicialização da política." (p. 14)
+"Por mais que seja problemático o conteúdo semântico da judicialização da política, parece razoável assumir que problemas de ordem constitucional (ainda que não em todos os casos) possam, em geral, ser caracterizados como questões de natureza política. Dessa forma, acredita-se que, com esse recorte ex ante, por mais que muitos casos relevantes para a judicialização fiquem de fora, abarca-se uma parte expressiva das questões e problemas levados ao STF que tenham a configuração de disputas políticas. Em outras palavras, parte-se da premissa de que o controle de constitucionalidade seria um âmbito privilegiado para observação da interação entre Poderes e também do suposto fenômeno da judicialização da política." (p. 14)
 
 #### Exercício 4. Discorra criticamente sobre essa operacionalização.
 
@@ -134,7 +133,7 @@ A operacionalização do conceito foi a operacionalização de utilizar a propor
 
 ## III) Exercícios referentes ao texto "Galanter, 2018 (1941)"
 
-### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que "Quem tem" Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as 7 características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
+### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que 'Quem tem' Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as 7 características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
 
 ### Exercício 1. Descreve as características de um JH e de um PE
 
