@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Metodologia</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Metodologia
+]
+
+---
+
+
+
+
+class: middle, center
+
+# Aula I de Metodologia
+## Definição de escopo e operacionalização de conceitos
+
+---
+# Objetivos de aula
+#### 1. Aprender as questões envolvidas na definição de escopo: __&lt;span style="color:#3B0F70;"&gt;marca azul&lt;/span&gt;__
+
+#### 2. Aprender a discutir criticamente a operacionalização de conceitos: __&lt;span style="color:#7AD151;"&gt;marca verde&lt;/span&gt;__
+
+---
+class: middle, center, tema1
+# Definição de escopo
+
+---
+class: tema1
+# Escopo temporal
+
+&lt;img src="img/tempos.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+(1) Prospectivo e retrospectivo
+
+(2) Apenas prospectivo
+
+(3) Apenas retrospectivo
+
+---
+class: tema1
+# Escopo temporal
+
+&lt;img src="img/tempos.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+(4) Nenhum dos dois, mas poderia ser capturado por atividade no período.
+
+(5 e 6) fora do escopo.
+
+(7) Nenhum dos dois tipos e não poderia ser capturado (ficou inativo no período).
+
+---
+class: tema1
+
+# Escopo geográfico
+
+Está ligado à escolha do tribunal a se estudar, ou da instituição. 
+- TJs
+- STJ
+- JF
+- TRF
+- STF
+- TRT
+
+Não precisamos estudar sempre tribunais judiciais, podemos estudar tribunais administrativos também:
+- Conselho dos Contribuintes
+- Tribunal de Impostos e Taxas
+- CARF
+- CVM
+- CRSFN
+
+E não precisamos nem estuar tribunais, podemos estudar instituições, tais como a Defensoria Pública ou o Ministério Público
+
+---
+class: middle, center, tema2
+# Operacionalização de conceitos
+
+
+---
+class: tema2
+
+# Do plano abstrato ao empírico
+
+&lt;img src="img/operacionalizacao.png" width="90%" style="display: block; margin: auto;" /&gt;
+##### Fonte: SILVA, Glauco Peres. Desenho de Pesquisa. Brasília: Enap. 2018
+
+---
+class: middle, center
+
+# Exercícios
+
+---
+class: middle, center
+
+# Aula II de Metodologia
+## Perguntas de pesquisa e Processo de geração de dados
+
+---
+# Objetivos de aula
+#### 1. Aprender as diferenças das perguntas no Direito para as perguntas na Estatística: __&lt;span style="color:#3B0F70;"&gt;marca azul&lt;/span&gt;__
+
+#### 2. Aprender a discutir criticamente os processos de geração de dados: __&lt;span style="color:#7AD151;"&gt;marca verde&lt;/span&gt;__
+
+---
+class: middle, center, tema1
+# Pergunta de pesquisa
+
+---
+class: tema1
+## Diferença 1: Perguntas normativas x Perguntas descritivas
+
+#### Perguntas normativas
+1. Quem controla jurisdicionalmente a discricionariedade no Brasil? Qual é o objeto do controle? Como deve ser a discricionariedade controlada?
+2. O que é o interesse público? 
+3. Como devemos tratar as demandas em direito à saúde, elas "devem  ser  consideradas  como  ações  individuais  e  sujeitas  às  regras  estabelecidas  no  Código  de  Processo  Civil  ou  deveriam  ser  tratadas  como  coletivas  e  sujeitas  às normas  do  Código  de  Defesa  do  Consumidor  e  da  Lei  da  Ação  Civil  Pública? Ou deveriam receber um regime legal intermediário mais adequado?"
+
+#### Perguntas descritivas
+1. Quais os "impactos da MPV 1.040/2021 no tempo de abertura de empresas"?
+2. "Como os agentes tomadores de decisão reagiram à lei 11.343/2006? O padrão das apreensões mudou depois de 2006?"
+---
+class: tema1
+## Diferença 2: Tese x Hipótese
+
+### Tese
+
+No Direito, a gente tende a dizer qual é a tese e elaborar o caminho até ela posteriormente, dentro dos limites que a lei permitir. 
+
+### Hipótese
+
+Na Estatística, a gente elabora uma hipótese e utiliza um caminho rígido para *verificar* se a hipótese é correta ou não.
+
+---
+class: middle, center, tema2
+# Processo de geração de dados
+
+---
+class: , middle, center, tema2
+
+### A seguir, vamos ver um exemplo. O exemplo veio de um estudo da ABJ, sobre a judicialização da saúde na Justiça Federal do Ceará. 
+
+---
+class: middle, center, tema2
+
+#### Eu posso afirmar com certeza que existem aproximadamente a mesma quantidade de processos com 1 e com 2 partes?
+
+&lt;img src="img/p_n_ativo1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: tema2
+
+# Como esse dado foi gerado?
+
+- Os dados foram coletados automaticamente do site da Justiça Federal do Ceará
+- Na Justiça Federal, os dados apareciam da seguinte maneira:
+
+&lt;img src="img/jfce_metadados_partes.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+- Então o scraper que criamos extraía o nome da parte e o seu tipo de participação
+- Consideramos como polo ativo apenas as partes classificadas como “Impetrante”, “Autor”, “Embargante”, “Parte Autora”, “Exequente” e “Requerente”.
+
+#### Como vocês avaliaram o gráfico, então, sabendo disso?
+
+---
+class: middle, center, tema2
+
+#### Eu posso afirmar com certeza que existem aproximadamente a mesma quantidade de processos com 1 e com 2 partes?
+
+&lt;img src="img/p_n_ativo2.png" width="100%" style="display: block; margin: auto;" /&gt;
+---
+class: tema2
+## Processo de Geração de Dados (PGD)
+
+### Como os dados foram gerados?
+
+O processo de geração de dados é a forma, por meio da qual, determinada informação foi criada. É extremamente importante documentar e reportar todos esses processos, para que os pares acadêmicos possam validar a pesquisa e as escolhas metodológicas feitas nela. **O processo de geração de dados é importante porque:**
+
+&gt; sem essa informação, nós não podemos determinar se utilizar processos padrões de análise de dados irá produzir inferências enviesadas. Somente ao saber do processo por meio do qual os dados foram gerados é que nós conseguiremos produzir uma inferência causal ou descritiva válida.
+
+KING, G.; KEOHANE, R. O.; VERBA, S. **Designing Social Inquiry: Scientific Inference in Qualitative Research**. Princeton: Princeton University Press. 1994, p. 23. 
+
+---
+class: middle, center
+
+# Exercícios
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:12",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
