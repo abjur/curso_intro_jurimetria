@@ -59,7 +59,9 @@ knitr::include_graphics("img/assuntos.png")
 
 #### Nesta imagem, o Assunto - Nome4 é o nível de assunto mais específico que essa árvore consegue chegar. O que significa o "-" nesta coluna? 
 
-#### d) Com base no que foi discutido no item (c), discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público?
+Os casos "-" são casos que são sobre o Ministério Público, mas que não receberam classificação mais específica. 
+
+#### d) Com base no que foi discutido no item (c), discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público? O que significam os casos de cinza? 
 
 ```{r fig-assuntos-mp}
 assuntos_tjam |> 
@@ -86,10 +88,21 @@ assuntos_tjam |>
   )
 ```
 
-Nós não sabemos a real distribuição dos casos marcados com "-". Isso dificulta a análise. Será que todos os casos que estão em "-" deveriam ser classificados como "Promoção", sendo, portanto, "Promoção" o assunto mais frequente? 
+Nós não sabemos a real distribuição dos casos marcados com "-". Isso dificulta a análise. Para a gente assumir alguma distribuição dos casos "-" entre as outras categorias possíveis, temos de partir de uma forte premissa de que os casos marcados com "-" são aleatórios. Algumas perguntas podemos nos fazer questionar essa aleatoriedade. 
+
+Será que os casos marcados com "-" são aqueles casos que se enquadram em mais de um assunto como a combinação de dois ou mais assuntos (por exemplo, remuneração + promoção) e, justamente por não se enquadrar em um único assunto, eles foram marcados com "-"? Se este for o caso, será que o fato de esses casos representarem a combinação de mais de um assunto não indica que esses casos são mais complexos que os demais, que tratam de um único tema? E por serem casos mais complexos, será que eles não demoram mais tempo para serem resolvidos, ou são casos com menos consenso entre os juízes e, portanto, são casos com mais recursos? 
+
+Uma outra série de perguntas possíveis é: será que todos os casos que estão em "-" deveriam ser classificados como "Promoção", sendo, portanto, "Promoção" o assunto mais frequente? Será que existe algum motivo para que casos que de fato sejam de "Promoção" sejam classificados de forma mais genérica do que os outros assuntos processuais? Por exemplo, será que SEMPRE que os promotores se deparam com um caso de "Remuneração", eles registram no sistema do tribunal como o assunto "Remuneração", mas quando o caso é de "Promoção", eles registram no sistema do tribunal ou com o assunto "Promoção" ou com o assunto "Ministério Público"? 
+
+#### e) Um pesquisador deseja listar _todos_ os processos relacionados à remuneração do promotores públicos. Com base na planilha deste exercício e nas discussões do item (d), quais assuntos você recomendaria a ele utilizar para filtrar a sua busca? 
+
+Uma primeira resposta seria dizer que basta procurar pelo assunto "Remuneração". Entretanto, o enunciado diz que o pesquisador deseja listar _todos_ os processos relacionados à remuneração dos promotores. Nesse caso, o que acontece com os processos que foram mal classificados? O pesquisador estaria deliberadamente excluindo esses processos da análise. E teria problema excluir de forma sistemática os processos mal classificados? Novamente, aqui há um problema do que podemos assumir sobre o caso. Será que os casos mal classificados possuem características específicas, ou eles são aleatórios? Se for o caso de aleatoridade, não tem problema o pesquisador deixar de fora esses casos (apesar de ser da sua vontade pessoal listar _todos_ os processos). Mas se não tiver como o pesquisador defender a aleatoriedade da má-classificação, então talvez seja melhor ele tentar pegar os processos mal classificados. Neste caso, ele precisaria procurar pelos assuntos "Remuneração" e "Ministério Público". 
+
+Se ele quiser ser mais abrangente ainda, ele deveria pegar também os assuntos "Agentes Políticos" e "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO". Mas se ele pegar esses assuntos tão genéricos, ele vai acabar pegando muito lixo na pesquisa dele, fazendo com que muitos processos que estão fora do escopo dele entrem na análise. Aqui, então, entra uma discussão importante a respeito da parcimônia x precisão. O que está em jogo aqui é saber sopesar a simplicidade da pesquisa com a sua precisão. Escolher assuntos tão genéricos vai fazer com que tenha muito lixo na lista de processos. Se isso não for retirado da base, então a análise não vai mais ser sobre processos de Remuneração do Ministério Público, mas sim, uma análise sobre qualquer tema sobre o Ministério Público, ou sobre qualquer outro Agente Político, ou ainda sobre qualquer assunto de Direito Administrativo.
 
 ## II) Investigando o processo de geração de dados do valor da causa
 
+https://www.youtube.com/watch?v=wZ5MgsU_03w
 
 ## III) Investigando o processo de geração de dados de datas
 
