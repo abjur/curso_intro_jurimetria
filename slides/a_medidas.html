@@ -3,7 +3,7 @@
   <head>
     <title>Medidas</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="libs/panelset-0.2.6/panelset.js"></script>
@@ -14,10 +14,42 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Medidas
+]
 
 ---
 
+
+
+&lt;div style = "position:fixed; visibility: hidden"&gt;
+`$$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$`
+`$$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$`
+`$$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$`
+`$$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$`
+&lt;/div&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      red: ["{\\color{red}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      gray: ["{\\color{gray}{#1}}", 1]
+    },
+    loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}}
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.red {color: #FF0000;}
+.blue {color: #0000FF;}
+.green {color: #00FF00;}
+.gray {color: #A9A9A9;}
+&lt;/style&gt;
 
 
 
@@ -30,9 +62,9 @@ Depois, vamos ver as medidas desses tipos de variáveis:
 1. Medidas de variáveis categóricas: Tabelas de frequência
 2. Medidas de variáveis numéricas:
   1. Medidas de centro:
-      1. Moda
       1. Média
       1. Mediana
+      1. Moda
   1. Medidas de dispersão:
       1. Desvio médio
       1. Variância
@@ -45,7 +77,7 @@ class: middle, center, tema1
 
 ---
 class: tema1
-# Tipos de variáveis
+## Tipos de variáveis
 
 ### Variáveis qualitativas/categóricas
 
@@ -65,7 +97,7 @@ class: middle, center, tema2
 
 ---
 class: tema2
-# Tabela de frequência
+## Tabela de frequência
 
 |variável `\(x_i\)`  |frequência `\(n_i\)`|frequência acumulada `\(N_i\)`|proporção `\(f_i\)`     |proporção acumulada `\(F_i\)`|porcentagem `\(100 f_i\)`|
 |:--------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:|:---------------------:|
@@ -81,19 +113,381 @@ class: middle, center
 # Medidas para variáveis numéricas
 
 ---
-# Medidas de centro - Média
+## Medidas de centro - Média
 
-`\(\frac{1}{n} \sum_{i=i}^{n} x_{i}\)`
+.center-middle[
+.large-lonely[
+`$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$`
+]
+]
 
 ---
-# Medidas de centro - Mediana
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+`$$\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$`
+]
+]
 
 ---
-# Medidas de centro - Moda
+## Medidas de centro - Média
 
+.left-middle[
+.large-lonely[
+`$$\red{\sum_{i=i}^{n} x_{i}}$$`
+]
+]
+
+--
+.pull-right2[
+Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.
+]
+
+--
+.pull-right2[
+A seguir, temos um exemplo mais simples de interpretar:
+
+.large-text[
+`$$4+8+12+16+20=\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$`
+]
+]
+
+--
+.pull-right2[
+Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5). 
+]
+
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$`
+]
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$`
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: `\(4k\)`, ou seja, 4 vezes k. 
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_\blue{{k=1}}^\gray{5} \gray{4k}$$`
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: `\(4k\)`, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando `\(k=1\)`. Se a expressão é `\(4k\)`, então, quando `\(k=1\)`, a expressão é igual a 4.
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_\gray{{k=1}}^\blue{5} \gray{4k}$$`
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: `\(4k\)`, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando `\(k=1\)`. Se a expressão é `\(4k\)`, então, quando `\(k=1\)`, a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando `\(k=5\)`. Se a expressão é `\(4k\)`, então, quando `\(k=5\)`, a expressão é igual a 20. 
+
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$`
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: `\(4k\)`, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando `\(k=1\)`. Se a expressão é `\(4k\)`, então, quando `\(k=1\)`, a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando `\(k=5\)`. Se a expressão é `\(4k\)`, então, quando `\(k=5\)`, a expressão é igual a 20. 
+
+Ou seja, serão somados todos os termos de `\(k=1\)` até `\(k=5\)`, fazendo `\(4x1 + 4x2 + 4x3 + 4x4 + 4x5\)`
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+`$$\sum_{{k=1}}^{5} \blue{4k}$$`
+]
+]
+
+--
+
+Na fórmula da média, há uma diferença importante: no lugar do k, temos o `\(x_i\)`. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é `\(x_i\)` .
+
+.left-middle[
+.large-lonely[
+`$$\sum_{i=i}^{n} \blue{x_{i}}$$`
+]
+]
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+`$$\sum_{i=1}^{10} \blue{x_{i}}$$`
+]
+]
+
+.pull-right2[
+
+
+|Índice |Descrição | Valor de avaliação inicial|
+|:------|:---------|--------------------------:|
+|$x_1$  |bem 1     |                       4934|
+|$x_2$  |bem 2     |                      81000|
+|$x_3$  |bem 3     |                       1921|
+|$x_4$  |bem 4     |                        235|
+|$x_5$  |bem 5     |                         70|
+|$x_6$  |bem 6     |                        234|
+|$x_7$  |bem 7     |                       2000|
+|$x_8$  |bem 8     |                         30|
+|$x_9$  |bem 9     |                       7500|
+|$x_10$ |bem 10    |                          0|
+
+]
+--
+
+.left-bottom[
+Quando o termo inicial (_i_) é 1, então a expressão a ser somada não é 1, mas é `\(x_1\)` , o que, neste caso, significa R$ 4934.5
+]
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+`$$\sum_{i=i}^{n} x_{i}$$`
+]
+]
+
+.pull-right2[
+Com isso, vimos todos os elementos do somatório que faz parte da fórmula da média. Temos a expressão a ser somada ( `\(x_i\)`) , o termo inicial ( `\(i=1\)` ) e o termo final (n). 
+]
+
+--
+.pull-right2[
+Importa dizer que, no caso da média, o índice final (n) será sempre o número total de observações. Assim, o índice final será sempre `\(i=n\)`, referindo-se sempre ao último número da sequência, `\(x_n\)`. Se, por exemplo, existirem 10 observações (a unidade de uma base de dados) a serem somadas, então $n=10 $ e o último termo a ser somado será `\(x_{10}\)`.
+]
+
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+`$$\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}$$`
+]
+]
+
+.pull-right2[
+Com isso, vimos todos os elementos do somatório, que faz parte da fórmula da média. Temos a expressão a ser somada ( `\(x_i\)`) , o termo inicial ( `\(i=1\)` ) e o termo final (n). Nesse caso, o índice final é quando `\(i=n\)`, ou seja, é o `\(x_n\)`. Se, por exemplo, existirem 10 expressões a serem somadas, então `\(n=10\)` e o último term^o a ser somado é `\(x_{10}\)`.
+
+O que falta agora para completar a fórmula da média é a divisão. A média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo `\(n\)` da divisão!
+]
+
+---
+## Medidas de centro - Média
+
+.center-middle[
+.large-lonely[
+`$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$`
+]
+]
+
+---
+## Medidas de centro - Mediana
+
+### Conceito
+
+Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio. 
+
+Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais. 
+
+--
+
+**Exercício rápido.** Ache a mediana dos dois conjuntos a seguir:
+
+.large-text[
+&gt; 3 17 81 502 900
+
+&gt; 5 72 80 100 203 399
+]
+
+---
+## Medidas de centro - Mediana
+
+### Fórmula matemática
+.center-middle[
+.large-lonely[
+`$$md\left(x\right)
+=\begin{cases}
+  {x_\frac{n+1}{2}}                                    &amp; n\text{ ímpar}\\
+  \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) &amp; n \text{ par}
+\end{cases}$$`
+]
+]
+
+---
+## Exercício de checagem
+
+Dada a seguinte fórmula, avalie as proposições:
+.large-text[$$x_\frac{n+1}{2}$$]
+
+I. Podemos afirmar que, em uma distribuição com 17 números, a mediana será o 8º número da sequência.
+
+II. Dado que `\(\frac{n+1}{2}\)`, então a mediana de uma sequência com 17 números é `\(\frac{17+1}{2}=\frac{18}{2}=9\)`.
+
+III. Essa fórmula é a fórmula geral para calcular qualquer mediana.
+
+**Quais proposições são verdadeiras?**
+
+&lt;ol type="a"&gt;
+  &lt;li&gt;Apenas a II &lt;/li&gt;
+  &lt;li&gt;Apenas a III&lt;/li&gt;
+  &lt;li&gt;I e II&lt;/li&gt;
+  &lt;li&gt;II e III&lt;/li&gt;
+  &lt;li&gt;Nenhuma&lt;/li&gt;
+&lt;/ol&gt;
+
+---
+## Medidas de centro - Média x Mediana
+
+Agora precisamos comparar a média com a mediana. Calcule agora a média e a mediana dos seguintes conjuntos.
+
+.center[.large-text[
+&gt; Conjunto 1: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+ 
+&gt; Conjunto 2: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000
+]]
+
+--
+
+#### Respostas
+
+.pull-left[
+Conjunto 1:
+- Média: 15 
+- Mediana: 15
+]
+
+.pull-right[
+Conjunto 2:
+- Média 195
+- Mediana: 15
+]
+
+--
+
+#### O que podemos concluir sobre essas respostas?
+
+Dizemos que a mediana é mais _robusta_ do que a média, porque ela não é afetada por "valores extremos". 
+
+
+---
+## Exercício de checagem
+
+#### Para cada situação, avalie qual medida é mais adequada para avaliar a medida central, a média ou a mediana:
+1. **Tempo de duração dos processos**. Os tempos de duração dos processos variam muito. Existem processos que se encerram muito rapidamente, em questão de dias, ou de poucos meses, porque se extinguem sem o julgamento do mérito, ou porque é realizado acordo entre as partes, ou até porque a parte autora desiste do processo. Por outro lado, existem processos muito demorados, que se alongam por muitos anos. Neste contexto, qual é a melhor medida para caracterizar o centro da distribuição de tempo de duração de processos? A média ou a mediana?
+1. **De acordo com a distribuição**. Para esta variável genérica, com a seguinte distribuição, qual valor devemos utilizar, média ou mediana?
+
+&lt;img src="a_medidas_files/figure-html/fig-mediana-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Medidas de centro - Moda
+
+### Conceito
+
+A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.
+
+--
+.center[.large-text[
+&gt; 1, 1, 1, 3, 5, 6, 7, 8, 9
+]]
+
+--
+.center[
+Moda: 1
+]
+
+--
+.center[.large-text[
+&gt; 1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8
+]]
+
+--
+.center[
+Moda: 2 e 6
+]
+
+--
+.center[.large-text[
+&gt; 1, 1, 3, 3, 5, 5, 7, 7
+]]
+
+--
+.center[
+Moda: Não existe
+]
+
+---
+.center[.large-text[
+&gt; 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+]]
+
+--
+.center[
+Moda: 1, 13, 18
+]
+
+--
+
+&lt;img src="a_medidas_files/figure-html/unnamed-chunk-1-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+---
+.center[.large-text[
+&gt; 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+]]
+
+.center[
+Moda: 1, 13, 18
+]
+
+&lt;img src="a_medidas_files/figure-html/unnamed-chunk-2-1.png" width="500px" style="display: block; margin: auto;" /&gt;
 ---
 # Medidas de dispersão
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -142,6 +536,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

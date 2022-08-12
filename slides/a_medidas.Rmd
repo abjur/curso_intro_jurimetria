@@ -21,8 +21,53 @@ knitr::opts_chunk$set(
   warning = FALSE
 )
 xaringanExtra::use_panelset()
-```
 
+cores_abj <-  viridis::viridis(2, 1, .2, .8)
+
+# setup_colors(
+#     red = "red",
+#     blue = "blue",
+#     green = "green",s
+#     gray = "dark grey"
+# )
+```
+<div style = "position:fixed; visibility: hidden">
+$$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$
+$$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$
+$$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$
+$$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
+</div>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      red: ["{\\color{red}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      gray: ["{\\color{gray}{#1}}", 1]
+    },
+    loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}}
+  }
+});
+</script>
+
+<style>
+.red {color: #FF0000;}
+.blue {color: #0000FF;}
+.green {color: #00FF00;}
+.gray {color: #A9A9A9;}
+</style>
+
+
+```{r flair_color, echo=FALSE}
+library(flair)
+red <- "#FF0000"
+blue <- "#0000FF"
+green <- "#00FF00"
+gray <- "#A9A9A9"
+```
 ---
 # Roteiro geral das aulas
 
@@ -32,9 +77,9 @@ Depois, vamos ver as medidas desses tipos de variáveis:
 1. Medidas de variáveis categóricas: Tabelas de frequência
 2. Medidas de variáveis numéricas:
   1. Medidas de centro:
-      1. Moda
       1. Média
       1. Mediana
+      1. Moda
   1. Medidas de dispersão:
       1. Desvio médio
       1. Variância
@@ -47,7 +92,7 @@ class: middle, center, tema1
 
 ---
 class: tema1
-# Tipos de variáveis
+## Tipos de variáveis
 
 ### Variáveis qualitativas/categóricas
 
@@ -67,7 +112,7 @@ class: middle, center, tema2
 
 ---
 class: tema2
-# Tabela de frequência
+## Tabela de frequência
 
 |variável $x_i$  |frequência $n_i$|frequência acumulada $N_i$|proporção $f_i$     |proporção acumulada $F_i$|porcentagem $100 f_i$|
 |:--------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:|:---------------------:|
@@ -83,16 +128,428 @@ class: middle, center
 # Medidas para variáveis numéricas
 
 ---
-# Medidas de centro - Média
+## Medidas de centro - Média
 
-$\frac{1}{n} \sum_{i=i}^{n} x_{i}$
+.center-middle[
+.large-lonely[
+$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+]
+]
 
 ---
-# Medidas de centro - Mediana
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+$$\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$
+]
+]
 
 ---
-# Medidas de centro - Moda
+## Medidas de centro - Média
 
+.left-middle[
+.large-lonely[
+$$\red{\sum_{i=i}^{n} x_{i}}$$
+]
+]
+
+--
+.pull-right2[
+Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.
+]
+
+--
+.pull-right2[
+A seguir, temos um exemplo mais simples de interpretar:
+
+.large-text[
+$$4+8+12+16+20=\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+]
+]
+
+--
+.pull-right2[
+Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5). 
+]
+
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+]
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k. 
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_\blue{{k=1}}^\gray{5} \gray{4k}$$
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_\gray{{k=1}}^\blue{5} \gray{4k}$$
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20. 
+
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+]
+]
+
+.pull-left2[
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20. 
+
+Ou seja, serão somados todos os termos de $k=1$ até $k=5$, fazendo $4x1 + 4x2 + 4x3 + 4x4 + 4x5$
+]
+
+---
+## Medidas de centro - Média
+
+.right-middle[
+.large-lonely[
+$$\sum_{{k=1}}^{5} \blue{4k}$$
+]
+]
+
+--
+
+Na fórmula da média, há uma diferença importante: no lugar do k, temos o $x_i$. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é $x_i$ .
+
+.left-middle[
+.large-lonely[
+$$\sum_{i=i}^{n} \blue{x_{i}}$$
+]
+]
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+$$\sum_{i=1}^{10} \blue{x_{i}}$$
+]
+]
+
+.pull-right2[
+
+```{r indice-exemplo, echo=FALSE, out.width="40%"}
+tab <- abjData::leiloes |>
+  dplyr::arrange(desc(descricao)) |>
+  dplyr::select(descricao, valor_avaliacao_inicial) |>
+  head(10) |> 
+  tidyr::replace_na(list(valor_avaliacao_inicial = 0)) |> 
+  dplyr::mutate(
+    descricao = 1:10,
+    descricao = paste0("bem ", descricao)
+  )
+
+tab |> 
+  dplyr::mutate(
+    indice = stringr::str_glue("$x_{1:10}$"), .before = 1
+  ) |>
+  knitr::kable(
+    col.names = c("Índice", "Descrição", "Valor de avaliação inicial"), 
+    digits = 0
+  )
+
+valor_bem1 <- tab$valor_avaliacao_inicial[tab$descricao == "bem 1"]
+```
+
+]
+--
+
+.left-bottom[
+Quando o termo inicial (_i_) é 1, então a expressão a ser somada não é 1, mas é $x_1$ , o que, neste caso, significa R$ `r valor_bem1`
+]
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+$$\sum_{i=i}^{n} x_{i}$$
+]
+]
+
+.pull-right2[
+Com isso, vimos todos os elementos do somatório que faz parte da fórmula da média. Temos a expressão a ser somada ( $x_i$) , o termo inicial ( $i=1$ ) e o termo final (n). 
+]
+
+--
+.pull-right2[
+Importa dizer que, no caso da média, o índice final (n) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações (a unidade de uma base de dados) a serem somadas, então $n=10 $ e o último termo a ser somado será $x_{10}$.
+]
+
+
+---
+## Medidas de centro - Média
+
+.left-middle[
+.large-lonely[
+$$\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}$$
+]
+]
+
+.pull-right2[
+Com isso, vimos todos os elementos do somatório, que faz parte da fórmula da média. Temos a expressão a ser somada ( $x_i$) , o termo inicial ( $i=1$ ) e o termo final (n). Nesse caso, o índice final é quando $i=n$, ou seja, é o $x_n$. Se, por exemplo, existirem 10 expressões a serem somadas, então $n=10$ e o último term^o a ser somado é $x_{10}$.
+
+O que falta agora para completar a fórmula da média é a divisão. A média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo $n$ da divisão!
+]
+
+---
+## Medidas de centro - Média
+
+.center-middle[
+.large-lonely[
+$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+]
+]
+
+---
+## Medidas de centro - Mediana
+
+### Conceito
+
+Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio. 
+
+Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais. 
+
+--
+
+**Exercício rápido.** Ache a mediana dos dois conjuntos a seguir:
+
+.large-text[
+> 3 17 81 502 900
+
+> 5 72 80 100 203 399
+]
+
+---
+## Medidas de centro - Mediana
+
+### Fórmula matemática
+.center-middle[
+.large-lonely[
+$$md\left(x\right)
+=\begin{cases}
+  {x_\frac{n+1}{2}}                                    & n\text{ ímpar}\\
+  \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) & n \text{ par}
+\end{cases}$$
+]
+]
+
+---
+## Exercício de checagem
+
+Dada a seguinte fórmula, avalie as proposições:
+.large-text[$$x_\frac{n+1}{2}$$]
+
+I. Podemos afirmar que, em uma distribuição com 17 números, a mediana será o 8º número da sequência.
+
+II. Dado que $\frac{n+1}{2}$, então a mediana de uma sequência com 17 números é $\frac{17+1}{2}=\frac{18}{2}=9$.
+
+III. Essa fórmula é a fórmula geral para calcular qualquer mediana.
+
+**Quais proposições são verdadeiras?**
+
+<ol type="a">
+  <li>Apenas a II </li>
+  <li>Apenas a III</li>
+  <li>I e II</li>
+  <li>II e III</li>
+  <li>Nenhuma</li>
+</ol>
+
+---
+## Medidas de centro - Média x Mediana
+
+Agora precisamos comparar a média com a mediana. Calcule agora a média e a mediana dos seguintes conjuntos.
+
+.center[.large-text[
+> Conjunto 1: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+ 
+> Conjunto 2: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000
+]]
+
+--
+
+#### Respostas
+
+.pull-left[
+Conjunto 1:
+- Média: 15 
+- Mediana: 15
+]
+
+.pull-right[
+Conjunto 2:
+- Média 195
+- Mediana: 15
+]
+
+--
+
+#### O que podemos concluir sobre essas respostas?
+
+Dizemos que a mediana é mais _robusta_ do que a média, porque ela não é afetada por "valores extremos". 
+
+
+---
+## Exercício de checagem
+
+#### Para cada situação, avalie qual medida é mais adequada para avaliar a medida central, a média ou a mediana:
+1. **Tempo de duração dos processos**. Os tempos de duração dos processos variam muito. Existem processos que se encerram muito rapidamente, em questão de dias, ou de poucos meses, porque se extinguem sem o julgamento do mérito, ou porque é realizado acordo entre as partes, ou até porque a parte autora desiste do processo. Por outro lado, existem processos muito demorados, que se alongam por muitos anos. Neste contexto, qual é a melhor medida para caracterizar o centro da distribuição de tempo de duração de processos? A média ou a mediana?
+1. **De acordo com a distribuição**. Para esta variável genérica, com a seguinte distribuição, qual valor devemos utilizar, média ou mediana?
+
+```{r fig-mediana}
+da_mpg <- ggplot2::mpg |> 
+  dplyr::mutate(cty = cty - 10) |> 
+  dplyr::filter(cty >= 0) 
+  
+da_mpg |> 
+  ggplot2::ggplot() + 
+  ggplot2::aes(x = cty) +
+  ggplot2::geom_bar(fill = cores_abj[1]) +
+  ggplot2::scale_x_continuous(breaks = 2*c(0:13)) +
+  ggplot2::scale_y_continuous(breaks = 5*c(0:5)) +
+  ggplot2::labs(x = "valor", y = "frequência")
+
+# media_cty <- median(da_mpg$cty)
+# mediana_cty <- median(da_mpg$cty)
+```
+
+
+---
+## Medidas de centro - Moda
+
+### Conceito
+
+A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.
+
+--
+.center[.large-text[
+> 1, 1, 1, 3, 5, 6, 7, 8, 9
+]]
+
+--
+.center[
+Moda: 1
+]
+
+--
+.center[.large-text[
+> 1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8
+]]
+
+--
+.center[
+Moda: 2 e 6
+]
+
+--
+.center[.large-text[
+> 1, 1, 3, 3, 5, 5, 7, 7
+]]
+
+--
+.center[
+Moda: Não existe
+]
+
+---
+.center[.large-text[
+> 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+]]
+
+--
+.center[
+Moda: 1, 13, 18
+]
+
+--
+
+```{r, out.width = '500px'}
+
+tibble::tibble(
+  x = c(1:10),
+  y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
+) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x, y) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggplot2::scale_x_continuous(breaks = 1*c(0:10))
+
+```
+---
+.center[.large-text[
+> 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+]]
+
+.center[
+Moda: 1, 13, 18
+]
+
+```{r, out.width = '500px'}
+
+tibble::tibble(
+  x = c(1:10),
+  y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
+) |> 
+  dplyr::mutate(
+    col_dif = x != 2
+  ) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x, y, fill = col_dif) +
+  ggplot2::geom_col(show.legend = FALSE) +
+  ggplot2::scale_x_continuous(breaks = 1*c(0:10)) +
+  ggplot2::scale_fill_manual(values = c(cores_abj[1], "gray70"))
+
+```
 ---
 # Medidas de dispersão
-
