@@ -123,11 +123,10 @@ Para os conflitos entre Instituições Financeiras (Recorrente) e Pessoas Juríd
 
 #### d) Comente, a partir dos viéses descritos no item (a) desta questão, se os resultados pró-devedor ou pró-credor do item (c) podem indicar um viés pró-devedor ou pró-credor dos magistrados?
 
-O resultado pró-devedor dos conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida) pode ser ampliado para dizer que há um viés pró-devedor, mas com ressalvas, pois as decisões pró-devedor podem ter sido decisões com viés de fato ou com viés legislativo. Supõe-se que os devedores não tenham
+O resultado pró-devedor dos conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida) pode ser ampliado para dizer que há um viés pró-devedor, mas com ressalvas, pois as decisões pró-devedor podem ter sido decisões com viés de fato ou com viés legislativo. Supõe-se que os devedores não tenham uma atuação estratégica, pois eles não possuem inteligência e recursos para tanto. 
 
 Já o resultado pró-credor dos conflitos entre Instituições Financeiras (Recorrente) e Pessoas Jurídicas (Recorrida) não pode ser ampliado para dizer que o Judiciário possui um viés pró-credor. O que acontece é que, nas ações em que as instituições financeiras são as recorrentes, a escolha de ajuizar as ações está nas mãos do próprio credor. Dessa forma, eles podem, a partir de uma litigância estratégica, ingressar com recursos somente nos casos em que eles têm maior probabilidade de êxito. 
-
-#### c) O que a conclusão do item (b) nos diz sobre a operacionalização do conceito?
+#### e) O que a conclusão do item (d) nos diz sobre a operacionalização do conceito?
 
 A operacionalização do conceito foi a operacionalização de utilizar a proporção de decisões pró-devedor (plano empírico) para dizer que há um viés judicial pró-devedor (plano abstrato). Essa operacionalização apresenta algumas fragilidades, pois as conclusões que tiramos sobre o viés judicial (conceito abstrato) a partir das decisões (variável) estão contaminadas com os viéses de fato e legislativo. 
 
