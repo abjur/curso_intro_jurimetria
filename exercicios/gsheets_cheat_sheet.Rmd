@@ -1,0 +1,49 @@
+---
+title: "Cheat sheet - Google Sheets"
+author: "ABJ"
+output: pdf_document
+---
+
+Este arquivo contém as fórmulas que serão utilizadas para a realização dos exercícios sobre medidas
+
+## Noções básicas
+
+- Para inserir qualquer fórmula no Google Sheets, você deverá selecionar uma célula e digitar "=". O gsheets só vai compreender o que está sendo escrito como uma fórmula caso haja o sinal de igual antes. 
+
+- Se você copiar e colar uma fórmula para outras células, os valores vão se "atualizar". 
+  - Por exemplo, se eu digito, na célula C1 "=A1+1", então, quando eu copiar e colar essa fórmula em C2 (andando verticalmente), a fórmula, automaticamente será reescrita como "=A2+1". 
+  - Da mesma forma, se eu copiar a fórmula de C1 em D1 (andando horizontalmente), a fórmula copiada ficará como "=B1+1". 
+  
+- Se você deseja impedir que a fórmula "ande" conforme você copia e cola, você deverá digitar um cifrão (\$) antes da parte da fórmula que você deseja fixar. 
+  - O cifrão antes da letra (por exemplo, C1=$A1+1) indica que a fórmula não vai mais andar horizontalmente. 
+    - Por exemplo, se você digitar na célula C1 "=\$A1+1", então, ao copiar esta fórmula em D1, a fórmula NÃO irá ser atualizada para "=B1+1", mas ela manterá "=\$A1+1". Mas se você copiar esta fórmula para C2, então a fórmula ficará "=\$A2+1"
+  - O cifrão antes do número (por exemplo, C1="A\$1+1") indica que a fórmula não vai mais andar verticalmente.
+      - Por exemplo, se você digitar na célula C1 "=A\$1+1", então, ao copiar esta fórmula em C2, a fórmula NÃO irá ser atualizada para "=A2+1", mas ela manterá "=A\$1+1". Mas se você copiar esta fórmula para D1, então a fórmula ficará "=B\$1+1"
+  - Se você deseja fixar o número, tanto horizontal, como verticalmente, então você poderá colocar os dois cifrões (por exemplo, C1="\$A\$1+1")
+  
+- Para selecionar uma coluna inteira, você poderá usar a seguinte notação A:A. Entretanto, prefira utilizar A2:A, pois, em alguns casos, é melhor desconsiderar a célula que contém o nome da coluna. 
+
+## Para variáveis categóricas
+
+1. Para elencar as categorias existentes, utilize a fórmula =UNIQUE(A2:A)"
+2. Para contar o número de ocorrências de determinada categoria, você deverá utilizar o CONTA.SE ou CONTA.SES. 
+  1. O CONTA.SE recebe dois argumentos: CONTA.SE(valores da coluna a serem contados; "categoria contada")
+  1. O CONTA.SES recebe quatro argumentos: CONTA.SES(valores da primeira coluna a serem contados; "categoria contada da primeira coluna"; valores da segunda coluna a serem contados; "categoria contada da segunda coluna")
+  1. Se existir mais de uma categoria a ser contada, você deverá escrever assim: CONTA.SE(valores da coluna a serem contados; {"categoria 1"; "categoria 2"})
+  1. As categorias não precisam ser um texto escrito, mas podem se referir ao conteúdo de uma célula específica: CONTA.SE(valores da coluna a serem contados; A1)
+   
+* Lembre sempre que nas fórmulas, cada parâmetro delas são separados por um ponto-vírgula (;)
+
+## Para variáveis numéricas
+
+### Medidas centrais
+
+1. A média se calcula com a fórmula =MÉDIA(A2:A)
+  1. Para calcular a média de categorias específicas, use o =MÉDIASE(intervalo de critério; "critério"; intervalo da média)
+1. A mediana se calcula com a fórmula =MED(A2:A)
+
+### Medidas de dispersão
+
+Existem fórmulas específicas para calcular as medidas de dispersão, mas não vamos utilizá-las. A única forma de que precisaremos é a de quantis empíricos. Lembrando que os quantis empíricos podem também ser chamados de percentis. 
+
+1. Para calcular os quantis empíricos, utilize a fórmula =PERCENTIL(intervalo de valores; percentil), por exemplo =PERCENTIL(A:A; 0,1) para encontrar o quantil empírico de 0,1 ou 10%. 

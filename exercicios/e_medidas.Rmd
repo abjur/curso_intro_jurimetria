@@ -1,0 +1,70 @@
+---
+title: "Exercícios: Medidas"
+author: "ABJ"
+output: pdf_document
+---
+
+# Orientações gerais
+
+- Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+- Os grupos terão de 40 minutos a 1 hora para responder às questões;
+- Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
+- Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo;
+- Você precisará do arquivo de cola para responder a esses exercícios;
+- As bases para o exercício podem ser encontradas no seguinte link: ... Baixe a base localmente e incorpore-a no seu Drive. 
+
+## I) Exercício 1: Medidas para variáveis categóricas
+
+**1) Faça a tabela de frequência das variáveis assunto e dec_val, incluindo a frequência ($n_i$), proporção ($f_i$) e porcentagem ($100*f_i$)**
+
+**2) Refaça a tabela do item anterior, apenas com a contagem de casos por assunto e a taxa de reforma (em que considera-se que reformou os resultados "Reformou" ou "Parcial")**
+
+**3) Interprete os resultados da tabela do item 2**
+
+
+## II) Exercício 2: Medidas para variáveis numéricas (medidas centrais)
+
+**1) Calcule o IDH médio do Brasil**
+
+**2) Calcule o IDH médio de cada região do Brasil**
+
+**3) Quais regiões estão abaixo da média brasileira?**
+
+**4) Calcule o IDH médio de cada Estado do Brasil**
+
+**5) Calcule a mediana do IDH brasileiro**
+
+**6) Compare a média brasileira com a mediana brasileira. Elas são muito diferente entre si? O que isso indica sobre a distribuição dos dados?**
+
+**7) De acordo com a sua resposta no item 6, responda se, neste caso, é preferível utilizar a média ou a mediana para representar a medida central dos dados?**
+
+## III) Exercício 3: Medidas para variáveis numéricas (medidas de dispersão - desvio)
+
+**1) Calcule o IDH médio do Brasil**
+
+**2) Calcule os desvios de cada município em relação à média. Para isso, crie uma coluna nova**
+
+**3) Calcule a média dos desvio**
+
+**4) Explique o resultado do item 3**
+
+**5) Como podemos arrumar o problema apresentado no item 4? Apresente todas as soluções possíveis, explicando como elas resolvem o problema gerado na conta da média dos desvios**
+
+**6) Aplique as soluções discutidas no caso atual, atualizando as células da planilha com os valores "corrigidos" do desvio**
+
+**7) Calcule o desvio médio e o desvio padrão. Os resultados foram iguais? Por quê?**
+
+## IV) Exercício 4: Medidas para variáveis numéricas (medidas de dispersão - amplitude e IQR)
+
+**1) Calcule os quantis empíricos de 12%, 65$ e 99%**
+
+**2) Faça uma tabela com os principais quantis empíricos (mínimo, quantil inferior, mediana, quantil superior, máximo)**
+
+**3) Calcule a amplitude e o IQR**
+
+**4) O IQR delimita qual porcentagem dos dados? Ou seja, quantos porcentos dos dados o IQR considera para ser calculado? E a amplitude?**
+
+**5) Responda sem calcular: que valor você espera encontrar entre a razão do IQR e a amplitude?**
+
+**6) Agora, calcule a razão do IQR com a amplitude. O resultado te supreende? Por quê? Como você o explica?**
