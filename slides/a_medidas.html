@@ -7,6 +7,10 @@
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="libs/viz-1.8.2/viz.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding-1.0.8/grViz.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
   </head>
@@ -53,7 +57,7 @@ MathJax.Hub.Config({
 
 
 
----
+
 # Roteiro geral das aulas
 
 Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. 
@@ -79,18 +83,8 @@ class: middle, center, tema1
 class: tema1
 ## Tipos de variáveis
 
-### Variáveis qualitativas/categóricas
-
-Variáveis ordinais: As categorias possuem uma ordenação universal entre si
-
-Variáveis nominais: As categorias não possuem uma ordenação universal entre si
-
-### Variáveis quantitativas/numéricas
-
-Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
-
-Variáveis contínuas: Representa números reais
-
+<div id="htmlwidget-eb407376ab23221b5c5b" style="width:90%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eb407376ab23221b5c5b">{"x":{"diagram":"\n  digraph boxes_and_circles {\n\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n\n    # several \"node\" statements\n\n    node [shape = box]\n      cat [label = \"variável categórica\"];\n      num [label = \"variável numérica\"]\n\n    node [shape = box, fillcolor = blue]\n      ord [label = \"variável categórica ordinal\"];\n      nom [label = \"variável categórica nominal\"];\n      cont [label = \"variável numérica contínua\"];\n      disc [label = \"variável numérica discreta\"]\n\n    # several \"edge\" statements\n    cat->ord cat->nom\n    num->cont num->disc\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ---
 class: middle, center, tema2
 # Medidas de Variáveis Categóricas
@@ -523,7 +517,7 @@ Moda: 1, 13, 18
 
 --
 
-&lt;img src="a_medidas_files/figure-html/unnamed-chunk-1-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="a_medidas_files/figure-html/unnamed-chunk-2-1.png" width="500px" style="display: block; margin: auto;" /&gt;
 ---
 .center[.large-text[
 &gt; 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
@@ -533,7 +527,7 @@ Moda: 1, 13, 18
 Moda: 1, 13, 18
 ]
 
-&lt;img src="a_medidas_files/figure-html/unnamed-chunk-2-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="a_medidas_files/figure-html/unnamed-chunk-3-1.png" width="500px" style="display: block; margin: auto;" /&gt;
 ---
 class: center, middle
 

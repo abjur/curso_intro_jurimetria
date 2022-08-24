@@ -68,7 +68,7 @@ blue <- "#0000FF"
 green <- "#00FF00"
 gray <- "#A9A9A9"
 ```
----
+
 # Roteiro geral das aulas
 
 Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. 
@@ -94,18 +94,33 @@ class: middle, center, tema1
 class: tema1
 ## Tipos de variáveis
 
-### Variáveis qualitativas/categóricas
+```{r}
 
-Variáveis ordinais: As categorias possuem uma ordenação universal entre si
+DiagrammeR::grViz("
+  digraph boxes_and_circles {
 
-Variáveis nominais: As categorias não possuem uma ordenação universal entre si
+    # a 'graph' statement
+    graph [overlap = false, fontsize = 10, rankdir = LR]
 
-### Variáveis quantitativas/numéricas
 
-Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
+    # several 'node' statements
 
-Variáveis contínuas: Representa números reais
+    node [shape = box]
+      cat [label = 'variável categórica'];
+      num [label = 'variável numérica']
 
+    node [shape = box, fillcolor = blue]
+      ord [label = 'variável categórica ordinal'];
+      nom [label = 'variável categórica nominal'];
+      cont [label = 'variável numérica contínua'];
+      disc [label = 'variável numérica discreta']
+
+    # several 'edge' statements
+    cat->ord cat->nom
+    num->cont num->disc
+  }
+  ")
+```
 ---
 class: middle, center, tema2
 # Medidas de Variáveis Categóricas

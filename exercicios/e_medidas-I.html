@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Medidas I</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="libs/viz-1.8.2/viz.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding-1.0.8/grViz.js"></script>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Medidas I
+]
+
+---
+
+
+
+&lt;div style = "position:fixed; visibility: hidden"&gt;
+`$$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$`
+`$$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$`
+`$$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$`
+`$$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$`
+&lt;/div&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      red: ["{\\color{red}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      gray: ["{\\color{gray}{#1}}", 1]
+    },
+    loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}}
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.red {color: #FF0000;}
+.blue {color: #0000FF;}
+.green {color: #00FF00;}
+.gray {color: #A9A9A9;}
+&lt;/style&gt;
+
+
+
+
+# Roteiro geral das aulas
+
+Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. 
+
+Depois, vamos ver as medidas desses tipos de variáveis:
+1. Medidas de variáveis categóricas: Tabelas de frequência
+2. Medidas de variáveis numéricas:
+  1. Medidas de centro:
+      1. Média
+      1. Mediana
+      1. Moda
+  1. Medidas de dispersão:
+      1. Desvio médio
+      1. Variância
+      1. Desvio padrão
+      1. Amplitude
+      1. IQR
+---
+class: middle, center, tema1
+# Tipos de variáveis
+
+---
+## Tipos de variáveis
+
+<div id="htmlwidget-e79b09a21e0dd1f6cbb1" style="width:90%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e79b09a21e0dd1f6cbb1">{"x":{"diagram":"\n  digraph boxes_and_circles {\n\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n\n    # several \"node\" statements\n\n    node [shape = box]\n      cat [label = \"variável categórica\"];\n      num [label = \"variável numérica\"]\n\n    node [shape = box, fillcolor = blue]\n      ord [label = \"variável categórica ordinal\"];\n      nom [label = \"variável categórica nominal\"];\n      cont [label = \"variável numérica contínua\"];\n      disc [label = \"variável numérica discreta\"]\n\n    # several \"edge\" statements\n    cat->ord cat->nom\n    num->cont num->disc\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+---
+class: middle, center
+# Medidas de Variáveis Categóricas
+
+---
+## Tabela de frequência
+
+|variável `\(x_i\)`  |frequência `\(n_i\)`|frequência acumulada `\(N_i\)`|proporção `\(f_i\)`     |proporção acumulada `\(F_i\)`|porcentagem `\(100 f_i\)`|
+|:--------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:|:---------------------:|
+|resposta 1 `\(x_1\)`| `\(n_1\)`          | `\(N_1=n_1\)`                | `\(f_1=\frac{n_1}{n}\)`| `\(F_1=f_1\)`               | `\(100f_1\)`              |
+|resposta 2 `\(x_2\)`| `\(n_2\)`          | `\(N_2=N_1+n_2\)`            | `\(f_2=\frac{n_2}{n}\)`| `\(F_2=F_1+f_2\)`           | `\(100f_2\)`              |
+|resposta 3 `\(x_3\)`| `\(n_3\)`          | `\(N_3=N_2+n_3\)`            | `\(f_3=\frac{n_3}{n}\)`| `\(F_3=F_2+f_3\)`           | `\(100f_3\)`              |
+| `\(...\)`          | `\(...\)`          | `\(...\)`                    | `\(...\)`              | `\(...\)`                   | `\(...\)`                 |
+|resposta k `\(x_k\)`| `\(n_k\)`          | `\(N_k=N_1+n_k\)`            | `\(f_k=\frac{n_k}{n}\)`| `\(F_k=F_{k-1}+f_k\)`       | `\(100f_k\)`              |
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:12",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

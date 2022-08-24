@@ -11,8 +11,8 @@ output: pdf_document
 - Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
 - Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo;
-- Você precisará do arquivo de cola para responder a esses exercícios;
-- As bases para o exercício podem ser encontradas no seguinte link: ... Baixe a base localmente e incorpore-a no seu Drive. 
+- Você precisará do arquivo de cola para responder a esses exercícios. O arquivo de cola está no Drive. 
+- As bases para o exercício podem ser encontradas no seguinte link: https://docs.google.com/spreadsheets/d/18icIOI2XZX4NR54upLsN0CnLRkyeo6ryQYsTKrZQxL0/edit?usp=sharing. Baixe a base localmente e incorpore-a no seu Drive para fazer os exercícios. 
 
 ## I) Exercício 1: Medidas para variáveis categóricas
 
@@ -21,7 +21,6 @@ output: pdf_document
 **2) Refaça a tabela do item anterior, apenas com a contagem de casos por assunto e a taxa de reforma (em que considera-se que reformou os resultados "Reformou" ou "Parcial")**
 
 **3) Interprete os resultados da tabela do item 2**
-
 
 ## II) Exercício 2: Medidas para variáveis numéricas (medidas centrais)
 
@@ -57,14 +56,12 @@ output: pdf_document
 
 ## IV) Exercício 4: Medidas para variáveis numéricas (medidas de dispersão - amplitude e IQR)
 
-**1) Calcule os quantis empíricos de 12%, 65$ e 99%**
+**1) Calcule os quantis empíricos de 12%, 65% e 99%**
 
 **2) Faça uma tabela com os principais quantis empíricos (mínimo, quantil inferior, mediana, quantil superior, máximo)**
 
 **3) Calcule a amplitude e o IQR**
 
-**4) O IQR delimita qual porcentagem dos dados? Ou seja, quantos porcentos dos dados o IQR considera para ser calculado? E a amplitude?**
+**4) Calcule o IQR dos Estados de GO e DF e interprete os resultados**
 
-**5) Responda sem calcular: que valor você espera encontrar entre a razão do IQR e a amplitude?**
-
-**6) Agora, calcule a razão do IQR com a amplitude. O resultado te supreende? Por quê? Como você o explica?**
+**5) Calcule a amplitude dos Estados de GO e DF e interprete os resultados, comparando com o IQR**
