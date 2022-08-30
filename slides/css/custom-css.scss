@@ -1,0 +1,17 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Lato-BoldItalic";
+$body-bg: #102C68;
+$body-color: #e5e5e5;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+p.thick negrito-cor {
+  font-weight: bold;
+  color: #AFCA0A;
+}

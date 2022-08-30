@@ -3,7 +3,7 @@ title: "Medidas"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["css/xaringan-themer.css", "default", "css/custom-css.css"]
+    css: ["xaringan-themer.css", "default", "css/quarto-css.css"]
     nature:
       ratio: "16:12"
       highlightStyle: github
@@ -69,7 +69,7 @@ green <- "#00FF00"
 gray <- "#A9A9A9"
 ```
 
-# Roteiro geral das aulas
+## Roteiro geral das aulas
 
 Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. 
 
@@ -86,6 +86,15 @@ Depois, vamos ver as medidas desses tipos de variáveis:
       1. Desvio padrão
       1. Amplitude
       1. IQR
+---
+## Plano geral de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1. Ver a classificação dos tips de variáveis
+
+1. Ver como os tipos de variáveis se refletem em uma base de dados
+
 ---
 class: middle, center, tema1
 # Tipos de variáveis
@@ -116,11 +125,42 @@ DiagrammeR::grViz("
       disc [label = 'variável numérica discreta']
 
     # several 'edge' statements
-    cat->ord cat->nom
     num->cont num->disc
+    cat->ord cat->nom
   }
   ")
 ```
+
+---
+class: tema1
+## Tipos de variáveis
+
+### Variáveis qualitativas/categóricas
+
+Variáveis ordinais: As categorias possuem uma ordenação universal entre si
+
+Variáveis nominais: As categorias não possuem uma ordenação universal entre si
+
+### Variáveis quantitativas/numéricas
+
+Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
+
+Variáveis contínuas: Representa números reais
+
+---
+class: tema1
+
+## Tipos de variáveis
+
+### Por que essa classificação importa?
+
+Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
+
+---
+class: tema1, middle, center
+
+# Fim
+
 ---
 class: middle, center, tema2
 # Medidas de Variáveis Categóricas
@@ -131,16 +171,28 @@ class: tema2
 
 |variável $x_i$  |frequência $n_i$|frequência acumulada $N_i$|proporção $f_i$     |proporção acumulada $F_i$|porcentagem $100 f_i$|
 |:--------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:|:---------------------:|
-|resposta 1 $x_1$| $n_1$          | $N_1=n_1$                | $f_1=\frac{n_1}{n}$| $F_1=f_1$               | $100f_1$              |
-|resposta 2 $x_2$| $n_2$          | $N_2=N_1+n_2$            | $f_2=\frac{n_2}{n}$| $F_2=F_1+f_2$           | $100f_2$              |
-|resposta 3 $x_3$| $n_3$          | $N_3=N_2+n_3$            | $f_3=\frac{n_3}{n}$| $F_3=F_2+f_3$           | $100f_3$              |
+| $x_1$| $n_1$          | $N_1=n_1$                | $f_1=\frac{n_1}{n}$| $F_1=f_1$               | $100f_1$              |
+| $x_2$| $n_2$          | $N_2=N_1+n_2$            | $f_2=\frac{n_2}{n}$| $F_2=F_1+f_2$           | $100f_2$              |
+| $x_3$| $n_3$          | $N_3=N_2+n_3$            | $f_3=\frac{n_3}{n}$| $F_3=F_2+f_3$           | $100f_3$              |
 | $...$          | $...$          | $...$                    | $...$              | $...$                   | $...$                 |
-|resposta k $x_k$| $n_k$          | $N_k=N_1+n_k$            | $f_k=\frac{n_k}{n}$| $F_k=F_{k-1}+f_k$       | $100f_k$              |
+| $x_k$| $n_k$          | $N_k=N_1+n_k$            | $f_k=\frac{n_k}{n}$| $F_k=F_{k-1}+f_k$       | $100f_k$              |
 
 ---
 class: middle, center
 
 # Medidas para variáveis numéricas
+
+---
+## Plano geral de aula
+
+As variáveis numéricas podem ser descritas em duas dimensões: (1) as medidas de centro e (2) as medidas de dispersão. 
+
+Nesta aula, vamos ver apenas as medidas de centro. Na aula seguinte, veremos as medidas de dispersão. 
+
+As medidas de centro são:
+1. Média
+2. Mediana
+3. Moda
 
 ---
 ## Medidas de centro - Média
@@ -454,32 +506,6 @@ Conjunto 2:
 #### O que podemos concluir sobre essas respostas?
 
 Dizemos que a mediana é mais _robusta_ do que a média, porque ela não é afetada por "valores extremos". 
-
-
----
-## Exercício de checagem
-
-#### Para cada situação, avalie qual medida é mais adequada para avaliar a medida central, a média ou a mediana:
-1. **Tempo de duração dos processos**. Os tempos de duração dos processos variam muito. Existem processos que se encerram muito rapidamente, em questão de dias, ou de poucos meses, porque se extinguem sem o julgamento do mérito, ou porque é realizado acordo entre as partes, ou até porque a parte autora desiste do processo. Por outro lado, existem processos muito demorados, que se alongam por muitos anos. Neste contexto, qual é a melhor medida para caracterizar o centro da distribuição de tempo de duração de processos? A média ou a mediana?
-1. **De acordo com a distribuição**. Para esta variável genérica, com a seguinte distribuição, qual valor devemos utilizar, média ou mediana?
-
-```{r fig-mediana}
-da_mpg <- ggplot2::mpg |> 
-  dplyr::mutate(cty = cty - 10) |> 
-  dplyr::filter(cty >= 0) 
-  
-da_mpg |> 
-  ggplot2::ggplot() + 
-  ggplot2::aes(x = cty) +
-  ggplot2::geom_bar(fill = cores_abj[1]) +
-  ggplot2::scale_x_continuous(breaks = 2*c(0:13)) +
-  ggplot2::scale_y_continuous(breaks = 5*c(0:5)) +
-  ggplot2::labs(x = "valor", y = "frequência")
-
-# media_cty <- median(da_mpg$cty)
-# mediana_cty <- median(da_mpg$cty)
-```
-
 
 ---
 ## Medidas de centro - Moda

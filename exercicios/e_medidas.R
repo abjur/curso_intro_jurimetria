@@ -6,6 +6,7 @@ link_tabela_frequencia <- "https://docs.google.com/spreadsheets/d/1-7b4xt0o68sh9
 
 # base simples
 
+set.seed(30)
 da_simples <- saudeJFCE::da_jfce |>
   dplyr::sample_n(30) |>
   dplyr::select(id_processo, assunto) |>

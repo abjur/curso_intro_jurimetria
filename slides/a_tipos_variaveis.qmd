@@ -1,0 +1,118 @@
+---
+title: "Medidas"
+subtitle: "Tipos de variáveis"
+format: 
+  revealjs:
+    theme: [default, css/custom-css.scss]
+editor: visual
+---
+
+## Roteiro geral das aulas {.smaller}
+
+Vamos começar vendo os tipos de variávies, que, .negrito-cor{basicamente}, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:
+
+1.  Medidas de variáveis categóricas: Tabelas de frequência
+2.  Medidas de variáveis numéricas
+    1.  Medidas de centro:
+
+        1.  Média
+
+        2.  Mediana
+
+        3.  Moda
+
+    2.  Medidas de dispersão:
+
+        1.  Desvio médio
+
+        2.  Variância
+
+        3.  Desvio padrão
+
+        4.  Amplitude
+
+        5.  IQR
+
+## Plano geral de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1.  Ver a classificação dos tips de variáveis
+2.  Ver como os tipos de variáveis se refletem em uma base de dados
+
+# Tipos de variáveis
+
+## Tipos de variáveis
+
+```{r}
+DiagrammeR::grViz("
+
+  digraph tipos_variaveis {
+
+    # a 'graph' statement
+
+    graph [overlap = false, fontsize = 10, rankdir = LR]
+
+    # several 'node' statements
+
+    node [shape = box]
+
+      cat [label = 'variável categórica', rank = 1];
+
+      num [label = 'variável numérica', rank = 2]
+
+    node [shape = box]
+
+      ord [label = 'variável ordinal'];
+
+      nom [label = 'variável nominal'];
+
+      cont [label = 'variável contínua'];
+
+      disc [label = 'variável discreta']
+
+    # several 'edge' statements
+    
+    subgraph {
+    rank = same; ord; nom
+    }
+    
+    cat->{ord, nom} 
+    
+    num -> {cont, disc}
+
+    {
+    rank = same;
+    edge[style=invis];
+    ord->nom
+    disc->cont
+    rankdir = 'TB'
+    }
+
+  }
+
+  ")
+
+```
+
+## Tipos de variáveis {.smaller}
+
+### Variáveis categóricas
+
+Variáveis ordinais: As categorias possuem uma ordenação universal entre si
+
+Variáveis nominais: As categorias não possuem uma ordenação universal entre si
+
+### Variáveis numéricas
+
+Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
+
+Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)
+
+## Tipos de variáveis
+
+### Por que essa classificação importa?
+
+Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
+
+# Fim
