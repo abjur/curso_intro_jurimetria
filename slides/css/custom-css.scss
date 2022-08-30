@@ -6,12 +6,21 @@ $body-color: #e5e5e5;
 
 /*-- scss:rules --*/
 
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
+.reveal .headers h2 {
+  color: #102C68;
+  text-align: center;
 }
 
-p.thick negrito-cor {
-  font-weight: bold;
+.reveal .headers h3 {
   color: #AFCA0A;
+  text-align: center;
 }
+
+.reveal .tema1 {
+  background-color: #fff;
+  border-top-width: 10px;
+  border-top-style: solid;
+  padding-top: 10px;
+  border-color: #3B0F70;
+}
+

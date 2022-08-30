@@ -326,9 +326,9 @@
   <p class="subtitle">Tipos de variáveis</p>
 </section>
 
-<section id="roteiro-geral-das-aulas" class="slide level2 smaller">
+<section id="roteiro-geral-das-aulas" class="slide level2 headers tema1">
 <h2>Roteiro geral das aulas</h2>
-<p>Vamos começar vendo os tipos de variávies, que, .negrito-cor{basicamente}, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:</p>
+<p>Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:</p>
 <ol type="1">
 <li>Medidas de variáveis categóricas: Tabelas de frequência</li>
 <li>Medidas de variáveis numéricas
@@ -367,8 +367,8 @@
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-8c7019ecfca031e9c517" style="width:960px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8c7019ecfca031e9c517">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c5958f0dabba815dae4f" style="width:960px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c5958f0dabba815dae4f">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
