@@ -7,7 +7,7 @@ format:
 editor: visual
 ---
 
-## Roteiro geral das aulas  {.headers .tema1}
+## Roteiro geral das aulas {.headers .tema1}
 
 Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:
 

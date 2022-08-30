@@ -1,18 +1,18 @@
 /*-- scss:defaults --*/
 
-$font-family-sans-serif: "Lato-BoldItalic";
-$body-bg: #102C68;
+$font-family-sans-serif: Yaldevi,Lato;
+$body-bg: #233262;
 $body-color: #e5e5e5;
 
 /*-- scss:rules --*/
 
 .reveal .headers h2 {
-  color: #102C68;
-  text-align: center;
+  color: #535692;
+  text-align: left;
 }
 
 .reveal .headers h3 {
-  color: #AFCA0A;
+  color: #b0e4af;
   text-align: center;
 }
 
@@ -21,6 +21,6 @@ $body-color: #e5e5e5;
   border-top-width: 10px;
   border-top-style: solid;
   padding-top: 10px;
-  border-color: #3B0F70;
+  border-color: #535692;
 }
 
