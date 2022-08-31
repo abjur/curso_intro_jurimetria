@@ -5,9 +5,10 @@ format:
   revealjs:
     theme: [default, css/custom-css.scss]
 editor: visual
+transition: fade
 ---
 
-## Roteiro geral das aulas {.headers .tema1}
+## **Roteiro geral das aulas**  {.headersh2}
 
 Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:
 
@@ -33,14 +34,14 @@ Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: v
 
         5.  IQR
 
-## Plano geral de aula
+## Plano geral de aula {.normal-page-img}
 
 Na aula de hoje, teremos dois objetivos:
 
 1.  Ver a classificação dos tips de variáveis
 2.  Ver como os tipos de variáveis se refletem em uma base de dados
 
-# Tipos de variáveis
+# Tipos de variáveis {.topics-page}
 
 ## Tipos de variáveis
 
@@ -95,23 +96,23 @@ DiagrammeR::grViz("
 
 ```
 
-## Tipos de variáveis {.smaller}
+## Tipos de variáveis {.normal-page .logo}
 
-### Variáveis categóricas
+### Variáveis categóricas {.headersh3}
 
 Variáveis ordinais: As categorias possuem uma ordenação universal entre si
 
 Variáveis nominais: As categorias não possuem uma ordenação universal entre si
 
-### Variáveis numéricas
+### Variáveis numéricas  {.headersh3}
 
 Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
 
 Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)
 
-## Tipos de variáveis
+## Tipos de variáveis {.normal-page}
 
-### Por que essa classificação importa?
+### Por que essa classificação importa? {.headersh3}
 
 Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
 
