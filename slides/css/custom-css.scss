@@ -1,11 +1,13 @@
 /*-- scss:defaults --*/
 
-$font-family-sans-serif: "Lato-BoldItalic";
-$body-bg: #102C68;
+$font-family-sans-serif: Yaldevi,Lato;
+$body-bg: #233262;
 $body-color: #e5e5e5;
+$text-weight: 900;
 
 /*-- scss:rules --*/
 
+<<<<<<< HEAD
 .center-middle {
   margin: 0;
   position: absolute;
@@ -31,18 +33,62 @@ $body-color: #e5e5e5;
 .reveal .headers h2 {
   color: #102C68;
   text-align: center;
+=======
+.reveal .headersh2 {
+  color: #535692;
+  font-weight: 800;
+  text-align: left;
+>>>>>>> 8a970f322c5d43ada9ab2c7fd02bf20903f086fe
 }
 
-.reveal .headers h3 {
-  color: #AFCA0A;
-  text-align: center;
+.reveal .headersh3 {
+  color: #535692;
+  $bold-weight: 700;
+  text-align: left;
 }
 
-.reveal .tema1 {
+
+.reveal .topics-page {
+  background-color: #233262;
+  border-left: 30px;
+  border-left-style: solid;
+  border-left-color:#b0e4af;
+  font-size: 40px;
+}
+
+.reveal .normal-page {
   background-color: #fff;
-  border-top-width: 10px;
+  border-block-end: 30px;
+  border-block-end-style:solid;
+  border-block-end-color:#233262;
+  font-size:28px;
+  color:#535692;
+
+}
+
+.reveal .normal-page-img {
+  background-color: #fff;
+  border-left-style: solid;
+  border-left-width: 180px;
+  border-left-color:#233262;
+  font-size:28px;
+  color:#535692;
+
+}
+
+.logo {
+    background-image: url(slides/img/logo-abj-colorido.png) ;
+    background-size: contain;
+    background-position: end;
+    width: auto;
+    height: 50px;
+  }
+
+.reveal .citations-page {
+  background-color: #fff;
+  border-top-width: 20px;
   border-top-style: solid;
   padding-top: 10px;
-  border-color: #3B0F70;
+  border-color: #535692;
 }
 

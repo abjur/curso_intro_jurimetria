@@ -7,7 +7,7 @@
 <link href="a_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="a_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.0.38">
 
   <title>Medidas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -326,7 +326,7 @@
   <p class="subtitle">Tipos de variáveis</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller">
+<section id="ementa-do-curso" class="slide level2 smaller headersh2">
 <h2>Ementa do curso</h2>
 <ol type="1">
 <li>Tipos de variáveis</li>
@@ -347,7 +347,7 @@
 </ol></li>
 </ol>
 </section>
-<section id="plano-geral-de-aula" class="slide level2">
+<section id="plano-geral-de-aula" class="slide level2 normal-page-img">
 <h2>Plano geral de aula</h2>
 <p>Na aula de hoje, teremos dois objetivos:</p>
 <ol type="1">
@@ -356,7 +356,7 @@
 </ol>
 </section>
 <section>
-<section id="tipos-de-variáveis" class="title-slide slide level1 center">
+<section id="tipos-de-variáveis" class="title-slide slide level1 topics-page center">
 <h1>Tipos de variáveis</h1>
 
 </section>
@@ -364,23 +364,28 @@
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
+<<<<<<< HEAD
 <div id="htmlwidget-9ddb25d09bbc69242cdf" style="width:960px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-9ddb25d09bbc69242cdf">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+=======
+<div id="htmlwidget-bd70f1bfee2d1b7b19a7" style="width:960px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bd70f1bfee2d1b7b19a7">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+>>>>>>> 8a970f322c5d43ada9ab2c7fd02bf20903f086fe
 </div>
 </div>
 </section>
-<section id="tipos-de-variáveis-2" class="slide level2 smaller">
+<section id="tipos-de-variáveis-2" class="slide level2 normal-page logo">
 <h2>Tipos de variáveis</h2>
-<h3 id="variáveis-categóricas">Variáveis categóricas</h3>
+<h3 class="headersh3" id="variáveis-categóricas">Variáveis categóricas</h3>
 <p>Variáveis ordinais: As categorias possuem uma ordenação universal entre si</p>
 <p>Variáveis nominais: As categorias não possuem uma ordenação universal entre si</p>
-<h3 id="variáveis-numéricas">Variáveis numéricas</h3>
+<h3 class="headersh3" id="variáveis-numéricas">Variáveis numéricas</h3>
 <p>Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).</p>
 <p>Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)</p>
 </section>
-<section id="tipos-de-variáveis-3" class="slide level2">
+<section id="tipos-de-variáveis-3" class="slide level2 normal-page">
 <h2>Tipos de variáveis</h2>
-<h3 id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
+<h3 class="headersh3" id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
 <p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.</p>
 </section></section>
 <section id="fim" class="title-slide slide level1 center">
@@ -546,7 +551,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
