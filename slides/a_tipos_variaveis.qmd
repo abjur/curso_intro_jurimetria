@@ -8,37 +8,32 @@ editor: visual
 transition: fade
 ---
 
-## **Roteiro geral das aulas**  {.headersh2}
+## Ementa do curso {.smaller .headersh2}
 
-Vamos começar vendo os tipos de variávies, que, basicamente, podem ser dois: variáveis categóricas e variáveis numéricas. Depois, vamos ver as medidas desses tipos de variáveis, conforme a seguinte lista:
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
 
-1.  Medidas de variáveis categóricas: Tabelas de frequência
-2.  Medidas de variáveis numéricas
-    1.  Medidas de centro:
+    2.  Mediana
 
-        1.  Média
+    3.  Moda
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
 
-        2.  Mediana
+    2.  Variância
 
-        3.  Moda
+    3.  Desvio padrão
 
-    2.  Medidas de dispersão:
+    4.  Amplitude
 
-        1.  Desvio médio
-
-        2.  Variância
-
-        3.  Desvio padrão
-
-        4.  Amplitude
-
-        5.  IQR
+    5.  IQR
 
 ## Plano geral de aula {.normal-page-img}
 
 Na aula de hoje, teremos dois objetivos:
 
-1.  Ver a classificação dos tips de variáveis
+1.  Ver a classificação dos tipos de variáveis
 2.  Ver como os tipos de variáveis se refletem em uma base de dados
 
 # Tipos de variáveis {.topics-page}

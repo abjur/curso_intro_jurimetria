@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="a_tipos_variaveis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/popper.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+<script src="a_tabela_frequencia_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a_tabela_frequencia_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a_tabela_frequencia_files/libs/quarto-html/popper.min.js"></script>
+<script src="a_tabela_frequencia_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a_tabela_frequencia_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a_tabela_frequencia_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a_tabela_frequencia_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.36">
 
   <title>Medidas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a_tabela_frequencia_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a_tabela_frequencia_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a_tabela_frequencia_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a_tabela_frequencia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a_tabela_frequencia_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -312,10 +312,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="a_tipos_variaveis_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-  <script src="a_tipos_variaveis_files/libs/viz-1.8.2/viz.js"></script>
-  <link href="a_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-  <script src="a_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -323,10 +319,10 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Medidas</h1>
-  <p class="subtitle">Tipos de variáveis</p>
+  <p class="subtitle">Tabela de frequência</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller headersh2">
+<section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
 <ol type="1">
 <li>Tipos de variáveis</li>
@@ -347,41 +343,103 @@
 </ol></li>
 </ol>
 </section>
-<section id="plano-geral-de-aula" class="slide level2 normal-page-img">
-<h2>Plano geral de aula</h2>
-<p>Na aula de hoje, teremos dois objetivos:</p>
+<section id="ementa-do-curso-1" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Ementa do curso</h2>
 <ol type="1">
-<li>Ver a classificação dos tipos de variáveis</li>
-<li>Ver como os tipos de variáveis se refletem em uma base de dados</li>
+<li>Tipos de variáveis</li>
+<li><strong>Medidas de variáveis categóricas: Tabelas de frequência</strong></li>
+<li>Medidas de variáveis numéricas I: Medidas de centro
+<ol type="1">
+<li><p>Média</p></li>
+<li><p>Mediana</p></li>
+<li><p>Moda</p></li>
+</ol></li>
+<li>Medidas de variáveis numéricas II: Medidas de dispersão
+<ol type="1">
+<li><p>Desvio médio</p></li>
+<li><p>Variância</p></li>
+<li><p>Desvio padrão</p></li>
+<li><p>Amplitude</p></li>
+<li><p>IQR</p></li>
+</ol></li>
 </ol>
 </section>
 <section>
-<section id="tipos-de-variáveis" class="title-slide slide level1 topics-page center">
-<h1>Tipos de variáveis</h1>
+<section id="medidas-de-variáveis-categóricas" class="title-slide slide level1 center">
+<h1>Medidas de variáveis categóricas</h1>
 
 </section>
-<section id="tipos-de-variáveis-1" class="slide level2">
-<h2>Tipos de variáveis</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div id="htmlwidget-bd70f1bfee2d1b7b19a7" style="width:960px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bd70f1bfee2d1b7b19a7">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
-<section id="tipos-de-variáveis-2" class="slide level2 normal-page logo">
-<h2>Tipos de variáveis</h2>
-<h3 class="headersh3" id="variáveis-categóricas">Variáveis categóricas</h3>
-<p>Variáveis ordinais: As categorias possuem uma ordenação universal entre si</p>
-<p>Variáveis nominais: As categorias não possuem uma ordenação universal entre si</p>
-<h3 class="headersh3" id="variáveis-numéricas">Variáveis numéricas</h3>
-<p>Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).</p>
-<p>Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)</p>
-</section>
-<section id="tipos-de-variáveis-3" class="slide level2 normal-page">
-<h2>Tipos de variáveis</h2>
-<h3 class="headersh3" id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
-<p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.</p>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<table>
+<caption>Tabela de frequência</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Variável</p>
+<span class="math inline">\(x_i\)</span></th>
+<th><p>Frequência</p>
+<span class="math inline">\(n_i\)</span></th>
+<th><p>Frequência acumulada</p>
+<span class="math inline">\(N_i\)</span></th>
+<th><p>Proporção</p>
+<span class="math inline">\(f_i\)</span></th>
+<th><p>Proporção acumulada</p>
+<span class="math inline">\(F_i\)</span></th>
+<th><p>Porcentagem</p>
+<span class="math inline">\(100 f_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x_1\)</span></td>
+<td><span class="math inline">\(n_1\)</span></td>
+<td><span class="math inline">\(N_1=n_1\)</span></td>
+<td><span class="math inline">\(f_1=\frac{n_1}{n}\)</span></td>
+<td><span class="math inline">\(F_1=f_1\)</span></td>
+<td><span class="math inline">\(100f_1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x_2\)</span></td>
+<td><span class="math inline">\(n_2\)</span></td>
+<td><span class="math inline">\(N_2=N_1+n_2\)</span></td>
+<td><span class="math inline">\(f_2=\frac{n_2}{n}\)</span></td>
+<td><span class="math inline">\(F_2=F_1+f_2\)</span></td>
+<td><span class="math inline">\(100f_2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x_3\)</span></td>
+<td><span class="math inline">\(n_3\)</span></td>
+<td><span class="math inline">\(N_3=N_2+n_3\)</span></td>
+<td><span class="math inline">\(f_3=\frac{n_3}{n}\)</span></td>
+<td><span class="math inline">\(F_3=F_2+f_3\)</span></td>
+<td><span class="math inline">\(100f_3\)</span></td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x_k\)</span></td>
+<td><span class="math inline">\(n_k\)</span></td>
+<td><span class="math inline">\(N_k=N_{k-1}+n_k\)</span></td>
+<td><span class="math inline">\(f_k=\frac{n_k}{n}\)</span></td>
+<td><span class="math inline">\(F_k=F_{k-1}+f_k\)</span></td>
+<td><span class="math inline">\(100f_k\)</span></td>
+</tr>
+</tbody>
+</table>
 </section></section>
 <section id="fim" class="title-slide slide level1 center">
 <h1>Fim</h1>
@@ -393,19 +451,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a_tabela_frequencia_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -546,7 +604,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -600,48 +658,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
