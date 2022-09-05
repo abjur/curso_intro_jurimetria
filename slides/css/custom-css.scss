@@ -6,6 +6,28 @@ $body-color: #e5e5e5;
 
 /*-- scss:rules --*/
 
+.center-middle {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.left-middle {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.large-lonely { font-size: 200% }
+
+.large-text { font-size: 130% }
+
 .reveal .headers h2 {
   color: #102C68;
   text-align: center;
@@ -23,3 +45,4 @@ $body-color: #e5e5e5;
   padding-top: 10px;
   border-color: #3B0F70;
 }
+

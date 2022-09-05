@@ -11,7 +11,8 @@
     <script src="libs/viz-1.8.2/viz.js"></script>
     <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding-1.0.9/grViz.js"></script>
-    <link rel="stylesheet" href="css/quarto-css.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -47,12 +48,6 @@ MathJax.Hub.Config({
 });
 &lt;/script&gt;
 
-&lt;style&gt;
-.red {color: #FF0000;}
-.blue {color: #0000FF;}
-.green {color: #00FF00;}
-.gray {color: #A9A9A9;}
-&lt;/style&gt;
 
 
 
@@ -91,8 +86,8 @@ class: middle, center, tema1
 class: tema1
 ## Tipos de variáveis
 
-<div id="htmlwidget-bae48149e7707681391b" style="width:90%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bae48149e7707681391b">{"x":{"diagram":"\n  digraph boxes_and_circles {\n\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n\n    # several \"node\" statements\n\n    node [shape = box]\n      cat [label = \"variável categórica\"];\n      num [label = \"variável numérica\"]\n\n    node [shape = box, fillcolor = blue]\n      ord [label = \"variável categórica ordinal\"];\n      nom [label = \"variável categórica nominal\"];\n      cont [label = \"variável numérica contínua\"];\n      disc [label = \"variável numérica discreta\"]\n\n    # several \"edge\" statements\n    num->cont num->disc\n    cat->ord cat->nom\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f95b697e4c4711b48483" style="width:90%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f95b697e4c4711b48483">{"x":{"diagram":"\n  digraph boxes_and_circles {\n\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n\n    # several \"node\" statements\n\n    node [shape = box]\n      cat [label = \"variável categórica\"];\n      num [label = \"variável numérica\"]\n\n    node [shape = box, fillcolor = blue]\n      ord [label = \"variável categórica ordinal\"];\n      nom [label = \"variável categórica nominal\"];\n      cont [label = \"variável numérica contínua\"];\n      disc [label = \"variável numérica discreta\"]\n\n    # several \"edge\" statements\n    num->cont num->disc\n    cat->ord cat->nom\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class: tema1
@@ -728,9 +723,8 @@ A partir dos desvios, a gente quer calcular **uma única medida** para resumir t
 
 Mas isso tem um problema: A média dos desvios é sempre 0!
 
-.large-text[
+
 `$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)=\frac{1}{n}\sum_{i=1}^n x_i - \frac{1}{n}\sum_{i=1}^n \bar x = \bar x - \frac{n}{n}\bar x = \bar x - \bar x = 0$$`
-]
 
 O problema são os números negativos dos desvios. A gente precisa eliminá-los. Para isso temos outras duas soluções:
 
@@ -738,7 +732,7 @@ O problema são os números negativos dos desvios. A gente precisa eliminá-los.
 ## Medidas de dispersão em torno da média
 ### Solução 2: Tirar a média do módulo dos desvios
 
-.pull-left[.large-text[$$\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|$$]]
+.pull-left[$$\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|$$]
 
 --
 &lt;br /&gt;
@@ -749,7 +743,7 @@ O problema são os números negativos dos desvios. A gente precisa eliminá-los.
 
 ### Solução 3: Tirar a média dos desvios ao quadrado
 
-.pull-left[.large-text[$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$]]
+.pull-left[$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$]
 
 ---
 ## Medidas de dispersão em torno da média

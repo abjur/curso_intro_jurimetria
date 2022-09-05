@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="a_tipos_variaveis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/popper.min.js"></script>
-<script src="a_tipos_variaveis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="a_medidas_centro_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a_medidas_centro_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a_medidas_centro_files/libs/quarto-html/popper.min.js"></script>
+<script src="a_medidas_centro_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a_medidas_centro_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a_medidas_centro_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a_medidas_centro_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <title>Medidas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a_tipos_variaveis_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a_medidas_centro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a_medidas_centro_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -312,10 +312,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="a_tipos_variaveis_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-  <script src="a_tipos_variaveis_files/libs/viz-1.8.2/viz.js"></script>
-  <link href="a_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-  <script src="a_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -323,89 +319,305 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Medidas</h1>
-  <p class="subtitle">Tipos de variáveis</p>
+  <p class="subtitle">Medidas para variáveis numéricas: Medidas de centro</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller">
+<section class="slide level2">
+
+<div style="position:fixed; visibility: hidden">
+<p><span class="math display">\[\require{color}\definecolor{red}{rgb}{1, 0, 0}\]</span> <span class="math display">\[\require{color}\definecolor{blue}{rgb}{0, 0, 1}\]</span> <span class="math display">\[\require{color}\definecolor{green}{rgb}{0, 1, 0}\]</span> <span class="math display">\[\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}\]</span></p>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      red: ["{\\color{red}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      gray: ["{\\color{gray}{#1}}", 1]
+    },
+    loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}}
+  }
+});
+</script>
+</section>
+<section id="ementa-do-curso" class="slide level2 smaller" data-background="#fff">
 <h2>Ementa do curso</h2>
 <ol type="1">
 <li>Tipos de variáveis</li>
 <li>Medidas de variáveis categóricas: Tabelas de frequência</li>
 <li>Medidas de variáveis numéricas I: Medidas de centro
 <ol type="1">
-<li><p>Média</p></li>
-<li><p>Mediana</p></li>
-<li><p>Moda</p></li>
+<li>Média</li>
+<li>Mediana</li>
+<li>Moda</li>
 </ol></li>
 <li>Medidas de variáveis numéricas II: Medidas de dispersão
 <ol type="1">
-<li><p>Desvio médio</p></li>
-<li><p>Variância</p></li>
-<li><p>Desvio padrão</p></li>
-<li><p>Amplitude</p></li>
-<li><p>IQR</p></li>
+<li>Desvio médio</li>
+<li>Variância</li>
+<li>Desvio padrão</li>
+<li>Amplitude</li>
+<li>IQR</li>
 </ol></li>
 </ol>
 </section>
-<section id="plano-geral-de-aula" class="slide level2">
-<h2>Plano geral de aula</h2>
-<p>Na aula de hoje, teremos dois objetivos:</p>
+<section id="ementa-do-curso-1" class="slide level2 smaller" data-background="#fff">
+<h2>Ementa do curso</h2>
 <ol type="1">
-<li>Ver a classificação dos tipos de variáveis</li>
-<li>Ver como os tipos de variáveis se refletem em uma base de dados</li>
+<li>Tipos de variáveis</li>
+<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
+<li><strong>Medidas de variáveis numéricas I: Medidas de centro</strong>
+<ol type="1">
+<li><strong>Média</strong></li>
+<li><strong>Mediana</strong></li>
+<li><strong>Moda</strong></li>
+</ol></li>
+<li>Medidas de variáveis numéricas II: Medidas de dispersão
+<ol type="1">
+<li>Desvio médio</li>
+<li>Variância</li>
+<li>Desvio padrão</li>
+<li>Amplitude</li>
+<li>IQR</li>
+</ol></li>
 </ol>
 </section>
 <section>
-<section id="tipos-de-variáveis" class="title-slide slide level1 center">
-<h1>Tipos de variáveis</h1>
+<section id="medidas-de-variáveis-numéricas" class="title-slide slide level1 center">
+<h1>Medidas de variáveis numéricas</h1>
 
 </section>
-<section id="tipos-de-variáveis-1" class="slide level2">
-<h2>Tipos de variáveis</h2>
-<div class="cell">
+<section id="média" class="slide level2">
+<h2>Média</h2>
+<div class="r-fit-text center-middle">
+<p><span class="math display">\[\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}\]</span></p>
+</div>
+</section>
+<section id="média-1" class="slide level2" data-background="#fff">
+<h2>Média</h2>
+<div class="left-middle" style="font-size: 200%">
+<p><span class="math display">\[\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}\]</span></p>
+</div>
+</section>
+<section id="média-2" class="slide level2 tema1">
+<h2>Média</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>oi</p>
+</div><div class="column" style="width:60%;">
+<p>tchau</p>
+</div>
+</div>
+</section>
+<section id="média-3" class="slide level2">
+<h2>Média</h2>
+<p><span class="math display">\[\red{\sum_{i=i}^{n} x_{i}}\]</span></p>
+<p>Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.</p>
+<p>A seguir, temos um exemplo mais simples de interpretar:</p>
+<p><span class="math display">\[4+8+12+16+20=\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
+<p>Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5).</p>
+</section>
+<section id="medidas-de-centro---média" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
+</section>
+<section id="medidas-de-centro---média-1" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_\gray{{k=1}}^\gray{5} \blue{4k}\]</span></p>
+<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
+</section>
+<section id="medidas-de-centro---média-2" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_\blue{{k=1}}^\gray{5} \gray{4k}\]</span></p>
+<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
+<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span> a expressão é igual a 4.</p>
+</section>
+<section id="medidas-de-centro---média-3" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_\gray{{k=1}}^\blue{5} \gray{4k}\]</span></p>
+<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
+<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span> a expressão é igual a 4.</p>
+<p>A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=5\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=5\)</span>, a expressão é igual a 20.</p>
+</section>
+<section id="medidas-de-centro---média-4" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
+<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
+<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span> a expressão é igual a 4.</p>
+<p>A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=5\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=5\)</span>, a expressão é igual a 20.</p>
+<p>Ou seja, serão somados todos os termos de <span class="math inline">\(k=1\)</span> até <span class="math inline">\(k=5\)</span>, fazendo <span class="math inline">\(4x1 + 4x2 + 4x3 + 4x4 + 4x5\)</span></p>
+<p>]</p>
+</section>
+<section id="medidas-de-centro---média-5" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_{{k=1}}^{5} \blue{4k}\]</span></p>
+<p>Na fórmula da média, há uma diferença importante: no lugar do k, temos o <span class="math inline">\(x_i\)</span>. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é <span class="math inline">\(x_i\)</span> .</p>
+<p><span class="math display">\[\sum_{i=i}^{n} \blue{x_{i}}\]</span></p>
+</section>
+<section id="medidas-de-centro---média-6" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_{i=1}^{10} \blue{x_{i}}\]</span></p>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-9ddb25d09bbc69242cdf" style="width:960px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9ddb25d09bbc69242cdf">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
-<section id="tipos-de-variáveis-2" class="slide level2 smaller">
-<h2>Tipos de variáveis</h2>
-<h3 id="variáveis-categóricas">Variáveis categóricas</h3>
-<p>Variáveis ordinais: As categorias possuem uma ordenação universal entre si</p>
-<p>Variáveis nominais: As categorias não possuem uma ordenação universal entre si</p>
-<h3 id="variáveis-numéricas">Variáveis numéricas</h3>
-<p>Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).</p>
-<p>Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)</p>
-</section>
-<section id="tipos-de-variáveis-3" class="slide level2">
-<h2>Tipos de variáveis</h2>
-<h3 id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
-<p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.</p>
-</section></section>
-<section id="fim" class="title-slide slide level1 center">
-<h1>Fim</h1>
-<div class="footer footer-default">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Índice </th>
+   <th style="text-align:left;"> Descrição </th>
+   <th style="text-align:right;"> Valor de avaliação inicial </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> \(x_1\) </td>
+   <td style="text-align:left;"> bem1 </td>
+   <td style="text-align:right;"> 4934 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_2\) </td>
+   <td style="text-align:left;"> bem2 </td>
+   <td style="text-align:right;"> 81000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_3\) </td>
+   <td style="text-align:left;"> bem3 </td>
+   <td style="text-align:right;"> 1921 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_4\) </td>
+   <td style="text-align:left;"> bem4 </td>
+   <td style="text-align:right;"> 235 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_5\) </td>
+   <td style="text-align:left;"> bem5 </td>
+   <td style="text-align:right;"> 70 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_6\) </td>
+   <td style="text-align:left;"> bem6 </td>
+   <td style="text-align:right;"> 234 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_7\) </td>
+   <td style="text-align:left;"> bem7 </td>
+   <td style="text-align:right;"> 2000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_8\) </td>
+   <td style="text-align:left;"> bem8 </td>
+   <td style="text-align:right;"> 30 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_9\) </td>
+   <td style="text-align:left;"> bem9 </td>
+   <td style="text-align:right;"> 7500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_10\) </td>
+   <td style="text-align:left;"> bem10 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
 
 </div>
+</div>
+<p>Quando o termo inicial (<em>i</em>) é 1, então a expressão a ser somada não é 1, mas é <span class="math inline">\(x_1\)</span> , o que, neste caso, significa R$</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code>numeric(0)</code></pre>
+</div>
+</div>
 </section>
+<section id="medidas-de-centro---média-7" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\sum_{i=i}^{n} x_{i}\]</span></p>
+<p>Com isso, vimos todos os elementos do somatório que faz parte da fórmula da média. Temos a expressão a ser somada (<span class="math inline">\(x_i\)</span>) , o termo inicial (<span class="math inline">\(i=1\)</span>) e o termo final (n).</p>
+<p>Importa dizer que, no caso da média, o índice final (n) será sempre o número total de observações. Assim, o índice final será sempre <span class="math inline">\(i=n\)</span>, referindo-se sempre ao último número da sequência, <span class="math inline">\(x_n\)</span>. Se, por exemplo, existirem 10 observações (a unidade de uma base de dados) a serem somadas, então <span class="math inline">\(n=10\)</span> e o último termo a ser somado será <span class="math inline">\(x_{10}\)</span>.</p>
+</section>
+<section id="medidas-de-centro---média-8" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}\]</span></p>
+<p>Com isso, vimos todos os elementos do somatório, que faz parte da fórmula da média. Temos a expressão a ser somada ( <span class="math inline">\(x_i\)</span> ), o termo inicial (<span class="math inline">\(i=1\)</span> ) e o termo final (n). Nesse caso, o índice final é quando $i=n$, ou seja, é o <span class="math inline">\(x_n\)</span>. Se, por exemplo, existirem 10 expressões a serem somadas, então <span class="math inline">\(n=10\)</span> e o último termo a ser somado é <span class="math inline">\(x_{10}\)</span>.</p>
+<p>O que falta agora para completar a fórmula da média é a divisão. A média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo <span class="math inline">\(n\)</span> da divisão!</p>
+</section>
+<section id="medidas-de-centro---média-9" class="slide level2">
+<h2>Medidas de centro - Média</h2>
+<p><span class="math display">\[\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}\]</span></p>
+</section>
+<section id="medidas-de-centro---mediana" class="slide level2">
+<h2>Medidas de centro - Mediana</h2>
+<h3 id="conceito">Conceito</h3>
+<p>Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.</p>
+<p>Se a quantidade total de números for ímpar, então o “meio” será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o “meio” será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.</p>
+<p><strong>Exercício rápido.</strong> Ache a mediana dos dois conjuntos a seguir:</p>
+<p>&gt; 3 17 81 502 900</p>
+<p>&gt; 5 72 80 100 203 399</p>
+</section>
+<section id="medidas-de-centro---mediana-1" class="slide level2">
+<h2>Medidas de centro - Mediana</h2>
+<h3 id="fórmula-matemática">Fórmula matemática</h3>
+<p><span class="math display">\[md\left(x\right) =\begin{cases} {x_\frac{n+1}{2}} &amp; n\text{ ímpar}\\ \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) &amp; n \text{ par} \end{cases}\]</span></p>
+</section>
+<section id="medidas-de-centro---média-x-mediana" class="slide level2">
+<h2>Medidas de centro - Média x Mediana</h2>
+<p>Agora precisamos comparar a média com a mediana. Calcule agora a média e a mediana dos seguintes conjuntos.</p>
+<p>&gt; Conjunto 1: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20</p>
+<p>&gt; Conjunto 2: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000</p>
+<h4 id="respostas">Respostas</h4>
+<p>Conjunto 1:</p>
+<p>- Média: 15</p>
+<p>- Mediana: 15</p>
+<p>Conjunto 2:</p>
+<p>- Média 195</p>
+<p>- Mediana: 15</p>
+<h4 id="o-que-podemos-concluir-sobre-essas-respostas">O que podemos concluir sobre essas respostas?</h4>
+<p>Dizemos que a mediana é mais _robusta_ do que a média, porque ela não é afetada por “valores extremos”.</p>
+</section>
+<section id="medidas-de-centro---moda" class="slide level2">
+<h2>Medidas de centro - Moda</h2>
+<h3 id="conceito-1">Conceito</h3>
+<p>A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.</p>
+<p>&gt; 1, 1, 1, 3, 5, 6, 7, 8, 9</p>
+<p>Moda: 1</p>
+<p>&gt; 1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8</p>
+<p>Moda: 2 e 6</p>
+<p>&gt; 1, 1, 3, 3, 5, 5, 7, 7</p>
+<p>Moda: Não existe</p>
+<p>&gt; 1, 13, 26, 1, 18, 23, 13, 2, 9, 18</p>
+<p>Moda: 1, 13, 18</p>
+
+<img data-src="a_medidas_centro_files/figure-revealjs/unnamed-chunk-2-1.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>1, 13, 26, 1, 18, 23, 13, 2, 9, 18</p>
+<p>Moda: 1, 13, 18</p>
+
+<img data-src="a_medidas_centro_files/figure-revealjs/unnamed-chunk-3-1.png" width="500" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+
+</div>
+</section></section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a_tipos_variaveis_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a_medidas_centro_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

@@ -1,0 +1,322 @@
+---
+title: "Medidas"
+subtitle: "Medidas para variáveis numéricas: Medidas de centro"
+format: 
+  revealjs:
+    theme: [default, css/custom-css.scss]
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+
+
+cores_abj <-  viridis::viridis(2, 1, .2, .8)
+
+
+```
+
+::: {style="position:fixed; visibility: hidden"}
+$$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$ $$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$ $$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$ $$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
+:::
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      red: ["{\\color{red}{#1}}", 1],
+      blue: ["{\\color{blue}{#1}}", 1],
+      green: ["{\\color{green}{#1}}", 1],
+      gray: ["{\\color{gray}{#1}}", 1]
+    },
+    loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}}
+  }
+});
+</script>
+```
+
+## Ementa do curso {.smaller background="#fff"}
+
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
+    2.  Mediana
+    3.  Moda
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  Amplitude
+    5.  IQR
+
+## Ementa do curso {.smaller background="#fff"}
+
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  **Medidas de variáveis numéricas I: Medidas de centro**
+    1.  **Média**
+    2.  **Mediana**
+    3.  **Moda**
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  Amplitude
+    5.  IQR
+
+# Medidas de variáveis numéricas
+
+## Média
+
+::: {.r-fit-text .center-middle}
+
+$$\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+
+:::
+
+## Média {background="#fff"}
+
+
+::: {.left-middle style="font-size: 200%"}
+
+$$\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$
+:::
+
+## Média {.tema1}
+
+::: columns
+::: {.column width="40%"}
+oi
+:::
+
+::: {.column width="60%"}
+tchau
+:::
+:::
+
+## Média
+
+$$\red{\sum_{i=i}^{n} x_{i}}$$
+
+Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.
+
+A seguir, temos um exemplo mais simples de interpretar:
+
+$$4+8+12+16+20=\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+
+Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5).
+
+## Medidas de centro - Média
+
+$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+
+## Medidas de centro - Média
+
+$$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$
+
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+## Medidas de centro - Média
+
+$$\sum_\blue{{k=1}}^\gray{5} \gray{4k}$$
+
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+
+## Medidas de centro - Média
+
+$$\sum_\gray{{k=1}}^\blue{5} \gray{4k}$$
+
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
+
+## Medidas de centro - Média
+
+$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+
+A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+
+A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
+
+Ou seja, serão somados todos os termos de $k=1$ até $k=5$, fazendo $4x1 + 4x2 + 4x3 + 4x4 + 4x5$
+
+\]
+
+## Medidas de centro - Média
+
+$$\sum_{{k=1}}^{5} \blue{4k}$$
+
+Na fórmula da média, há uma diferença importante: no lugar do k, temos o $x_i$. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é $x_i$ .
+
+$$\sum_{i=i}^{n} \blue{x_{i}}$$
+
+## Medidas de centro - Média
+
+$$\sum_{i=1}^{10} \blue{x_{i}}$$
+
+```{r indice-exemplo, echo=FALSE, out.width="40%"}
+  
+tab <- abjData::leiloes |>
+  dplyr::arrange(desc(descricao)) |>
+  dplyr::select(descricao, valor_avaliacao_inicial) |>
+  head(10) |>
+  tidyr::replace_na(list(valor_avaliacao_inicial = 0)) |>
+  dplyr::mutate(
+    descricao = 1:10,
+    descricao = paste0("bem", descricao)
+  )
+
+tab |>
+  dplyr::mutate(
+    indice = stringr::str_glue("\\(x_{1:10}\\)"), .before = 1
+  ) |>
+  knitr::kable(
+    col.names = c("Índice", "Descrição", "Valor de avaliação inicial"),
+    digits = 0,
+    format = "html", escape = FALSE
+  )
+
+valor_bem1 <- tab$valor_avaliacao_inicial[tab$descricao == "bem 1"]
+
+```
+
+Quando o termo inicial (*i*) é 1, então a expressão a ser somada não é 1, mas é $x_1$ , o que, neste caso, significa R\$
+
+```{r}
+valor_bem1
+```
+
+## Medidas de centro - Média
+
+$$\sum_{i=i}^{n} x_{i}$$
+
+Com isso, vimos todos os elementos do somatório que faz parte da fórmula da média. Temos a expressão a ser somada ($x_i$) , o termo inicial ($i=1$) e o termo final (n).
+
+Importa dizer que, no caso da média, o índice final (n) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações (a unidade de uma base de dados) a serem somadas, então $n=10$ e o último termo a ser somado será $x_{10}$.
+
+## Medidas de centro - Média
+
+$$\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}$$
+
+Com isso, vimos todos os elementos do somatório, que faz parte da fórmula da média. Temos a expressão a ser somada ( $x_i$ ), o termo inicial ($i=1$ ) e o termo final (n). Nesse caso, o índice final é quando \$i=n\$, ou seja, é o $x_n$. Se, por exemplo, existirem 10 expressões a serem somadas, então $n=10$ e o último termo a ser somado é $x_{10}$.
+
+O que falta agora para completar a fórmula da média é a divisão. A média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo $n$ da divisão!
+
+## Medidas de centro - Média
+
+$$\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+
+## Medidas de centro - Mediana
+
+### Conceito
+
+Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.
+
+Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.
+
+**Exercício rápido.** Ache a mediana dos dois conjuntos a seguir:
+
+\> 3 17 81 502 900
+
+\> 5 72 80 100 203 399
+
+## Medidas de centro - Mediana
+
+### Fórmula matemática
+
+$$md\left(x\right) =\begin{cases} {x_\frac{n+1}{2}} & n\text{ ímpar}\\ \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) & n \text{ par} \end{cases}$$
+
+## Medidas de centro - Média x Mediana
+
+Agora precisamos comparar a média com a mediana. Calcule agora a média e a mediana dos seguintes conjuntos.
+
+\> Conjunto 1: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+
+\> Conjunto 2: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000
+
+#### Respostas
+
+Conjunto 1:
+
+\- Média: 15
+
+\- Mediana: 15
+
+Conjunto 2:
+
+\- Média 195
+
+\- Mediana: 15
+
+#### O que podemos concluir sobre essas respostas?
+
+Dizemos que a mediana é mais \_robusta\_ do que a média, porque ela não é afetada por "valores extremos".
+
+## Medidas de centro - Moda
+
+### Conceito
+
+A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.
+
+\> 1, 1, 1, 3, 5, 6, 7, 8, 9
+
+Moda: 1
+
+\> 1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8
+
+Moda: 2 e 6
+
+\> 1, 1, 3, 3, 5, 5, 7, 7
+
+Moda: Não existe
+
+\> 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+
+Moda: 1, 13, 18
+
+```{r, out.width = '500px'}
+tibble::tibble(
+  x = c(1:10),
+  y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
+) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x, y) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggplot2::scale_x_continuous(breaks = 1*c(0:10))
+```
+
+## 
+
+1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+
+Moda: 1, 13, 18
+
+```{r, out.width = '500px'}
+tibble::tibble(
+  x = c(1:10),
+  y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
+) |>
+  dplyr::mutate(
+    col_dif = x != 2
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x, y, fill = col_dif) +
+  ggplot2::geom_col(show.legend = FALSE) +
+  ggplot2::scale_x_continuous(breaks = 1*c(0:10)) +
+  ggplot2::scale_fill_manual(values = c(cores_abj[1], "gray70"))
+```

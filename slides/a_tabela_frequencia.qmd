@@ -7,7 +7,7 @@ format:
 editor: visual
 ---
 
-## Ementa do curso {.smaller}
+## Ementa do curso {.smaller background="#fff"}
 
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
@@ -28,7 +28,7 @@ editor: visual
 
     5.  IQR
 
-## Ementa do curso {.smaller visibility="uncounted"}
+## Ementa do curso {.smaller background="#fff"}
 
 1.  Tipos de variáveis
 2.  **Medidas de variáveis categóricas: Tabelas de frequência**
@@ -51,24 +51,98 @@ editor: visual
 
 # Medidas de variáveis categóricas
 
-##  {.smaller}
+##  {.smaller background="#fff"}
 
-+----------+------------+----------------------+---------------------+---------------------+-------------+
-| Variável | Frequência | Frequência acumulada | Proporção           | Proporção acumulada | Porcentagem |
-|          |            |                      |                     |                     |             |
-| $x_i$    | $n_i$      | $N_i$                | $f_i$               | $F_i$               | $100 f_i$   |
-+==========+============+======================+=====================+=====================+=============+
-| $x_1$    | $n_1$      | $N_1=n_1$            | $f_1=\frac{n_1}{n}$ | $F_1=f_1$           | $100f_1$    |
-+----------+------------+----------------------+---------------------+---------------------+-------------+
-| $x_2$    | $n_2$      | $N_2=N_1+n_2$        | $f_2=\frac{n_2}{n}$ | $F_2=F_1+f_2$       | $100f_2$    |
-+----------+------------+----------------------+---------------------+---------------------+-------------+
-| $x_3$    | $n_3$      | $N_3=N_2+n_3$        | $f_3=\frac{n_3}{n}$ | $F_3=F_2+f_3$       | $100f_3$    |
-+----------+------------+----------------------+---------------------+---------------------+-------------+
-| ...      | ...        | ...                  | ...                 | ...                 | ...         |
-+----------+------------+----------------------+---------------------+---------------------+-------------+
-| $x_k$    | $n_k$      | $N_k=N_{k-1}+n_k$    | $f_k=\frac{n_k}{n}$ | $F_k=F_{k-1}+f_k$   | $100f_k$    |
-+----------+------------+----------------------+---------------------+---------------------+-------------+
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| Variável  | Frequência | Frequência acumulada | Proporção           | Proporção acumulada    | Porcentagem |
+|           |            |                      |                     |                        |             |
+| $x_i$     | $n_i$      | $N_i$                | $f_i$               | $F_i$                  | $100 f_i$   |
++===========+============+======================+=====================+========================+=============+
+| $x_1$     | $n_1$      | $N_1=n_1$            | $f_1=\frac{n_1}{n}$ | $F_1=f_1$              | $100f_1$    |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| $x_2$     | $n_2$      | $N_2=N_1+n_2$        | $f_2=\frac{n_2}{n}$ | $F_2=F_1+f_2$          | $100f_2$    |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| $x_3$     | $n_3$      | $N_3=N_2+n_3$        | $f_3=\frac{n_3}{n}$ | $F_3=F_2+f_3$          | $100f_3$    |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| ...       | ...        | ...                  | ...                 | ...                    | ...         |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| $x_k$     | $n_k$      | $N_k=N_{k-1}+n_k=n$  | $f_k=\frac{n_k}{n}$ | $F_k=F_{k-1}+f_k=1,00$ | $100f_k$    |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
+| **Total** | $n$        | \-                   | $1,00$              | \-                     | $100%$      |
++-----------+------------+----------------------+---------------------+------------------------+-------------+
 
 : Tabela de frequência
+
+## Absoluto ou Acumulado? {.smaller background="#fff"}
+
+```{r}
+da <- tibble::tibble(
+  assunto = c(
+    "Interpretação / Revisão de Contrato", 
+    "Bancários",
+    "Indenização por Dano Moral",
+    "Reparação de Danos", 
+    "Constratos de Consumo",
+    "Expurgos Inflacionários / Planos econômicos",
+    "Financiamento de Produto", 
+    "Seguro",
+    "Inclusão Indevida em Cadastro de Inadimplentes",
+    "Indenização por Dano Material"
+  ),
+  n = c(
+    112163,
+    46333,
+    32196,
+    30175,
+    13512,
+    13251,
+    12649,
+    10505,
+    7532,
+    7178
+  )
+) |> 
+  dplyr::mutate(
+    prop = round(n/308140, 3),
+    cum_prop = cumsum(prop),
+    perc = formattable::percent(prop),
+    cum_perc = formattable::percent(cum_prop)
+  ) 
+
+```
+
+```{r,fig.cap="10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul."}
+
+cores_abj <-  viridis::viridis(2, 1, .2, .8)
+
+da |> 
+  dplyr::arrange(n) |> 
+  dplyr::mutate(assunto = forcats::fct_inorder(assunto)) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = prop, y = assunto, label = perc) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggplot2::geom_label() +
+  ggplot2::labs(
+    x = "Proporção",
+    y = "Causa de Pedir (Assunto)"
+  )
+```
+
+## Absoluto ou Acumulado? {.smaller background="#fff"}
+
+```{r}
+da |> 
+  dplyr::select(-dplyr::contains("prop")) |>
+  dplyr::rename(
+    `Causa de Pedir (Assunto)` = assunto,
+    `Frequência` = n,
+    `Percentual` = perc,
+    `Percentual acumulado` = cum_perc
+  ) |>
+  knitr::kable(
+    caption = "10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul."
+  )
+  
+```
 
 # Fim

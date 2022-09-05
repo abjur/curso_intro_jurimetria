@@ -3,7 +3,7 @@ title: "Medidas"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["xaringan-themer.css", "default", "css/quarto-css.css"]
+    css: ["xaringan-themer.css", "default", "css/custom-css.css"]
     nature:
       ratio: "16:12"
       highlightStyle: github
@@ -24,10 +24,10 @@ xaringanExtra::use_panelset()
 
 cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
-# setup_colors(
+# xaringancolor::setup_colors(
 #     red = "red",
 #     blue = "blue",
-#     green = "green",s
+#     green = "green",
 #     gray = "dark grey"
 # )
 ```
@@ -53,13 +53,6 @@ MathJax.Hub.Config({
 });
 </script>
 
-<style>
-.red {color: #FF0000;}
-.blue {color: #0000FF;}
-.green {color: #00FF00;}
-.gray {color: #A9A9A9;}
-</style>
-
 
 ```{r flair_color, echo=FALSE}
 library(flair)
@@ -68,6 +61,7 @@ blue <- "#0000FF"
 green <- "#00FF00"
 gray <- "#A9A9A9"
 ```
+
 
 ## Roteiro geral das aulas
 
@@ -710,9 +704,8 @@ A partir dos desvios, a gente quer calcular **uma única medida** para resumir t
 
 Mas isso tem um problema: A média dos desvios é sempre 0!
 
-.large-text[
+
 $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)=\frac{1}{n}\sum_{i=1}^n x_i - \frac{1}{n}\sum_{i=1}^n \bar x = \bar x - \frac{n}{n}\bar x = \bar x - \bar x = 0$$
-]
 
 O problema são os números negativos dos desvios. A gente precisa eliminá-los. Para isso temos outras duas soluções:
 
@@ -720,7 +713,7 @@ O problema são os números negativos dos desvios. A gente precisa eliminá-los.
 ## Medidas de dispersão em torno da média
 ### Solução 2: Tirar a média do módulo dos desvios
 
-.pull-left[.large-text[$$\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|$$]]
+.pull-left[$$\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|$$]
 
 --
 <br />
@@ -731,7 +724,7 @@ O problema são os números negativos dos desvios. A gente precisa eliminá-los.
 
 ### Solução 3: Tirar a média dos desvios ao quadrado
 
-.pull-left[.large-text[$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$]]
+.pull-left[$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$]
 
 ---
 ## Medidas de dispersão em torno da média
