@@ -22,6 +22,8 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
+## Ementa do curso {.smaller background="#fff"}
+
 ::: {style="position:fixed; visibility: hidden"}
 $$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$ $$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$ $$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$ $$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
 :::
@@ -42,8 +44,6 @@ MathJax.Hub.Config({
 });
 </script>
 ```
-
-## Ementa do curso {.smaller background="#fff"}
 
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
@@ -75,248 +75,357 @@ MathJax.Hub.Config({
 
 # Medidas de variáveis numéricas
 
-## Média
+## Média {background="#fff"}
 
-::: {.r-fit-text .center-middle}
-
-$$\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
-
+::: {.center-middle .r-fit-text}
+$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
 :::
 
 ## Média {background="#fff"}
 
-
-::: {.left-middle style="font-size: 200%"}
-
+::: {.left-middle style="font-size: 130%"}
 $$\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$
 :::
 
-## Média {.tema1}
+## Média {background="#fff"}
 
-::: columns
-::: {.column width="40%"}
-oi
-:::
-
-::: {.column width="60%"}
-tchau
-:::
-:::
-
-## Média
-
+::: {.left-middle style="font-size: 130%;"}
 $$\red{\sum_{i=i}^{n} x_{i}}$$
+:::
 
+::: {.absolute .center-position left="210" style="font-size: 85%;"}
+::: fragment
 Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.
+:::
 
+::: fragment
 A seguir, temos um exemplo mais simples de interpretar:
 
-$$4+8+12+16+20=\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
-
-Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5).
-
-## Medidas de centro - Média
-
+::: {style="font-size: 30px;"}
+$$4+8+12+16+20=$$
+$$4*1+4*2+4*3+4*4+4*5=$$
 $$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+:::
+:::
 
-## Medidas de centro - Média
+::: fragment
+Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5).
+:::
+:::
 
+## Média {background="#fff"}
+
+::: {.right-middle style="font-size: 50px;"}
+$$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+:::
+
+## Média {background="#fff"}
+
+::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$
+:::
 
+::: {.absolute .center-position right="200" style="font-size: 32px;"}
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
+:::
 
-## Medidas de centro - Média
+## Média {background="#fff"}
 
+::: {.right-middle style="font-size: 50px;"}
 $$\sum_\blue{{k=1}}^\gray{5} \gray{4k}$$
+:::
 
+::: {.absolute .center-position right="200" style="font-size: 32px;"}
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
 
-A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
+:::
 
-## Medidas de centro - Média
+## Média {background="#fff"}
 
+::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\blue{5} \gray{4k}$$
+:::
 
+::: {.absolute .center-position right="200" style="font-size: 32px;"}
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
 
-A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
 
 A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
+:::
 
-## Medidas de centro - Média
+## Média {background="#fff"}
 
+::: {.right-middle style="font-size: 50px;"}
 $$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
+:::
 
+::: {.absolute .center-position right="200" style="font-size: 32px;"}
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
 
-A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$ a expressão é igual a 4.
+A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
 
 A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
 
 Ou seja, serão somados todos os termos de $k=1$ até $k=5$, fazendo $4x1 + 4x2 + 4x3 + 4x4 + 4x5$
+:::
 
-\]
+## Média {background="#fff"}
 
-## Medidas de centro - Média
-
+::: {.right-middle style="font-size: 50px;"}
 $$\sum_{{k=1}}^{5} \blue{4k}$$
+:::
 
+::: {.center-position style="font-size: 80%;"}
 Na fórmula da média, há uma diferença importante: no lugar do k, temos o $x_i$. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é $x_i$ .
+:::
 
-$$\sum_{i=i}^{n} \blue{x_{i}}$$
+::: {.left-middle style="font-size: 50px;"}
+$$\sum_{i=1}^{n} \blue{x_{i}}$$
+:::
 
-## Medidas de centro - Média
+## Média {background="#fff"}
 
+::: {.left-middle style="font-size: 50px;"}
 $$\sum_{i=1}^{10} \blue{x_{i}}$$
+:::
 
+::: {.fragment .absolute .center-position left="150" style="font-size: 80%;"}
 ```{r indice-exemplo, echo=FALSE, out.width="40%"}
-  
 tab <- abjData::leiloes |>
   dplyr::arrange(desc(descricao)) |>
   dplyr::select(descricao, valor_avaliacao_inicial) |>
-  head(10) |>
-  tidyr::replace_na(list(valor_avaliacao_inicial = 0)) |>
+  head(10) |> 
+  tidyr::replace_na(list(valor_avaliacao_inicial = 0)) |> 
   dplyr::mutate(
     descricao = 1:10,
-    descricao = paste0("bem", descricao)
+    descricao = paste0("bem ", descricao)
   )
 
-tab |>
+tab |> 
   dplyr::mutate(
     indice = stringr::str_glue("\\(x_{1:10}\\)"), .before = 1
   ) |>
   knitr::kable(
-    col.names = c("Índice", "Descrição", "Valor de avaliação inicial"),
+    col.names = c("Índice", "Descrição", "Valor de avaliação inicial"), 
     digits = 0,
-    format = "html", escape = FALSE
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
   )
 
 valor_bem1 <- tab$valor_avaliacao_inicial[tab$descricao == "bem 1"]
-
 ```
+:::
 
-Quando o termo inicial (*i*) é 1, então a expressão a ser somada não é 1, mas é $x_1$ , o que, neste caso, significa R\$
+::: {.fragment .absolute top="450" left="-80" width="35%" style="font-size: 70%;"}
+Quando o termo inicial (*i*) é 1, então a expressão a ser somada não é 1, mas é $x_1$ , o que, neste caso, significa R\$ `r valor_bem1`
+:::
 
-```{r}
-valor_bem1
-```
+## Média {background="#fff"}
 
-## Medidas de centro - Média
-
+::: {.left-middle style="font-size: 50px;"}
 $$\sum_{i=i}^{n} x_{i}$$
+:::
 
-Com isso, vimos todos os elementos do somatório que faz parte da fórmula da média. Temos a expressão a ser somada ($x_i$) , o termo inicial ($i=1$) e o termo final (n).
+::: {.absolute .center-position left="210" style="font-size: 30px;" width="1000px"}
+Com isso, vimos todos os elementos *do somatório* que fazem parte da fórmula da média. Temos a expressão a ser somada ($x_i$), o termo inicial ($i=1$) e o termo final ($n$).
 
-Importa dizer que, no caso da média, o índice final (n) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações (a unidade de uma base de dados) a serem somadas, então $n=10$ e o último termo a ser somado será $x_{10}$.
+Importa dizer que, no caso da média, o índice final ($n$) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações a serem somadas, então $n=10$ e o último termo a ser somado será $x_{10}$.
 
-## Medidas de centro - Média
+::: fragment
+O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.
+:::
+:::
 
+## Média {background="#fff"}
+
+::: {.left-middle style="font-size: 50px;"}
+$$\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+:::
+
+::: {.absolute .center-position left="210" style="font-size: 30px;" width="1000px"}
+Com isso, vimos todos os elementos *do somatório* que fazem parte da fórmula da média. Temos a expressão a ser somada ($x_i$), o termo inicial ($i=1$) e o termo final ($n$).
+
+Importa dizer que, no caso da média, o índice final ($n$) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações a serem somadas, então $n=10$ e o último termo a ser somado será $x_{10}$.
+
+O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.
+:::
+
+## Média {background="#fff"}
+
+::: {.left-middle style="font-size: 50px;"}
 $$\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}$$
+:::
 
-Com isso, vimos todos os elementos do somatório, que faz parte da fórmula da média. Temos a expressão a ser somada ( $x_i$ ), o termo inicial ($i=1$ ) e o termo final (n). Nesse caso, o índice final é quando \$i=n\$, ou seja, é o $x_n$. Se, por exemplo, existirem 10 expressões a serem somadas, então $n=10$ e o último termo a ser somado é $x_{10}$.
+::: {.absolute .center-position left="210" style="font-size: 30px;" width="1000px"}
+Com isso, vimos todos os elementos *do somatório* que fazem parte da fórmula da média. Temos a expressão a ser somada ($x_i$), o termo inicial ($i=1$) e o termo final ($n$).
 
-O que falta agora para completar a fórmula da média é a divisão. A média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo $n$ da divisão!
+Importa dizer que, no caso da média, o índice final ($n$) será sempre o número total de observações. Assim, o índice final será sempre $i=n$, referindo-se sempre ao último número da sequência, $x_n$. Se, por exemplo, existirem 10 observações a serem somadas, então $n=10$ e o último termo a ser somado será $x_{10}$.
 
-## Medidas de centro - Média
+O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo $n$ da divisão!
+:::
 
-$$\bar{x}=\frac{x_1+x_2+…+x_n}{n}=\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
+## Média {background="#fff"}
 
-## Medidas de centro - Mediana
+::: {.center-middle .r-fit-text}
+$$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
+:::
 
-### Conceito
+## Mediana {background="#fff"}
 
+#### Conceito
+
+::: {style="font-size: 30px;"}
 Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.
 
 Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.
 
 **Exercício rápido.** Ache a mediana dos dois conjuntos a seguir:
 
-\> 3 17 81 502 900
+::: center
+::: fragment
+3 17 81 502 900
+:::
 
-\> 5 72 80 100 203 399
+::: fragment
+5 72 80 100 203 399
+:::
+:::
+:::
 
-## Medidas de centro - Mediana
+## Mediana {background="#fff"}
 
-### Fórmula matemática
+#### Fórmula matemática
 
-$$md\left(x\right) =\begin{cases} {x_\frac{n+1}{2}} & n\text{ ímpar}\\ \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) & n \text{ par} \end{cases}$$
+::: {.center-middle .r-fit-text}
+$$md\left(x\right)
+=\begin{cases}
+  {x_\frac{n+1}{2}}                                    & n\text{ ímpar}\\
+  \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) & n \text{ par}
+\end{cases}$$
+:::
 
-## Medidas de centro - Média x Mediana
+## Média x Mediana {background="#fff"}
 
-Agora precisamos comparar a média com a mediana. Calcule agora a média e a mediana dos seguintes conjuntos.
+::: {style="font-size: 30px;"}
+Agora precisamos comparar a média com a mediana. Para isso, calcule agora a média e a mediana dos seguintes conjuntos.
 
-\> Conjunto 1: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+::: center
+**Conjunto 1:** 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
-\> Conjunto 2: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000
+**Conjunto 2:** 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000
+:::
+:::
 
+::: fragment
 #### Respostas
 
+::: {style="font-size: 30px;"}
+::: columns
+::: column
 Conjunto 1:
 
-\- Média: 15
+-   Média: 15
+-   Mediana: 15
+:::
 
-\- Mediana: 15
-
+::: column
 Conjunto 2:
 
-\- Média 195
+-   Média 195
+-   Mediana: 15
+:::
+:::
+:::
+:::
 
-\- Mediana: 15
-
+::: fragment
 #### O que podemos concluir sobre essas respostas?
 
-Dizemos que a mediana é mais \_robusta\_ do que a média, porque ela não é afetada por "valores extremos".
+::: {style="font-size: 30px;"}
+Dizemos que a mediana é mais *robusta* do que a média, porque ela não é afetada por "valores extremos".
+:::
+:::
 
-## Medidas de centro - Moda
+## Moda {background="#fff"}
 
 ### Conceito
 
+::: {style="font-size: 30px;"}
 A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.
+:::
 
-\> 1, 1, 1, 3, 5, 6, 7, 8, 9
+:::: {.columns}
+::: {.center style="font-size: 30px;"}
+::: fragment
+1, 1, 1, 3, 5, 6, 7, 8, 9
+:::
 
-Moda: 1
+::: fragment
+**Moda:** 1
+:::
 
-\> 1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8
+::: fragment
+1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8
+:::
 
-Moda: 2 e 6
+::: fragment
+**Moda:** 2 e 6
+:::
 
-\> 1, 1, 3, 3, 5, 5, 7, 7
+::: fragment
+1, 1, 3, 3, 5, 5, 7, 7
+:::
 
-Moda: Não existe
+::: fragment
+**Moda:** Não existe
+:::
 
-\> 1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+::: fragment
+1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+:::
 
-Moda: 1, 13, 18
+::: fragment
+**Moda:** 1, 13, 18
+:::
+:::
+::::
 
-```{r, out.width = '500px'}
+## {background="#fff"}
+
+```{r, out.width = '1000px', fig.align='center'}
+
 tibble::tibble(
   x = c(1:10),
   y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
-) |>
+) |> 
   ggplot2::ggplot() +
   ggplot2::aes(x, y) +
   ggplot2::geom_col(fill = cores_abj[1]) +
-  ggplot2::scale_x_continuous(breaks = 1*c(0:10))
+  ggplot2::scale_x_continuous(breaks = 1*c(0:10)) +
+  ggplot2::theme_minimal()
+
 ```
 
-## 
+## {background="#fff"}
 
-1, 13, 26, 1, 18, 23, 13, 2, 9, 18
+```{r, out.width = '1000px', fig.align='center'}
 
-Moda: 1, 13, 18
-
-```{r, out.width = '500px'}
 tibble::tibble(
   x = c(1:10),
   y = c(2, 8, 5, 6, 1, 1, 2, 3, 4, 1)
-) |>
+) |> 
   dplyr::mutate(
     col_dif = x != 2
-  ) |>
+  ) |> 
   ggplot2::ggplot() +
   ggplot2::aes(x, y, fill = col_dif) +
   ggplot2::geom_col(show.legend = FALSE) +
   ggplot2::scale_x_continuous(breaks = 1*c(0:10)) +
-  ggplot2::scale_fill_manual(values = c(cores_abj[1], "gray70"))
+  ggplot2::scale_fill_manual(values = c(cores_abj[1], "gray70")) +
+  ggplot2::theme_minimal()
+
 ```
+
+# Fim

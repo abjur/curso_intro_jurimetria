@@ -7,7 +7,16 @@ $text-weight: 900;
 
 /*-- scss:rules --*/
 
-<<<<<<< HEAD
+.center {
+  text-align: center;
+}
+
+.center-position {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
 .center-middle {
   margin: 0;
   position: absolute;
@@ -21,24 +30,48 @@ $text-weight: 900;
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 10%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-.large-lonely { font-size: 200% }
+.left-bottom {
+  float: left;
+  width: 25%;
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
 
-.large-text { font-size: 130% }
+.right-middle {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pull-right2 {
+  float: right;
+  width: 200%;
+}
+
+.pull-left2 {
+  float: left;
+  width: 75%;
+}
 
 .reveal .headers h2 {
   color: #102C68;
   text-align: center;
-=======
+}
+
 .reveal .headersh2 {
   color: #535692;
   font-weight: 800;
   text-align: left;
->>>>>>> 8a970f322c5d43ada9ab2c7fd02bf20903f086fe
 }
 
 .reveal .headersh3 {
@@ -91,4 +124,6 @@ $text-weight: 900;
   padding-top: 10px;
   border-color: #535692;
 }
+
+.striped tr:nth-child(even) { background: #eee; }
 

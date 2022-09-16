@@ -53,6 +53,7 @@ editor: visual
 
 ##  {.smaller background="#fff"}
 
+:::{.absolute left=-120}
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 | Variável  | Frequência | Frequência acumulada | Proporção           | Proporção acumulada    | Porcentagem |
 |           |            |                      |                     |                        |             |
@@ -72,6 +73,7 @@ editor: visual
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 
 : Tabela de frequência
+:::
 
 ## Absoluto ou Acumulado? {.smaller background="#fff"}
 
@@ -130,6 +132,7 @@ da |>
 
 ## Absoluto ou Acumulado? {.smaller background="#fff"}
 
+::: {style="font-size: 90%"}
 ```{r}
 da |> 
   dplyr::select(-dplyr::contains("prop")) |>
@@ -144,5 +147,6 @@ da |>
   )
   
 ```
+:::
 
 # Fim
