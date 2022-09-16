@@ -3,6 +3,7 @@ title: "Medidas"
 subtitle: "Tipos de variáveis"
 format: 
   revealjs:
+    logo: "/img/logo-abj-colorido.png"
     theme: [default, css/custom-css.scss]
 editor: visual
 transition: fade
