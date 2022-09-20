@@ -1,6 +1,6 @@
 ---
 title: "Medidas"
-subtitle: "Medidas para variáveis numéricas: Medidas de centro"
+subtitle: "Medidas para variáveis numéricas: medidas de centro"
 format: 
   revealjs:
     theme: [default, css/custom-css.scss]
@@ -73,7 +73,7 @@ MathJax.Hub.Config({
     4.  Amplitude
     5.  IQR
 
-# Medidas de variáveis numéricas
+# Medidas de centro
 
 ## Média {background="#fff"}
 
@@ -87,7 +87,7 @@ $$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
 $$\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.left-middle style="font-size: 130%;"}
 $$\red{\sum_{i=i}^{n} x_{i}}$$
@@ -113,13 +113,13 @@ Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limit
 :::
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$
@@ -129,7 +129,7 @@ $$\sum_\gray{{k=1}}^\gray{5} \blue{4k}$$
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\blue{{k=1}}^\gray{5} \gray{4k}$$
@@ -141,7 +141,7 @@ A primeira parte da notação do somatório é a expressão que será somada. Ne
 A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\blue{5} \gray{4k}$$
@@ -155,7 +155,7 @@ A segunda parte da notação é o limite inferior da soma, isto é, o termo inic
 A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
 :::
 
-## Média {background="#fff"}
+## Média - Somatório {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\blue{{k=1}}^\blue{5} \blue{4k}$$
@@ -171,7 +171,7 @@ A última parte da notação é o limite superior da soma, isto é, o termo fina
 Ou seja, serão somados todos os termos de $k=1$ até $k=5$, fazendo $4x1 + 4x2 + 4x3 + 4x4 + 4x5$
 :::
 
-## Média {background="#fff"}
+## Média - Índice {background="#fff"}
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_{{k=1}}^{5} \blue{4k}$$
@@ -185,7 +185,7 @@ Na fórmula da média, há uma diferença importante: no lugar do k, temos o $x_
 $$\sum_{i=1}^{n} \blue{x_{i}}$$
 :::
 
-## Média {background="#fff"}
+## Média - Índice {background="#fff"}
 
 ::: {.left-middle style="font-size: 50px;"}
 $$\sum_{i=1}^{10} \blue{x_{i}}$$
@@ -279,15 +279,17 @@ $$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
 ::: {style="font-size: 30px;"}
 Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.
 
-Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.
-
-**Exercício rápido.** Ache a mediana dos dois conjuntos a seguir:
-
 ::: center
 ::: fragment
 3 17 81 502 900
 :::
+:::
 
+::: fragment
+Se a quantidade total de números for ímpar, então o "meio" será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o "meio" será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.
+:::
+
+::: center
 ::: fragment
 5 72 80 100 203 399
 :::

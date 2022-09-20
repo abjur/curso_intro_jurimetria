@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="a_medidas_centro_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a_medidas_centro_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a_medidas_centro_files/libs/quarto-html/popper.min.js"></script>
-<script src="a_medidas_centro_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a_medidas_centro_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a_medidas_centro_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a_medidas_centro_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="a_medidas_dispersao_I_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a_medidas_dispersao_I_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a_medidas_dispersao_I_files/libs/quarto-html/popper.min.js"></script>
+<script src="a_medidas_dispersao_I_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a_medidas_dispersao_I_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a_medidas_dispersao_I_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a_medidas_dispersao_I_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <title>Medidas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a_medidas_dispersao_I_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a_medidas_dispersao_I_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a_medidas_centro_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a_medidas_centro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a_medidas_centro_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a_medidas_dispersao_I_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a_medidas_dispersao_I_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a_medidas_dispersao_I_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a_medidas_dispersao_I_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a_medidas_dispersao_I_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -319,7 +319,7 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Medidas</h1>
-  <p class="subtitle">Medidas para variáveis numéricas: Medidas de centro</p>
+  <p class="subtitle">Medidas para variáveis numéricas: medidas de dispersão I</p>
 </section>
 
 <section id="ementa-do-curso" class="slide level2 smaller" data-background="#fff">
@@ -365,127 +365,86 @@ MathJax.Hub.Config({
 <ol type="1">
 <li>Tipos de variáveis</li>
 <li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li><strong>Medidas de variáveis numéricas I: Medidas de centro</strong>
+<li>Medidas de variáveis numéricas I: Medidas de centro
 <ol type="1">
-<li><strong>Média</strong></li>
-<li><strong>Mediana</strong></li>
-<li><strong>Moda</strong></li>
+<li>Média</li>
+<li>Mediana</li>
+<li>Moda</li>
 </ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
+<li><strong>Medidas de variáveis numéricas II: Medidas de dispersão</strong>
 <ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
+<li><strong>Desvio médio</strong></li>
+<li><strong>Variância</strong></li>
+<li><strong>Desvio padrão</strong></li>
 <li>Amplitude</li>
 <li>IQR</li>
 </ol></li>
 </ol>
 </section>
 <section>
-<section id="medidas-de-variáveis-numéricas" class="title-slide slide level1 center">
-<h1>Medidas de variáveis numéricas</h1>
+<section id="medidas-de-dispersão" class="title-slide slide level1 center">
+<h1>Medidas de dispersão</h1>
 
 </section>
-<section id="média" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="center-middle r-fit-text">
-<p><span class="math display">\[\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}\]</span></p>
-</div>
-</section>
-<section id="média-1" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="left-middle" style="font-size: 130%">
-<p><span class="math display">\[\blue{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}\]</span></p>
-</div>
-</section>
-<section id="média---somatório" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="left-middle" style="font-size: 130%;">
-<p><span class="math display">\[\red{\sum_{i=i}^{n} x_{i}}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 85%;left: 210px; ">
-<div class="fragment">
-<p>Esse símbolo é a letra grega sigma (maiúscula), que na matemática usamos para representar somatórios. O somatório é uma notação que resume uma série de adições em sequência.</p>
-</div>
-<div class="fragment">
-<p>A seguir, temos um exemplo mais simples de interpretar:</p>
+<section id="por-que-falar-em-medidas-de-dispersão" class="slide level2" data-background="#fff">
+<h2>Por que falar em medidas de dispersão?</h2>
+<h4 id="qual-a-média-e-a-mediana-dos-grupos-abaixo">Qual a média e a mediana dos grupos abaixo?</h4>
 <div style="font-size: 30px;">
-<p><span class="math display">\[4+8+12+16+20=\]</span></p>
-<p><span class="math display">\[4*1+4*2+4*3+4*4+4*5=\]</span></p>
-<p><span class="math display">\[\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
+<div class="center">
+<div class="columns">
+<div class="column">
+<p>Grupo A: 3 4 5 6 7</p>
+<p>Grupo B: 1 2 5 7 9</p>
+</div><div class="column">
+<p>Grupo C: 5 5 5 5 5</p>
+<p>Grupo D: 3 5 5 7</p>
+</div>
 </div>
 </div>
 <div class="fragment">
-<p>Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limite inferior (k=1) e o limite superior (5).</p>
+<p>A média e a mediana dos grupos é a mesma: 5</p>
+<p><span class="math display">\[\bar{x}=5\]</span></p>
+<p><span class="math display">\[md(x)=5\]</span></p>
+</div>
+<div class="fragment">
+<p><strong>Então como pdemos difereneciar esses grupos entre si?</strong></p>
+</div>
+<div class="fragment center">
+<p>Usando medidas de dispersão</p>
 </div>
 </div>
 </section>
-<section id="média---somatório-1" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
+<section id="tipologia-das-medidas-de-dispersão" class="slide level2" data-background="#fff">
+<h2>Tipologia das medidas de dispersão</h2>
+<ol type="1">
+<li>Amplitude</li>
+<li>Medidas de dispersão em torno da média (desvios)
+<ol type="1">
+<li>Desvio médio</li>
+<li>Variância e desvio padrão</li>
+</ol></li>
+<li>IQR</li>
+</ol>
+</section>
+<section id="medidas-de-dispersão-em-torno-da-média" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<div class="fragment">
+<!-- -->
+<h3 id="desvio">Desvio</h3>
+<div style="font-size: 30px;">
+<p>O conceito central para compreendermos as medidas de dispersão é o “desvio”. O desvio deve ser pensado sempre em relação à média. A média é uma única medida que resume todas as observações, já o desvio é uma informação que existe <em>para cada</em> observação.</p>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 30px;">
+<p>Para calcular o desvio basta simplesmente subtrair o valor da observação com a média do conjunto de observações.</p>
+</div>
+<p><span class="math display">\[desvio = x_i - \bar{x}\]</span></p>
 </div>
 </section>
-<section id="média---somatório-2" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_\gray{{k=1}}^\gray{5} \blue{4k}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 32px;right: 200px; ">
-<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
-</div>
-</section>
-<section id="média---somatório-3" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_\blue{{k=1}}^\gray{5} \gray{4k}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 32px;right: 200px; ">
-<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
-<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span>, a expressão é igual a 4.</p>
-</div>
-</section>
-<section id="média---somatório-4" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_\gray{{k=1}}^\blue{5} \gray{4k}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 32px;right: 200px; ">
-<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
-<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span>, a expressão é igual a 4.</p>
-<p>A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=5\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=5\)</span>, a expressão é igual a 20.</p>
-</div>
-</section>
-<section id="média---somatório-5" class="slide level2" data-background="#fff">
-<h2>Média - Somatório</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_\blue{{k=1}}^\blue{5} \blue{4k}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 32px;right: 200px; ">
-<p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
-<p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span>, a expressão é igual a 4.</p>
-<p>A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=5\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=5\)</span>, a expressão é igual a 20.</p>
-<p>Ou seja, serão somados todos os termos de <span class="math inline">\(k=1\)</span> até <span class="math inline">\(k=5\)</span>, fazendo <span class="math inline">\(4x1 + 4x2 + 4x3 + 4x4 + 4x5\)</span></p>
-</div>
-</section>
-<section id="média---índice" class="slide level2" data-background="#fff">
-<h2>Média - Índice</h2>
-<div class="right-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_{{k=1}}^{5} \blue{4k}\]</span></p>
-</div>
-<div class="center-position" style="font-size: 80%;">
-<p>Na fórmula da média, há uma diferença importante: no lugar do k, temos o <span class="math inline">\(x_i\)</span>. Acontece que o i não é um número exatamente como funcionava com o k, ele é apenas um índice. Precisamos, então, verificar o que é <span class="math inline">\(x_i\)</span> .</p>
-</div>
-<div class="left-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_{i=1}^{n} \blue{x_{i}}\]</span></p>
-</div>
-</section>
-<section id="média---índice-1" class="slide level2" data-background="#fff">
-<h2>Média - Índice</h2>
-<div class="left-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_{i=1}^{10} \blue{x_{i}}\]</span></p>
-</div>
-<div class="fragment absolute center-position" style="font-size: 80%;left: 150px; ">
+<section id="medidas-de-dispersão-em-torno-da-média-1" class="slide level2 smaller" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h4 id="no-exemplo-abaixo-quais-são-os-desvios-das-observações">No exemplo abaixo, quais são os desvios das observações?</h4>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 
@@ -493,224 +452,156 @@ MathJax.Hub.Config({
  <thead>
   <tr>
    <th style="text-align:left;"> Índice </th>
-   <th style="text-align:left;"> Descrição </th>
-   <th style="text-align:right;"> Valor de avaliação inicial </th>
+   <th style="text-align:right;"> Valor </th>
   </tr>
  </thead>
 <tbody>
   <tr>
    <td style="text-align:left;"> \(x_1\) </td>
-   <td style="text-align:left;"> bem 1 </td>
-   <td style="text-align:right;"> 4934 </td>
+   <td style="text-align:right;"> 3 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> \(x_2\) </td>
-   <td style="text-align:left;"> bem 2 </td>
-   <td style="text-align:right;"> 81000 </td>
+   <td style="text-align:right;"> 4 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> \(x_3\) </td>
-   <td style="text-align:left;"> bem 3 </td>
-   <td style="text-align:right;"> 1921 </td>
+   <td style="text-align:right;"> 5 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> \(x_4\) </td>
-   <td style="text-align:left;"> bem 4 </td>
-   <td style="text-align:right;"> 235 </td>
+   <td style="text-align:right;"> 6 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> \(x_5\) </td>
-   <td style="text-align:left;"> bem 5 </td>
-   <td style="text-align:right;"> 70 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> \(x_6\) </td>
-   <td style="text-align:left;"> bem 6 </td>
-   <td style="text-align:right;"> 234 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> \(x_7\) </td>
-   <td style="text-align:left;"> bem 7 </td>
-   <td style="text-align:right;"> 2000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> \(x_8\) </td>
-   <td style="text-align:left;"> bem 8 </td>
-   <td style="text-align:right;"> 30 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> \(x_9\) </td>
-   <td style="text-align:left;"> bem 9 </td>
-   <td style="text-align:right;"> 7500 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> \(x_10\) </td>
-   <td style="text-align:left;"> bem 10 </td>
-   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 7 </td>
   </tr>
 </tbody>
 </table>
 
 </div>
 </div>
-</div>
-<div class="fragment absolute" style="font-size: 70%;top: 450px; left: -80px; width: 35%; ">
-<p>Quando o termo inicial (<em>i</em>) é 1, então a expressão a ser somada não é 1, mas é <span class="math inline">\(x_1\)</span> , o que, neste caso, significa R$ 4934.5</p>
-</div>
 </section>
-<section id="média-2" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="left-middle" style="font-size: 50px;">
-<p><span class="math display">\[\sum_{i=i}^{n} x_{i}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 30px;left: 210px; width: 1000px; ">
-<p>Com isso, vimos todos os elementos <em>do somatório</em> que fazem parte da fórmula da média. Temos a expressão a ser somada (<span class="math inline">\(x_i\)</span>), o termo inicial (<span class="math inline">\(i=1\)</span>) e o termo final (<span class="math inline">\(n\)</span>).</p>
-<p>Importa dizer que, no caso da média, o índice final (<span class="math inline">\(n\)</span>) será sempre o número total de observações. Assim, o índice final será sempre <span class="math inline">\(i=n\)</span>, referindo-se sempre ao último número da sequência, <span class="math inline">\(x_n\)</span>. Se, por exemplo, existirem 10 observações a serem somadas, então <span class="math inline">\(n=10\)</span> e o último termo a ser somado será <span class="math inline">\(x_{10}\)</span>.</p>
-<div class="fragment">
-<p>O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.</p>
-</div>
-</div>
-</section>
-<section id="média-3" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="left-middle" style="font-size: 50px;">
-<p><span class="math display">\[\frac{1}{n} \sum_{i=i}^{n} x_{i}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 30px;left: 210px; width: 1000px; ">
-<p>Com isso, vimos todos os elementos <em>do somatório</em> que fazem parte da fórmula da média. Temos a expressão a ser somada (<span class="math inline">\(x_i\)</span>), o termo inicial (<span class="math inline">\(i=1\)</span>) e o termo final (<span class="math inline">\(n\)</span>).</p>
-<p>Importa dizer que, no caso da média, o índice final (<span class="math inline">\(n\)</span>) será sempre o número total de observações. Assim, o índice final será sempre <span class="math inline">\(i=n\)</span>, referindo-se sempre ao último número da sequência, <span class="math inline">\(x_n\)</span>. Se, por exemplo, existirem 10 observações a serem somadas, então <span class="math inline">\(n=10\)</span> e o último termo a ser somado será <span class="math inline">\(x_{10}\)</span>.</p>
-<p>O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.</p>
-</div>
-</section>
-<section id="média-4" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="left-middle" style="font-size: 50px;">
-<p><span class="math display">\[\frac{1}{\blue{n}} \sum_{i=i}^{\blue{n}} x_{i}\]</span></p>
-</div>
-<div class="absolute center-position" style="font-size: 30px;left: 210px; width: 1000px; ">
-<p>Com isso, vimos todos os elementos <em>do somatório</em> que fazem parte da fórmula da média. Temos a expressão a ser somada (<span class="math inline">\(x_i\)</span>), o termo inicial (<span class="math inline">\(i=1\)</span>) e o termo final (<span class="math inline">\(n\)</span>).</p>
-<p>Importa dizer que, no caso da média, o índice final (<span class="math inline">\(n\)</span>) será sempre o número total de observações. Assim, o índice final será sempre <span class="math inline">\(i=n\)</span>, referindo-se sempre ao último número da sequência, <span class="math inline">\(x_n\)</span>. Se, por exemplo, existirem 10 observações a serem somadas, então <span class="math inline">\(n=10\)</span> e o último termo a ser somado será <span class="math inline">\(x_{10}\)</span>.</p>
-<p>O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo <span class="math inline">\(n\)</span> da divisão!</p>
-</div>
-</section>
-<section id="média-5" class="slide level2" data-background="#fff">
-<h2>Média</h2>
-<div class="center-middle r-fit-text">
-<p><span class="math display">\[\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}\]</span></p>
-</div>
-</section>
-<section id="mediana" class="slide level2" data-background="#fff">
-<h2>Mediana</h2>
-<h4 id="conceito">Conceito</h4>
-<div style="font-size: 30px;">
-<p>Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.</p>
-<div class="center">
-<div class="fragment">
-<p>3 17 81 502 900</p>
+<section id="medidas-de-dispersão-em-torno-da-média-2" class="slide level2 smaller" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h4 id="no-exemplo-abaixo-quais-são-os-desvios-das-observações-1">No exemplo abaixo, quais são os desvios das observações?</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Índice </th>
+   <th style="text-align:right;"> Valor </th>
+   <th style="text-align:right;"> Desvio </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> \(x_1\) </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> -2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_2\) </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> -1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_3\) </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_4\) </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> \(x_5\) </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+</tbody>
+</table>
+
 </div>
 </div>
 <div class="fragment">
-<p>Se a quantidade total de números for ímpar, então o “meio” será exatamente o número que divide os dados em dois grupos de tamanhos iguais. Se a quantidade total de números for par, então o “meio” será a média dos dois números centrais, de forma que esta média divida os dados em dois grupos de tamanhos iguais.</p>
+<p>A partir dos desvios, a gente quer calcular <strong>uma única medida</strong> para resumir todo o padrão de desvios da distribuição. Então a gente quer transformar essa medida individual de cada observação (o desvio) para uma informação de conjunto.</p>
 </div>
-<div class="center">
-<div class="fragment">
-<p>5 72 80 100 203 399</p>
-</div>
-</div>
+<div class="fragment center">
+<p><strong>Como fazer isso?</strong></p>
 </div>
 </section>
-<section id="mediana-1" class="slide level2" data-background="#fff">
-<h2>Mediana</h2>
-<h4 id="fórmula-matemática">Fórmula matemática</h4>
-<div class="center-middle r-fit-text">
-<p><span class="math display">\[md\left(x\right)
-=\begin{cases}
-  {x_\frac{n+1}{2}}                                    &amp; n\text{ ímpar}\\
-  \frac {1}{2}\left(x_{\frac{n}{2}} + x_{\frac{n}{2} + 1}\right) &amp; n \text{ par}
-\end{cases}\]</span></p>
+<section id="medidas-de-dispersão-em-torno-da-média-3" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h4 id="solução-1-tirar-a-média-dos-desvios">Solução 1: Tirar a média dos desvios!</h4>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)\]</span></p>
+<div class="fragment" style="font-size: 30px;">
+<p>Mas isso tem um problema: A média dos desvios é sempre zero!</p>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)=\frac{1}{n}\sum_{i=1}^n x_i - \frac{1}{n}\sum_{i=1}^n \bar x = \bar x - \frac{n}{n}\bar x = \bar x - \bar x = 0\]</span></p>
+<p>O problema são os números negativos dos desvios. A gente precisa eliminá-los. Para isso temos outras duas soluções:</p>
 </div>
 </section>
-<section id="média-x-mediana" class="slide level2" data-background="#fff">
-<h2>Média x Mediana</h2>
-<div style="font-size: 30px;">
-<p>Agora precisamos comparar a média com a mediana. Para isso, calcule agora a média e a mediana dos seguintes conjuntos.</p>
-<div class="center">
-<p><strong>Conjunto 1:</strong> 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20</p>
-<p><strong>Conjunto 2:</strong> 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2000</p>
-</div>
-</div>
-<div class="fragment">
-<!-- -->
-<h4 id="respostas">Respostas</h4>
-<div style="font-size: 30px;">
+<section id="medidas-de-dispersão-em-torno-da-média-4" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h4 id="solução-2-tirar-a-média-do-módulo-dos-desvios">Solução 2: Tirar a média do módulo dos desvios</h4>
 <div class="columns">
 <div class="column">
-<p>Conjunto 1:</p>
-<ul>
-<li>Média: 15</li>
-<li>Mediana: 15</li>
-</ul>
-</div><div class="column">
-<p>Conjunto 2:</p>
-<ul>
-<li>Média 195</li>
-<li>Mediana: 15</li>
-</ul>
-</div>
-</div>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|\]</span></p>
+</div><div class="column" style="font-size: 40px;">
+<p><br></p>
 </div>
 </div>
 <div class="fragment">
 <!-- -->
-<h4 id="o-que-podemos-concluir-sobre-essas-respostas">O que podemos concluir sobre essas respostas?</h4>
-<div style="font-size: 30px;">
-<p>Dizemos que a mediana é mais <em>robusta</em> do que a média, porque ela não é afetada por “valores extremos”.</p>
-</div>
-</div>
-</section>
-<section id="moda" class="slide level2" data-background="#fff">
-<h2>Moda</h2>
-<h3 id="conceito-1">Conceito</h3>
-<div style="font-size: 30px;">
-<p>A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.</p>
-</div>
+<h4 id="solução-3-tirar-a-média-dos-desvios-ao-quadrado">Solução 3: Tirar a média dos desvios ao quadrado</h4>
 <div class="columns">
-<div class="center" style="font-size: 30px;">
-<div class="fragment">
-<p>1, 1, 1, 3, 5, 6, 7, 8, 9</p>
-</div>
-<div class="fragment">
-<p><strong>Moda:</strong> 1</p>
-</div>
-<div class="fragment">
-<p>1, 13, 2, 2, 6, 41, 7, 16, 6, 17, 10, 19, 8</p>
-</div>
-<div class="fragment">
-<p><strong>Moda:</strong> 2 e 6</p>
-</div>
-<div class="fragment">
-<p>1, 1, 3, 3, 5, 5, 7, 7</p>
-</div>
-<div class="fragment">
-<p><strong>Moda:</strong> Não existe</p>
-</div>
-<div class="fragment">
-<p>1, 13, 26, 1, 18, 23, 13, 2, 9, 18</p>
-</div>
-<div class="fragment">
-<p><strong>Moda:</strong> 1, 13, 18</p>
+<div class="column">
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2\]</span></p>
+</div><div class="column" style="font-size: 40px;">
+<p><br></p>
 </div>
 </div>
 </div>
 </section>
-<section id="section" class="slide level2" data-background="#fff">
-<h2></h2>
-
-<img data-src="a_medidas_centro_files/figure-revealjs/unnamed-chunk-1-1.png" width="1000" class="r-stretch quarto-figure-center"></section>
-<section id="section-1" class="slide level2" data-background="#fff">
-<h2></h2>
-
-<img data-src="a_medidas_centro_files/figure-revealjs/unnamed-chunk-2-1.png" width="1000" class="r-stretch quarto-figure-center"></section></section>
+<section id="medidas-de-dispersão-em-torno-da-média-5" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h4 id="solução-2-tirar-a-média-do-módulo-dos-desvios-1">Solução 2: Tirar a média do módulo dos desvios</h4>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|\]</span></p>
+</div><div class="column" style="font-size: 30px;">
+<p><br> <br> Isso é chamado de <strong>desvio médio</strong></p>
+</div>
+</div>
+<h4 id="solução-3-tirar-a-média-dos-desvios-ao-quadrado-1">Solução 3: Tirar a média dos desvios ao quadrado</h4>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2\]</span></p>
+</div><div class="column" style="font-size: 30px;">
+<p><br> <br> Isso é chamado de <strong>variância</strong></p>
+</div>
+</div>
+</section>
+<section id="medidas-de-dispersão-em-torno-da-média-6" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h3 id="variância-e-desvio-padrão">Variância e desvio padrão</h3>
+<div style="font-size: 30px;">
+<p>Por mais natural que seja usar o módulo dos desvio, essa operação gera complicações de cálculo depois. Então, por essa razão, costumamos utilizar a variância.</p>
+</div>
+<p><span class="math display">\[var(x) = \frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2\]</span></p>
+</section>
+<section id="medidas-de-dispersão-em-torno-da-média-7" class="slide level2" data-background="#fff">
+<h2>Medidas de dispersão em torno da média</h2>
+<h3 id="variância-e-desvio-padrão-1">Variância e desvio padrão</h3>
+<div style="font-size: 30px;">
+<p>Entretanto, a variância, por ter números elevados ao quadrado, precisa ser “corrigida” de alguma forma para se tornar uma medida interpretável. Assim, a medida que usamos no lugar da variância é simplesmente a sua raiz quadrada. É o chamado desvio padrão, que é definido pela seguinte fórmula:</p>
+</div>
+<p><span class="math display">\[dp(x) = \sqrt{var}\]</span></p>
+<p><span class="math display">\[dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}\]</span></p>
+</section></section>
 <section id="fim" class="title-slide slide level1 center">
 <h1>Fim</h1>
 <div class="footer footer-default">
@@ -721,19 +612,19 @@ MathJax.Hub.Config({
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a_medidas_centro_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a_medidas_centro_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a_medidas_dispersao_I_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
