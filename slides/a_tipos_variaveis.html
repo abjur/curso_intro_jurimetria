@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="pt"><head>
 <script src="a_tipos_variaveis_files/libs/clipboard/clipboard.min.js"></script>
 <script src="a_tipos_variaveis_files/libs/quarto-html/tabby.min.js"></script>
 <script src="a_tipos_variaveis_files/libs/quarto-html/popper.min.js"></script>
 <script src="a_tipos_variaveis_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="a_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="a_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+<link href="a_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.36">
 
   <title>Medidas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -317,11 +317,11 @@
   <link href="a_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
   <script src="a_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
   <h1 class="title">Medidas</h1>
   <p class="subtitle">Tipos de variáveis</p>
 </section>
@@ -364,8 +364,8 @@
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-e341d00b66b543902297" style="width:960px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e341d00b66b543902297">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fcad9bbdb74a813cef2e" style="width:960px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fcad9bbdb74a813cef2e">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -383,11 +383,12 @@
 <h3 class="headersh3" id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
 <p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.</p>
 </section></section>
-<section id="fim" class="title-slide slide level1 center">
-<h1>Fim</h1>
-
-<img src="/img/logo-abj-colorido.png" class="slide-logo r-stretch"><div class="footer footer-default">
-
+<section id="section" class="title-slide slide level1 center" data-background="#fff">
+<h1></h1>
+<p><img data-src="img/logo-abj-colorido.png" width="500"></p>
+<p><img src="img/logo-abj-colorido.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Introdução à Pesquisa Jurimétrica.</p>
 </div>
 </section>
     </div>
@@ -442,7 +443,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -547,7 +548,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -680,7 +681,7 @@
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Copiada");
         setTimeout(function() {
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');

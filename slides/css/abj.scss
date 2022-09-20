@@ -1,6 +1,4 @@
-
 /*-- scss:defaults --*/
-
 //font
 $font-family-sans-serif: Lato, sans-serif !default;
 $text-indent: 0;
@@ -12,10 +10,7 @@ $body-color: #233262;
 $link-color: #adc910;
 $presentation-font-size-root: 35px;
 
-
-
 // headings
-
 $presentation-heading-font: Yaldevi, Lato, sans-serif !default;
 $presentation-heading-color: #233262 !default;
 $h1-font-size: 1.6em !default;
@@ -23,7 +18,6 @@ $h2-font-size: 1.3em !default;
 $h3-font-size: 1.15em !default;
 
 /*-- scss:rules --*/
-
 
 .footer {
   font-family: $presentation-heading-font;
@@ -49,7 +43,7 @@ $h3-font-size: 1.15em !default;
   color: $body-color !important;
 }
 
-//pages
+// pages
 
 .reveal .page {
   background-color: #fff;

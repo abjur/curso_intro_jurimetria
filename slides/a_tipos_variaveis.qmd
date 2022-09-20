@@ -3,10 +3,19 @@ title: "Medidas"
 subtitle: "Tipos de variáveis"
 format: 
   revealjs:
-    logo: "/img/logo-abj-colorido.png"
-    theme: [default, css/custom-css.scss]
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
 editor: visual
-transition: fade
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
 ---
 
 ## Ementa do curso {.smaller .headersh2}
@@ -106,4 +115,6 @@ Variáveis contínuas: Representa números reais (inclui números fracionados e 
 
 Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
 
-# Fim
+# {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}

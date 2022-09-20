@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="pt"><head>
 <script src="a_medidas_dispersao_I_files/libs/clipboard/clipboard.min.js"></script>
 <script src="a_medidas_dispersao_I_files/libs/quarto-html/tabby.min.js"></script>
 <script src="a_medidas_dispersao_I_files/libs/quarto-html/popper.min.js"></script>
 <script src="a_medidas_dispersao_I_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="a_medidas_dispersao_I_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="a_medidas_dispersao_I_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a_medidas_dispersao_I_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="a_medidas_dispersao_I_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <title>Medidas</title>
@@ -313,16 +313,16 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
   <h1 class="title">Medidas</h1>
   <p class="subtitle">Medidas para variáveis numéricas: medidas de dispersão I</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller" data-background="#fff">
+<section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
 <div style="position:fixed; visibility: hidden">
 <p><span class="math display">\[\require{color}\definecolor{red}{rgb}{1, 0, 0}\]</span> <span class="math display">\[\require{color}\definecolor{blue}{rgb}{0, 0, 1}\]</span> <span class="math display">\[\require{color}\definecolor{green}{rgb}{0, 1, 0}\]</span> <span class="math display">\[\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}\]</span></p>
@@ -360,7 +360,7 @@ MathJax.Hub.Config({
 </ol></li>
 </ol>
 </section>
-<section id="ementa-do-curso-1" class="slide level2 smaller" data-background="#fff">
+<section id="ementa-do-curso-1" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
 <ol type="1">
 <li>Tipos de variáveis</li>
@@ -386,7 +386,7 @@ MathJax.Hub.Config({
 <h1>Medidas de dispersão</h1>
 
 </section>
-<section id="por-que-falar-em-medidas-de-dispersão" class="slide level2" data-background="#fff">
+<section id="por-que-falar-em-medidas-de-dispersão" class="slide level2">
 <h2>Por que falar em medidas de dispersão?</h2>
 <h4 id="qual-a-média-e-a-mediana-dos-grupos-abaixo">Qual a média e a mediana dos grupos abaixo?</h4>
 <div style="font-size: 30px;">
@@ -407,14 +407,14 @@ MathJax.Hub.Config({
 <p><span class="math display">\[md(x)=5\]</span></p>
 </div>
 <div class="fragment">
-<p><strong>Então como pdemos difereneciar esses grupos entre si?</strong></p>
+<p><strong>Então como pdemos diferenciar esses grupos entre si?</strong></p>
 </div>
 <div class="fragment center">
 <p>Usando medidas de dispersão</p>
 </div>
 </div>
 </section>
-<section id="tipologia-das-medidas-de-dispersão" class="slide level2" data-background="#fff">
+<section id="tipologia-das-medidas-de-dispersão" class="slide level2">
 <h2>Tipologia das medidas de dispersão</h2>
 <ol type="1">
 <li>Amplitude</li>
@@ -426,7 +426,7 @@ MathJax.Hub.Config({
 <li>IQR</li>
 </ol>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <div class="fragment">
 <!-- -->
@@ -442,7 +442,7 @@ MathJax.Hub.Config({
 <p><span class="math display">\[desvio = x_i - \bar{x}\]</span></p>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-1" class="slide level2 smaller" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-1" class="slide level2 smaller">
 <h2>Medidas de dispersão em torno da média</h2>
 <h4 id="no-exemplo-abaixo-quais-são-os-desvios-das-observações">No exemplo abaixo, quais são os desvios das observações?</h4>
 <div class="cell" data-layout-align="center">
@@ -482,7 +482,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-2" class="slide level2 smaller" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-2" class="slide level2 smaller">
 <h2>Medidas de dispersão em torno da média</h2>
 <h4 id="no-exemplo-abaixo-quais-são-os-desvios-das-observações-1">No exemplo abaixo, quais são os desvios das observações?</h4>
 <div class="cell" data-layout-align="center">
@@ -534,7 +534,7 @@ MathJax.Hub.Config({
 <p><strong>Como fazer isso?</strong></p>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-3" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-3" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <h4 id="solução-1-tirar-a-média-dos-desvios">Solução 1: Tirar a média dos desvios!</h4>
 <p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)\]</span></p>
@@ -544,7 +544,7 @@ MathJax.Hub.Config({
 <p>O problema são os números negativos dos desvios. A gente precisa eliminá-los. Para isso temos outras duas soluções:</p>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-4" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-4" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <h4 id="solução-2-tirar-a-média-do-módulo-dos-desvios">Solução 2: Tirar a média do módulo dos desvios</h4>
 <div class="columns">
@@ -566,7 +566,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-5" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-5" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <h4 id="solução-2-tirar-a-média-do-módulo-dos-desvios-1">Solução 2: Tirar a média do módulo dos desvios</h4>
 <div class="columns">
@@ -585,7 +585,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-6" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-6" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <h3 id="variância-e-desvio-padrão">Variância e desvio padrão</h3>
 <div style="font-size: 30px;">
@@ -593,7 +593,7 @@ MathJax.Hub.Config({
 </div>
 <p><span class="math display">\[var(x) = \frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2\]</span></p>
 </section>
-<section id="medidas-de-dispersão-em-torno-da-média-7" class="slide level2" data-background="#fff">
+<section id="medidas-de-dispersão-em-torno-da-média-7" class="slide level2">
 <h2>Medidas de dispersão em torno da média</h2>
 <h3 id="variância-e-desvio-padrão-1">Variância e desvio padrão</h3>
 <div style="font-size: 30px;">
@@ -602,10 +602,12 @@ MathJax.Hub.Config({
 <p><span class="math display">\[dp(x) = \sqrt{var}\]</span></p>
 <p><span class="math display">\[dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}\]</span></p>
 </section></section>
-<section id="fim" class="title-slide slide level1 center">
-<h1>Fim</h1>
+<section id="section" class="title-slide slide level1 center" data-background="#fff">
+<h1></h1>
+<p><img data-src="img/logo-abj-colorido.png" width="500"></p>
+<p><img src="img/logo-abj-colorido.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p>Introdução à Pesquisa Jurimétrica.</p>
 </div>
 </section>
     </div>
@@ -660,7 +662,7 @@ MathJax.Hub.Config({
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -898,7 +900,7 @@ MathJax.Hub.Config({
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Copiada");
         setTimeout(function() {
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');

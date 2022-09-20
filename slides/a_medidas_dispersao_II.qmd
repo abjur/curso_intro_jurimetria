@@ -1,0 +1,8 @@
+---
+title: "Medidas"
+subtitle: "Medidas para variáveis numéricas: medidas de dispersão II"
+format: 
+  revealjs:
+    theme: [default, css/custom-css.scss]
+editor: visual
+---

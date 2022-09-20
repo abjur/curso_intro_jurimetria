@@ -3,10 +3,20 @@ title: "Medidas"
 subtitle: "Medidas para variáveis numéricas: medidas de dispersão I"
 format: 
   revealjs:
-    theme: [default, css/custom-css.scss]
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
 editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -22,7 +32,7 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
-## Ementa do curso {.smaller background="#fff"}
+## Ementa do curso {.smaller}
 
 ::: {style="position:fixed; visibility: hidden"}
 $$\require{color}\definecolor{red}{rgb}{1, 0, 0}$$ $$\require{color}\definecolor{blue}{rgb}{0, 0, 1}$$ $$\require{color}\definecolor{green}{rgb}{0, 1, 0}$$ $$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
@@ -58,7 +68,7 @@ MathJax.Hub.Config({
     4.  Amplitude
     5.  IQR
 
-## Ementa do curso {.smaller background="#fff"}
+## Ementa do curso {.smaller }
 
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
@@ -76,7 +86,7 @@ MathJax.Hub.Config({
 # Medidas de dispersão
 
 
-## Por que falar em medidas de dispersão? {background="#fff"}
+## Por que falar em medidas de dispersão?
 
 #### Qual a média e a mediana dos grupos abaixo?
 
@@ -114,7 +124,7 @@ Usando medidas de dispersão
 :::
 :::
 
-## Tipologia das medidas de dispersão {background="#fff"}
+## Tipologia das medidas de dispersão
 
 1. Amplitude
 2. Medidas de dispersão em torno da média (desvios)
@@ -123,7 +133,7 @@ Usando medidas de dispersão
 3. IQR
 
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 ::: fragment
 ### Desvio
@@ -140,7 +150,7 @@ Para calcular o desvio basta simplesmente subtrair o valor da observação com a
 $$desvio = x_i - \bar{x}$$
 :::
 
-## Medidas de dispersão em torno da média {.smaller background="#fff"}
+## Medidas de dispersão em torno da média {.smaller }
 
 #### No exemplo abaixo, quais são os desvios das observações?
 ```{r}
@@ -156,7 +166,7 @@ tibble::tibble(
   )
 ```
 
-## Medidas de dispersão em torno da média {.smaller background="#fff"}
+## Medidas de dispersão em torno da média {.smaller }
 
 #### No exemplo abaixo, quais são os desvios das observações?
 
@@ -183,7 +193,7 @@ A partir dos desvios, a gente quer calcular **uma única medida** para resumir t
 :::
 
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 #### Solução 1: Tirar a média dos desvios!
 
@@ -197,7 +207,7 @@ $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)=\frac{1}{n}\sum_{i=1}^n x_i - \frac{1}{n}\
 O problema são os números negativos dos desvios. A gente precisa eliminá-los. Para isso temos outras duas soluções:
 :::
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 #### Solução 2: Tirar a média do módulo dos desvios
 ::::{.columns}
@@ -223,7 +233,7 @@ $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 ::::
 :::
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 #### Solução 2: Tirar a média do módulo dos desvios
 ::::{.columns}
@@ -252,7 +262,7 @@ Isso é chamado de **variância**
 ::::
 
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 ### Variância e desvio padrão
 
@@ -263,7 +273,7 @@ Por mais natural que seja usar o módulo dos desvio, essa operação gera compli
 $$var(x) = \frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 
 
-## Medidas de dispersão em torno da média {background="#fff"}
+## Medidas de dispersão em torno da média
 
 ### Variância e desvio padrão
 
@@ -272,7 +282,12 @@ Entretanto, a variância, por ter números elevados ao quadrado, precisa ser "co
 :::
 
 $$dp(x) = \sqrt{var}$$
+
 $$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$
 
 
-# Fim
+# {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
+
+
