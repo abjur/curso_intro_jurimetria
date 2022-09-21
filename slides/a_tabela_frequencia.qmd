@@ -3,11 +3,22 @@ title: "Medidas"
 subtitle: "Tabela de frequência"
 format: 
   revealjs:
-    theme: [default, css/custom-css.scss]
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
 editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
 ---
 
-## Ementa do curso {.smaller background="#fff"}
+## Ementa do curso {.smaller}
 
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
@@ -28,7 +39,7 @@ editor: visual
 
     5.  IQR
 
-## Ementa do curso {.smaller background="#fff"}
+## Ementa do curso {.smaller}
 
 1.  Tipos de variáveis
 2.  **Medidas de variáveis categóricas: Tabelas de frequência**
@@ -49,11 +60,12 @@ editor: visual
 
     5.  IQR
 
-# Medidas de variáveis categóricas
+# Medidas de variáveis categóricas {.slide-title}
 
-##  {.smaller background="#fff"}
+##  {.smaller}
 
-:::{.absolute left=-120}
+::: {.absolute left="-120"}
+
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 | Variável  | Frequência | Frequência acumulada | Proporção           | Proporção acumulada    | Porcentagem |
 |           |            |                      |                     |                        |             |
@@ -75,7 +87,7 @@ editor: visual
 : Tabela de frequência
 :::
 
-## Absoluto ou Acumulado? {.smaller background="#fff"}
+## Absoluto ou Acumulado? {.smaller}
 
 ```{r}
 da <- tibble::tibble(
@@ -130,7 +142,7 @@ da |>
   )
 ```
 
-## Absoluto ou Acumulado? {.smaller background="#fff"}
+## Absoluto ou Acumulado? {.smaller}
 
 ::: {style="font-size: 90%"}
 ```{r}
@@ -143,10 +155,14 @@ da |>
     `Percentual acumulado` = cum_perc
   ) |>
   knitr::kable(
-    caption = "10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul."
+    caption = "10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul.",
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
   )
   
 ```
 :::
 
-# Fim
+# {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}

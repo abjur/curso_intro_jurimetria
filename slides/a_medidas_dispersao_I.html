@@ -324,23 +324,6 @@
 
 <section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
-<div style="position:fixed; visibility: hidden">
-<p><span class="math display">\[\require{color}\definecolor{red}{rgb}{1, 0, 0}\]</span> <span class="math display">\[\require{color}\definecolor{blue}{rgb}{0, 0, 1}\]</span> <span class="math display">\[\require{color}\definecolor{green}{rgb}{0, 1, 0}\]</span> <span class="math display">\[\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}\]</span></p>
-</div>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-    Macros: {
-      red: ["{\\color{red}{#1}}", 1],
-      blue: ["{\\color{blue}{#1}}", 1],
-      green: ["{\\color{green}{#1}}", 1],
-      gray: ["{\\color{gray}{#1}}", 1]
-    },
-    loader: {load: ['[tex]/color']},
-    tex: {packages: {'[+]': ['color']}}
-  }
-});
-</script>
 <ol type="1">
 <li>Tipos de variáveis</li>
 <li>Medidas de variáveis categóricas: Tabelas de frequência</li>
@@ -382,7 +365,7 @@ MathJax.Hub.Config({
 </ol>
 </section>
 <section>
-<section id="medidas-de-dispersão" class="title-slide slide level1 center">
+<section id="medidas-de-dispersão" class="title-slide slide level1 slide-title center">
 <h1>Medidas de dispersão</h1>
 
 </section>
@@ -601,6 +584,22 @@ MathJax.Hub.Config({
 </div>
 <p><span class="math display">\[dp(x) = \sqrt{var}\]</span></p>
 <p><span class="math display">\[dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}\]</span></p>
+</section>
+<section id="medidas-de-dispersão-em-torno-da-média-8" class="slide level2">
+<h2>Medidas de dispersão em torno da média</h2>
+<div class="columns">
+<div class="column">
+<h4 id="média-dos-desvios">Média dos desvios</h4>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)\]</span></p>
+<h4 id="variância">Variância</h4>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2\]</span></p>
+</div><div class="column">
+<h5 id="desvio-médio">Desvio médio</h5>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n|x_i-\bar x|\]</span></p>
+<h5 id="desvio-padrão">Desvio padrão</h5>
+<p><span class="math display">\[\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}\]</span></p>
+</div>
+</div>
 </section></section>
 <section id="section" class="title-slide slide level1 center" data-background="#fff">
 <h1></h1>

@@ -18,7 +18,7 @@ title-slide-attributes:
   preview-links: true
 ---
 
-## Ementa do curso {.smaller .headersh2}
+## Ementa do curso {.smaller}
 
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
@@ -33,14 +33,14 @@ title-slide-attributes:
     4.  Amplitude
     5.  IQR
 
-## Plano geral de aula {.normal-page-img}
+## Plano geral de aulas
 
 Na aula de hoje, teremos dois objetivos:
 
 1.  Ver a classificação dos tipos de variáveis
 2.  Ver como os tipos de variáveis se refletem em uma base de dados
 
-# Tipos de variáveis {.topics-page}
+# Tipos de variáveis {.slide-title}
 
 ## Tipos de variáveis
 
