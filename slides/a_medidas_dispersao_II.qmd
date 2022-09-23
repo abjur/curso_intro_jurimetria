@@ -30,11 +30,19 @@ knitr::opts_chunk$set(
 
 cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
-
 ```
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -47,9 +55,21 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     3.  Desvio padrão
     4.  Amplitude
     5.  IQR
+:::
+::::
+
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -62,8 +82,17 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     3.  Desvio padrão
     4.  **Amplitude**
     5.  **IQR**
+:::
+::::
 
 # Medidas de dispersão {.slide-title}
+
+## Plano de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1. Compreender o que é a amplitude, como calculá-la e para que utilizá-la
+2. Aprender o que são e para que servem os quantis empíricos e o IQR
 
 ## Amplitude
 
@@ -74,14 +103,12 @@ $$A = max - min$$
 
 ::: fragment
 #### Problemas
-A amplitude é uma medida simples de ser calculada, entretanto, ela tem alguns problemas:
-- É uma medida muito suscetível a valores extremos, ou seja, ela é pouco robusta
-- Ela não consegue indicar a relação da dispersão com as medidas centrais
+A amplitude é uma medida simples de ser calculada, entretanto, é importante saber que ela tem um problema potencial que é a sua **alta suscetibilidade a valores extremos, ou seja, ela é pouco robusta**, assim como a média. 
 :::
 
 ## IQR
 
-A última medida de dispersão que temos é a variação inter-quartil (que vem do inglês _interquartile range_, de onde originou a sigla IQR). Para compreendermos o IQR, devemos compreender o que é um **quantil empírico**. 
+A última medida de dispersão que temos é a amplitude inter-quartil (que vem do inglês _interquartile range_, de onde originou a sigla IQR). Para compreendermos o IQR, devemos compreender o que é um **quantil empírico**. 
 
 ## Quantis empíricos
 

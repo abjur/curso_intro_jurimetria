@@ -35,6 +35,15 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -47,9 +56,21 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     3.  Desvio padrão
     4.  Amplitude
     5.  IQR
+:::
+::::
+
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -62,8 +83,17 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     3.  **Desvio padrão**
     4.  Amplitude
     5.  IQR
+:::
+::::
 
 # Medidas de dispersão {.slide-title}
+
+## Plano de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1. Compreender o que são medidas de dispersão em geral
+2. Aprender como se calculam as medidas de dispersão relacionadas ao "desvio"
 
 ## Por que falar em medidas de dispersão?
 
@@ -75,7 +105,7 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 ::: column
 Grupo A: 3 4 5 6 7
 
-Grupo B: 1 2 5 7 9
+Grupo B: 1 3 5 7 9
 :::
 
 ::: column
@@ -93,7 +123,7 @@ $$md(x)=5$$
 :::
 
 ::: fragment
-**Então como pdemos diferenciar esses grupos entre si?**
+**Então como podemos diferenciar esses grupos entre si?**
 :::
 
 ::: {.fragment .center}
@@ -103,10 +133,10 @@ Usando medidas de dispersão
 
 ## Tipologia das medidas de dispersão
 
-1.  Amplitude
-2.  Medidas de dispersão em torno da média (desvios)
+1.  Medidas de dispersão em torno da média (desvios)
     1.  Desvio médio
     2.  Variância e desvio padrão
+2.  Amplitude
 3.  IQR
 
 ## Medidas de dispersão em torno da média
@@ -249,7 +279,6 @@ Por mais natural que seja usar o módulo dos desvio, essa operação gera compli
 $$var(x) = \frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 
 ## Medidas de dispersão em torno da média
-
 ### Variância e desvio padrão
 
 ::: {style="font-size: 30px;"}
@@ -258,13 +287,17 @@ Entretanto, a variância, por ter números elevados ao quadrado, precisa ser "co
 
 $$dp(x) = \sqrt{var}$$
 
-$$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$ \## Medidas de dispersão em torno da média
+$$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$ 
+
+
+## Medidas de dispersão em torno da média
 
 ::: columns
 ::: column
 #### Média dos desvios
 
-$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)$$ \#### Variância $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
+$$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)$$ 
+#### Variância $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 :::
 
 ::: column

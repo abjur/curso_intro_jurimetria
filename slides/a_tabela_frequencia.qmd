@@ -20,52 +20,68 @@ title-slide-attributes:
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
     1.  Média
-
     2.  Mediana
-
     3.  Moda
 4.  Medidas de variáveis numéricas II: Medidas de dispersão
     1.  Desvio médio
-
     2.  Variância
-
     3.  Desvio padrão
-
     4.  Amplitude
-
     5.  IQR
+:::
+::::
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  **Medidas de variáveis categóricas: Tabelas de frequência**
 3.  Medidas de variáveis numéricas I: Medidas de centro
     1.  Média
-
     2.  Mediana
-
     3.  Moda
 4.  Medidas de variáveis numéricas II: Medidas de dispersão
     1.  Desvio médio
-
     2.  Variância
-
     3.  Desvio padrão
-
     4.  Amplitude
-
     5.  IQR
+:::
+::::
 
 # Medidas de variáveis categóricas {.slide-title}
+
+## Plano de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1. Aprender a interpretar as medidas de uma tabela de distribição de frequência
+2. Aprender a construir uma tabela de frequência no google sheets
 
 ##  {.smaller}
 
 ::: {.absolute left="-120"}
-
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 | Variável  | Frequência | Frequência acumulada | Proporção           | Proporção acumulada    | Porcentagem |
 |           |            |                      |                     |                        |             |
@@ -81,13 +97,13 @@ title-slide-attributes:
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 | $x_k$     | $n_k$      | $N_k=N_{k-1}+n_k=n$  | $f_k=\frac{n_k}{n}$ | $F_k=F_{k-1}+f_k=1,00$ | $100f_k$    |
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
-| **Total** | $n$        | \-                   | $1,00$              | \-                     | $100%$      |
+| **Total** | $n$        | -                   | $1,00$              | -                     | $100%$      |
 +-----------+------------+----------------------+---------------------+------------------------+-------------+
 
 : Tabela de frequência
 :::
 
-## Absoluto ou Acumulado? {.smaller}
+## Quando usar a informação acumulada? {.smaller}
 
 ```{r}
 da <- tibble::tibble(
@@ -142,7 +158,7 @@ da |>
   )
 ```
 
-## Absoluto ou Acumulado? {.smaller}
+## Quando usar a informação acumulada {.smaller}
 
 ::: {style="font-size: 90%"}
 ```{r}
@@ -163,6 +179,6 @@ da |>
 ```
 :::
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}

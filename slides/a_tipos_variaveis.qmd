@@ -20,6 +20,15 @@ title-slide-attributes:
 
 ## Ementa do curso {.smaller}
 
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -32,15 +41,43 @@ title-slide-attributes:
     3.  Desvio padrão
     4.  Amplitude
     5.  IQR
+:::
+::::
 
-## Plano geral de aulas
+## Ementa do curso {.smaller}
+
+:::: {.columns}
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+1. Definição de escopo
+2. Operacionalização de conceitos
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
+1.  **Tipos de variáveis**
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
+    2.  Mediana
+    3.  Moda
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  Amplitude
+    5.  IQR
+:::
+::::
+
+# Tipos de variáveis {.slide-title}
+
+## Plano de aula
 
 Na aula de hoje, teremos dois objetivos:
 
 1.  Ver a classificação dos tipos de variáveis
 2.  Ver como os tipos de variáveis se refletem em uma base de dados
-
-# Tipos de variáveis {.slide-title}
 
 ## Tipos de variáveis
 
@@ -95,26 +132,26 @@ DiagrammeR::grViz("
 
 ```
 
-## Tipos de variáveis {.normal-page .logo}
+## Tipos de variáveis
 
-### Variáveis categóricas {.headersh3}
+### Variáveis categóricas
 
 Variáveis ordinais: As categorias possuem uma ordenação universal entre si
 
 Variáveis nominais: As categorias não possuem uma ordenação universal entre si
 
-### Variáveis numéricas {.headersh3}
+### Variáveis numéricas
 
 Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
 
 Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)
 
-## Tipos de variáveis {.normal-page}
+## Tipos de variáveis
 
-### Por que essa classificação importa? {.headersh3}
+### Por que essa classificação importa?
 
 Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
