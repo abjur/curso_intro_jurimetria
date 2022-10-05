@@ -24,8 +24,8 @@ title-slide-attributes:
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
 
-1.  Definição de escopo
-2.  Operacionalização de conceitos
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
@@ -52,8 +52,8 @@ title-slide-attributes:
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
 
-1.  Definição de escopo
-2.  Operacionalização de conceitos
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
@@ -154,7 +154,7 @@ Variáveis contínuas: Representa números reais (inclui números fracionados e 
 
 ### Por que essa classificação importa?
 
-Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo.
+Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo, pois a média é uma medida de uma variável numérica, enquanto o juiz é uma variável categórica. Então é importante sabermos distinguir os tipos de variáveis para sabermos nos adequar às análises de cada caso. 
 
 #  {background="#fff"}
 

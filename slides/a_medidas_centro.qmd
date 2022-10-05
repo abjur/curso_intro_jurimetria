@@ -33,7 +33,7 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
-## {visibility="hidden"}
+##  {visibility="hidden"}
 
 ::: {style="position:fixed; visibility: hidden"}
 $$\require{color}\definecolor{red}{rgb}{.784, .247, .361}$$ $$\require{color}\definecolor{blue}{rgb}{.24, .51, .60}$$ $$\require{color}\definecolor{green}{rgb}{49, 82.7, 40.4}$$ $$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
@@ -55,18 +55,19 @@ MathJax.Hub.Config({
 });
 </script>
 ```
-
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. Definição de escopo
-2. Operacionalização de conceitos
+
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -80,19 +81,21 @@ MathJax.Hub.Config({
     4.  Amplitude
     5.  IQR
 :::
-::::
+:::
 
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. Definição de escopo
-2. Operacionalização de conceitos
+
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  **Medidas de variáveis numéricas I: Medidas de centro**
@@ -106,17 +109,17 @@ MathJax.Hub.Config({
     4.  Amplitude
     5.  IQR
 :::
-::::
+:::
 
 # Medidas de centro {.slide-title}
 
-## Plano de aula 
+## Plano de aula
 
 Na aula de hoje, teremos três objetivos:
 
-1. Compreender como se calculam as medidas de centro (média, mediana e moda)
-2. Aprender notação matemática
-3. Aprender a diferenciar média de mediana
+1.  Compreender como se calculam as medidas de centro (média, mediana e moda)
+2.  Aprender notação matemática
+3.  Aprender a diferenciar média de mediana
 
 ## Média
 

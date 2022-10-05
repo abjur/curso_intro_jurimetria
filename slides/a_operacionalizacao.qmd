@@ -1,6 +1,6 @@
 ---
 title: "Metodologia"
-subtitle: "Definição de escopo e operacionalização de conceitos"
+subtitle: "Operacionalização de conceitos"
 format: 
   revealjs:
       logo: "img/logo-abj-colorido.png"
@@ -31,15 +31,17 @@ xaringanExtra::use_panelset()
 
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. Definição de escopo
-2. Operacionalização de conceitos
+
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -53,19 +55,21 @@ xaringanExtra::use_panelset()
     4.  Amplitude
     5.  IQR
 :::
-::::
+:::
 
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. **Definição de escopo**
-2. **Operacionalização de conceitos**
+
+1. **Operacionalização de conceitos**
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -79,82 +83,7 @@ xaringanExtra::use_panelset()
     4.  Amplitude
     5.  IQR
 :::
-::::
-
-# Definição de escopo {.slide-title}
-
-## Escopo temporal {.smaller}
-
-```{r}
-knitr::include_graphics("img/tempos.png")
-```
-
-:::: columns 
-::: {.column width="20%"}
-(1) Prospectivo e retrospectivo
-
-(2) Apenas prospectivo
-
-(3) Apenas retrospectivo
 :::
-
-::: {.column width="80%"}
-(4) Nenhum dos dois, mas poderia ser capturado por atividade no período.
-
-(5 e 6) fora do escopo.
-
-(7) Nenhum dos dois tipos e não poderia ser capturado (ficou inativo no período).
-:::
-::::
-
-
-
-## Escopo geográfico {.smaller}
-
-A escolha do escopo geográfico se liga à escolha da instituição que será analisada
-
-:::: columns
-::: column
-Podemos analisar tribunais judiciais:
-
-::::columns
-::: column
-- TJs
-- TRF
-- JF
-:::
-::: column
-- STJ
-- STF
-- TRT
-:::
-::::
-
-Podemos estudar agências reguladoras
-
-- Anvisa
-- Aneel
-- Anatel
-
-:::
-
-::: column
-Podemos estudar tribunais administrativos:
-
-- CARF
-- CVM
-- CADE
-
-Podemos estudar outras instituições jurídicas:
-
-- Defensoria Pública
-- Ministério Público
-- Advocacia Geral da União
-- Procuradoria Geral
-:::
-::::
-
-Mas independente do que escolhermos estudar, precisamos pensar na sua manifestação geográfica. 
 
 # Operacionalização de conceitos {.slide-title}
 
@@ -163,6 +92,29 @@ Mas independente do que escolhermos estudar, precisamos pensar na sua manifesta�
 ```{r, out.width="80%", fig.subcap="Fonte: SILVA, Glauco Peres. Desenho de Pesquisa. Brasília: Enap. 2018"}
 knitr::include_graphics("img/operacionalizacao.png")
 ```
+
+## Implicações observáveis
+
+#### Exemplo: operacionalizando "segurança jurídica"
+
+1. Se um Estado tiver mais segurança jurídica do que outro, espero encontrar uma menor **taxa de litigiosidade** no Estado mais seguro.
+2. Se um Estado tiver mais segurança jurídica do que outro, espero encontrar **contratos com a Administração Pública mais longevos**.
+
+Temos que pensar na maior quantidade de implicações observáveis possíveis de um conceito, pois quanto mais implicações um conceito tiver, melhor ele poderá ser medido. 
+
+::: {style="font-size: 30px"}
+**Fonte: KING, Gary; KEOHANE, Robert; VERBA, Sidney. Designing Social Inquiry: Scientific Inference in Qualitative Research. Princeton University Press. 1994**
+:::
+
+## Conclusão
+
+### Esforço de objetivação
+
+Não é sequer possível encontrar _a melhor operacionalização de um conceito_. A operacionalizção sempre vai ser limitada. A melhor prática então não é fazer uma busca incessante pela melhor operacionalização, mas é _reportar_ e _explicitar_ com clareza qual foi a operacionalização utilizada e, principalmente, quais as limitações dessa operacionalização. 
+
+::: {style="font-size: 30px"}
+**Fonte: PIRES, Álvaro P. Sobre algumas questões epistemológicas de uma metodologia geral para as ciências sociais. In: POUPART, Jean (Org.). A pesquisa qualitativa: Enfoques epistemológicos e metodológicos. Petrópolis: Vozes. 2010**
+:::
 
 #  {background="#fff"}
 

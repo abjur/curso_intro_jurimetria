@@ -35,15 +35,17 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. Definição de escopo
-2. Operacionalização de conceitos
+
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -57,20 +59,21 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     4.  Amplitude
     5.  IQR
 :::
-::::
-
+:::
 
 ## Ementa do curso {.smaller}
 
-:::: {.columns}
+::: columns
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
-1. Definição de escopo
-2. Operacionalização de conceitos
+
+1. Operacionalização de conceitos
+2. Definição de escopo
 :::
 
 ::: {.column width="68%"}
 #### Parte 2 - Técnicas
+
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -84,7 +87,7 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
     4.  Amplitude
     5.  IQR
 :::
-::::
+:::
 
 # Medidas de dispersão {.slide-title}
 
@@ -92,8 +95,8 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 Na aula de hoje, teremos dois objetivos:
 
-1. Compreender o que são medidas de dispersão em geral
-2. Aprender como se calculam as medidas de dispersão relacionadas ao "desvio"
+1.  Compreender o que são medidas de dispersão em geral
+2.  Aprender como se calculam as medidas de dispersão relacionadas ao "desvio"
 
 ## Por que falar em medidas de dispersão?
 
@@ -279,6 +282,7 @@ Por mais natural que seja usar o módulo dos desvio, essa operação gera compli
 $$var(x) = \frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 
 ## Medidas de dispersão em torno da média
+
 ### Variância e desvio padrão
 
 ::: {style="font-size: 30px;"}
@@ -287,8 +291,7 @@ Entretanto, a variância, por ter números elevados ao quadrado, precisa ser "co
 
 $$dp(x) = \sqrt{var}$$
 
-$$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$ 
-
+$$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$
 
 ## Medidas de dispersão em torno da média
 
@@ -297,6 +300,7 @@ $$dp(x) = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2}$$
 #### Média dos desvios
 
 $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)$$ 
+
 #### Variância $$\frac{1}{n}\sum_{i=1}^n(x_i-\bar x)^2$$
 :::
 
