@@ -400,8 +400,79 @@
 <li>Escopo geográfico</li>
 </ol>
 </section>
-<section id="escopo-temporal" class="slide level2 smaller">
+<section id="escopo-temporal" class="slide level2">
 <h2>Escopo temporal</h2>
+<h4 id="pesquisas-retrospectivas-e-prospectivas">Pesquisas retrospectivas e prospectivas</h4>
+<p><strong>Pesquisas retrospectivas:</strong> São as pesquisas cujo escopo temporal considera apenas casos <em>finalizados até determinada data</em>. Isso é feitando buscando os processos pela decisão/sentença/acórdão.</p>
+<p><strong>Pesquisas prospectivas:</strong> São as pesquisas cujo escopo temporal considera todos os casos <em>iniciados a partir de uma data, independente de seu fim</em>. Isso é feito buscando os processos de acordo com a sua data de distribuição.</p>
+</section>
+<section id="escopo-temporal-1" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados">Fontes de dados</h4>
+<p>A definição do escopo temporal está intrinsecamente relacionada à forma de encontrar os processsos de interesse. Existem duas fontes principais de listagem de processos:</p>
+<ul>
+<li><strong>Consulta de Julgados (CJPG ou CJSG):</strong> Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em “Pesquisa Livre”. E o resultado dessa pesquisa é uma série de decisões. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças; já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer sistema de consulta de julgados, teremos sermpre uma pequisa retrospectiva.</li>
+</ul>
+
+<img data-src="img/cjpg.png" class="r-stretch quarto-figure-center"><p class="caption">cjpg do esaj do tjsp</p></section>
+<section id="escopo-temporal-2" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados-1">Fontes de dados</h4>
+<ul>
+<li><strong>Diários de Justiça Eletrônico (DJE):</strong> O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.</li>
+</ul>
+<div class="columns">
+<div class="column">
+<p><img data-src="img/dje_tjsp1.png"></p>
+<p><img data-src="img/dje_tjsp4.png"></p>
+</div><div class="column">
+<p><img data-src="img/dje_tjsp2.png"></p>
+<p><img data-src="img/dje_tjsp3.png"></p>
+</div>
+</div>
+</section>
+<section id="escopo-temporal-3" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados-2">Fontes de dados</h4>
+<p>O que devemos perceber, então, é que para delimitar o escopo temporal, precisamos de duas informações:</p>
+<ol type="1">
+<li>As <strong>datas de referência</strong>, que são o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015.
+<ul>
+<li>Mesmo que façamos uma pesquisa do tipo “todos os processos distribuídos até 2015”, parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início do escopo temporal será a data do processo mais antigo encontrado.</li>
+</ul></li>
+<li>O <strong>indexador</strong>, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas dois indexadores possíveis: a data de distribuição e a data da decisão.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Fonte de pesquisa </th>
+   <th style="text-align:left;"> Indexador </th>
+   <th style="text-align:left;"> Escopo temporal </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> CJPG/CJSG </td>
+   <td style="text-align:left;"> Data da decisão </td>
+   <td style="text-align:left;"> Retrospectivo </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DJE </td>
+   <td style="text-align:left;"> Data de distribuição </td>
+   <td style="text-align:left;"> Prospectivo </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="escopo-temporal-4" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="relaçaõ-entre-o-escopo-e-os-processos-encontrados">Relaçaõ entre o escopo e os processos encontrados</h4>
 
 <img data-src="img/tempos.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="columns">
 <div class="column" style="width:20%;">
@@ -465,11 +536,29 @@
 </div>
 </div>
 <p>Mas independente do que escolhermos estudar, precisamos pensar na sua manifestação geográfica.</p>
-
-<img src="img/logo-abj-colorido.png" class="slide-logo r-stretch"><div class="footer footer-default">
+</section>
+<section id="escopo-geográfico-1" class="slide level2 smaller">
+<h2>Escopo geográfico</h2>
+<h4 id="o-ciclo-vicioso-de-são-paulo">O ciclo vicioso de São Paulo</h4>
+<ol type="1">
+<li>Tem mais pesquisas sobre São Paulo do que sobre outros Estados</li>
+<li>Temos, então, mais dados estruturados sobre São Paulo do que sobre outros Estados</li>
+<li>Então é mais fácil realizar pesquisas em São Paulo do que em outros Estaddos</li>
+<li>Então mais pesquisas são feitas em São Paulo do que em outros Estados</li>
+<li>Então tem mais demanda dos pesquisadores sobre órgãos públicos para se ter mais acesso a dados</li>
+<li>Então tem mais dados em São Paulo do que em outros Estados</li>
+<li>Então é mais fácil realizar pesquisas em São Paulo do que em outros Estados</li>
+<li>Então mais pesquisas são feitas em São Paulo do que em outros Estados</li>
+</ol>
+</section></section>
+<section id="section" class="title-slide slide level1 center" data-background="#fff">
+<h1></h1>
+<p><img data-src="img/logo-abj-colorido.png" width="500"></p>
+<p><img src="img/logo-abj-colorido.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>Introdução à Pesquisa Jurimétrica.</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

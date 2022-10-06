@@ -62,74 +62,35 @@ Assim, ao se ignorar as ações civis públicas e as ações populares, a socied
 
 #### c) A premissa para realizar essa operacionalização é forte ou fraca?
 
-Se o estudo pretende falar da política em geral, é uma premissa forte 
+Se o estudo pretende falar da política em geral, é uma premissa forte. 
 
 ## II) Exercícios referentes ao texto "Yeung e Azevedo, 2017"
 
-#### Exercício 1. Qual é o conceito que está sendo visualizado? 
+#### Exercício 1. A partir da leitura das 3 primeiras páginas da "Introdução" do artigo responda: 
+
+#### a) Qual é o conceito teórico de interesse para o artigo? 
 
 Viés judicial pró-devedor
 
-#### Exercício 2. Como esse conceito está sendo visualizado na prática? 
+#### b) Como esse conceito está sendo visualizado na prática? 
 
 Proporção de ações fávoráveis ao devedor no STJ
 
-#### Exercício 3. No artigo de Yeung e Azevedo, 2017, os autores escrevem:
+#### c) Com base nas respostas anteriores, responda qual é a operacionalização que está sendo feita? 
 
-> Dado que este trabalho foca na questão do viés judicial, a pergunta imediata seria: o que é viés judicial? A definição literal para 'viés' é 'oblíquo' ou 'em diagonal', ou seja, algo que não segue o padrão ou o sentido usual. Portanto, uma decisão judicial com viés seria uma que não é 'reta' ou 'direita', que é 'oblíqua' em alguma direção. O grande problema é definir qual seria a decisão 'reta/direita' para cada um dos casos que chega ao Judiciário. Mais difícil ainda seria afirmar que o Judiciário brasileira como um todo, ou o grupo de magistrados, tem viés. Isso implicaria dizer que suas decisões são, no todo ou na maioria, 'oblíquas'. **Como testar isso sem observar o comportamento sem viés?** Simplesmente não é possível. (p. 329, grifos nossos)
+O conceito de "viés judicial pró-devedor" está sendo operacionalizado por meio do dado empírico de "proporção de ações favoráveis ao devedor no STJ". 
 
-#### Com base no trecho acima, responda: qual é a importância de se testar o viés observando o camportamento sem viés?
+#### Exercício 2. Yeung e Azevedo, 2017, na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão além da decisão do juiz. 
 
-A importância de se estudar os casos sem viés é ter um grupo de comparação em relação ao viés. Sem esse parâmetro, ficamos sem norte para definirmos se houve viés ou não.
-
-Depois, veremos o Teorema de Priest & Klein. Com isso, vamos poder refinar essa resposta. Com o teorema vamos ver que não precisamos observar o comportamento sem viés, pois podemos supor que o comportamento sem viés seja um comportamento em que 50% das decisões são a favor do devedor, e 50% a favor do credor. 
-
-Por hora, como ainda não vimos o teorema, podemos afirmar que a comparação com o grupo "sem viés" serve para se ter um parâmetro do que significa o viés. 
-
-#### Exercício 4. Yeung e Azevedo, 2017, na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão para-além da decisão do juiz. 
-
-#### a) Quais são os vieses que os autores reconhecem? Descreva os seus funcionamentos.
+#### a) Quais são os vieses que os autores reconhecem? Descreva-os. 
 
 Viés do fato: "Pode, contudo, acontecer de os recursos chegarem ao STJ de maneira *não-aleatória*. Por exemplo, eles poderiam ser 'naturalmente' mais favoráveis ao devedor. Neste caso, mesmo que os magistrados consistentemente decidissem a favor do devedor, isso não poderia ser considerado um viés da decisão, mas sim um *viés do fato*. Em outras palavras, se a maior parte dos processos que chegassem ao STJ contivessem fatos que favorecessem o devedor, mesmo magistrados neutros tenderiam a decidir dando ganho de causa a esta parte. Infelizmente, este é um problema a que estão sujeitos todos os estudos de decisões judiciais que somente observam os casos levados ao judiciário. Espera-se que trabalhos futuros consigam lidar com este assunto de forma mais adequada." (p. 330)
 
 Viés legislativo: "Além do viés do fato, existe outra falsa fonte de viés judicial, que Falcão, Schuartz e Arguelhes (2006) chamam de *viés legislativo*. Segundo estes autores, o suposto viés anti-credor não é criado pelo juiz no momento da tomada da decisão judicial, mas em um momento anterior, talvez na criação das leis ou das normas legais pelo Executivo e/ou Legislativo. O magistrado, como membro do Poder Judiciário, tem a função e o dever de respeitar tais leis. Neste caso, mesmo que a decisão judicial acabe por favorecer – “devida” ou “indevidamente” – uma ou outra parte, não significa que o juiz julgou com viés: ele apenas cumpriu sem papel e não teria responsabilidade por ter favorecido uma ou outra parte. O viés não é de sua decisão." (p. 330)
 
-#### b) O estudo encontrou as seguintes proporções de vitória de litígios:
+#### b) A partir destes vieses apresentados pelos autores, discorra criticamente sobre a operacionalização realizada no artigo. 
 
-|      Tipo Recorrente     |      Tipo Recorrido      | Decisão: Não conhecido/Não provido | Decisão: Provido (Parcial ou Total) |
-|:------------------------:|:------------------------:|:----------------------------------:|:-----------------------------------:|
-| Pessoa Física            | Pessoa Física            | 59,12%                             | 40,88%                              |
-| Pessoa Física            | Pessoa Jurídica          | 55,35%                             | 44,65%                              |
-| Pessoa Física            | Inst. Financeiras | 51,52%                             | 48,48%                              |
-| Pessoa Jurídica          | Pessoa Física            | 49,71%                             | 50,29%                              |
-| Pessoa Jurídica          | Pessoa Jurídica          | 45,87%                             | 54,41%                              |
-| Pessoa Jurídica          | Inst. Financeiras | 42,08%                             | 57,92%                              |
-| Inst. Financeiras | Pessoa Física            | 40,33%                             | 59,67%                              |
-| Inst. Financeiras | Pessoa Jurídica          | 36,68%                             | 63,31%                              |
-| Inst. Financeiras | Inst. Financeiras | 33,19%                             | 66,81%                              |
-
-
-#### Antes de olhar para a tabela, pense abstratamente nos conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida) e nos conflitos entre Instituições Financeiras (Recorrente) e Pessoas Jurídicas (Recorrida) e responde: o que seria um resultado pró-credor e um resultado pró-devedor em cada um desses conflitos? 
-
-Para os conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida), o resultado pró-devedor seria o resultado de decisões de provimento parcial ou total e o resultado pró-credor seria o resultado de decisões não conhecidas ou não providas. 
-
-Para os conflitos entre Instituições Financeiras (Recorrente) e Pessoas Jurídicas (Recorrida), os resultados se invertem: o resultado pró-devedor seria o resultado de decisões não conhecidas ou não providas e o resultado pró-credor seria o resultado de provimento parcial ou total das decisões. 
-
-#### c) E, agora, olhando para a tabela, o resultado foi pró-quem nestes dois tipos de conflito?
-
-Para os conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida), o resultado foi pró-devedor. 
-
-Para os conflitos entre Instituições Financeiras (Recorrente) e Pessoas Jurídicas (Recorrida), o resultado foi pró-credor. 
-
-#### d) Comente, a partir dos viéses descritos no item (a) desta questão, se os resultados pró-devedor ou pró-credor do item (c) podem indicar um viés pró-devedor ou pró-credor dos magistrados?
-
-O resultado pró-devedor dos conflitos entre Pessoas Jurídicas (Recorrente) e Instituições Financeiras (Recorrida) pode ser ampliado para dizer que há um viés pró-devedor, mas com ressalvas, pois as decisões pró-devedor podem ter sido decisões com viés de fato ou com viés legislativo. Supõe-se que os devedores não tenham uma atuação estratégica, pois eles não possuem inteligência e recursos para tanto. 
-
-Já o resultado pró-credor dos conflitos entre Instituições Financeiras (Recorrente) e Pessoas Jurídicas (Recorrida) não pode ser ampliado para dizer que o Judiciário possui um viés pró-credor. O que acontece é que, nas ações em que as instituições financeiras são as recorrentes, a escolha de ajuizar as ações está nas mãos do próprio credor. Dessa forma, eles podem, a partir de uma litigância estratégica, ingressar com recursos somente nos casos em que eles têm maior probabilidade de êxito. 
-
-#### e) O que a conclusão do item (d) nos diz sobre a operacionalização do conceito?
-
-A operacionalização do conceito foi a operacionalização de utilizar a proporção de decisões pró-devedor (plano empírico) para dizer que há um viés judicial pró-devedor (plano abstrato). Essa operacionalização apresenta algumas fragilidades, pois as conclusões que tiramos sobre o viés judicial (conceito abstrato) a partir das decisões (variável) estão contaminadas com os viéses de fato e legislativo. 
+A operacionalização de "viés judicial" por meio da proporção de decisões favoráveis ao devedor no STJ possui seus limites, como vimos pelos viéses. Entretanto, os autores explicitaram com muita clareza que limites são estes. A pesquisa, dessa forma, foi objetiva e honesta ao explicitar todas as suas limitações. 
 
 ## III) Exercícios referentes ao texto "Galanter, 2018 (1941)"
 
@@ -147,7 +108,7 @@ Os PEs, por outro lado, possuem um outro interesse. É claro que eles buscam tam
 
 Então, de um lado, temos JHs caracterizados por um desconhecimento e falta de familiaridade com o Judiciário, que entra nele somente para maximizar seus ganhos ou minimizar suas perdas; e, do outro, temos PEs, caracterizados por um relacionamento íntimo e prolongado com os agentes do sistema jurídico, que buscam, além de satisfazer seus interesses materiais, proteger também seus interesses normativos.
 
-### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, uma etapa da metodologia perpassa pela necessidade de se operacionalizar os conceitos de JH e de PE. A seguir, discuta algumas possibilidades de operacionalização. 
+### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, foi necessário operacionalizar os conceitos de Jogador Habitual e Participante Eventual. A seguir, discuta algumas possibilidades de operacionalização que a pesquisadora deseja realizar. 
 
 ### a) O CNJ, em 2012, realizou um estudo a respeito dos grandes litigantes, elencando quem são os 100 maiores litigantes dos Tribunais de Justiça. Depois, em 2015, a Associação Brasileira de Magistrados atualizou os dados (mas apenas para alguns estados). A partir destes estudos, a pesquisadora decidiu operacionalizar os JHs como as partes que aparecem nestes dois estudos [não é preciso ler os relatórios para responder a essa questão].
 
@@ -155,16 +116,13 @@ Há várias considerações a se fazer a respeito dessa operacionalização:
 
 1. O nome dos litigantes que consta nas listas pode variar a sua escrita ao longo dos processos. Então é possível que um litigante considerado como LH para essa pesquisa fique de fora na hora da operacionalização, simplesmente porque a grafia de seu nome está diferente do que consta nos relatórios. 
 2. Por mais que essas listas dos 100 maiores litigantes apresentem partes muito frequentes no Judiciário, não é em todo processo que elas aparecerem que elas serão consideradas como JHs Em alguns processos, uma parte frequente no Judiciário pode ser uma parte inédia, meramente incidental, não possuindo qualquer expertise ou interesse normativo nela. 
-3. Existem mais partes que os litigantes apresentados na lista que poderiam ser considerados como JhH. 
+3. Existem mais partes que os litigantes apresentados na lista que poderiam ser considerados como JH. 
 
-### b) A pesquisadora coletou todos os dados para realizar a sua pesquisa, de forma que uma das informações que ela tinha era o nome de cada uma das partes. A partir disso, ela contou o número de vezes que cada um dos nomes apareciam ao longo dos processos. Como ela estava analisando apenas a Justiça Estadual, ela achou que seria razoável dizer que as partes que apareciam mais de 100 vezes seriam consideradas LHs. 
+### b) A pesquisadora coletou todos os dados para realizar a sua pesquisa, de forma que uma das informações que ela tinha era o nome de cada uma das partes. A partir disso, ela contou o número de vezes que cada um dos nomes apareciam ao longo dos processos. Como ela estava analisando apenas a Justiça Estadual, ela achou que seria razoável dizer que as partes que apareciam mais de 100 vezes seriam consideradas JHs. 
 
-Há várias considerações a se fazer a respeito dessa operacionalização:
+O problema dessa operacionalização é o _corte_. Qual é o corte preciso para se dizer isso? Por que não consideramos que um LH é aquele que aparece em mais de 30 processos? Ou 1000? Ao mesmo tempo em que é razoável supor que, quanto mais processos uma parte aparece, mais expertise ela tem nesse tipo de judicialização e mais ela pode desenvolver uma estratégia normativa, também não podemos dizer com muita convicção qual é o número exato de processos que uma parte precisa participar para ser considerada como um JH.
 
-1. É muito arbitrário estabelecer um corte de que se uma parte aparecer mais de 100 vezes ela será um litigante habitual. Por que não 30? Ou 1000?
-2. É razoável supor que, quanto mais processos uma parte aparece, mais expertise ela tem nesse tipo de judicialização. 
-
-### c) A pesquisadora, a partir do nome das partes, percebeu que era possível classificá-las como pessoas jurídicas de direito público, pessoas jurídicas de direito privado e pessoas físicas, sendo que as pessoas físicas seriam sempre as partes residuais (ou seja, as que não se enquadram em nenhum critério). A partir disso, ela estabeleceu que todas as pessoas jurídicas, seja de direito público, seja de direito privado, seriam consideradas como JHs
+### c) A pesquisadora, a partir do nome das partes, percebeu que era possível classificá-las como pessoas jurídicas de direito público, pessoas jurídicas de direito privado e pessoas físicas, sendo que as pessoas físicas seriam sempre as partes residuais (ou seja, as que não se enquadram em nenhum critério). A partir disso, ela estabeleceu que todas as pessoas jurídicas, seja de direito público, seja de direito privado, seriam consideradas como JHs; e que todo o resto, seria considerado como PE. 
 
 Há várias considerações a se fazer a respeito dessa operacionalização:
 
@@ -173,3 +131,42 @@ Há várias considerações a se fazer a respeito dessa operacionalização:
 3. As empresas podem aparecer nos processos de forma meramente incidental, não podendo ser consideradas como JH em muitas judicializações. 
 4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
 
+
+### IV) Exercício sobre o gráfico
+
+```{r, fig.width=7, fig.height=4, dpi=300}
+set.seed(1)
+N <- 400
+tabela <- tibble::tibble(
+  data_entrada = runif(N, 2010, 2021.5),
+  data_saida = data_entrada + rexp(N, 1/5),
+  tempo = data_saida - data_entrada
+) |> 
+  dplyr::mutate(observado = dplyr::if_else(
+    data_saida <= 2021.5, "Observado", "Não observado"
+  ))
+
+tabela |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(data_entrada, tempo, colour = observado,
+               alpha = observado) +
+  ggplot2::geom_point() +
+  ggplot2::geom_abline(
+    slope = -1,
+    intercept = 2021.5,
+    colour = 2, 
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(breaks = 2010:2021) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::labs(
+    x = "Ano entrada", y = "Tempo (anos)", 
+    colour = "", alpha = ""
+  ) +
+  ggplot2::scale_colour_viridis_d(
+    option = "A", begin = .2, end = .8, direction = -1
+  ) +
+  ggplot2::ylim(c(0,10)) +
+  ggplot2::scale_alpha_discrete(range = c(.4, 1)) +
+  ggplot2::theme(legend.position = "bottom")
+```
