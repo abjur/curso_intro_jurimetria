@@ -106,9 +106,9 @@ xaringanExtra::use_panelset()
 
 A definição do escopo temporal está intrinsecamente relacionada à forma de encontrar os processsos de interesse. Existem duas fontes principais de listagem de processos:
 
-- **Consulta de Julgados (CJPG ou CJSG):** Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em "Pesquisa Livre". E o resultado dessa pesquisa é uma série de decisões. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças; já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer sistema de consulta de julgados, teremos sermpre uma pequisa retrospectiva. 
+- **Consulta de Julgados (CJPG ou CJSG):** Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em "Pesquisa Livre". O resultado dessa pesquisa é sempre uma decisão. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças, já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer um dos sistemas de consulta de julgados, teremos sermpre uma pequisa retrospectiva. 
 
-![cjpg do esaj do tjsp](img/cjpg.png)
+![](img/cjpg.png){width=60%}
 
 ## Escopo temporal {.smaller}
 
@@ -227,20 +227,61 @@ Podemos estudar outras instituições jurídicas:
 
 Mas independente do que escolhermos estudar, precisamos pensar na sua manifestação geográfica.
 
-## Escopo geográfico {.smaller}
+## Escopo geográfico
 
 #### O ciclo vicioso de São Paulo
 
-1. Tem mais pesquisas sobre São Paulo do que sobre outros Estados
-2. Temos, então, mais dados estruturados sobre São Paulo do que sobre outros Estados
-3. Então é mais fácil realizar pesquisas em São Paulo do que em outros Estaddos
-4. Então mais pesquisas são feitas em São Paulo do que em outros Estados
-5. Então tem mais demanda dos pesquisadores sobre órgãos públicos para se ter mais acesso a dados do que em outros Estados
-6. Então tem mais dados em São Paulo do que em outros Estados
-3. Então é mais fácil realizar pesquisas em São Paulo do que em outros Estados
-4. Então mais pesquisas são feitas em São Paulo do que em outros Estados
+```{r}
+DiagrammeR::grViz("
 
+  digraph ciclo_sp {
 
+    # a 'graph' statement
+
+    graph [class = dgr_graph, rankdir = 'LR']
+
+    # several 'node' statements
+
+    node [
+      shape = oval, 
+      style = filled, 
+      fillcolor = white, 
+      color = white, 
+      fontcolor = MidnightBlue, 
+      fontname = Yaldelvi,
+      fontsize = 25
+    ]
+
+      prod [label = 'Maior produção\nde pesquisa', fontcolor = DarkGreen, rank = 1];
+      
+      demanda [label = 'Maior demanda\npor dados', rank = 2]
+
+      estrutura [label = 'Melhor estrutura\nde dados', rank = 3];
+      
+      scraper [label = 'O TJSP é mais\nfácil de scrapear', rank = 4];
+      
+      tecnologia [label = 'Existe mais tecnologia\npara pesquisar em SP', rank = 2];
+      
+      facil [label = 'Maior facilidade\nem fazer pesquisa', fontcolor = DarkGreen, rank = 4];
+      
+
+    # several 'edge' statements
+    
+    prod->demanda
+    demanda->estrutura
+    estrutura->facil
+    facil->prod
+  
+    scraper->facil
+    
+    prod->tecnologia
+    tecnologia->facil
+
+  }
+
+  ")
+
+```
 
 #  {background="#fff"}
 
