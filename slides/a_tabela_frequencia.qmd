@@ -81,11 +81,11 @@ title-slide-attributes:
 Na aula de hoje, teremos dois objetivos:
 
 1.  Aprender a interpretar as medidas de uma tabela de distribição de frequência
-2.  Aprender a construir uma tabela de frequência no google sheets
+2.  Aprender quando usar cada medida
 
 ##  {.smaller}
 
-::: {.absolute left="-120"}
+::: {.absolute left="-150"}
 +-----------+------------+-------------------------+---------------------+-----------------------------+-------------+
 | Variável  | Frequência | Frequência acumulada    | Proporção           | Proporção acumulada         | Porcentagem |
 |           |            |                         |                     |                             |             |
@@ -101,9 +101,7 @@ Na aula de hoje, teremos dois objetivos:
 +-----------+------------+-------------------------+---------------------+-----------------------------+-------------+
 | $x_k$     | $n_k$      | $N_k=N_{k-1}+n_k=n$     | $f_k=\frac{n_k}{n}$ | $F_k=F_{k-1}+f_k=1,00$      | $100f_k$    |
 +-----------+------------+-------------------------+---------------------+-----------------------------+-------------+
-| **Total** | $n$        | -                       | $1,00$ \|           | -                           | 100%\$      |
-|           |            |                         |                     |                             |             |
-|           |            |                       | |                     |                         | $ |             |
+| **Total** | $n$        |                         | $1,00$              |                             | $100%$      |
 +-----------+------------+-------------------------+---------------------+-----------------------------+-------------+
 
 : Tabela de frequência

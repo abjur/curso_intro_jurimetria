@@ -415,7 +415,7 @@
 <h4 id="fontes-de-dados">Fontes de dados</h4>
 <p>A definição do escopo temporal está intrinsecamente relacionada à forma de encontrar os processsos de interesse. Existem duas fontes principais de listagem de processos:</p>
 <ul>
-<li><strong>Consulta de Julgados (CJPG ou CJSG):</strong> Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em “Pesquisa Livre”. E o resultado dessa pesquisa é uma série de decisões. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças; já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer sistema de consulta de julgados, teremos sermpre uma pequisa retrospectiva.</li>
+<li><strong>Consulta de Julgados (CJPG ou CJSG):</strong> Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em “Pesquisa Livre”. O resultado dessa pesquisa é sempre uma decisão. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças, já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer um dos sistemas de consulta de julgados, teremos sermpre uma pequisa retrospectiva.</li>
 </ul>
 
 <img data-src="img/cjpg.png" style="width:60.0%" class="r-stretch"></section>
@@ -425,26 +425,42 @@
 <ul>
 <li><strong>Diários de Justiça Eletrônico (DJE):</strong> O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.</li>
 </ul>
-<div class="columns">
-<div class="column">
-<p><img data-src="img/dje_tjsp1.png"></p>
-<p><img data-src="img/dje_tjsp4.png"></p>
-</div><div class="column">
-<p><img data-src="img/dje_tjsp2.png"></p>
-<p><img data-src="img/dje_tjsp3.png"></p>
-</div>
-</div>
-</section>
+
+<img data-src="img/dje_tjsp1.png" class="r-stretch"></section>
 <section id="escopo-temporal-3" class="slide level2 smaller">
 <h2>Escopo temporal</h2>
 <h4 id="fontes-de-dados-2">Fontes de dados</h4>
+<ul>
+<li><strong>Diários de Justiça Eletrônico (DJE):</strong> O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.</li>
+</ul>
+
+<img data-src="img/dje_tjsp4.png" class="r-stretch"></section>
+<section id="escopo-temporal-4" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados-3">Fontes de dados</h4>
+<ul>
+<li><strong>Diários de Justiça Eletrônico (DJE):</strong> O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.</li>
+</ul>
+
+<img data-src="img/dje_tjsp2.png" class="r-stretch"></section>
+<section id="escopo-temporal-5" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados-4">Fontes de dados</h4>
+<ul>
+<li><strong>Diários de Justiça Eletrônico (DJE):</strong> O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.</li>
+</ul>
+
+<img data-src="img/dje_tjsp3.png" class="r-stretch"></section>
+<section id="escopo-temporal-6" class="slide level2 smaller">
+<h2>Escopo temporal</h2>
+<h4 id="fontes-de-dados-5">Fontes de dados</h4>
 <p>O que devemos perceber, então, é que para delimitar o escopo temporal, precisamos de duas informações:</p>
 <ol type="1">
-<li>As <strong>datas de referência</strong>, que são o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015.
+<li>A <strong>janela de análise</strong>, que é o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015.
 <ul>
-<li>Mesmo que façamos uma pesquisa do tipo “todos os processos distribuídos até 2015”, parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início do escopo temporal será a data do processo mais antigo encontrado.</li>
+<li>A janela de análise pode ser delimitada de forma empírica. Por exemplo, se fizermos uma pesquisa em que a janela seja “todos os processos distribuídos até 2015”, parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início da janela de pesquisa será a data do processo mais antigo encontrado.</li>
 </ul></li>
-<li>O <strong>indexador</strong>, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas dois indexadores possíveis: a data de distribuição e a data da decisão.</li>
+<li>A <strong>data de referência</strong>, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas duas datas possíveis: a data de distribuição e a data da decisão.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -474,7 +490,7 @@
 </div>
 </div>
 </section>
-<section id="escopo-temporal-4" class="slide level2 smaller">
+<section id="escopo-temporal-7" class="slide level2 smaller">
 <h2>Escopo temporal</h2>
 <h4 id="relaçaõ-entre-o-escopo-e-os-processos-encontrados">Relaçaõ entre o escopo e os processos encontrados</h4>
 
@@ -546,8 +562,8 @@
 <h4 id="o-ciclo-vicioso-de-são-paulo">O ciclo vicioso de São Paulo</h4>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-50c48d2b60bc71ccbb98" style="width:90%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-50c48d2b60bc71ccbb98">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-87787d8233efa1d224b0" style="width:90%;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-87787d8233efa1d224b0">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>

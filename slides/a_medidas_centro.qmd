@@ -27,9 +27,7 @@ knitr::opts_chunk$set(
   warning = FALSE
 )
 
-
 cores_abj <-  viridis::viridis(2, 1, .2, .8)
-
 
 ```
 
@@ -55,6 +53,7 @@ MathJax.Hub.Config({
 });
 </script>
 ```
+
 ## Ementa do curso {.smaller}
 
 ::: columns

@@ -116,21 +116,32 @@ A definição do escopo temporal está intrinsecamente relacionada à forma de e
 
 - **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição. 
 
-:::: columns
-::: column
 ![](img/dje_tjsp1.png)
+
+## Escopo temporal {.smaller}
+
+#### Fontes de dados
+
+- **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição. 
 
 ![](img/dje_tjsp4.png)
 
-:::
 
-::: column
+## Escopo temporal {.smaller}
+
+#### Fontes de dados
+
+- **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição. 
+
 ![](img/dje_tjsp2.png)
 
-![](img/dje_tjsp3.png)
+## Escopo temporal {.smaller}
 
-:::
-::::
+#### Fontes de dados
+
+- **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição. 
+
+![](img/dje_tjsp3.png)
 
 ## Escopo temporal {.smaller}
 
@@ -138,9 +149,9 @@ A definição do escopo temporal está intrinsecamente relacionada à forma de e
 
 O que devemos perceber, então, é que para delimitar o escopo temporal, precisamos de duas informações:
 
-1. As **datas de referência**, que são o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015. 
-    - Mesmo que façamos uma pesquisa do tipo "todos os processos distribuídos até 2015", parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início do escopo temporal será a data do processo mais antigo encontrado. 
-2. O **indexador**, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas dois indexadores possíveis: a data de distribuição e a data da decisão. 
+1. A **janela de análise**, que é o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015. 
+    - A janela de análise pode ser delimitada de forma empírica. Por exemplo, se fizermos uma pesquisa em que a janela seja "todos os processos distribuídos até 2015", parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início da janela de pesquisa será a data do processo mais antigo encontrado.
+2. A **data de referência**, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas duas datas possíveis: a data de distribuição e a data da decisão. 
 
 ```{r}
 tibble::tibble(
