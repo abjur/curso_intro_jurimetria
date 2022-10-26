@@ -1,0 +1,301 @@
+---
+title: "Introdução à jurimetria"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+
+cores_abj <-  viridis::viridis(2, 1, .2, .8)
+
+
+```
+
+# Nos conhecendo melhor
+
+## Para vocês nos conhecerem melhor
+
+:::: columns
+:::column
+Foto minha
+:::
+:::column
+Foto do Julio
+:::
+::::
+
+## Para nós conhecermos vocês melhor
+
+::: {.center-middle}
+**Respondam este formulário por favor!**
+
+<https://forms.gle/HStRPDK2jVsJNDts5>
+
+Demora de 5 a 10 minutos para responder!
+:::
+
+# Sobre o curso
+
+## Ementa do curso {.smaller}
+
+::: columns
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+
+1. Operacionalização de conceitos
+2. Definição de escopo
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
+
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
+    2.  Mediana
+    3.  Moda
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  Amplitude
+    5.  IQR
+:::
+:::
+
+## Informações sobre as aulas {.smaller}
+
+:::: columns
+
+:::column
+### Aulas assíncronas
+- São mais de 4 horas de gravação.
+- São 12 materiais gravados, divididos em 9 aulas e 3 materiais extras.
+- Os materiais ficarão disponíveis para serem assistidos a partir de hoje e poderão ser acessados a qualquer momento.
+:::
+
+:::column
+### Aulas síncronas
+- São 3 encontros, contando com a aula de hoje, de 3 horas de duração.
+- Logo no início das aulas, iremos dar uma lista de exercícios. 
+- Vocês terão 2 horas para realizar os exercícios em grupos.
+- Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.
+- Ficará como atividade para casa refazer os exercícios e enviar uma lista *individual*
+:::
+
+::::
+
+## {.smaller}
+
+:::: columns
+::: {.column width="80%"}
+```{r}
+cronograma_videos <- tibble::tibble(
+  semana="1",
+  aula="1",
+  tipo_aula="Metodologia",
+  duracao=15,
+  conteudo="Operacionalização de conceitos"
+) |> 
+  dplyr::add_row(
+    semana="1",
+    aula="2",
+    tipo_aula="Metodologia",
+    duracao=30,
+    conteudo="Definição de escopo"
+  ) |> 
+  dplyr::add_row(
+    semana="1", 
+    aula="3",
+    tipo_aula="Técnicas",
+    duracao=24,
+    conteudo="Tipos de variáveis"
+  ) |> 
+  dplyr::add_row(
+    semana="1", 
+    aula="4",
+    tipo_aula="Técnicas",
+    duracao=17,
+    conteudo="Tabela de frequência"
+  ) |> 
+  dplyr::add_row(
+    semana="1", 
+    aula="5",
+    tipo_aula="Prática",
+    duracao=33,
+    conteudo="Tabela de frequência no gsheets"
+  ) |>
+  dplyr::add_row(
+    semana="1", 
+    aula="Extra",
+    tipo_aula="Prática",
+    duracao=15,
+    conteudo="Tabela de frequência no R"
+  ) |> 
+  dplyr::add_row(
+    semana="2", 
+    aula="6",
+    tipo_aula="Técnicas",
+    duracao=22,
+    conteudo="Medidas de centro"
+  ) |>
+  dplyr::add_row(
+    semana="2", 
+    aula="7",
+    tipo_aula="Técnicas",
+    duracao=18,
+    conteudo="Medidas de dispersão I"
+  ) |> 
+  dplyr::add_row(
+    semana="2", 
+    aula="8",
+    tipo_aula="Técnicas",
+    duracao=10,
+    conteudo="Medidas de dispersão II"
+  ) |> 
+  dplyr::add_row(
+    semana="2", 
+    aula="9",
+    tipo_aula="Prática",
+    duracao=35,
+    conteudo="Medidas no gsheets"
+  ) |> 
+  dplyr::add_row(
+    semana="2", 
+    aula="Extra",
+    tipo_aula="Prática",
+    duracao=20,
+    conteudo="Medidas no R"
+  ) |>
+  dplyr::add_row(
+    semana=" ", 
+    aula="Extra",
+    tipo_aula="Prática",
+    duracao=43,
+    conteudo="Por que usar R"
+  ) 
+
+cronograma_videos |> 
+  janitor::adorn_totals() |> 
+  dplyr::mutate(duracao=paste0(duracao,"min")) |> 
+  knitr::kable(
+    caption="Cronograma dos vídeos",
+    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+:::
+::: {.column width="20%"}
+**Semana 1**
+
+de 08/11/2022 até 22/11/2022
+
+**Semana 2**
+
+de 22/11/2022 até 29/11/2022
+
+**Semana * **
+
+Material livre, que não está vinculado a nenhuma aula
+:::
+::::
+
+## Planejamento da Semana 1 {.smaller}
+
+```{r}
+cronograma_videos |> 
+  dplyr::filter(semana=="1") |> 
+  janitor::adorn_totals() |> 
+  dplyr::mutate(duracao=paste0(duracao,"min")) |> 
+  knitr::kable(
+    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+::: {.center}
+
+**Preparação para a aula:** 08/11/2022 - 22/11/2022
+
+**Data e hora da aula:** 22/11/2022 das 19 às 22hrs
+:::
+
+```{r}
+tibble::tibble(
+  semana="1", 
+  aula="Síncrona",
+  tipo_aula="Exercício",
+  duracao="3hrs",
+  conteudo="Metodologia"
+) |> 
+  knitr::kable(
+    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+
+
+## Planejamento da Semana 2 {.smaller}
+
+```{r}
+cronograma_videos |> 
+  dplyr::filter(semana=="2") |> 
+  janitor::adorn_totals() |> 
+  dplyr::mutate(duracao=paste0(duracao,"min")) |> 
+  knitr::kable(
+    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+::: {.center}
+
+**Preparação para a aula:** 22/11/2022 - 29/11/2022
+
+**Data e hora da aula:** 29/11/2022 das 19 às 22hrs
+:::
+
+```{r}
+tibble::tibble(
+  semana="2", 
+  aula="Síncrona",
+  tipo_aula="Exercício",
+  duracao="3hrs",
+  conteudo="Técnicas"
+) |> 
+  knitr::kable(
+    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+
+
+# Dúvidas? Comentários?
+
+# {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
