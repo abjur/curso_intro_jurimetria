@@ -39,13 +39,13 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 ::: column
 #### Julio Trecenti
 
-![](img/julio.jpg)
+![](img/julio.jpg){width="500"}
 :::
 
 ::: column
 #### Ricardo Feliz
 
-![](img/ricardo.jpeg){width="480"}
+![](img/ricardo.jpeg){width="375"}
 :::
 :::
 
