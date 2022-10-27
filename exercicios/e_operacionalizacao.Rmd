@@ -7,11 +7,11 @@ output: pdf_document
 # Orientações gerais
 
 - Formem grupos de 5 pessoas. Todas as questões deverão ser respondidas nestes grupos;
-- Os grupos terão de 40 minutos a 1 hora para responder às questões;
-- Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
+- Os grupos terão de 1:30 a 2:00 horas para responder às questões;
+- Um único aluno será encarregado de anotar as respostas de todas as questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo;
-- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing
+- Teremos um breve intervalo antes de voltarmos à sala;
+- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: <https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing>
 - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
 
 ## I) Exercícios referentes ao texto "Sundfeld et al, 2011". 
@@ -80,7 +80,7 @@ Proporção de ações fávoráveis ao devedor no STJ
 
 O conceito de "viés judicial pró-devedor" está sendo operacionalizado por meio do dado empírico de "proporção de ações favoráveis ao devedor no STJ". 
 
-#### Exercício 2. Yeung e Azevedo, 2017, na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão além da decisão do juiz. 
+#### Exercício 2. Yeung e Azevedo (2017), na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão além da decisão do juiz. 
 
 #### a) Quais são os vieses que os autores reconhecem? Descreva-os. 
 
@@ -94,19 +94,15 @@ A operacionalização de "viés judicial" por meio da proporção de decisões f
 
 ## III) Exercícios referentes ao texto "Galanter, 2018 (1941)"
 
-### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que 'Quem tem' Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as 7 características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
+### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que 'Quem tem' Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
 
 ### Exercício 1. Descreve as características de um JH e de um PE
 
-Um JH é aquele tipo de parte que está indo para a arena judicial pela primeira vez (é o “primeiro tiro” dele no mundo jurídico). Assim sendo, ele não possui familiaridade com as regras jurídicas, com as leis, as normas, os princípios e regulamentos. Mesmo sem esse conhecimento, ele acaba, por algum infortúnio, tendo que resolver seus problemas judicialmente. Tanto o requerente quanto o requerido podem assumir a tipologia do JH.
-
-Já o PE é o exato oposto do JH, ele é aquele tipo de parte que está reiteradamente envolvido em algum conflito judicial. Isso lhe garante maior expertise nos embates jurídicos. Outras características importantes dos PEs são que, por estarem constantemente na frente dos juízes, eles acabam desenvolvendo relacionamentos informais com as autoridades do mundo do direito. Esses relacionamentos podem lhe conferir fama e status dentro dos tribunais, bem como lhe possibilitam tornar-se amigos íntimos ou, na pior das hipóteses, rivais dos juízes. Isso também é um fator que acaba influenciando a capacidade desses agentes em ganhar uma disputa. Outro elemento importante na caracterização dos PEs é que, além de relacionamentos com o Poder Judiciário e expertise técnica, eles dispõem de recursos que são inimagináveis, muitas vezes, para os JHs. É claro que pessoas ricas podem ser one-shooters, mas mesmo as pessoas ricas não se comparam com a quantidade de recursos que grandes agentes jurídicos possuem.
-
-Mas de todas as diferenças entre JH e PE, existe um fator decisivo para distinguí-los, que é a questão do interesse. Sempre que os one-shooters se apresentam no Judiciário, eles possuem um único interesse: ganhar o máximo possível de um processo que eles começaram, ou perder o mínimo possível de um processo no qual eles estão sendo acusados. No fim, o que essa estratégia está buscando é resguardar os interesses materiais da parte, seja o de maximizar os ganhos (no caso de o OS ser parte autora), seja minimizar suas perdas (no case de o JH ser parte réu). Isso é o que caracteriza o interesse dos JHs nas disputas judiciais.
-
-Os PEs, por outro lado, possuem um outro interesse. É claro que eles buscam também proteger seus interesses materiais, mas, justamente por estarem envolvidos na mesma disputa judicial repetidas vezes, eles acabam desenvolvendo um segundo tipo de interesse: o interesse normativo. A ideia é que, como esses agentes sabem que eles vão voltar para o Judiciário outras vezes, então, a fim de otimizar os seus ganhos e perdas materiais no longo prazo, eles buscam criar decisões jurídicas favoráveis a eles, isto é, criar uma jurisprudência favroável a eles. No curto prazo, isso pode dar a impressão de que os PEs estão realizando uma estratégia irracional. Mas, no longo prazo, isso não se mostra verdadeiro. A fim de evitar decisões contrárias aos PEs, esses agentes evadem do Judiciário às vezes, comprometendo-se até com acordos extrajudiciais que são mais custosos do que os danos, sanções ou reparações que eles seriam condenados a pagar se realizassem aquela disputa na frente do juiz. Esses esforços evitam que se consolidem entendimentos jurisprudenciais contrários aos interesses dos PEs.
-
-Então, de um lado, temos JHs caracterizados por um desconhecimento e falta de familiaridade com o Judiciário, que entra nele somente para maximizar seus ganhos ou minimizar suas perdas; e, do outro, temos PEs, caracterizados por um relacionamento íntimo e prolongado com os agentes do sistema jurídico, que buscam, além de satisfazer seus interesses materiais, proteger também seus interesses normativos.
+1. Conhecimento prévio;
+2. Expertise;
+3. Relações informais com os atores institucionais;
+4. Reputação e credibilidade;
+5. Interesse normativo. 
 
 ### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, foi necessário operacionalizar os conceitos de Jogador Habitual e Participante Eventual. A seguir, discuta algumas possibilidades de operacionalização que a pesquisadora deseja realizar. 
 
@@ -132,7 +128,9 @@ Há várias considerações a se fazer a respeito dessa operacionalização:
 4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
 
 
-### IV) Exercício sobre o gráfico
+## IV) Exercício sobre definição de escopo temporal
+
+### Exercício 1. Interprete os elementos do gráfico. 
 
 ```{r, fig.width=7, fig.height=4, dpi=300}
 set.seed(1)
@@ -146,6 +144,49 @@ tabela <- tibble::tibble(
     data_saida <= 2021.5, "Observado", "Não observado"
   ))
 
+tabela |> 
+  dplyr::filter(observado == "Observado") |> 
+  ggplot2::ggplot(ggplot2::aes(data_entrada, tempo)) +
+  ggplot2::geom_point(
+    colour = viridis::viridis(1, 1, .2, .8, 1, "A")
+  ) +
+  ggplot2::geom_abline(
+    slope = -1,
+    intercept = 2021.5,
+    colour = 2, 
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(breaks = 2010:2021) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::ylim(c(0,10)) +
+  ggplot2::labs(x = "Ano entrada", y = "Tempo (anos)")
+```
+
+### a) Qual é o escopo temporal desta pesquisa? Diga qual é a janela de análise e a data de referência. 
+
+O escopo temporal são processos distribuídos entre 2010 e 2021. 
+
+### b) Qual é a unidade amostral dessa base e como ela está representada?
+
+A unidade amostral é um processo. Os processos estão sendo representados por uma bola. 
+
+### c) Qual é o eixo x do gráfico? E o que ele representa? 
+
+No eixo x, temos o "Ano entrada", que indica o ano em que o processo foi distribuído.
+
+### d) Qual é o eixo y do gráfico? O que ele representa? E como ele é calculado?
+
+No eixo y, temos o tempo de duração de cada processo. O tempo de duração de um processo é calculado a partir da diferença entre o início do processo (distribuição) e o fim (sentença).
+
+### e) A partir da resposta anterior, responda se, _teoricamente_, todas as observações da base vão aparecer neste gráfico, ou se há alguma condição especial para que as bolinhas apareçam? 
+
+### f) O que significa a linha pontilhada? 
+
+A linha pontilhada indica o tempo máximo de duração dos processos que o escopo consegue capturar. 
+
+### Exercício 2. Agora vejamos uma variação do primeiro gráfico. 
+
+```{r, fig.width=7, fig.height=4, dpi=300}
 tabela |> 
   ggplot2::ggplot() +
   ggplot2::aes(data_entrada, tempo, colour = observado,
@@ -170,3 +211,45 @@ tabela |>
   ggplot2::scale_alpha_discrete(range = c(.4, 1)) +
   ggplot2::theme(legend.position = "bottom")
 ```
+
+### a) Na legenda, para as cores das bolas, está escrito "Observado" e "Não observado". O que está sendo "Observado"? Em outras palavras, como interpretar as cores das bolas?  
+
+### b) Por que existem bolas "Não observadas"? 
+
+### Exercício 3. Um grupo de pesquisadores deseja calcular o tempo médio de duração dos processos. Eles só têm acesso aos dados "Observados". Discuta, em grupo, se há algum problema metodológico nesta pesquisa. 
+
+Os dados que o grupo coletou foram de processos distribuídos entre 2010 e 2021. Muitos desses processos ainda não acabaram e, portanto, não possuem tempo de duração. Assim, eles estão "invisíveis" para a pesquisa. Isso vai gerar uma subestimação do tempo de duração dos processos ao se calcular a média, uma vez que apenas os processos que se encerraram de forma mais célere vão ser considerados para calcular esta média. 
+
+### Exercício 4. A Tabela abaixo resume os dados do gráfico. Foram feitos dois agrupamentos distintos para se calcular a média dos processos. A partir dos resultados obtidos, discuta a validade em se calcular a média ao longo dos anos em um estudo retrospectivo.
+
+```{r media-tempos}
+media_total <- tabela |> 
+  dplyr::summarise(mean(tempo)) |> 
+  dplyr::pull() |> 
+  obsFase3:::tempo_lab_one()
+
+media_observado <- tabela |> 
+  dplyr::group_by(observado) |> 
+  dplyr::summarise(mean(tempo)) |> 
+  dplyr::ungroup() |> 
+  dplyr::filter(observado=="Observado") |> 
+  dplyr::pull() |> 
+  obsFase3:::tempo_lab_one()
+
+
+tibble::tibble(
+  grupo = c("'Observado' e 'Não observado'", "Apenas 'Observado'"),
+  media_tempos = c(media_total, media_observado)
+) |> 
+  knitr::kable(
+    caption="Média de tempos",
+    col.names=c("O que foi considerado", "Média de tempos")
+  )
+```
+
+### Exercício 5. Em quais situações a pesquisa prospectiva e retrospectiva dariam os mesmos resultados:
+
+### a) para analisar o resultado das decisões dos processos (favorável, desfavorável ou parcialmente favorável)
+
+### b) para calcular o tempo médio/mediano de duração dos processos
+

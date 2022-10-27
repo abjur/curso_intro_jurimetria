@@ -35,18 +35,23 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ## Para vocês nos conhecerem melhor
 
-:::: columns
-:::column
-Foto minha
+::: columns
+::: column
+#### Julio Trecenti
+
+![](img/julio.jpg)
 :::
-:::column
-Foto do Julio
+
+::: column
+#### Ricardo Feliz
+
+![](img/ricardo.jpeg){width="480"}
 :::
-::::
+:::
 
 ## Para nós conhecermos vocês melhor
 
-::: {.center-middle}
+::: center-middle
 **Respondam este formulário por favor!**
 
 <https://forms.gle/HStRPDK2jVsJNDts5>
@@ -62,8 +67,8 @@ Demora de 5 a 10 minutos para responder!
 ::: {.column width="32%"}
 #### Parte 1 - Metodologia
 
-1. Operacionalização de conceitos
-2. Definição de escopo
+1.  Operacionalização de conceitos
+2.  Definição de escopo
 :::
 
 ::: {.column width="68%"}
@@ -86,29 +91,29 @@ Demora de 5 a 10 minutos para responder!
 
 ## Informações sobre as aulas {.smaller}
 
-:::: columns
-
-:::column
+::: columns
+::: column
 ### Aulas assíncronas
-- São mais de 4 horas de gravação.
-- São 12 materiais gravados, divididos em 9 aulas e 3 materiais extras.
-- Os materiais ficarão disponíveis para serem assistidos a partir de hoje e poderão ser acessados a qualquer momento.
+
+-   São mais de 4 horas de gravação.
+-   São 12 materiais gravados, divididos em 9 aulas e 3 materiais extras.
+-   Os materiais ficarão disponíveis para serem assistidos a partir de hoje e poderão ser acessados a qualquer momento.
 :::
 
-:::column
+::: column
 ### Aulas síncronas
-- São 3 encontros, contando com a aula de hoje, de 3 horas de duração.
-- Logo no início das aulas, iremos dar uma lista de exercícios. 
-- Vocês terão 2 horas para realizar os exercícios em grupos.
-- Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.
-- Ficará como atividade para casa refazer os exercícios e enviar uma lista *individual*
+
+-   São 3 encontros, contando com a aula de hoje, de 3 horas de duração.
+-   Logo no início das aulas, iremos dar uma lista de exercícios.
+-   Vocês terão 2 horas para realizar os exercícios em grupos.
+-   Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.
+-   Ficará como atividade para casa refazer os exercícios e enviar uma lista *individual*
+:::
 :::
 
-::::
+##  {.smaller}
 
-## {.smaller}
-
-:::: columns
+::: columns
 ::: {.column width="80%"}
 ```{r}
 cronograma_videos <- tibble::tibble(
@@ -207,6 +212,7 @@ cronograma_videos |>
   )
 ```
 :::
+
 ::: {.column width="20%"}
 **Semana 1**
 
@@ -216,11 +222,11 @@ de 08/11/2022 até 22/11/2022
 
 de 22/11/2022 até 29/11/2022
 
-**Semana * **
+**Semana \***
 
 Material livre, que não está vinculado a nenhuma aula
 :::
-::::
+:::
 
 ## Planejamento da Semana 1 {.smaller}
 
@@ -235,8 +241,8 @@ cronograma_videos |>
     table.attr = "class=\"striped\""
   )
 ```
-::: {.center}
 
+::: center
 **Preparação para a aula:** 08/11/2022 - 22/11/2022
 
 **Data e hora da aula:** 22/11/2022 das 19 às 22hrs
@@ -257,7 +263,6 @@ tibble::tibble(
   )
 ```
 
-
 ## Planejamento da Semana 2 {.smaller}
 
 ```{r}
@@ -271,8 +276,8 @@ cronograma_videos |>
     table.attr = "class=\"striped\""
   )
 ```
-::: {.center}
 
+::: center
 **Preparação para a aula:** 22/11/2022 - 29/11/2022
 
 **Data e hora da aula:** 29/11/2022 das 19 às 22hrs
@@ -293,9 +298,8 @@ tibble::tibble(
   )
 ```
 
-
 # Dúvidas? Comentários?
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
