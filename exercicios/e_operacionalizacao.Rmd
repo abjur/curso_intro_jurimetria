@@ -1,5 +1,5 @@
 ---
-title: "Exercícios: Operacionalização de conceitos"
+title: "Exercícios: Operacionalização de conceitos e definição de escopo"
 author: "ABJ"
 output: pdf_document
 ---
@@ -22,11 +22,20 @@ output: pdf_document
 
 Judicialização da política
 
-#### Exercício 2. Como esse conceito está sendo visualizado na prática? 
+#### Exercício 2. Como esse conceito está sendo operacionalizado? 
 
-Por meio de ações constitucionais que versem sobre a separação dos poderes.
+A equipe de pesquisa buscou estudar "decisões de caráter predominantemente
+político" (p. 14). Para tanto, a equipe escolheu visualizar estatísticas sobre ações constitucionais que versem sobre a separação dos poderes. A estatística para tanto é bem simples: o aumento, ao longo do tempo, de decisões em que o STF interfere nos demais poderes. 
+
+Trechos que sustentam isso:
 
 "A despeito das dificuldades anteriormente apontadas a respeito da caracterização do que seriam questões essencialmente políticas como um âmbito temático ou locus propício para a ocorrência do fenômeno da judicialização, a presente pesquisa procurou evitar tais problemas por meio da seguinte escolha: tratar exclusivamente de ações envolvendo controle de constitucionalidade." (p. 14)
+
+"No primeiro grupo, chamado de fatores de entrada, encontram-se informações concernentes a variáveis que caracterizam a demanda que é levada ao STF. Aqui, esses dados podem ilustrar a judicialização da política entendida não apenas como um aumento da demanda judicial (dados como a distribuição temporal e periodização das ações propostas ajudam a lançar luz sobre essa tese), mas também como uma mudança qualitativa dessa demanda." (p. 17)
+
+"O segundo grupo de informações analisadas, chamado de fatores de saída, procura dialogar com a tese de que a judicialização da política diz respeito não somente ao tipo de demanda judicializada, mas também à forma com que o STF reage à demanda que lhe é proposta. Em outras palavras, esses dados podem esclarecer melhor se e como o STF tem se mostrado mais ou menos “interventivo” ao controlar a atividade normativa atribuída constitucionalmente ao Legislativo e, em algumas hipóteses, também ao Executivo federal." (p. 18)
+
+"Nota 38: Trata-se de número relativamente baixo, que não permite falar em “judicialização”, se esta for entendida como um aumento (numérico) dos casos em que o Judiciário intervém na atuação dos demais Poderes." (p. 19)
 
 #### Exercício 3. Como os autores justificam essa operacionalização? 
 
@@ -36,7 +45,7 @@ Por meio de ações constitucionais que versem sobre a separação dos poderes.
 
 #### a) O que fica de fora com essa operacionalização?
 
-A política pode ser discutida em outras ações. Um exemplo são as ações civis públicas e ações populares. 
+A política pode ser judicializada em outros tipos ações. Os exemplos mais significativos são as ações civis públicas e ações populares. 
 
 #### b) Que impactos que isso pode ter para os resultados?
 
@@ -127,10 +136,9 @@ Há várias considerações a se fazer a respeito dessa operacionalização:
 3. As empresas podem aparecer nos processos de forma meramente incidental, não podendo ser consideradas como JH em muitas judicializações. 
 4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
 
-
 ## IV) Exercício sobre definição de escopo temporal
 
-### Exercício 1. Interprete os elementos do gráfico. 
+### Exercício 1. Os dados do gráfico abaixo são fictícios, mas eles representam os dados de uma pesquisa retrospectiva, obtidos a partir da consulta de julgados de primeiro grau. A partir das sentenças, foram identificados vários processos. De cada processo, foram extraídas as datas de distribuição e a data da sentença, para, então, calcular o tempo de duração total do processo. A partir destas informações e do gráfico, responda:
 
 ```{r, fig.width=7, fig.height=4, dpi=300}
 set.seed(1)
@@ -162,9 +170,9 @@ tabela |>
   ggplot2::labs(x = "Ano entrada", y = "Tempo (anos)")
 ```
 
-### a) Qual é o escopo temporal desta pesquisa? Diga qual é a janela de análise e a data de referência. 
+### a) Qual é o escopo temporal desta pesquisa? Informe qual é a janela de análise e a data de referência. 
 
-O escopo temporal são processos distribuídos entre 2010 e 2021. 
+O escopo temporal são processos concluídos entre 2010 e 2021. Isso significa que a data de referência é a data da sentença e a janela de análise é 01/01/2010 até 31/12/2021. 
 
 ### b) Qual é a unidade amostral dessa base e como ela está representada?
 
@@ -172,19 +180,17 @@ A unidade amostral é um processo. Os processos estão sendo representados por u
 
 ### c) Qual é o eixo x do gráfico? E o que ele representa? 
 
-No eixo x, temos o "Ano entrada", que indica o ano em que o processo foi distribuído.
+No eixo x, temos o "Ano entrada", que indica o ano em que o processo foi distribuído. Por mais que a forma de extração dos dados tenha sido feita com base na data da sentença, o eixo x representa a data de distribuição!
 
 ### d) Qual é o eixo y do gráfico? O que ele representa? E como ele é calculado?
 
 No eixo y, temos o tempo de duração de cada processo. O tempo de duração de um processo é calculado a partir da diferença entre o início do processo (distribuição) e o fim (sentença).
 
-### e) A partir da resposta anterior, responda se, _teoricamente_, todas as observações da base vão aparecer neste gráfico, ou se há alguma condição especial para que as bolinhas apareçam? 
+### e) O que significa a linha pontilhada? 
 
-### f) O que significa a linha pontilhada? 
+A linha pontilhada indica o tempo máximo de duração dos processos que o escopo consegue capturar. Por exemplo, se o processo tiver sido distribuído em 2010, como essa pesquisa realizou a busca dos dados com base na data de sentença, então o tempo de duração máximo que vai aparecer para um processo de 2010 é se ele tiver se encerrado em 31/12/2021, ou seja, o tempo máximo é de 11 anos. A linha pontilhada, portanto, representa esse tempo máximo de duração dos processos que é possível, teoricamente, encontrar na base.
 
-A linha pontilhada indica o tempo máximo de duração dos processos que o escopo consegue capturar. 
-
-### Exercício 2. Agora vejamos uma variação do primeiro gráfico. 
+### f) Agora vejamos uma variação do primeiro gráfico. Nesta variação, aparece uma legenda, para as cores das bolas, em que está escrito "Observado" e "Não observado". O que está sendo "Observado"? Em outras palavras, como interpretar as cores das bolas?  
 
 ```{r, fig.width=7, fig.height=4, dpi=300}
 tabela |> 
@@ -212,15 +218,9 @@ tabela |>
   ggplot2::theme(legend.position = "bottom")
 ```
 
-### a) Na legenda, para as cores das bolas, está escrito "Observado" e "Não observado". O que está sendo "Observado"? Em outras palavras, como interpretar as cores das bolas?  
+Cada bola continua representando um processo, mas agora apareceram bolas que não foram observadas pela forma como a pesquisa foi feita. Ou seja, são processos que se encerraram depois de 31/12/2021. 
 
-### b) Por que existem bolas "Não observadas"? 
-
-### Exercício 3. Um grupo de pesquisadores deseja calcular o tempo médio de duração dos processos. Eles só têm acesso aos dados "Observados". Discuta, em grupo, se há algum problema metodológico nesta pesquisa. 
-
-Os dados que o grupo coletou foram de processos distribuídos entre 2010 e 2021. Muitos desses processos ainda não acabaram e, portanto, não possuem tempo de duração. Assim, eles estão "invisíveis" para a pesquisa. Isso vai gerar uma subestimação do tempo de duração dos processos ao se calcular a média, uma vez que apenas os processos que se encerraram de forma mais célere vão ser considerados para calcular esta média. 
-
-### Exercício 4. A Tabela abaixo resume os dados do gráfico. Foram feitos dois agrupamentos distintos para se calcular a média dos processos. A partir dos resultados obtidos, discuta a validade em se calcular a média ao longo dos anos em um estudo retrospectivo.
+### g) Com base nos dados apresentados na variação do gráfico, que vimos no item 'f', calculamos a média do tempo de duração dos processos. Entretanto, fizemos esse cálculo de duas formas distintas: uma considerando apenas os processos "Observados" e outra considerando todos os processos (tanto os "Observados" com os "Não observados"). A Tabela abaixo resume estes dados. A partir dos resultados obtidos, explique a diferença do tempo mediano entre os dois grupos. Por que existe essa diferença? 
 
 ```{r media-tempos}
 media_total <- tabela |> 
@@ -236,7 +236,6 @@ media_observado <- tabela |>
   dplyr::pull() |> 
   obsFase3:::tempo_lab_one()
 
-
 tibble::tibble(
   grupo = c("'Observado' e 'Não observado'", "Apenas 'Observado'"),
   media_tempos = c(media_total, media_observado)
@@ -247,9 +246,10 @@ tibble::tibble(
   )
 ```
 
-### Exercício 5. Em quais situações a pesquisa prospectiva e retrospectiva dariam os mesmos resultados:
+### Exercício 2. Em quais situações a pesquisa prospectiva e retrospectiva dariam os mesmos resultados:
 
 ### a) para analisar o resultado das decisões dos processos (favorável, desfavorável ou parcialmente favorável)
 
 ### b) para calcular o tempo médio/mediano de duração dos processos
 
+### c) para calcular a proporção de processos com pedidos liminares
