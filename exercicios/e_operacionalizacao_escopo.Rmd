@@ -1,0 +1,176 @@
+---
+title: "Exercícios: Operacionalização de conceitos e definição de escopo"
+author: "ABJ"
+output: pdf_document
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE
+)
+```
+
+
+\newpage
+
+## I) Exercícios referentes ao texto "Yeung e Azevedo, 2017"
+
+### Exercício 1. A partir da leitura das 3 primeiras páginas da "Introdução" do artigo responda: 
+
+#### a) Qual é o conceito teórico de interesse para o artigo? 
+
+#### b) Como esse conceito está sendo visualizado na prática? 
+
+#### c) Com base nas respostas anteriores, responda qual é a operacionalização que está sendo feita? 
+
+### Exercício 2. Yeung e Azevedo (2017), na parte 5 do artigo, entitulada "Definindo o que é viés e o que não é viés", reconhecem dois viéses possíveis que estão além da decisão do juiz. 
+
+#### a) Quais são os vieses que os autores reconhecem? Descreva-os. 
+
+#### b) A partir destes vieses apresentados pelos autores, discorra criticamente sobre a operacionalização realizada no artigo. 
+
+\newpage
+
+## II) Exercícios referentes ao texto "Galanter, 2018 (1941)"
+
+#### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que 'Quem tem' Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
+
+### Exercício 1. Descreva as características de um JH e de um PE
+
+### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, foi necessário operacionalizar os conceitos de Jogador Habitual e Participante Eventual. A seguir, discuta algumas possibilidades de operacionalização que a pesquisadora deseja realizar. 
+
+#### a) O CNJ, em 2012, realizou um estudo a respeito dos grandes litigantes, elencando quem são os 100 maiores litigantes dos Tribunais de Justiça. Depois, em 2015, a Associação Brasileira de Magistrados atualizou os dados (mas apenas para alguns estados). A partir destes estudos, a pesquisadora decidiu operacionalizar os JHs como as partes que aparecem nestes dois estudos [não é preciso ler os relatórios para responder a essa questão].
+
+#### b) A pesquisadora coletou todos os dados para realizar a sua pesquisa, de forma que uma das informações que ela tinha era o nome de cada uma das partes. A partir disso, ela contou o número de vezes que cada um dos nomes apareciam ao longo dos processos. Como ela estava analisando apenas a Justiça Estadual, ela achou que seria razoável dizer que as partes que apareciam mais de 100 vezes seriam consideradas JHs. 
+
+#### c) A pesquisadora, a partir do nome das partes, percebeu que era possível classificá-las como pessoas jurídicas de direito público, pessoas jurídicas de direito privado e pessoas físicas, sendo que as pessoas físicas seriam sempre as partes residuais (ou seja, as que não se enquadram em nenhum critério). A partir disso, ela estabeleceu que todas as pessoas jurídicas, seja de direito público, seja de direito privado, seriam consideradas como JHs; e que todo o resto, seria considerado como PE. 
+
+\newpage
+
+## III) Exercício sobre definição de escopo temporal
+
+### Exercício 1. Os dados do gráfico abaixo são fictícios, mas eles representam os dados de uma pesquisa retrospectiva, obtidos a partir da consulta de julgados de primeiro grau. A partir das sentenças, foram identificados vários processos. De cada processo, foram extraídas as datas de distribuição e a data da sentença, para, então, calcular o tempo de duração total do processo. A partir destas informações e do gráfico, responda:
+
+```{r echo=FALSE, fig.height=4, fig.width=7, dpi=300}
+set.seed(1)
+N <- 400
+tabela <- tibble::tibble(
+  data_entrada = runif(N, 2010, 2021.5),
+  data_saida = data_entrada + rexp(N, 1/5),
+  tempo = data_saida - data_entrada
+) |> 
+  dplyr::mutate(observado = dplyr::if_else(
+    data_saida <= 2021.5, "Observado", "Não observado"
+  ))
+
+tabela |> 
+  dplyr::filter(observado == "Observado") |> 
+  ggplot2::ggplot(ggplot2::aes(data_entrada, tempo)) +
+  ggplot2::geom_point(
+    colour = viridis::viridis(1, 1, .2, .8, 1, "A")
+  ) +
+  ggplot2::geom_abline(
+    slope = -1,
+    intercept = 2021.5,
+    colour = 2, 
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(breaks = 2010:2021) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::ylim(c(0,10)) +
+  ggplot2::labs(x = "Ano entrada", y = "Tempo (anos)")
+```
+
+#### a) Qual é o escopo temporal desta pesquisa? Informe qual é a janela de análise e a data de referência. 
+
+#### b) Qual é a unidade amostral dessa base e como ela está representada?
+
+#### c) Qual é o eixo x do gráfico? E o que ele representa? 
+
+#### d) Qual é o eixo y do gráfico? O que ele representa? E como ele é calculado?
+
+#### e) O que significa a linha pontilhada? 
+
+#### f) Agora vejamos uma variação do primeiro gráfico. Nesta variação, aparece uma legenda, para as cores das bolas, em que está escrito "Observado" e "Não observado". O que está sendo "Observado"? Em outras palavras, como interpretar as cores das bolas?  
+
+```{r echo=FALSE, fig.height=4, fig.width=7, dpi=300}
+tabela |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(data_entrada, tempo, colour = observado,
+               alpha = observado) +
+  ggplot2::geom_point() +
+  ggplot2::geom_abline(
+    slope = -1,
+    intercept = 2021.5,
+    colour = 2, 
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(breaks = 2010:2021) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::labs(
+    x = "Ano entrada", y = "Tempo (anos)", 
+    colour = "", alpha = ""
+  ) +
+  ggplot2::scale_colour_viridis_d(
+    option = "A", begin = .2, end = .8, direction = -1
+  ) +
+  ggplot2::ylim(c(0,10)) +
+  ggplot2::scale_alpha_discrete(range = c(.4, 1)) +
+  ggplot2::theme(legend.position = "bottom")
+```
+
+#### g) Com base nos dados apresentados na variação do gráfico, que vimos no item 'f', calculamos a média do tempo de duração dos processos. Entretanto, fizemos esse cálculo de duas formas distintas: uma considerando apenas os processos "Observados" e outra considerando todos os processos (tanto os "Observados" com os "Não observados"). A Tabela abaixo resume estes dados. A partir dos resultados obtidos, explique a diferença do tempo mediano entre os dois grupos. Por que existe essa diferença? 
+
+```{r media-tempos, echo=FALSE}
+media_total <- tabela |> 
+  dplyr::summarise(mean(tempo)) |> 
+  dplyr::pull() |> 
+  obsFase3:::tempo_lab_one()
+
+media_observado <- tabela |> 
+  dplyr::group_by(observado) |> 
+  dplyr::summarise(mean(tempo)) |> 
+  dplyr::ungroup() |> 
+  dplyr::filter(observado=="Observado") |> 
+  dplyr::pull() |> 
+  obsFase3:::tempo_lab_one()
+
+tibble::tibble(
+  grupo = c("'Observado' e 'Não observado'", "Apenas 'Observado'"),
+  media_tempos = c(media_total, media_observado)
+) |> 
+  knitr::kable(
+    caption="Média de tempos",
+    col.names=c("O que foi considerado", "Média de tempos")
+  )
+```
+
+### Exercício 2. Em quais situações a pesquisa prospectiva e retrospectiva dariam os mesmos resultados:
+
+#### a) para analisar o resultado das decisões dos processos (favorável, desfavorável ou parcialmente favorável)
+
+#### b) para calcular o tempo médio/mediano de duração dos processos
+
+#### c) para calcular a proporção de processos com pedidos liminares
+
+\newpage
+
+## Extra) Exercícios referentes ao texto "Sundfeld et al, 2011". 
+
+**Ler páginas 12 a 21 do texto, começando em "II. Escolhas metodológicas e justificativas" e acabando em "III. O controle preventivo de constitucionalidade".**
+
+### Exercício 1. Qual é o conceito que está sendo estudado? 
+
+### Exercício 2. Como esse conceito está sendo operacionalizado? 
+
+### Exercício 3. Como os autores justificam essa operacionalização? 
+
+### Exercício 4. Discorra criticamente sobre essa operacionalização.
+
+#### a) O que fica de fora com essa operacionalização?
+
+#### b) Que impactos que isso pode ter para os resultados?
+
+#### c) A premissa para realizar essa operacionalização é forte ou fraca?

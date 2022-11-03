@@ -4,76 +4,28 @@ author: "ABJ"
 output: pdf_document
 ---
 
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE
+)
+```
+
 # Orientações gerais
 
-- Formem grupos de 5 pessoas. Todas as questões deverão ser respondidas nestes grupos;
-- Os grupos terão de 1:30 a 2:00 horas para responder às questões;
+- Serão formados 6 grupos de 5 pessoas;
+- Os grupos terão 2 horas para responder às questões;
 - Um único aluno será encarregado de anotar as respostas de todas as questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
 - Teremos um breve intervalo antes de voltarmos à sala;
 - Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: <https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing>
 - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
+- Será tarefa avaliativa uma entrega INDIVIDUAL dos exercícios
 
-## I) Exercícios referentes ao texto "Sundfeld et al, 2011". 
+\newpage
 
-**Ler páginas 12 a 17 do texto, começando em "II. Escolhas metodológicas e justificativas" e acabando em "II.2 Desenho de pesquisa". Não precisa ler o que vem a partir de "II.2.1 Análise quantitativa: o que chega e o que faz o STF".**
-
-#### Exercício 1. Qual é o conceito que está sendo estudado? 
-
-Judicialização da política
-
-#### Exercício 2. Como esse conceito está sendo operacionalizado? 
-
-A equipe de pesquisa buscou estudar "decisões de caráter predominantemente
-político" (p. 14). Para tanto, a equipe escolheu visualizar estatísticas sobre ações constitucionais que versem sobre a separação dos poderes. A estatística para tanto é bem simples: o aumento, ao longo do tempo, de decisões em que o STF interfere nos demais poderes. 
-
-Trechos que sustentam isso:
-
-"A despeito das dificuldades anteriormente apontadas a respeito da caracterização do que seriam questões essencialmente políticas como um âmbito temático ou locus propício para a ocorrência do fenômeno da judicialização, a presente pesquisa procurou evitar tais problemas por meio da seguinte escolha: tratar exclusivamente de ações envolvendo controle de constitucionalidade." (p. 14)
-
-"No primeiro grupo, chamado de fatores de entrada, encontram-se informações concernentes a variáveis que caracterizam a demanda que é levada ao STF. Aqui, esses dados podem ilustrar a judicialização da política entendida não apenas como um aumento da demanda judicial (dados como a distribuição temporal e periodização das ações propostas ajudam a lançar luz sobre essa tese), mas também como uma mudança qualitativa dessa demanda." (p. 17)
-
-"O segundo grupo de informações analisadas, chamado de fatores de saída, procura dialogar com a tese de que a judicialização da política diz respeito não somente ao tipo de demanda judicializada, mas também à forma com que o STF reage à demanda que lhe é proposta. Em outras palavras, esses dados podem esclarecer melhor se e como o STF tem se mostrado mais ou menos “interventivo” ao controlar a atividade normativa atribuída constitucionalmente ao Legislativo e, em algumas hipóteses, também ao Executivo federal." (p. 18)
-
-"Nota 38: Trata-se de número relativamente baixo, que não permite falar em “judicialização”, se esta for entendida como um aumento (numérico) dos casos em que o Judiciário intervém na atuação dos demais Poderes." (p. 19)
-
-#### Exercício 3. Como os autores justificam essa operacionalização? 
-
-"Por mais que seja problemático o conteúdo semântico da judicialização da política, parece razoável assumir que problemas de ordem constitucional (ainda que não em todos os casos) possam, em geral, ser caracterizados como questões de natureza política. Dessa forma, acredita-se que, com esse recorte ex ante, por mais que muitos casos relevantes para a judicialização fiquem de fora, abarca-se uma parte expressiva das questões e problemas levados ao STF que tenham a configuração de disputas políticas. Em outras palavras, parte-se da premissa de que o controle de constitucionalidade seria um âmbito privilegiado para observação da interação entre Poderes e também do suposto fenômeno da judicialização da política." (p. 14)
-
-#### Exercício 4. Discorra criticamente sobre essa operacionalização.
-
-#### a) O que fica de fora com essa operacionalização?
-
-A política pode ser judicializada em outros tipos ações. Os exemplos mais significativos são as ações civis públicas e ações populares. 
-
-#### b) Que impactos que isso pode ter para os resultados?
-
-Retirar da análise ações civis públicas e ações populares significa retirar da análise ações cuja competência são da sociedade civil. Pelo art. 103 da Constituição Federal, são legitimados a propor ADIN e ADC:
-
-1. o Presidente da República;
-1. a Mesa do Senado Federal;
-1. a Mesa da Câmara dos Deputados;
-1. a Mesa de Assembléia Legislativa ou da Câmara Legislativa do Distrito Federal;
-1. o Governador de Estado ou do Distrito Federal;
-1. o Procurador-Geral da República;
-1. o Conselho Federal da Ordem dos Advogados do Brasil;
-1. partido político com representação no Congresso Nacional;
-1. confederação sindical ou entidade de classe de âmbito nacional.
-
-Ou seja, são legitimados a entrar com ações constitucionais apenas atores institucionais partidários. 
-
-Para ações civis públicas e para ações populares, há outros legitimados. 
-
-No art. 5, LXXIII da CF há a previsão de que "qualquer cidadão é parte legítima para propor ação popular". Já para as ações civis públicas, o art. 5, V da Lei de Ação Civil Pública (Lei 7.347/1985) prevê que "têm legitimidade para propor a ação principal e a ação cautelar: V - a associação que, concomitantemente: a) esteja constituída há pelo menos 1 (um) ano nos termos da lei civil; b) inclua, entre suas finalidades institucionais, a proteção ao patrimônio público e social, ao meio ambiente, ao consumidor, à ordem econômica, à livre concorrência, aos direitos de grupos raciais, étnicos ou religiosos ou ao patrimônio artístico, estético, histórico, turístico e paisagístico."
-
-Assim, ao se ignorar as ações civis públicas e as ações populares, a sociedade civil organizada não participa dessa "política" que está sendo analisada no estudo. Então esse estudo está avaliando a judicialização da política por atores institucionais apenas. É uma ressalva importantíssima essa. 
-
-#### c) A premissa para realizar essa operacionalização é forte ou fraca?
-
-Se o estudo pretende falar da política em geral, é uma premissa forte. 
-
-## II) Exercícios referentes ao texto "Yeung e Azevedo, 2017"
+## I) Exercícios referentes ao texto "Yeung e Azevedo, 2017"
 
 #### Exercício 1. A partir da leitura das 3 primeiras páginas da "Introdução" do artigo responda: 
 
@@ -101,7 +53,9 @@ Viés legislativo: "Além do viés do fato, existe outra falsa fonte de viés ju
 
 A operacionalização de "viés judicial" por meio da proporção de decisões favoráveis ao devedor no STJ possui seus limites, como vimos pelos viéses. Entretanto, os autores explicitaram com muita clareza que limites são estes. A pesquisa, dessa forma, foi objetiva e honesta ao explicitar todas as suas limitações. 
 
-## III) Exercícios referentes ao texto "Galanter, 2018 (1941)"
+\newpage
+
+## II) Exercícios referentes ao texto "Galanter, 2018 (1941)"
 
 ### Em 1941, Marc Galanter escreveu um célebre artigo em que ele formulou uma tipologia de partes nos litígios. O artigo, no original, se chama "Why the 'Haves' Come Out Ahead", o que pode ser traduzido como "Por que 'Quem tem' Sai na Frente". Para realizar este exercício, leia as páginas 46 a 51 do pdf, em que Galanter descreve as características de um "jogador habitual" (JH) e de "participante eventual" (PE). 
 
@@ -136,7 +90,9 @@ Há várias considerações a se fazer a respeito dessa operacionalização:
 3. As empresas podem aparecer nos processos de forma meramente incidental, não podendo ser consideradas como JH em muitas judicializações. 
 4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
 
-## IV) Exercício sobre definição de escopo temporal
+\newpage
+
+## III) Exercício sobre definição de escopo temporal
 
 ### Exercício 1. Os dados do gráfico abaixo são fictícios, mas eles representam os dados de uma pesquisa retrospectiva, obtidos a partir da consulta de julgados de primeiro grau. A partir das sentenças, foram identificados vários processos. De cada processo, foram extraídas as datas de distribuição e a data da sentença, para, então, calcular o tempo de duração total do processo. A partir destas informações e do gráfico, responda:
 
@@ -250,6 +206,73 @@ tibble::tibble(
 
 ### a) para analisar o resultado das decisões dos processos (favorável, desfavorável ou parcialmente favorável)
 
+Dá no mesmo.
+
 ### b) para calcular o tempo médio/mediano de duração dos processos
 
+Só funciona para pesquisas prospectivas.
+
 ### c) para calcular a proporção de processos com pedidos liminares
+
+Dá no mesmo.
+
+\newpage
+
+## Extra) Exercícios referentes ao texto "Sundfeld et al, 2011". 
+
+**Ler páginas 12 a 21 do texto, começando em "II. Escolhas metodológicas e justificativas" e acabando em "III. O controle preventivo de constitucionalidade".**
+
+#### Exercício 1. Qual é o conceito que está sendo estudado? 
+
+Judicialização da política
+
+#### Exercício 2. Como esse conceito está sendo operacionalizado? 
+
+A equipe de pesquisa buscou estudar "decisões de caráter predominantemente
+político" (p. 14). Para tanto, a equipe escolheu visualizar estatísticas sobre ações constitucionais que versem sobre a separação dos poderes. A estatística para tanto é bem simples: o aumento, ao longo do tempo, de decisões em que o STF interfere nos demais poderes. 
+
+Trechos que sustentam isso:
+
+"A despeito das dificuldades anteriormente apontadas a respeito da caracterização do que seriam questões essencialmente políticas como um âmbito temático ou locus propício para a ocorrência do fenômeno da judicialização, a presente pesquisa procurou evitar tais problemas por meio da seguinte escolha: tratar exclusivamente de ações envolvendo controle de constitucionalidade." (p. 14)
+
+"No primeiro grupo, chamado de fatores de entrada, encontram-se informações concernentes a variáveis que caracterizam a demanda que é levada ao STF. Aqui, esses dados podem ilustrar a judicialização da política entendida não apenas como um aumento da demanda judicial (dados como a distribuição temporal e periodização das ações propostas ajudam a lançar luz sobre essa tese), mas também como uma mudança qualitativa dessa demanda." (p. 17)
+
+"O segundo grupo de informações analisadas, chamado de fatores de saída, procura dialogar com a tese de que a judicialização da política diz respeito não somente ao tipo de demanda judicializada, mas também à forma com que o STF reage à demanda que lhe é proposta. Em outras palavras, esses dados podem esclarecer melhor se e como o STF tem se mostrado mais ou menos “interventivo” ao controlar a atividade normativa atribuída constitucionalmente ao Legislativo e, em algumas hipóteses, também ao Executivo federal." (p. 18)
+
+"Nota 38: Trata-se de número relativamente baixo, que não permite falar em “judicialização”, se esta for entendida como um aumento (numérico) dos casos em que o Judiciário intervém na atuação dos demais Poderes." (p. 19)
+
+#### Exercício 3. Como os autores justificam essa operacionalização? 
+
+"Por mais que seja problemático o conteúdo semântico da judicialização da política, parece razoável assumir que problemas de ordem constitucional (ainda que não em todos os casos) possam, em geral, ser caracterizados como questões de natureza política. Dessa forma, acredita-se que, com esse recorte ex ante, por mais que muitos casos relevantes para a judicialização fiquem de fora, abarca-se uma parte expressiva das questões e problemas levados ao STF que tenham a configuração de disputas políticas. Em outras palavras, parte-se da premissa de que o controle de constitucionalidade seria um âmbito privilegiado para observação da interação entre Poderes e também do suposto fenômeno da judicialização da política." (p. 14)
+
+#### Exercício 4. Discorra criticamente sobre essa operacionalização.
+
+#### a) O que fica de fora com essa operacionalização?
+
+A política pode ser judicializada em outros tipos ações. Os exemplos mais significativos são as ações civis públicas e ações populares. 
+
+#### b) Que impactos que isso pode ter para os resultados?
+
+Retirar da análise ações civis públicas e ações populares significa retirar da análise ações cuja competência são da sociedade civil. Pelo art. 103 da Constituição Federal, são legitimados a propor ADIN e ADC:
+
+1. o Presidente da República;
+1. a Mesa do Senado Federal;
+1. a Mesa da Câmara dos Deputados;
+1. a Mesa de Assembléia Legislativa ou da Câmara Legislativa do Distrito Federal;
+1. o Governador de Estado ou do Distrito Federal;
+1. o Procurador-Geral da República;
+1. o Conselho Federal da Ordem dos Advogados do Brasil;
+1. partido político com representação no Congresso Nacional;
+1. confederação sindical ou entidade de classe de âmbito nacional.
+
+Ou seja, são legitimados a entrar com ações constitucionais apenas atores institucionais partidários. 
+
+Para ações civis públicas e para ações populares, há outros legitimados. 
+
+No art. 5, LXXIII da CF há a previsão de que "qualquer cidadão é parte legítima para propor ação popular". Já para as ações civis públicas, o art. 5, V da Lei de Ação Civil Pública (Lei 7.347/1985) prevê que "têm legitimidade para propor a ação principal e a ação cautelar: V - a associação que, concomitantemente: a) esteja constituída há pelo menos 1 (um) ano nos termos da lei civil; b) inclua, entre suas finalidades institucionais, a proteção ao patrimônio público e social, ao meio ambiente, ao consumidor, à ordem econômica, à livre concorrência, aos direitos de grupos raciais, étnicos ou religiosos ou ao patrimônio artístico, estético, histórico, turístico e paisagístico."
+
+Assim, ao se ignorar as ações civis públicas e as ações populares, a sociedade civil organizada não participa dessa "política" que está sendo analisada no estudo. Então esse estudo está avaliando a judicialização da política por atores institucionais apenas. É uma ressalva importantíssima essa. 
+
+#### c) A premissa para realizar essa operacionalização é forte ou fraca?
+
+Se o estudo pretende falar da política em geral, é uma premissa forte. 
