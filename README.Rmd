@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+## Sobre o curso
+
+O objetivo da parte 1 do curso de Introdução à pesquisa Jurimétrica é apresentar e discutir a aplicação de métodos quantitativos no Direito. A ideia do curso é tratar dos limites de aplicação e elementos básicos de pesquisa quantitativa, com aplicações em temas do Direito.
+
+O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é completar a discussão e apresentação das aplicações de métodos quantitativos no Direito. A ideia desta segunda parte é avançar nos conhecimentos sobre os limites de aplicação e elementos de pesquisa quantitativa, com aplicações em temas do Direito.
+
+```{r}
+#| echo: FALSE
+fs::dir_ls("slides", glob = "*.html") |> 
+  tibble::enframe() |> 
+  dplyr::transmute(
+    nome = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
+    link = glue::glue("[{nome}](https://abjur.github.io/{name})")
+  ) |> 
+  knitr::kable()
+```
+
+Os slides serão atualizados conforme o curso vai acontecendo.
+
+## Informações importantes
+
+- Livro: [https://livro.abj.org.br](https://livro.abj.org.br)
+
+- Blog: [https://lab.abj.org.br](https://lab.abj.org.br)
+
+- Fórum: [https://forum.abj.org.br](https://forum.abj.org.br)
+
+
+## Material extra
+
+Referências extras comentadas nas aulas.
+
+```{r}
+#| message: false
+#| echo: false
+
+
+# googlesheets4::gs4_deauth()
+# googlesheets4::gs4_auth("julio.trecenti@gmail.com")
+# "1TX72A4wiJqc31XvDqhVqpIBfH5YN4UpU0DmsznWESSY" |> 
+#   googlesheets4::read_sheet(turma) |>
+#   dplyr::filter(aula <= num_aula) |> 
+#   dplyr::mutate(link = glue::glue("[{desc}]({purrr::map_chr(url, utils::URLencode)})")) |>
+#   dplyr::select(-desc, -url) |>
+#   dplyr::arrange(aula) |> 
+#   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
+```
