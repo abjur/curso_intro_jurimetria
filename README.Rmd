@@ -14,7 +14,7 @@ fs::dir_ls("slides", glob = "*.html") |>
   tibble::enframe() |> 
   dplyr::transmute(
     nome = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
-    link = glue::glue("[{nome}](https://abjur.github.io/{name})")
+    link = glue::glue("[{nome}](https://abjur.github.io/curso_intro_jurimetria/{name})")
   ) |> 
   knitr::kable()
 ```
