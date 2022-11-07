@@ -1,0 +1,162 @@
+---
+title: "Medidas"
+subtitle: "Medidas para variáveis numéricas: medidas de dispersão II"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+
+
+cores_abj <-  viridis::viridis(2, 1, .2, .8)
+
+```
+
+## Ementa do curso {.smaller}
+
+::: columns
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+
+1.  Operacionalização de conceitos
+2.  Definição de escopo
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
+
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
+    2.  Mediana
+    3.  Moda
+4.  Medidas de variáveis numéricas II: Medidas de dispersão
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  Amplitude
+    5.  IQR
+:::
+:::
+
+## Ementa do curso {.smaller}
+
+::: columns
+::: {.column width="32%"}
+#### Parte 1 - Metodologia
+
+1.  Operacionalização de conceitos
+2.  Definição de escopo
+:::
+
+::: {.column width="68%"}
+#### Parte 2 - Técnicas
+
+1.  Tipos de variáveis
+2.  Medidas de variáveis categóricas: Tabelas de frequência
+3.  Medidas de variáveis numéricas I: Medidas de centro
+    1.  Média
+    2.  Mediana
+    3.  Moda
+4.  **Medidas de variáveis numéricas II: Medidas de dispersão**
+    1.  Desvio médio
+    2.  Variância
+    3.  Desvio padrão
+    4.  **Amplitude**
+    5.  **IQR**
+:::
+:::
+
+# Medidas de dispersão {.slide-title}
+
+## Plano de aula
+
+Na aula de hoje, teremos dois objetivos:
+
+1.  Compreender o que é a amplitude, como calculá-la e para que utilizá-la
+2.  Aprender o que são e para que servem os quantis empíricos e o IQR
+
+## Amplitude
+
+#### Definição
+
+A amplitude indica, basicamente, o espectro dentro do qual as observações variam. Para calculá-la basta identificar o valor máximo do conjunto, bem como o seu valor mínimo. A diferença entre os dois números é a amplitude.
+
+$$A = max - min$$
+
+::: fragment
+#### Problemas
+
+A amplitude é uma medida simples de ser calculada, entretanto, é importante saber que ela tem um problema potencial que é a sua **alta suscetibilidade a valores extremos, ou seja, ela é pouco robusta**, assim como a média.
+:::
+
+## IQR
+
+A última medida de dispersão que temos é a amplitude inter-quartil (que vem do inglês *interquartile range*, de onde originou a sigla IQR). Para compreendermos o IQR, devemos compreender o que é um **quantil empírico**.
+
+## Quantis empíricos
+
+Os quantis empíricos são medidas de posição (e não medidas de dispersão).
+
+Eles são valores que dividem um conjunto de dados em uma determinada proporção.
+
+Já vimos um exemplo de um quantil empírico anteriormente: a mediana. A mediana é o quantil de 50%, pois ela divide os dados em uma proporção de 50%. Podemos pensar em muitos outros quantis empíricos, tais como o quantil de 10%, que divide os dados em 10% e 90%.
+
+Dos vários quantis empíricos que existem, há um grupo especial de quantis, que são os **quartis**.
+
+## Quantis empíricos
+
+### Quartis
+
+::: {style="font-size: 30px;"}
+Existem três quantis empíricos que, juntos, formam um subconjunto especial dos quantis, que são os quartis. Os três quartis empíricos dividem os dados em 4 grupos de igual tamanho. São eles:
+
+-   o quantil de 25%, também chamado de quartil inferior
+-   o quantil de 50%, também chamado de mediana
+-   o quantil de 75%, também chamado de quartil superior
+
+Esses três quartis dividem os dados em quatro conjuntos:
+
+::: columns
+::: column
+-   Conjunto 1: $[q(0,00), q(0,25)]$
+-   Conjunto 2: $[q(0,25), q(0,50)]$
+:::
+
+::: column
+-   Conjunto 3: $[q(0,50), q(0,75)]$
+-   Conjunto 4: $[q(0,75), q(1,00)]$
+:::
+:::
+:::
+
+## Voltando ao IQR...
+
+Com os quantis empíricos, podemo pensar o que seria o IQR. O IQR é simplesmente a amplitude entre os quartis inferior e superior, isto é, $q(0,75)−q(0,25)$.
+
+Podemos comparar o IQR com a Amplitude, pois podemos definir a Amplitude como $q(1,00)−q(0,00)$. A diferença do IQR para a amplitude então seria que o IQR é uma medida robusta, enquanto a amplitude é uma medida extremamente suscetível aos extremos. Isso acontece porque, justamente, o IQR exclui do seu cálculo os 25% iniciais e finais.
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
