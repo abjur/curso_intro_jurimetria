@@ -6,7 +6,7 @@ output: github_document
 
 O objetivo da parte 1 do curso de Introdução à pesquisa Jurimétrica é apresentar e discutir a aplicação de métodos quantitativos no Direito. A ideia do curso é tratar dos limites de aplicação e elementos básicos de pesquisa quantitativa, com aplicações em temas do Direito.
 
-O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é completar a discussão e apresentação das aplicações de métodos quantitativos no Direito. A ideia desta segunda parte é avançar nos conhecimentos sobre os limites de aplicação e elementos de pesquisa quantitativa, com aplicações em temas do Direito.
+O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é completar a discussão com a apresentação das aplicações de métodos quantitativos no Direito. A ideia desta segunda parte é avançar nos conhecimentos sobre os limites de aplicação e elementos de pesquisa quantitativa, com aplicações em temas do Direito.
 
 ```{r}
 #| echo: FALSE
@@ -16,8 +16,8 @@ fs::dir_ls("slides", glob = "*.html") |>
     stringr::str_detect(name, "a[0-9]{2}")
   ) |> 
   dplyr::transmute(
-    nome = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
-    link = glue::glue("[{nome}](https://abjur.github.io/curso_intro_jurimetria/{name})")
+    aula = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
+    slide = glue::glue("[{aula}](https://abjur.github.io/curso_intro_jurimetria/{aula})")
   ) |> 
   knitr::kable()
 ```

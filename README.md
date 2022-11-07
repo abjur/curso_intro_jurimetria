@@ -7,21 +7,21 @@ ideia do curso é tratar dos limites de aplicação e elementos básicos de
 pesquisa quantitativa, com aplicações em temas do Direito.
 
 O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é
-completar a discussão e apresentação das aplicações de métodos
+completar a discussão com a apresentação das aplicações de métodos
 quantitativos no Direito. A ideia desta segunda parte é avançar nos
 conhecimentos sobre os limites de aplicação e elementos de pesquisa
 quantitativa, com aplicações em temas do Direito.
 
-| nome                 | link                                                                                                        |
-|:---------------------|:------------------------------------------------------------------------------------------------------------|
-| introducao           | [introducao](https://abjur.github.io/curso_intro_jurimetria/slides/a00_introducao.html)                     |
-| operacionalizacao    | [operacionalizacao](https://abjur.github.io/curso_intro_jurimetria/slides/a01_operacionalizacao.html)       |
-| escopo               | [escopo](https://abjur.github.io/curso_intro_jurimetria/slides/a02_escopo.html)                             |
-| tipos_variaveis      | [tipos_variaveis](https://abjur.github.io/curso_intro_jurimetria/slides/a03_tipos_variaveis.html)           |
-| tabela_frequencia    | [tabela_frequencia](https://abjur.github.io/curso_intro_jurimetria/slides/a04_tabela_frequencia.html)       |
-| medidas_centro       | [medidas_centro](https://abjur.github.io/curso_intro_jurimetria/slides/a05_medidas_centro.html)             |
-| medidas_dispersao_I  | [medidas_dispersao_I](https://abjur.github.io/curso_intro_jurimetria/slides/a06_medidas_dispersao_I.html)   |
-| medidas_dispersao_II | [medidas_dispersao_II](https://abjur.github.io/curso_intro_jurimetria/slides/a07_medidas_dispersao_II.html) |
+| aula                 | slide                                                                                       |
+|:---------------------|:--------------------------------------------------------------------------------------------|
+| introducao           | [introducao](https://abjur.github.io/curso_intro_jurimetria/introducao)                     |
+| operacionalizacao    | [operacionalizacao](https://abjur.github.io/curso_intro_jurimetria/operacionalizacao)       |
+| escopo               | [escopo](https://abjur.github.io/curso_intro_jurimetria/escopo)                             |
+| tipos_variaveis      | [tipos_variaveis](https://abjur.github.io/curso_intro_jurimetria/tipos_variaveis)           |
+| tabela_frequencia    | [tabela_frequencia](https://abjur.github.io/curso_intro_jurimetria/tabela_frequencia)       |
+| medidas_centro       | [medidas_centro](https://abjur.github.io/curso_intro_jurimetria/medidas_centro)             |
+| medidas_dispersao_I  | [medidas_dispersao_I](https://abjur.github.io/curso_intro_jurimetria/medidas_dispersao_I)   |
+| medidas_dispersao_II | [medidas_dispersao_II](https://abjur.github.io/curso_intro_jurimetria/medidas_dispersao_II) |
 
 Os slides serão atualizados conforme o curso vai acontecendo.
 
