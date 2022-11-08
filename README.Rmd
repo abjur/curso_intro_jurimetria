@@ -17,7 +17,7 @@ fs::dir_ls("slides", glob = "*.html") |>
   ) |> 
   dplyr::transmute(
     aula = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
-    slide = glue::glue("[{aula}](https://abjur.github.io/curso_intro_jurimetria/{aula})")
+    slide = glue::glue("[{aula}](https://abjur.github.io/curso_intro_jurimetria/{name})")
   ) |> 
   knitr::kable()
 ```
