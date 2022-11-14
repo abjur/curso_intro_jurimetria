@@ -6,21 +6,26 @@ output: pdf_document
 
 # Orientações gerais
 
-- Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
-- Os grupos terão de 40 minutos a 1 hora para responder às questões;
-- Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
+- Serão formados 6 grupos de 5 pessoas;
+- Os grupos terão 2 horas para responder às questões;
+- Um único aluno será encarregado de anotar as respostas de todas as questões discutidas no grupo;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo;
-- Você precisará do arquivo de cola para responder a esses exercícios. O arquivo de cola está no Drive. 
-- As bases para o exercício podem ser encontradas no seguinte link: https://docs.google.com/spreadsheets/d/18icIOI2XZX4NR54upLsN0CnLRkyeo6ryQYsTKrZQxL0/edit?usp=sharing. Baixe a base localmente e incorpore-a no seu Drive para fazer os exercícios. 
+- Teremos um breve intervalo antes de voltarmos à sala;
+- As bases para o exercício podem ser encontradas no seguinte link: <https://docs.google.com/spreadsheets/d/18icIOI2XZX4NR54upLsN0CnLRkyeo6ryQYsTKrZQxL0/edit?usp=sharing>. 
+- Baixe a base localmente e incorpore-a no seu Drive para fazer os exercícios. - Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
+- Será tarefa avaliativa uma entrega INDIVIDUAL dos exercícios
+- Elaboramos um cheat sheet para você, caso seja necessária alguma cola a respeito de alguma função do gsheets. 
+
 
 ## I) Exercício 1: Medidas para variáveis categóricas
 
 **1) Faça a tabela de frequência das variáveis assunto e dec_val, incluindo a frequência ($n_i$), proporção ($f_i$) e porcentagem ($100*f_i$)**
 
-**2) Refaça a tabela do item anterior, apenas com a contagem de casos por assunto e a taxa de reforma (em que considera-se que reformou os resultados "Reformou" ou "Parcial")**
+**2) Refaça a tabela do item anterior, como Tabela Dinâmica**
 
-**3) Interprete os resultados da tabela do item 2**
+**3) Refaça a tabela do item anterior, apenas com a contagem de casos por assunto e a taxa de reforma (em que considera-se como reformou apenas os resultados "Reformou" ou "Parcial"). Espera-se que a tabela final tenha 4 colunas: assunto, frequência, contagem de casos reformados e taxa de reforma.**
+
+**4) Interprete os resultados da tabela do item 3**
 
 ## II) Exercício 2: Medidas para variáveis numéricas (medidas centrais)
 
@@ -28,7 +33,7 @@ output: pdf_document
 
 **2) Calcule o IDH médio de cada região do Brasil**
 
-**3) Quais regiões estão abaixo da média brasileira?**
+**3) Quais regiões estão abaixo da média brasileira? Retorne a resposta em uma tabela, de três colunas: Região, Média do IDH (para a região), Abaixo da média do BR (VERDADEIRO/FALSO)**
 
 **4) Calcule o IDH médio de cada Estado do Brasil**
 

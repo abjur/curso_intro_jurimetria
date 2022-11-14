@@ -77,7 +77,7 @@ da_categorica <- abjData::consumo |>
 googlesheets4::write_sheet(
   da_categorica,
   link_exercicio,
-  "Exercício 1"
+  "Tabela de frequência"
 )
 
 # Exercício 2
@@ -96,7 +96,7 @@ da_central <- abjData::pnud_min |>
 googlesheets4::write_sheet(
   da_central,
   link_exercicio,
-  "Exercício 2"
+  "Medidas de centro"
 )
 
 # Exercício 3
@@ -118,7 +118,7 @@ da_desvio <- abjData::pnud_min |>
 googlesheets4::write_sheet(
   da_desvio,
   link_exercicio,
-  "Exercício 3"
+  "Medidas de dispersão I"
 )
 
 # Exercício 4
@@ -138,10 +138,31 @@ da_quantil <- readr::read_delim("~/Downloads/ciee.csv", delim = ";") |>
 googlesheets4::write_sheet(
   da_quantil,
   link_exercicio,
-  "Exercício 4"
+  "Medidas de dispersão II"
 )
 
+# Exerecício 5
 
+set.seed(1)
+da_gsheets <- abjData::consumo |>
+  dplyr::sample_n(20) |>
+  dplyr::transmute(
+    id_processo,
+    assunto,
+    dec_val,
+    dec_date,
+    valor = as.character(valor),
+    valor_corrigido = NA_character_,
+    ` ` = NA_character_,
+    `  ` = NA_character_,
+    `   ` = NA_character_,
+    `    ` = NA_character_,
+    `     ` = NA_character_,
+    `      ` = NA_character_
+  )
 
-
-
+googlesheets4::write_sheet(
+  da_gsheets,
+  link_exercicio,
+  "Formatação de dados"
+)

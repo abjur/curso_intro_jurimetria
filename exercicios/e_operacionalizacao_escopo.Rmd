@@ -12,6 +12,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Orientações gerais
+
+- Serão formados 6 grupos de 5 pessoas;
+- Os grupos terão 2 horas para responder às questões;
+- Um único aluno será encarregado de anotar as respostas de todas as questões discutidas no grupo;
+- Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+- Teremos um breve intervalo antes de voltarmos à sala;
+- Para responder aos exercícios, os alunos deverão acessar dois textos que estão no Drive, no link: <https://drive.google.com/drive/folders/1mrogYNLA5x9cCzw4sTQWBOUtTGOPKyB1?usp=sharing>
+- Não leia os textos completos, não há tempo para isso. Há a indicação das páginas necessárias nos próprios enunciados dos exercícios;
+- Será tarefa avaliativa uma entrega INDIVIDUAL dos exercícios
 
 \newpage
 

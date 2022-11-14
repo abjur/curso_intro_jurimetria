@@ -41,6 +41,39 @@ Referências extras comentadas nas aulas.
 #| message: false
 #| echo: false
 
+tibble::tibble(
+  nome = c(
+    "Case ABJ - Varas empresariais", 
+    "Pesquisas realizadas pelo Departamento de Pesquisas Judiciárias (DPJ) do CNJ", 
+    "Tese do Marcelo Guedes Nunes", 
+    "Lee Loevinger (1949)",
+    "Lee Loevinger (1961)",
+    "Lee Loevinger (1963)",
+    "Society for Empirical Legal Studie (SELS)",
+    "Case ABJ - Drogas", 
+    "Cases ABJ", 
+    "Bases de dados da ABJ utilizado no curso", 
+    "Cursos sobre R", 
+    "Exemplo de Dashboard (Observatório da Litigiosidade)", 
+    "Materiais de web scraping"
+  ),
+  links = c(
+    "https://abj.org.br/pesquisas/varas-empresariais/",
+    "https://www.cnj.jus.br/pesquisas-judiciarias/",
+    "https://tede2.pucsp.br/handle/handle/5978",
+    "https://core.ac.uk/download/pdf/217207244.pdf",
+    "https://core.ac.uk/download/217207250.pdf",
+    "https://scholarship.law.duke.edu/lcp/vol28/iss1/2/",
+    "https://community.lawschool.cornell.edu/sels/",
+    "https://abj.org.br/pesquisas/drogas-stf/",
+    "https://abj.org.br/pesquisas/",
+    "https://github.com/abjur/abjData",
+    "https://loja.curso-r.com/",
+    "https://abjur.shinyapps.io/obsCIEE",
+    "https://curso-r.github.io/main-web-scraping/"
+  )
+) |> 
+  knitr::kable()
 
 # googlesheets4::gs4_deauth()
 # googlesheets4::gs4_auth("julio.trecenti@gmail.com")
