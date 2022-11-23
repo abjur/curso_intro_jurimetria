@@ -55,7 +55,8 @@ tibble::tibble(
     "Bases de dados da ABJ utilizado no curso", 
     "Cursos sobre R", 
     "Exemplo de Dashboard (Observatório da Litigiosidade)", 
-    "Materiais de web scraping"
+    "Materiais de web scraping",
+    "Priest & Klein (1984)"
   ),
   links = c(
     "https://abj.org.br/pesquisas/varas-empresariais/",
@@ -70,7 +71,8 @@ tibble::tibble(
     "https://github.com/abjur/abjData",
     "https://loja.curso-r.com/",
     "https://abjur.shinyapps.io/obsCIEE",
-    "https://curso-r.github.io/main-web-scraping/"
+    "https://curso-r.github.io/main-web-scraping/",
+    "https://www.rand.org/content/dam/rand/pubs/reports/2006/R3032.pdf"
   )
 ) |> 
   knitr::kable()
