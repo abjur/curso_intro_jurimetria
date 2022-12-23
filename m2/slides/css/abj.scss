@@ -1,0 +1,58 @@
+/*-- scss:defaults --*/
+//font
+$font-family-sans-serif: Lato, sans-serif !default;
+$text-indent: 0;
+$accent-color: #b0e4af;
+
+//geral
+$body-bg: #fff;
+$body-color: #233262;
+$link-color: #adc910;
+$presentation-font-size-root: 35px;
+
+// headings
+$presentation-heading-font: Yaldevi, Lato, sans-serif !default;
+$presentation-heading-color: #233262 !default;
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+
+/*-- scss:rules --*/
+
+.footer {
+  font-family: $presentation-heading-font;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+
+}
+
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+}
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  end: 0 !important;
+  right: 10px !important;
+  max-height: 13% !important;
+  height: 100% !important;
+  width: small !important;
+  color: $body-color !important;
+}
+
+// pages
+
+.reveal .page {
+  background-color: #fff;
+  border-block-end: 30px;
+  border-block-end-style:solid;
+  border-block-end-color:#233262;
+}
+
+.reveal .page-app {
+   background-color: #fff;
+
+}
