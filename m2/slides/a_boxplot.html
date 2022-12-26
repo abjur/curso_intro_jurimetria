@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt"><head>
-<script src="a03_tipos_variaveis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/popper.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a03_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a03_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a03_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="a_boxplot_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a_boxplot_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a_boxplot_files/libs/quarto-html/popper.min.js"></script>
+<script src="a_boxplot_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a_boxplot_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a_boxplot_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a_boxplot_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <title>Medidas</title>
+  <title>Visualizações</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a_boxplot_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a_boxplot_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a_boxplot_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a_boxplot_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a_boxplot_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a_boxplot_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a_boxplot_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -312,18 +312,18 @@
       margin-right: 0; 
     }
   </style>
-  <script src="a03_tipos_variaveis_files/libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/viz-1.8.2/viz.js"></script>
-  <link href="a03_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-  <script src="a03_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
+  <script src="a_boxplot_files/libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+  <script src="a_boxplot_files/libs/viz-1.8.2/viz.js"></script>
+  <link href="a_boxplot_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+  <script src="a_boxplot_files/libs/grViz-binding-1.0.9/grViz.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
-  <h1 class="title">Medidas</h1>
-  <p class="subtitle">Tipos de variáveis</p>
+  <h1 class="title">Visualizações</h1>
+  <p class="subtitle">Boxplot</p>
 </section>
 
 <section id="ementa-do-curso" class="slide level2 smaller">
@@ -407,8 +407,8 @@
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-861ea5e7c3ba919f5a58" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-861ea5e7c3ba919f5a58">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0f8a986a4ca733e6fb9e" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-0f8a986a4ca733e6fb9e">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -438,19 +438,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a_boxplot_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

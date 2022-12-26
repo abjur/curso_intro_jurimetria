@@ -1,0 +1,31 @@
+---
+title: "Visualizações"
+subtitle: "Boxplot"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+## Ementa do curso {.smaller}
+
+# Visualizações {.slide-title}
+
+## Boxplot
+
+### Como construir?
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}

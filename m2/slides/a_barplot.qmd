@@ -1,0 +1,338 @@
+---
+title: "Visualizações"
+subtitle: "Gráfico de barra"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE, 
+  results = "hide"
+)
+```
+
+## Ementa do curso {.smaller}
+
+# Gráfico de barras {.slide-title}
+
+```{r base}
+consumo <- abjData::consumo |>
+  dplyr::filter(dec_val == "Reformou" |
+                  dec_val == "Parcial" |
+                  dec_val == "Não reformou")
+
+cores_abj <- c("#102C68", "#AFCA0A", "#575756")
+
+```
+
+## Como construir?
+
+Em um eixo, ficam as categorias. No outro, fica alguma medida dessa categoria, seja a sua contagem ou sua proporção. 
+
+O eixo que contém as categorias é o eixo que contém a variável que estamos descrevendo. O outro eixo é apenas uma característica dessa variável que estamos utilizando para descrever a variável de interesse. 
+
+É possível haver uma segunda variável, além da categoria, que podemos representar de algumas formas distintas. Então dizemos que existem gráficos de barras univariados e os bivariados. 
+
+## Como construir? - Univariados
+
+```{r}
+bar_vert <- consumo |>
+  dplyr::count(dec_val) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = dec_val, x = n) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggplot2::ylab("Decisão de\nsegunda instância") +
+  ggplot2::xlab("Quantidade") +
+  ggthemes::theme_hc()
+
+bar_hor <- consumo |>
+  dplyr::count(dec_val) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = dec_val, y = n) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggplot2::xlab("Decisão de segunda instância") +
+  ggplot2::ylab("Quantidade") +
+  ggthemes::theme_hc()
+
+patchwork::wrap_plots(bar_vert, bar_hor) +
+  patchwork::plot_annotation(title = "Gráficos de barras na vertical e na horizontal")
+
+```
+
+## Como construir? - Bivariados (Empilhados)
+
+```{r}
+bar_stack <- consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = dec_val, fill = tipo_litigio, y= n) +
+  ggplot2::geom_col() +
+  ggplot2::labs(
+    x = "Decisão de segunda instância",
+    y = "Quantidade"
+  ) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggthemes::theme_hc() +
+  ggplot2::theme(
+    legend.position = c(0.95, 0.95),
+    legend.justification = c("right", "top"),
+    legend.box.just = "right",
+    legend.margin = ggplot2::margin(6, 6, 6, 6),
+    legend.background = ggplot2::element_rect(fill = "white", color = "black")
+  ) +
+  ggplot2::guides(fill=ggplot2::guide_legend("Tipo de litígio", nrow=2, byrow=TRUE))
+
+patchwork::wrap_plots(bar_hor, bar_stack, ncol = 1) +
+  patchwork::plot_annotation(
+    title = "Gráficos de barras na horizontal quebrado em uma segunda variável, do modo empilhado (stacked)"
+  )
+```
+
+## Como construir? - Bivariados (Agrupados)
+
+```{r}
+bar_dodge <- consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = dec_val, fill = tipo_litigio, y= n) +
+  ggplot2::geom_col(position = 'dodge') +
+  ggplot2::labs(
+    x = "Decisão de segunda instância",
+    y = "Quantidade"
+  ) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggthemes::theme_hc() +
+  ggplot2::theme(
+    legend.position = c(0.95, 0.95),
+    legend.justification = c("right", "top"),
+    legend.box.just = "right",
+    legend.margin = ggplot2::margin(6, 6, 6, 6),
+    legend.background = ggplot2::element_rect(fill = "white", color = "black")
+  ) +
+  ggplot2::guides(fill=ggplot2::guide_legend("Tipo de litígio", nrow=2, byrow=TRUE))
+
+patchwork::wrap_plots(bar_hor, bar_dodge, ncol = 1) +
+  patchwork::plot_annotation(
+    title = "Gráficos de barras na horizontal quebrado em uma segunda variável, do modo desviado (dodged)"
+  )
+```
+
+## Como construir? - Bivariados (Em camadas)
+
+```{r}
+bar_facet <- consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = dec_val, x = n, fill = tipo_litigio) +
+  ggplot2::geom_col(show.legend = FALSE) +
+  ggplot2::facet_wrap(.~tipo_litigio, nrow = 1) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggplot2::ylab("Decisão de\nsegunda instância") +
+  ggplot2::xlab("Quantidade") +
+  ggthemes::theme_hc()
+
+patchwork::wrap_plots(bar_vert, bar_facet, ncol = 1) +
+  patchwork::plot_annotation(
+    title = "Gráficos de barras na horizontal quebrado em uma segunda variável, do modo facetado"
+  )
+```
+
+## Como construir? - Trivariados?
+
+```{r}
+consumo |>
+  dplyr::filter(dec_unanime != "(Vazio)") |> 
+  dplyr::count(dec_val, tipo_litigio, dec_unanime) |>
+  dplyr::group_by(dec_unanime) |> 
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = dec_val, x = prop, fill = tipo_litigio) +
+  ggplot2::geom_col() +
+  ggplot2::facet_wrap(.~dec_unanime, nrow = 1) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggplot2::ylab("Decisão de segunda instância") +
+  ggplot2::xlab("Quantidade") +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Gráfico de barras na vertical, quebrado por outras duas variáveis."
+  )
+```
+
+## Interpretações
+
+:::: {.columns}
+::: {.column width="70%"}
+
+![Fonte: Marc Streit e Nils Gehlenborg. **Bar charts and box plots**. *Nature Methods*, v. 11, p. 117, 2014](img/Streit-Gehlenborg-2014.webp)
+:::
+
+::: {.column width="30%" .mini-text}
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+
+**(b)** Gráficos empilhados permitem a comparação do valor total de cada item.
+
+**(c)** Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.
+
+**(d)** Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.
+:::
+::::
+
+## Interpretações (a)
+
+::: {.center .mini-text}
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+:::
+
+![Fonte: from Data to Viz. **The Issue with Pie Chart**. Disponível em: https://www.data-to-viz.com/caveat/pie.html](img/pie-datatoviz.png)
+
+## Interpretações (a)
+
+::: {.center .mini-text}
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+:::
+
+![Fonte: from Data to Viz. **The Issue with Pie Chart**. Disponível em: https://www.data-to-viz.com/caveat/pie.html](img/bar-datatoviz.png)
+
+## Interpretações (b)
+
+::: {.center .mini-text}
+**(b)** Gráficos empilhados permitem a comparação do valor total de cada item.
+
+```{r}
+consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::mutate(
+    prop = n / sum(n),
+    dec_val = stringr::str_replace_all(dec_val, "/", "/ \n"),
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = dec_val, y = n, fill = tipo_litigio) +
+  ggplot2::geom_col(show.legend = FALSE) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggplot2::labs(
+    title = "Gráfico de barras com comparação entre os grupos 'Reformou' e 'Não reformou'",
+    x = "Decisão de segunda instância",
+    y = "Quantidade"
+  ) +
+  gghighlight::gghighlight(
+    dec_val == "Reformou" | dec_val == "Parcial"
+  ) +
+  ggthemes::theme_hc()
+```
+:::
+
+## Interpretações (c)
+
+::: {.center .mini-text}
+**(c)** Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.
+:::
+
+```{r}
+consumo1 <- consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::transmute(
+    dec_val = stringr::str_replace_all(dec_val, "/", "/ \n"),
+    tipo_litigio,
+    n,
+    prop = n / sum(n)
+  )
+
+consumo2 <- consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::transmute(
+    dec_val = stringr::str_replace_all(dec_val, "/", "/ \n"),
+    tipo_litigio,
+    n,
+    prop = n / sum(n)
+  )
+
+subset_consumo2 <- consumo1 |>
+  dplyr::mutate(
+    highlight = dplyr::if_else(
+      condition = tipo_litigio == "PF-nPF",
+      true = n,
+      false = NA_integer_
+    )
+  )
+
+ggplot2::ggplot() +
+  ggplot2::geom_col(
+    data = consumo2,
+    ggplot2::aes(x = tipo_litigio, y = n, group = dec_val),
+    fill = "grey",
+    alpha = .6,
+    position = 'dodge') +
+  ggplot2::geom_col(
+    data = subset_consumo2,
+    ggplot2::aes(x = tipo_litigio, y = highlight, fill = dec_val),
+    position = 'dodge') +
+  ggplot2::labs(
+    x = "Decisão de segunda instância",
+    y = "Quantidade"
+  ) +
+  ggplot2::scale_fill_viridis_d(begin = .2, end = .8) +
+  ggthemes::theme_hc() +
+  ggplot2::theme(
+    legend.position = c(0.95, 0.95),
+    legend.justification = c("right", "top"),
+    legend.box.just = "right",
+    legend.margin = ggplot2::margin(6, 6, 6, 6),
+    legend.background = ggplot2::element_rect(fill = "white", color = "black")
+  ) +
+  ggplot2::guides(fill=ggplot2::guide_legend("Resultado", nrow=3, byrow=TRUE))
+```
+
+## Interpretações (d)
+
+::: {.center .mini-text}
+**(d)** Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.
+:::
+
+```{r}
+consumo |>
+  dplyr::count(dec_val, tipo_litigio) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(
+    dec_val = stringr::str_replace_all(dec_val, "/", "/ \n"),
+    highlight = tipo_litigio == "PF-nPF"
+  ) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(y = dec_val, x = n, fill = highlight) +
+  ggplot2::geom_col(show.legend = FALSE) +
+  ggplot2::facet_wrap(.~tipo_litigio, nrow = 1) +
+  ggplot2::scale_fill_manual(values = c("gray70", viridis::viridis(4, 1, .2, .8)[3])) +
+  ggplot2::ylab("Decisão de\nsegunda instância") +
+  ggplot2::xlab("Quantidade") +
+  ggthemes::theme_hc()
+```
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}

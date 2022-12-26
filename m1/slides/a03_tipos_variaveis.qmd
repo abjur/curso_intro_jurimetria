@@ -76,85 +76,9 @@ title-slide-attributes:
 
 # Tipos de variáveis {.slide-title}
 
-## Plano de aula
+## Boxplot
 
-Na aula de hoje, teremos dois objetivos:
-
-1.  Ver a classificação dos tipos de variáveis
-2.  Ver como os tipos de variáveis se refletem em uma base de dados
-
-## Tipos de variáveis
-
-```{r}
-DiagrammeR::grViz("
-
-  digraph tipos_variaveis {
-
-    # a 'graph' statement
-
-    graph [overlap = false, fontsize = 10, rankdir = LR]
-
-    # several 'node' statements
-
-    node [shape = box]
-
-      cat [label = 'variável categórica', rank = 1];
-
-      num [label = 'variável numérica', rank = 2]
-
-    node [shape = box]
-
-      ord [label = 'variável ordinal'];
-
-      nom [label = 'variável nominal'];
-
-      cont [label = 'variável contínua'];
-
-      disc [label = 'variável discreta']
-
-    # several 'edge' statements
-    
-    subgraph {
-    rank = same; ord; nom
-    }
-    
-    cat->{ord, nom} 
-    
-    num -> {cont, disc}
-
-    {
-    rank = same;
-    edge[style=invis];
-    ord->nom
-    disc->cont
-    rankdir = 'TB'
-    }
-
-  }
-
-  ")
-
-```
-
-## Tipos de variáveis
-
-### Variáveis categóricas
-
-Variáveis ordinais: As categorias possuem uma ordenação universal entre si
-
-Variáveis nominais: As categorias não possuem uma ordenação universal entre si
-
-### Variáveis numéricas
-
-Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).
-
-Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)
-
-## Tipos de variáveis
-
-### Por que essa classificação importa?
-
-Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo, pois a média é uma medida de uma variável numérica, enquanto o juiz é uma variável categórica. Então é importante sabermos distinguir os tipos de variáveis para sabermos nos adequar às análises de cada caso.
+- Tipo de variável: 
 
 #  {background="#fff"}
 

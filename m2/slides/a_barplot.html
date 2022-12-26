@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt"><head>
-<script src="a03_tipos_variaveis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/popper.min.js"></script>
-<script src="a03_tipos_variaveis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a03_tipos_variaveis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a03_tipos_variaveis_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a03_tipos_variaveis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="a_barplot_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a_barplot_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a_barplot_files/libs/quarto-html/popper.min.js"></script>
+<script src="a_barplot_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a_barplot_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a_barplot_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a_barplot_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <title>Medidas</title>
+  <title>Visualizações</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a_barplot_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a_barplot_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a03_tipos_variaveis_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a_barplot_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a_barplot_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a_barplot_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a_barplot_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a_barplot_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -312,120 +312,109 @@
       margin-right: 0; 
     }
   </style>
-  <script src="a03_tipos_variaveis_files/libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/viz-1.8.2/viz.js"></script>
-  <link href="a03_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-  <script src="a03_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
-  <h1 class="title">Medidas</h1>
-  <p class="subtitle">Tipos de variáveis</p>
+  <h1 class="title">Visualizações</h1>
+  <p class="subtitle">Gráfico de barra</p>
 </section>
 
 <section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li>Tipos de variáveis</li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li>Medidas de variáveis numéricas I: Medidas de centro
-<ol type="1">
-<li>Média</li>
-<li>Mediana</li>
-<li>Moda</li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="ementa-do-curso-1" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia-1">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas-1">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li><strong>Tipos de variáveis</strong></li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li>Medidas de variáveis numéricas I: Medidas de centro
-<ol type="1">
-<li>Média</li>
-<li>Mediana</li>
-<li>Moda</li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
 </section>
 <section>
-<section id="tipos-de-variáveis" class="title-slide slide level1 slide-title center">
-<h1>Tipos de variáveis</h1>
+<section id="gráfico-de-barras" class="title-slide slide level1 slide-title center">
+<h1>Gráfico de barras</h1>
+<div class="cell">
 
+</div>
 </section>
-<section id="plano-de-aula" class="slide level2">
-<h2>Plano de aula</h2>
-<p>Na aula de hoje, teremos dois objetivos:</p>
-<ol type="1">
-<li>Ver a classificação dos tipos de variáveis</li>
-<li>Ver como os tipos de variáveis se refletem em uma base de dados</li>
-</ol>
+<section id="como-construir" class="slide level2">
+<h2>Como construir?</h2>
+<p>Em um eixo, ficam as categorias. No outro, fica alguma medida dessa categoria, seja a sua contagem ou sua proporção.</p>
+<p>O eixo que contém as categorias é o eixo que contém a variável que estamos descrevendo. O outro eixo é apenas uma característica dessa variável que estamos utilizando para descrever a variável de interesse.</p>
+<p>É possível haver uma segunda variável, além da categoria, que podemos representar de algumas formas distintas. Então dizemos que existem gráficos de barras univariados e os bivariados.</p>
 </section>
-<section id="tipos-de-variáveis-1" class="slide level2">
-<h2>Tipos de variáveis</h2>
+<section id="como-construir---univariados" class="slide level2">
+<h2>Como construir? - Univariados</h2>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="como-construir---bivariados-empilhados" class="slide level2">
+<h2>Como construir? - Bivariados (Empilhados)</h2>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="como-construir---bivariados-agrupados" class="slide level2">
+<h2>Como construir? - Bivariados (Agrupados)</h2>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="como-construir---bivariados-em-camadas" class="slide level2">
+<h2>Como construir? - Bivariados (Em camadas)</h2>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="como-construir---trivariados" class="slide level2">
+<h2>Como construir? - Trivariados?</h2>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="interpretações" class="slide level2">
+<h2>Interpretações</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Streit-Gehlenborg-2014.webp"></p>
+<p></p><figcaption>Fonte: Marc Streit e Nils Gehlenborg. <strong>Bar charts and box plots</strong>. <em>Nature Methods</em>, v. 11, p.&nbsp;117, 2014</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column mini-text" style="width:30%;">
+<p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
+<p><strong>(b)</strong> Gráficos empilhados permitem a comparação do valor total de cada item.</p>
+<p><strong>(c)</strong> Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.</p>
+<p><strong>(d)</strong> Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.</p>
+</div>
+</div>
+</section>
+<section id="interpretações-a" class="slide level2">
+<h2>Interpretações (a)</h2>
+<div class="center mini-text">
+<p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
+</div>
+
+<img data-src="img/pie-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from Data to Viz. <strong>The Issue with Pie Chart</strong>. Disponível em: https://www.data-to-viz.com/caveat/pie.html</p></section>
+<section id="interpretações-a-1" class="slide level2">
+<h2>Interpretações (a)</h2>
+<div class="center mini-text">
+<p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
+</div>
+
+<img data-src="img/bar-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from Data to Viz. <strong>The Issue with Pie Chart</strong>. Disponível em: https://www.data-to-viz.com/caveat/pie.html</p></section>
+<section id="interpretações-b" class="slide level2">
+<h2>Interpretações (b)</h2>
+<div class="center mini-text">
+<p><strong>(b)</strong> Gráficos empilhados permitem a comparação do valor total de cada item.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-861ea5e7c3ba919f5a58" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-861ea5e7c3ba919f5a58">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
 </div>
 </div>
 </section>
-<section id="tipos-de-variáveis-2" class="slide level2">
-<h2>Tipos de variáveis</h2>
-<h3 id="variáveis-categóricas">Variáveis categóricas</h3>
-<p>Variáveis ordinais: As categorias possuem uma ordenação universal entre si</p>
-<p>Variáveis nominais: As categorias não possuem uma ordenação universal entre si</p>
-<h3 id="variáveis-numéricas">Variáveis numéricas</h3>
-<p>Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).</p>
-<p>Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)</p>
-</section>
-<section id="tipos-de-variáveis-3" class="slide level2">
-<h2>Tipos de variáveis</h2>
-<h3 id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
-<p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo, pois a média é uma medida de uma variável numérica, enquanto o juiz é uma variável categórica. Então é importante sabermos distinguir os tipos de variáveis para sabermos nos adequar às análises de cada caso.</p>
-</section></section>
+<section id="interpretações-c" class="slide level2">
+<h2>Interpretações (c)</h2>
+<div class="center mini-text">
+<p><strong>(c)</strong> Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.</p>
+</div>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="interpretações-d" class="slide level2">
+<h2>Interpretações (d)</h2>
+<div class="center mini-text">
+<p><strong>(d)</strong> Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.</p>
+</div>
+
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
 <section id="section" class="title-slide slide level1 center" data-background="#fff">
 <h1></h1>
 <p><img data-src="img/logo-abj-colorido.png" width="500"></p>
@@ -438,19 +427,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a_barplot_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a03_tipos_variaveis_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a_barplot_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
