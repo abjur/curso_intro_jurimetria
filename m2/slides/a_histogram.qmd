@@ -1,0 +1,517 @@
+---
+title: "Visualizações"
+subtitle: "Histograma"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE, 
+  results = "hide"
+)
+
+options(scipen=999)
+```
+
+## Ementa do curso {.smaller}
+
+# Histograma {.slide-title}
+
+```{r base}
+consumo <- abjData::consumo
+
+cores_abj <- c("#102C68", "#AFCA0A", "#575756")
+
+format_reais <- function(valor) {
+  real <- paste("R$", format(valor, decimal.mark = ",", big.mark = ".", nsmall = 2))
+  return(real)
+}
+```
+
+## Como construir?
+
+- Variáveis numéricas contínuas
+- Eixos: x = variável; y = contagem
+- Podem ser bivariados, adicionando cores ao histograma
+
+## Como construir? Visão geral
+
+```{r}
+consumo |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 30) +
+  ggplot2::labs(
+    title = "Histograma simples",
+    x = "Tempo (em dias)",
+    y = "Quantidade de casos"
+  ) +
+  ggthemes::theme_hc()
+```
+
+## Como construir? Eixo x
+
+O eixo x contém uma linha contínua numérica. Dizemos que a linha é contínua porque ela é inteira preenchida, de forma que entre dois números, haverá sempre pelo menos um número intermediário entre eles. Por exemplo, entre 1 e 2, tem 0 1.5; entre o 1.5 e o 1, tem o 1.25. Entre o 1 e o 1.25, tem o 1.125. Entre o 1 e o 1.125, tem o 1.01. Entre o 1 e o 1.01, tem o 1.05 e assim por diante. 
+
+Essa linha contém infinitos números, mas ela está delimitado a um intervalo, que vai do menor número encontrado na base, até o maior número encontrado na base. No nosso caso, o intervalo está dado entre 0 e 2000 dias
+
+## Como construir? Bins / Barras 
+
+Apesar de haver infinitos números sobre a linha do eixo x, não existem infintas barras sobre ele. Existe apenas um número finito de barras. Todas as barras possuem intervalos de igual amplitude. O tamanho de cada intervalo que dá origem às barras é calculado pela amplitude total, dividido pela quantidade de barras que teremos representadas. 
+
+## Como construir? Bins / Barras {.smaller}
+
+:::: columns
+::: {.column width="60%"}
+```{r,fig.height=9}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 5) +
+  ggthemes::theme_hc(30) +
+  ggplot2::labs(
+    title = "Histograma com 5 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade de casos"
+  )
+```
+:::
+
+::: {.column width="40%"}
+No gráfico que estamos de base, o intervalo total é de 0 a 2000, o que dá uma amplitude de 2000. Se construirmos 5 barras neste histograma, teremos, os seguintes intervalos:
+
+- 0 a 400 dias, que representamos como [0, 400)
+- 400 a 800 dias, que representamos como [400, 800)
+- 800 a 1200 dias, que representamos como [800, 1200)
+- 1200 a 1600 dias, que representamos como [1200, 1600)
+- 1600 a 2000 dias, que representamos como [1600, 2000]
+:::
+::::
+
+
+## Como construir? Bins / Barras {.smaller}
+
+:::: columns
+::: {.column width="60%"}
+```{r,fig.height=9}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 5) +
+  ggthemes::theme_hc(30) +
+  ggplot2::labs(
+    title = "Histograma com 5 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade de casos"
+  )
+```
+:::
+
+::: {.column width="40%"}
+
+```{r,results='hold'}
+consumo |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
+      tempo >= 400 & tempo < 800 ~ "[400, 800)",
+      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
+      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
+      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
+    ),
+    intervalo = forcats::as_factor(intervalo)
+  ) |> 
+  dplyr::count(intervalo) |> 
+  knitr::kable(
+    col.names = c("Intervalo", "N")
+  )
+```
+:::
+::::
+
+## Como construir? Bins / Barras {.smaller}
+
+:::: columns
+::: {.column width="60%"}
+```{r, fig.height=9}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 30) +
+  ggthemes::theme_hc(30) +
+  ggplot2::labs(
+    title = "Histograma com 30 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade de casos"
+  )
+
+```
+:::
+
+::: {.column width="40%"}
+Podemos alterar a quantidade de bins, de forma que formemos diferentes intervalos. Neste caso, estamos com 30 barras. 
+
+```{r,results='hold'}
+intervalos <- seq(0, max(consumo$tempo), len=30)
+
+consumo |> 
+  dplyr::mutate(
+    intervalo = cut(consumo$tempo, breaks = intervalos, include.lowest = F, include.highest = T)
+  ) |> 
+  dplyr::count(intervalo) |> 
+  dplyr::filter(n > 20) |>
+  dplyr::mutate(
+    n = as.character(n)
+  ) |> 
+  dplyr::add_row(
+    intervalo = "...",
+    n = "..."
+  ) |> 
+  dplyr::mutate(
+    intervalo = stringr::str_replace_all(intervalo, "\\(", "\\["),
+    intervalo = stringr::str_replace_all(intervalo, "\\]", "\\)")
+  ) |> 
+  dplyr::add_row(
+    intervalo = "[1929,2000]",
+    n = "1"
+  ) |> 
+  knitr::kable()
+```
+
+:::
+::::
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 5) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 5 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 6) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 6 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 7) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 7 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 8) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 8 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 9) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 9 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 10) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 10 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 20) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 20 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 30) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 30 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 40) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 40 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 50) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 50 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 100) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 100 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 150) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 150 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 200) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 200 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Bins / Barras 
+
+```{r}
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 300) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma com 300 intervalos",
+    x = "Tempo (em dias)",
+    y = "Quantidade\nde casos"
+  )
+```
+
+## Como construir? Histograma x Barras
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r,results='hold'}
+consumo |>
+  dplyr::filter(dec_val == "Reformou" |
+                  dec_val == "Parcial" |
+                  dec_val == "Não reformou") |> 
+  dplyr::count(dec_val) |>
+  knitr::kable(
+    caption = "Tabela de frequência de variável categórica",
+    col.names = c("Decisão de segunda instância", "N")
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r,results='hold'}
+consumo |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
+      tempo >= 400 & tempo < 800 ~ "[400, 800)",
+      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
+      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
+      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
+    ),
+    intervalo = forcats::as_factor(intervalo)
+  ) |> 
+  dplyr::count(intervalo) |> 
+  knitr::kable(
+    caption = "Tabela de frequência para os intervalos do histograma",
+    col.names = c("Intervalo", "N")
+  )
+```
+:::
+::::
+
+## Como construir? Histograma x Barras
+
+```{r}
+p_bar <- consumo |>
+  dplyr::filter(dec_val == "Reformou" |
+                  dec_val == "Parcial" |
+                  dec_val == "Não reformou") |> 
+  dplyr::count(dec_val) |>
+  dplyr::mutate(prop = n / sum(n)) |>
+  dplyr::mutate(dec_val = stringr::str_replace_all(dec_val, "/", "/ \n")) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = dec_val, y = n) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Gráfico de barras",
+    x = "Decisão de segunda instância",
+    y = "Quantidade de casos"
+  )
+
+p_hist <- consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 5) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Histograma",
+    x = "Tempo (em dias)",
+    y = "Quantidade de casos"
+  ) +
+  ggthemes::theme_hc()
+
+patchwork::wrap_plots(p_bar, p_hist)
+
+```
+
+## Como construir? Histograma x Barras
+
+```{r}
+p_hist_bar <- consumo |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
+      tempo >= 400 & tempo < 800 ~ "[400, 800)",
+      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
+      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
+      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
+    ),
+    intervalo = forcats::as_factor(intervalo)
+  ) |> 
+  dplyr::count(intervalo) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = intervalo, y = n) +
+  ggplot2::geom_col(fill = cores_abj[1]) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(
+    title = "Gráfico de barras",
+    x = "Intervalo de tempo (em dias)",
+    y = "Quantidade de casos"
+  )
+
+patchwork::wrap_plots(p_hist_bar, p_hist)
+```
+
+## Interpretações
+
+Os histogramas nos permitem visualizar 
+

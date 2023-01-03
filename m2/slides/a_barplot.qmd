@@ -42,11 +42,10 @@ cores_abj <- c("#102C68", "#AFCA0A", "#575756")
 
 ## Como construir?
 
-Em um eixo, ficam as categorias. No outro, fica alguma medida dessa categoria, seja a sua contagem ou sua proporção. 
-
-O eixo que contém as categorias é o eixo que contém a variável que estamos descrevendo. O outro eixo é apenas uma característica dessa variável que estamos utilizando para descrever a variável de interesse. 
-
-É possível haver uma segunda variável, além da categoria, que podemos representar de algumas formas distintas. Então dizemos que existem gráficos de barras univariados e os bivariados. 
+- Variáveis categóricas ou variáveis numéricas discretas
+- Eixos: Variável x Contagem/Proporção
+  - A contagem/proporção não é uma variável, mas é uma característica de cada categoria
+- É possível colocar outra variável além da variável inicial no gráfico de barras. Essa nova variável deve ser uma variável categórica também. Daí a diferença de gráficos univariados (só tem uma variável representada) e bivariados (tem duas variáveis representadas)
 
 ## Como construir? - Univariados
 
@@ -251,7 +250,7 @@ consumo |>
 ## Interpretações (c)
 
 ::: {.center .mini-text}
-**(c)** Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.
+**(c)** Gráficos agrupados permitem a comparação dos itens dentro de cada categoria.
 :::
 
 ```{r}
@@ -312,7 +311,7 @@ ggplot2::ggplot() +
 ## Interpretações (d)
 
 ::: {.center .mini-text}
-**(d)** Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.
+**(d)** Gráficos por camadas permitem a comparação de todas as categorias dentro de um item.
 :::
 
 ```{r}
