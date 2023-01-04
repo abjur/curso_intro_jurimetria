@@ -513,5 +513,83 @@ patchwork::wrap_plots(p_hist_bar, p_hist)
 
 ## Interpretações
 
-Os histogramas nos permitem visualizar 
+Interpretamos os histogramas indicando qual é a distribuição do dado. Existem alguns tipos de distribuições. 
 
+```{r}
+N <- 10000
+set.seed(2)
+dados_sim <- tibble::tibble(
+  simetrica = rbeta(N, 3, 3),
+  `assimetrica para direita` = rbeta(N, 1, 5),
+  `assimetrica para esquerda` = rbeta(N, 5, 1)
+) |> 
+  tidyr::pivot_longer(dplyr::everything()) |> 
+  dplyr::mutate(name = forcats::lvls_reorder(name, c(1, 3, 2)))
+dados_sim |> 
+  ggplot2::ggplot(ggplot2::aes(x = value)) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 20) +
+  ggplot2::facet_wrap(~name) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(x = "", y = "") +
+  ggplot2::scale_x_continuous(breaks = seq(0, 1, .2)) +
+  ggplot2::theme(
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+## Interpretações
+
+As distribuições resguardam uma relação importante em relação às medidas de centro.
+
+```{r}
+medias <- dados_sim |> 
+  dplyr::group_by(tipo = name) |> 
+  dplyr::summarise(`Média` = mean(value), Mediana = median(value)) |> 
+  tidyr::pivot_longer(c(`Média`, Mediana))
+
+dados_sim |> 
+  dplyr::rename(tipo = name) |> 
+  ggplot2::ggplot(ggplot2::aes(x = value)) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 20, alpha = .4) +
+  ggplot2::geom_vline(
+    ggplot2::aes(xintercept = value, linetype = name),
+    data = medias
+  ) +
+  ggplot2::facet_wrap(~tipo) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(x = "", y = "", linetype = "Medida") +
+  ggplot2::scale_x_continuous(breaks = seq(0, 1, .2)) +
+  ggplot2::theme(
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+## Interpretações {.smaller}
+
+A partir desses três histogramas, podemos tirar as seguintes propriedades:
+
+- Distribuição assimétrica para esquerda: Média < Mediana
+- Distribuição simétrica: Média = Mediana
+- Distribuição assimétrica para direita: Média > Mediana
+
+```{r,fig.height=4}
+dados_sim |> 
+  dplyr::rename(tipo = name) |> 
+  ggplot2::ggplot(ggplot2::aes(x = value)) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 20, alpha = .4) +
+  ggplot2::geom_vline(
+    ggplot2::aes(xintercept = value, linetype = name),
+    data = medias
+  ) +
+  ggplot2::facet_wrap(~tipo) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(x = "", y = "", linetype = "Medida") +
+  ggplot2::scale_x_continuous(breaks = seq(0, 1, .2)) +
+  ggplot2::theme(
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
