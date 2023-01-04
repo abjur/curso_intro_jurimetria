@@ -20,11 +20,570 @@ title-slide-attributes:
 
 ## Ementa do curso {.smaller}
 
-# Visualizações {.slide-title}
+# Boxplot {.slide-title}
 
-## Boxplot
+```{r base}
+cores_abj <- c("#102C68", "#AFCA0A", "#575756")
 
-### Como construir?
+format_reais <- function(valor) {
+  real <- paste("R$", format(valor, decimal.mark = ",", big.mark = ".", nsmall = 2))
+  return(real)
+}
+
+consumo <- abjData::consumo
+
+set.seed(909)
+sub_set_consumo <- consumo |>
+  dplyr::sample_n(30)
+
+tab_stats <- sub_set_consumo |>
+  dplyr::summarise(
+    `valor máximo` = max(valor),
+    q3 = quantile(valor, 0.75),
+    `mediana` = quantile(valor, 0.5),
+    q1 = quantile(valor, 0.25),
+    `valor mínimo` = min(valor),
+    iqr = q3-q1,
+    bigode_superior = q3 + (3/2 * iqr),
+    bigode_inferior = q1 - (3/2 * iqr),
+    `último ponto superior` = max(valor[valor < bigode_superior]),
+    `último ponto inferior` = min(valor[valor > bigode_inferior]),
+    pontos_superiores = length(valor[valor > bigode_superior]),
+    pontos_inferiores = length(valor[valor < bigode_inferior])
+  ) |>
+  dplyr::mutate(
+    dplyr::across(
+      .fns = ~round(.x, 2)
+    )
+  ) |>
+  dplyr::rename(
+    `quartil superior` = q3,
+    `quartil inferior` = q1,
+    `IQR` = iqr,
+    `quartil superior + 3/2 IQR` = bigode_superior,
+    `quartil inferior - 3/2 IQR` = bigode_inferior,
+    `quantidade de pontos superiores` = pontos_superiores,
+    `quantidade de pontos inferiores` = pontos_inferiores
+  ) |>
+  tibble::rownames_to_column() |>
+  dplyr::mutate(rowname = "valores") |>
+  tidyr::pivot_longer(!rowname, names_to = "medidas", values_to = "valores") |>
+  tidyr::pivot_wider(names_from = "rowname", values_from = "valores")
+```
+
+## Como construir? 
+
+```{r}
+p1 <- ggplot2::ggplot(cars) +
+  ggplot2::aes(x = dist, y = "") +
+  ggplot2::geom_boxplot(width = 0.5) +
+  ggplot2::theme_bw() +
+  ggplot2::labs(x = "", y = "")
+  
+p2 <- ggplot2::ggplot(cars) +
+  ggplot2::aes(y = dist, x = "") +
+  ggplot2::geom_boxplot(width = .5) +
+  ggplot2::theme_bw() +
+  ggplot2::labs(x = "", y = "")
+patchwork::wrap_plots(p1, p2)
+```
+
+## Como construir? Visão geral {.smaller}
+
+- Variáveis numéricas contínuas
+- Eixos: contém apenas um eixo, que é o eixo da variável contínua
+- Pode ser bivariado, adicionando categorias aos boxplots
+- O gráfico é construído a partir de estatísticas de resumo importantes. É preciso domínio sobre quantis empíricos para construir esse gráfico
+- O gráfico pode vir apresentado tanto deitado, como de pé. É mais comum vê-lo na vertical. 
+- Elementos do boxplot:
+   - Linha central
+   - Caixa
+   - Bigodes
+   - Pontos
+  
+## Como construir? Passo a passo {.smaller}
+
+Começamos a fazer o boxplot pela caixa central. A caixa central é constituída dos três quartis, isto é, o quartil inferior (ou quantil de 25%), a mediana (ou quantil de 50%) e o quartil superior (ou quantil de 75%). 
+
+```{r}
+#| fig-height: 2.8
+#| fig-width: 8.0
+sub_set_consumo |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = valor, y = "") +
+  ggplot2::geom_boxplot(
+    outlier.shape = NA
+  ) +
+  ggplot2::stat_boxplot(
+    geom = "errorbar",
+    colour = "white"
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = tab_stats$valores[c(4,3,2)],
+    labels = format_reais,
+    guide = ggplot2::guide_axis(angle = 45)
+  ) +
+  ggplot2::coord_cartesian(xlim = tab_stats$valores[c(8,7)]+c(-1000,1000)) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::theme(
+    axis.text.y = ggplot2::element_blank(),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank()
+  )
+```
+## Como construir? Passo a passo {.smaller}
+
+Depois da caixa central, adicionamos os bigodes. Os bigodes se iniciam nos quartis inferior e superior e se estende até, no máximo 3/2*IQR depois.
+
+```{r}
+#| fig-height: 2.8
+#| fig-width: 8.0
+sub_set_consumo |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = valor, y = "1") +
+  ggplot2::geom_boxplot(
+    outlier.shape = NA
+  ) +
+  ggplot2::stat_boxplot(
+    geom = "errorbar",
+    colour = "white"
+  ) +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[8],
+    xend = tab_stats$valores[4],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[2],
+    xend = tab_stats$valores[7],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = tab_stats$valores[c(4,3,2,12,7,8)],
+    labels = format_reais,
+    guide = ggplot2::guide_axis(angle = 45)
+  ) +
+  ggplot2::coord_cartesian(xlim = tab_stats$valores[c(8,7)]+c(-1000,1000)) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::theme(
+    axis.text.y = ggplot2::element_blank(),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+## Como construir? Passo a passo {.smaller}
+
+Apesar dos bigodes poderem se estender até 3/2*IQR unidades depois dos quartis, eles não necessariamente vão parar aí. Eles param no maior valor encontrado nos dados que esteja dentro da região potencial do bigode. 
+
+```{r}
+#| fig-height: 2.8
+#| fig-width: 8.0
+sub_set_consumo |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = valor, y = "1") +
+  ggplot2::stat_boxplot(
+    geom = "errorbar",
+    width = .2
+  ) +
+  ggplot2::geom_boxplot(
+    outlier.shape = NA
+  ) +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[8],
+    xend = tab_stats$valores[4],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[2],
+    xend = tab_stats$valores[7],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = sort(tab_stats$valores[c(4,3,2,7,8,9,10)]),
+    labels = format_reais,
+    guide = ggplot2::guide_axis(n.dodge = 2)
+  ) +
+  ggplot2::coord_cartesian(xlim = tab_stats$valores[c(8,7)]+c(-1000,1000)) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::theme(
+    axis.text.y = ggplot2::element_blank(),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+
+## Como construir? Passo a passo {.smaller}
+
+Uma vez delimitado o fim dos bigodes, podemos ir para o último elemento dos boxplots: os pontos. Os pontos são todas as observações que estão além do fim dos bigodes. 
+
+```{r}
+#| fig-height: 2.8
+#| fig-width: 8.0
+sub_set_consumo |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = valor, y = "1") +
+  ggplot2::stat_boxplot(
+    geom = "errorbar",
+    width = .2
+  ) +
+  ggplot2::geom_boxplot() +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[8],
+    xend = tab_stats$valores[4],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::annotate(
+    "segment",
+    x = tab_stats$valores[2],
+    xend = tab_stats$valores[7],
+    y = "1",
+    yend = "1",
+    linetype = 2
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = sort(tab_stats$valores[c(4,3,2,7,8,9,10)]),
+    labels = format_reais,
+    guide = ggplot2::guide_axis(n.dodge = 2)
+  ) +
+  ggrepel::geom_text_repel(
+    ggplot2::aes(label = format_reais(valor)),
+    data = sub_set_consumo |> 
+      dplyr::filter(valor > tab_stats$valores[7]), 
+    direction = "y",
+    min.segment.length = 100,
+    size = 3
+  ) +
+  # ggplot2::coord_cartesian(xlim = tab_stats$valores[c(8,7)]+c(-1000,1000)) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::theme(
+    axis.text.y = ggplot2::element_blank(),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank()
+  )
+```
+
+## Como construir? As medidas {.smaller}
+
+:::: {.columns}
+::: {.column width='20%'}
+São 5 informações de que precisamos (máximo, mínimo, mediana, quartil superior e inferior), e outras 7 medidas decorrentes dessas 5 (IQR, o limite superior do bigode, o limite inferior do bigode, o ponto superior, o ponto inferior e os potenciais outliers nos limites inferior e superior)
+:::
+::: {.column width='80%'}
+```{r}
+tab_stats |>
+  dplyr::transmute(
+    medidas,
+    `parte do boxplot` = dplyr::case_when(
+      medidas == "quartil inferior" |
+        medidas == "mediana" |
+        medidas == "quartil superior" ~ "centro",
+      medidas == "valor máximo" |
+        medidas == "valor mínimo" |
+        stringr::str_detect(medidas, "último") |
+        stringr::str_detect(medidas, "IQR") ~ "bigodes",
+      TRUE ~ "pontos"
+    ),
+    valores = dplyr::case_when(
+      !stringr::str_detect(medidas, "quantidade de pontos") ~ format_reais(valores),
+      TRUE ~ paste0(valores, " pontos")
+    )
+  ) |> 
+  knitr::kable(
+    col.names = c("MEDIDAS", "PARTE BOXPLOT", "VALORES"),
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  ) |> 
+  kableExtra::kable_styling() |> 
+  kableExtra::row_spec(c(1:5),bold=T,hline_after = T)
+```
+:::
+::::
+
+## Como construir? Bivariados {.smaller}
+
+```{r}
+consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo, y = dec_val, fill = dec_val) +
+  ggplot2::geom_boxplot(show.legend = FALSE) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_fill_manual(values = cores_abj) +
+  ggplot2::labs(x = "Tempo (dias)", y = "Decisão")
+```
+
+## Interpretações: Distribuição
+
+Os boxplots, assim como os histogramas, indicam distribuições
+
+```{r}
+N <- 10000
+set.seed(2)
+
+dados_sim <- tibble::tibble(
+  simetrica = rbeta(N, 3, 3),
+  direita = rbeta(N, 1.5, 4),
+  esquerda = rbeta(N, 4, 1.5)
+) |> 
+  tidyr::pivot_longer(dplyr::everything()) |> 
+  dplyr::arrange(name) |> 
+  dplyr::mutate(name = forcats::lvls_reorder(name, c(2, 3, 1))) |> 
+  dplyr::arrange(name)
+
+medidas <- dados_sim |> 
+  dplyr::group_by(name) |> 
+  dplyr::summarise(quant = quantile(value, c(.25, .5, .75)), .groups = "drop")
+
+plot_density <- function(da) {
+  medidas <- dplyr::summarise(da, quant = quantile(value, c(.25, .5, .75)))
+  da |> 
+    ggplot2::ggplot() +
+    ggplot2::aes(x = value) +
+    ggplot2::geom_density(fill = "gray80", colour = "transparent") +
+    ggplot2::scale_x_continuous(
+      breaks = medidas$quant,
+      labels = c("Q1", "Q2", "Q3"), 
+      guide = ggplot2::guide_axis(check.overlap = TRUE)
+    ) +
+    ggplot2::geom_vline(
+      ggplot2::aes(xintercept = quant), 
+      data = medidas, linetype = 2
+    ) +
+    ggplot2::theme_minimal() +
+    ggplot2::labs(title = stringr::str_to_title(da$name[1])) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(hjust = .5),
+      axis.title = ggplot2::element_blank(),
+      axis.text.y = ggplot2::element_blank(), 
+      panel.grid = ggplot2::element_blank()
+    )
+}
+
+densidades <- dados_sim |> 
+  dplyr::group_split(name) |> 
+  purrr::map(plot_density)
+
+plot_boxplot <- function(da) {
+  da |> 
+    ggplot2::ggplot() +
+    ggplot2::aes(x = value) +
+    ggplot2::geom_boxplot() +
+    ggplot2::theme_minimal() +
+    ggplot2::theme_void()
+}
+
+boxplots <- dados_sim |> 
+  dplyr::group_split(name) |> 
+  purrr::map(plot_boxplot)
+
+patchwork::wrap_plots(
+  c(densidades, boxplots), 
+  nrow = 2, heights = c(8,2)
+)
+```
+
+## Interpretações: 50%
+
+```{r}
+#| fig-width: 11.0
+#| fig-height: 6.0
+set.seed(5)
+dados <- tibble::tibble(
+  x = qnorm(seq(0.001, 0.999, .001))
+)
+shade <- function(x, vals) {
+  y <- dnorm(x)
+  y[x < vals[1] | x > vals[2]] <- NA
+  y
+}
+
+p2 <- ggplot2::ggplot() +
+  ggplot2::geom_vline(
+    xintercept = c(-2.698, -0.6745, 0.6745, 2.698),
+    colour = "gray"
+  ) +
+  ggplot2::stat_function(
+    fun = dnorm, geom = "area",
+    fill = "gray40",
+    xlim = c(-3.5, 3.5)
+  ) +
+  ggplot2::stat_function(
+    fun = purrr::partial(shade, vals = c(-2.698,2.698)) , 
+    geom = "area", 
+    fill = cores_abj[1],
+    xlim = c(-3.5, 3.5)
+  ) +
+  ggplot2::stat_function(
+    fun = purrr::partial(shade, vals = c(-0.6745,0.6745)) , 
+    geom = "area", 
+    fill = cores_abj[2],
+    xlim = c(-3.5, 3.5)
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = seq(-3.2,3.2),
+    labels = scales::label_math(.x~sigma)
+  ) +
+  ggplot2::labs(
+    x = "", y = "Densidade"
+  ) +
+  ggplot2::annotate(
+    "text",
+    x = 0, y = .05, label = "50%", size = 5
+  ) +
+  ggplot2::annotate(
+    "text",
+    x = c(-1.3, 1.3), y = .05, label = "24.65%", size = 5, colour = "white"
+  ) +
+  ggplot2::annotate(
+    "text",
+    x = c(-3, 3), y = .05, label = "0.35%", size = 5, colour = "black"
+  ) +
+  ggplot2::theme_minimal(12)
+
+boxplot <- ggplot2::ggplot(dados) +
+  ggplot2::aes(x = x) +
+  ggplot2::geom_vline(
+    xintercept = c(-2.698, -0.6745, 0.6745, 2.698),
+    colour = "gray"
+  ) +
+  ggplot2::stat_boxplot(
+    geom = "errorbar",
+    colour = cores_abj[1],
+    width = .2,
+    size = 1.2
+  ) +
+  ggplot2::geom_boxplot(
+    fill = cores_abj[2], 
+    outlier.colour = "gray40",
+    width = .3
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = seq(-3,3),
+    labels = scales::label_math(.x~sigma),
+    limits = c(-3.5, 3.5)
+  ) +
+  ggplot2::coord_cartesian(ylim = c(-.3, .3)) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::theme(
+    panel.grid = ggplot2::element_blank()
+  )
+
+patchwork::wrap_plots(boxplot, p2, ncol = 1)
+```
+
+## Interpretações: Outliers {.smaller}
+
+Outliers são pontos que se diferem drasticamente do resto dos dados. O problema é como identificar esses outliers.
+
+:::: {.columns}
+::: {.column}
+- Existe uma nota de corte?
+- Qual é o critério de outlier para boxplots?
+:::
+
+::: {.column}
+- O critério do boxplot é bom?
+- "Potenciais outliers"
+:::
+::::
+
+```{r}
+#| fig-width: 8.0
+#| fig-height: 2.5
+options(scipen = 999)
+consumo |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = valor) +
+  ggplot2::geom_boxplot() +
+  ggplot2::scale_x_log10(
+    breaks=10^c(3,4,5,6,7,8),
+    labels = scales::dollar_format(
+      prefix = "R$", big.mark = ".", decimal.mark = ","
+    )
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(
+    axis.title.y = ggplot2::element_blank(),
+    axis.text.y = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank()
+  ) +
+  ggplot2::labs(x = "Valor")
+```
+
+## Interpretações: Bivariados
+
+```{r}
+#| fig-width: 11.0
+#| fig-height: 6.0
+hists <- consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo, fill = dec_val) +
+  ggplot2::geom_histogram(bins = 30) +
+  gghighlight::gghighlight(label_key = dec_val) +
+  ggplot2::facet_wrap(~ dec_val) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_fill_manual(values = cores_abj) +
+  ggplot2::labs(x = "Tempo (dias)", y = "Contagem") +
+  ggplot2::theme(
+    axis.title.x = ggplot2::element_blank()
+  )
+
+boxs <- consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo, y = dec_val, fill = dec_val) +
+  ggplot2::geom_boxplot(show.legend = FALSE) +
+  ggplot2::facet_wrap(~ dec_val, scales = "free_y") +
+  ggthemes::theme_hc() +
+  ggplot2::scale_fill_manual(values = cores_abj) +
+  ggplot2::labs(x = "Tempo (dias)", y = "Decisão") +
+  ggplot2::theme(
+    axis.text.y = ggplot2::element_blank(),
+    axis.title.y = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank(),
+    axis.text.x = ggplot2::element_blank(),
+    # axis.title.x = ggplot2::element_blank(),
+    axis.ticks.x = ggplot2::element_blank(),
+    strip.background = ggplot2::element_blank(),
+    strip.text.x = ggplot2::element_blank()
+  )
+
+patchwork::wrap_plots(hists, boxs, nrow = 2, heights = c(8, 2))
+```
 
 #  {background="#fff"}
 

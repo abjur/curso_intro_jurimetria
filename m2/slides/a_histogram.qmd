@@ -45,12 +45,6 @@ format_reais <- function(valor) {
 
 ## Como construir?
 
-- Variáveis numéricas contínuas
-- Eixos: x = variável; y = contagem
-- Podem ser bivariados, adicionando cores ao histograma
-
-## Como construir? Visão geral
-
 ```{r}
 consumo |> 
   ggplot2::ggplot() +
@@ -63,6 +57,12 @@ consumo |>
   ) +
   ggthemes::theme_hc()
 ```
+
+## Como construir? Visão geral
+
+- Variáveis numéricas contínuas
+- Eixos: x = variável; y = contagem
+- Podem ser bivariados, adicionando cores ao histograma
 
 ## Como construir? Eixo x
 
@@ -510,6 +510,62 @@ p_hist_bar <- consumo |>
 
 patchwork::wrap_plots(p_hist_bar, p_hist)
 ```
+
+## Como construir? Bivariados
+
+```{r}
+consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo) +
+  ggplot2::geom_histogram(fill = cores_abj[1], bins = 30) +
+  ggthemes::theme_hc() +
+  ggplot2::labs(x = "Tempo (dias)", y = "Contagem")
+```
+
+## Como construir? Bivariados
+
+```{r}
+consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo, fill = dec_val) +
+  ggplot2::geom_histogram(bins = 30) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_fill_manual(values = cores_abj) +
+  ggplot2::labs(x = "Tempo (dias)", y = "Contagem") +
+  ggplot2::theme(
+    legend.position = c(.8, .8)
+  )
+```
+
+## Como construir? Bivariados
+
+```{r}
+consumo |>
+  dplyr::filter(
+    dec_val == "Não reformou" |
+      dec_val == "Reformou" |
+      dec_val == "Parcial"
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = tempo, fill = dec_val) +
+  ggplot2::geom_histogram(bins = 30) +
+  gghighlight::gghighlight(label_key = dec_val) +
+  ggplot2::facet_wrap(~ dec_val) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_fill_manual(values = cores_abj) +
+  ggplot2::labs(x = "Tempo (dias)", y = "Contagem")
+```
+
 
 ## Interpretações
 
