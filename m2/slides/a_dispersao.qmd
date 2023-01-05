@@ -1,0 +1,168 @@
+---
+title: "Visualizações"
+subtitle: "Gráficos de dispersão"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE, 
+  results = "hide"
+)
+
+cores_abj <- c("#102C68", "#AFCA0A", "#575756")
+
+```
+
+## Ementa do curso {.smaller}
+
+# Gráficos de dispersão {.slide-title}
+
+## Como construir?
+
+```{r}
+#| fig-width: 11.0
+#| fig-height: 6.0
+abjData::litigiosidade |> 
+  dplyr::filter(ano == min(ano)) |>
+  dplyr::mutate(
+    congestionamento = baixados / (novos + pendentes),
+    novos_por_100k = novos/pop * 100000
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = novos_por_100k, x = idhm) +
+  ggplot2::geom_point() +
+  ggplot2::labs(
+    title = "Gráfico de dispersão",
+    y = "Casos novos por 100 mil habitantes",
+    x = "IDH"
+  ) +
+  ggplot2::theme_minimal()
+```
+
+## Como construir? Visão geral
+
+- Não existe na forma univariada; só existe a partir do bivariado.
+- Nos dois eixos deve haver uma variável numérica. 
+- Cada ponto no gráfico representa uma observação. Os eixos são características dessa observação.
+- Mostra a associação entre duas variáveis numéricas.
+
+## Interpretações: Associação
+
+```{r}
+#| fig-width: 9.0
+#| fig-height: 4.0
+p_positivo <- abjData::litigiosidade |>
+  dplyr::filter(ano == min(ano)) |>
+  dplyr::mutate(
+    congestionamento = baixados / (novos + pendentes),
+    novos_por_100k = novos/pop * 100000
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = novos_por_100k, x = idhm) +
+  ggplot2::geom_point() +
+  ggplot2::geom_smooth(method=lm, se=FALSE, color = cores_abj[1]) +
+  ggplot2::labs(
+    title = "Gráfico de dispersão com relação positiva",
+    y = "Casos novos por 100 mil habitantes",
+    x = "IDH"
+  ) +
+  ggplot2::theme_minimal()
+
+p_negativo <- abjData::litigiosidade |>
+  dplyr::filter(ano == min(ano)) |>
+  dplyr::mutate(
+    congestionamento = baixados / (novos + pendentes),
+    novos_por_100k = novos/pop * 100000
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(y = novos_por_100k, x = t_analf18m) +
+  ggplot2::geom_point() +
+  ggplot2::geom_smooth(method=lm, se=FALSE, color = cores_abj[1]) +
+  ggplot2::labs(
+    title = "Gráfico de dispersão com relação negativa",
+    y = "Casos novos por 100 mil habitantes",
+    x = "Taxa de analfabetismo - 18 anos ou mais"
+  ) +
+  ggplot2::theme_minimal()
+
+patchwork::wrap_plots(p_positivo, p_negativo, ncol = 2)
+```
+
+## Interpretações: Legalidade
+
+```{r}
+#| fig-width: 11.0
+#| fig-height: 6.0
+da_final <- obsFase2::da_relatorio |> 
+  dplyr::select(
+    id_processo = n_processo,
+    divida,
+    remuneracao_liquida = remuneracao_liquida_arrumado,
+    parcelado,
+    capital,
+    deferido
+  )
+
+da_deferido <- da_final |> 
+  dplyr::filter(deferido == "Sim")
+
+si <- function(x) {
+  breaks <- c(0, 10^c(M = 3, MM = 6, B = 9))
+  n_suffix <- cut(abs(x), breaks = c(unname(breaks), Inf), 
+                  labels = c(names(breaks)), right = FALSE)
+  n_suffix[is.na(n_suffix)] <- ""
+  suffix <- n_suffix
+  scale <- 1/breaks[n_suffix]
+  scale[which(scale %in% c(Inf, NA))] <- 1
+  scales::number(x, accuracy = 1, 
+                 scale = unname(scale), 
+                 suffix = suffix)
+}
+
+da_deferido |> 
+  dplyr::filter(!is.na(divida), !is.na(remuneracao_liquida)) |> 
+  dplyr::filter(
+    remuneracao_liquida > 1000
+    # remuneracao_liquida < 2e7
+  ) |> 
+  ggplot2::ggplot(ggplot2::aes(divida, remuneracao_liquida)) +
+  ggplot2::geom_point(size = 2, ggplot2::aes(colour = parcelado, shape = capital)) +
+  ggplot2::scale_x_log10(breaks = c(10^(1:7), 2e8, 1e9), labels = si) +
+  ggplot2::scale_y_log10(breaks = c(10^(1:7)), labels = si) +
+  ggplot2::scale_shape_discrete(
+    name = "Tipo de vara", 
+    labels = c("Comum", "Especializada")
+  ) +
+  ggplot2::geom_abline(slope = 1, intercept = log10(0.05), colour = "black") +
+  ggplot2::geom_hline(yintercept = 1e7, colour = "red", linetype = 2) +
+  ggplot2::scale_colour_viridis_d(begin = 0.2, end = 0.8, direction = -1) +
+  ggplot2::theme_minimal(12) +
+  ggplot2::labs(
+    x = "Dívida total",
+    y = "Remuneração do AJ",
+    colour = "",
+    shape = "Tipo de vara"
+  ) +
+  ggplot2::theme(legend.position = "bottom")
+```
+
+# {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}

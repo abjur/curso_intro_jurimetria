@@ -1,0 +1,119 @@
+---
+title: "Visualizações"
+subtitle: "Séries temporais"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE, 
+  results = "hide"
+)
+```
+
+## Ementa do curso {.smaller}
+
+# Séries temporais {.slide-title}
+
+```{r}
+cores_abj <- c("#102C68", "#AFCA0A", "#575756")
+
+norte <- c("AM", "TO", "AP", "AC", "RR", "RO")
+nordeste <- c("MA", "BA", "PE", "SE", "AL", "RN", "PB", "CE", "PI", "PA")
+centro_oeste <- c("GO", "MT", "MS", "DF")
+sudeste <- c("SP", "MG", "RJ", "ES")
+sul <- c("RS", "PR", "SC")
+
+liti <- abjData::litigiosidade |>
+  dplyr::mutate(
+    regiao = dplyr::case_when(
+      tribunal_uf %in% norte ~ "Norte",
+      tribunal_uf %in% nordeste ~ "Nordeste",
+      tribunal_uf %in% centro_oeste ~ "Centro Oeste",
+      tribunal_uf %in% sudeste ~ "Sudeste",
+      tribunal_uf %in% sul ~ "Sul"
+    )
+  ) 
+```
+
+## Como construir?
+
+```{r}
+liti |> 
+  dplyr::group_by(ano) |>
+  dplyr::summarise(
+    novos = sum(novos),
+    pop = sum(pop),
+    .groups = "drop"
+  ) |>
+  dplyr::mutate(
+    novos_por_100k = novos/pop * 100000
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = ano, y = novos_por_100k) +
+  ggplot2::geom_point(color = cores_abj[1], size = 2.2) +
+  ggplot2::geom_line(color = cores_abj[1], size = 1) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_colour_viridis_d(begin = .1, end = .9) +
+  ggplot2::labs(
+    x = "Ano", y = "Casos novos por\n100 mil habitantes",
+    colour = "Região"
+  )
+```
+
+## Como construir? Visão geral
+
+-   Variável temporal (datas, anos)
+-   Eixos: x = tempo; y = variável numérica (discreta ou contínua)
+-   Tem bivariado
+
+## Como construir? Bivariado
+
+```{r}
+liti |> 
+  dplyr::group_by(regiao, ano) |>
+  dplyr::summarise(
+    novos = sum(novos),
+    pop = sum(pop),
+    .groups = "drop"
+  ) |>
+  dplyr::mutate(
+    novos_por_100k = novos/pop * 100000
+  ) |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = ano, y = novos_por_100k, colour = regiao) +
+  ggplot2::geom_point(size = 2.2) +
+  ggplot2::geom_line(size = 1) +
+  ggthemes::theme_hc() +
+  ggplot2::scale_colour_viridis_d(begin = .1, end = .9) +
+  ggplot2::labs(
+    x = "Ano", y = "Casos novos por\n100 mil habitantes",
+    colour = "Região"
+  )
+```
+
+## Interpretações: Tendência
+
+Usamos as séries temporais para avaliar tendências. Eles são muito utilizados para fazer previsões.
+
+![](img/ipcc.png)
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
