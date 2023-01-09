@@ -22,6 +22,11 @@ title-slide-attributes:
 
 # Processo de geração de dados {.slide-title}
 
+```{r}
+da <- obsFase3::da_processo_tidy |> 
+  dplyr::filter(data_hora <= "2021-07-13")
+```
+
 ## {.r-fit-text .center}
 
 A seguir, vamos ver um exemplo. O exemplo veio de um estudo da ABJ, sobre a judicialização da saúde na Justiça Federal do Ceará. 
@@ -81,8 +86,7 @@ Se a pesquisa envolver a **classificação manual de dados**, então temos que e
 
 ::: {.fragment}
 ```{r,fig.cap="Fonte: ABJ. **Observatório da Insolvência Fase 3: Falências no Estado de São Paulo**. 2022"}
-obsFase3::da_processo_tidy |> 
-  dplyr::filter(data_hora <= "2021-07-13") |> 
+da |> 
   dplyr::filter(
     info_origem_min != "Convolação",
     info_fal_dec_min == "Não"
@@ -145,6 +149,12 @@ Se a pesquisa envolver a **classificação manual de dados**, então temos que e
 
 Se a pesquisa envolver a **extração automática de dados**, então devemos explicar (1) como as informações que foram raspadas foram geradas e (2) como elas foram extraídas.
 
+## Processo de Geração de Dados (PGD) {.smaller}
+
+#### Boas práticas
+
+Se a pesquisa envolver a **extração automática de dados**, então devemos explicar **(1) como as informações que foram raspadas foram geradas** e (2) como elas foram extraídas.
+
 ::: {.fragment}
 ```{r}
 #| fig.align: 'center'
@@ -153,19 +163,6 @@ Se a pesquisa envolver a **extração automática de dados**, então devemos exp
 knitr::include_graphics("img/pgd_esaj_capa.png")
 ```
 :::
-
-## Processo de Geração de Dados (PGD) {.smaller}
-
-#### Boas práticas
-
-Se a pesquisa envolver a **extração automática de dados**, então devemos explicar **(1) como as informações que foram raspadas foram geradas** e (2) como elas foram extraídas.
-
-```{r}
-#| fig.align: 'center'
-#| out.width: '100%'
-#| out.height: '100%'
-knitr::include_graphics("img/pgd_esaj_capa.png")
-```
 
 ::: {.fragment}
 - Exemplo da informação `Juiz`
@@ -179,12 +176,128 @@ knitr::include_graphics("img/pgd_esaj_capa.png")
 
 #### Boas práticas
 
+Se a pesquisa envolver a **extração automática de dados**, então devemos explicar (1) como as informações que foram raspadas foram geradas e (2) como elas foram extraídas.
+
+## Processo de Geração de Dados (PGD) {.smaller}
+
+#### Boas práticas
+
 Se a pesquisa envolver a **extração automática de dados**, então devemos explicar (1) como as informações que foram raspadas foram geradas e **(2) como elas foram extraídas.**
 
+::: {.fragment}
 - Normalmente, extraímos os dados por meio de uma API, ou de algum scraper (raspador de dados).
 - APIs nunca vão alterar a estrutura dos dados originais; mas os scrapers podem.
 - A melhor forma de documentar como extraímos os dados é compartilhando o código-fonte.
 - Nem sempre é possível compartilhar o código-fonte, pois às vezes existem questões de privacidade e sigilo. Nestes casos, temos de dizer que criamos um scraper e explicar as questões que nos impediram de compartilhar o seu código-fonte. 
+:::
+
+## Processo de Geração de Dados (PGD) {.smaller}
+
+#### Boas práticas
+
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+
+::: {.fragment style='font-size: 21px'}
+```{r}
+#| fig.cap: "Fonte: ABJ. **Observatório da Insolvência Fase 3: Falências no Estado de São Paulo**. 2022"
+#| out.height: 9
+rx_veic <- c(
+  "veiculo|carro|motocicleta|caminh|helicoptero|bmw|automov|peugeot|montana",
+  "civic|uno mille|fusca|vectra|carreta"
+) |> stringr::str_c(collapse = "|")
+rx_construcao <- c(
+  "morcas|tanque|torno|parafuso|prego|instrumento|grua|pallet|ponte",
+  "divisorias|moldes flor|silber cutter|acessorio|solda|vigi?a|carretel",
+  "aco carb|an?tenas|cabine"
+) |> stringr::str_c(collapse = "|")
+rx_maquina <- c(
+  "maquina|motor|trator|prensa|furadeira|balanca|catraca",
+  "painel|tubo de aco|cilindro|secador|gerador|espirra|paleteira",
+  "lixadeira|estufa|autoclave|fresadora|jateadora|coletores|lavador|robo",
+  "injetora|dobradeira|empilhadeira|puch sup|rebobin|spectrom|fan-coil",
+  "gravadora|processadora|determinadora|conica|brochad|medidor|limadora",
+  "exaust|laminadora|determinad|analisador|ferdimat|torre|rompedor|transformad",
+  "raio x|elevador|pantografo|frezad|evaporador|guilhotina|ensaio de tracao"
+) |> stringr::str_c(collapse = "|")
+rx_escritorio <- c(
+  "gabinete|cal?deira|mesa|ar condicionado|arquivo|estabilizador",
+  "telefon|armario|mouse|bebedour|computador|bancada|forno|microondas|grampea",
+  "impressora|etiqueta|fax|papel|rack|switch|ventilador|monitor|estante|geladeira",
+  "lacre|escritorio|papel|papeis"
+) |> stringr::str_c(collapse = "|")
+rx_imovel <- c(
+  "casa|terreno|imovel|predio|imoveis|fazenda|conjunto|usina",
+  "galpao|estacao|estufa|chacara|sitio|bloco|apartamento|hotel",
+  "setor de producao|loja"
+) |> stringr::str_c(collapse = "|")
+rx_credito <- c(
+  "credito|carteira|titulo|acoes"
+) |> stringr::str_c(collapse = "|")
+rx_imaterial <- c(
+  "marca|musica|inpi"
+) |> stringr::str_c(collapse = "|")
+rx_diversos <- c(
+  "sucata|caixa|bolsa|mala|colchao|carrinho|roupeiro",
+  "mochila|esmeril"
+) |> stringr::str_c(collapse = "|")
+rx_lote <- "lote"
+
+aux_leilao_descricao <- obsFase3::da_leilao_tidy |>
+  dplyr::semi_join(da, "id_processo") |>
+  dplyr::mutate(descricao = stringr::str_squish(tolower(abjutils::rm_accent(descricao)))) |>
+  dplyr::mutate(tipo_bem = dplyr::case_when(
+    stringr::str_detect(descricao, rx_veic) ~ "Veículo",
+    stringr::str_detect(descricao, rx_maquina) ~ "Máquina",
+    stringr::str_detect(descricao, rx_construcao) ~ "Construção",
+    stringr::str_detect(descricao, rx_escritorio) ~ "Escritório",
+    stringr::str_detect(descricao, rx_imovel) ~ "Imóvel",
+    stringr::str_detect(descricao, rx_credito) ~ "Crédito",
+    stringr::str_detect(descricao, rx_imaterial) ~ "Imaterial",
+    stringr::str_detect(descricao, rx_diversos) ~ "Diversos",
+    stringr::str_detect(descricao, rx_lote) ~ "Outros (Lote)",
+    TRUE ~ "Outros"
+  ))
+
+reais <- scales::dollar_format(prefix = "R$ ", big.mark = ".", decimal.mark = ",")
+
+aux_leilao_descricao |>
+  dplyr::filter(!is.na(valor_avaliacao_inicial)) |>
+  dplyr::group_by(tipo_bem, descricao, id_processo) |>
+  dplyr::summarise(
+    valor_total_arrematado = dplyr::first(valor_total_arrematado),
+    valor_avaliacao_inicial = dplyr::last(valor_avaliacao_inicial),
+    .groups = "drop"
+  ) |>
+  dplyr::group_by(tipo_bem) |>
+  dplyr::summarise(
+    n = dplyr::n(),
+    soma = sum(valor_avaliacao_inicial)
+  ) |>
+  dplyr::arrange(dplyr::desc(soma)) |>
+  dplyr::mutate(
+    total = sum(n),
+    prop = soma/sum(soma),
+    acu = cumsum(prop),
+    prop_n = n/total,
+  ) |>
+  janitor::adorn_totals() |>
+  dplyr::mutate(
+    soma = reais(soma),
+    prop_n = obsFase3::pct(prop_n),
+    prop_valor = obsFase3::pct(prop)
+  ) |>
+  dplyr::select(-acu, -prop, -total) |>
+  purrr::set_names(c(
+    "Tipo de bem", "Quantidade",
+    "Valor total", "% Quantidade", "% Valor"
+  )) |>
+  knitr::kable(
+    caption = "*Tabela 3.19. Valores dos leilões por tipo de bem.*",
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+:::
 
 
 ## Processo de Geração de Dados (PGD) {.smaller}
@@ -193,9 +306,103 @@ Se a pesquisa envolver a **extração automática de dados**, então devemos exp
 
 Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
 
-::: {.fragment}
-- Exemplo de regex que vai criar categorias para as partes. 
-- Exemplo do meu TCC
+```{r}
+set.seed(19)
+obsFase3::da_leilao_tidy |> 
+  dplyr::select(descricao, valor_avaliacao_inicial) |> 
+  dplyr::sample_n(100) |> 
+  knitr::kable(
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  ) |> 
+  kableExtra::kable_styling("striped", full_width = F) |> 
+  kableExtra::scroll_box(width = "1000px", height = "450px")
+```
+
+## Processo de Geração de Dados (PGD) {.smaller}
+
+#### Boas práticas
+
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+
+```{r}
+set.seed(19)
+obsFase3::da_leilao_tidy |> 
+  dplyr::sample_n(100) |> 
+  dplyr::semi_join(da, "id_processo") |>
+  dplyr::mutate(tipo_bem = stringr::str_squish(tolower(abjutils::rm_accent(descricao)))) |>
+  dplyr::mutate(tipo_bem = dplyr::case_when(
+    stringr::str_detect(descricao, rx_veic) ~ "Veículo",
+    stringr::str_detect(descricao, rx_maquina) ~ "Máquina",
+    stringr::str_detect(descricao, rx_construcao) ~ "Construção",
+    stringr::str_detect(descricao, rx_escritorio) ~ "Escritório",
+    stringr::str_detect(descricao, rx_imovel) ~ "Imóvel",
+    stringr::str_detect(descricao, rx_credito) ~ "Crédito",
+    stringr::str_detect(descricao, rx_imaterial) ~ "Imaterial",
+    stringr::str_detect(descricao, rx_diversos) ~ "Diversos",
+    stringr::str_detect(descricao, rx_lote) ~ "Outros (Lote)",
+    TRUE ~ "Outros"
+  )) |> 
+  dplyr::select(descricao, tipo_bem, valor_avaliacao_inicial) |> 
+  knitr::kable(
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  ) |> 
+  kableExtra::kable_styling("striped", full_width = F) |> 
+  kableExtra::scroll_box(width = "1000px", height = "450px")
+```
+
+## Processo de Geração de Dados (PGD) {.smaller}
+
+#### Boas práticas
+
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+
+::: {style='font-size: 20px'}
+```{r}
+#| eval: false
+#| echo: true
+rx_veic <- c(
+  "veiculo|carro|motocicleta|caminh|helicoptero|bmw|automov|peugeot|montana",
+  "civic|uno mille|fusca|vectra|carreta"
+) |> stringr::str_c(collapse = "|")
+rx_construcao <- c(
+  "morcas|tanque|torno|parafuso|prego|instrumento|grua|pallet|ponte",
+  "divisorias|moldes flor|silber cutter|acessorio|solda|vigi?a|carretel",
+  "aco carb|an?tenas|cabine"
+) |> stringr::str_c(collapse = "|")
+rx_maquina <- c(
+  "maquina|motor|trator|prensa|furadeira|balanca|catraca",
+  "painel|tubo de aco|cilindro|secador|gerador|espirra|paleteira",
+  "lixadeira|estufa|autoclave|fresadora|jateadora|coletores|lavador|robo",
+  "injetora|dobradeira|empilhadeira|puch sup|rebobin|spectrom|fan-coil",
+  "gravadora|processadora|determinadora|conica|brochad|medidor|limadora",
+  "exaust|laminadora|determinad|analisador|ferdimat|torre|rompedor|transformad",
+  "raio x|elevador|pantografo|frezad|evaporador|guilhotina|ensaio de tracao"
+) |> stringr::str_c(collapse = "|")
+rx_escritorio <- c(
+  "gabinete|cal?deira|mesa|ar condicionado|arquivo|estabilizador",
+  "telefon|armario|mouse|bebedour|computador|bancada|forno|microondas|grampea",
+  "impressora|etiqueta|fax|papel|rack|switch|ventilador|monitor|estante|geladeira",
+  "lacre|escritorio|papel|papeis"
+) |> stringr::str_c(collapse = "|")
+rx_imovel <- c(
+  "casa|terreno|imovel|predio|imoveis|fazenda|conjunto|usina",
+  "galpao|estacao|estufa|chacara|sitio|bloco|apartamento|hotel",
+  "setor de producao|loja"
+) |> stringr::str_c(collapse = "|")
+rx_credito <- c(
+  "credito|carteira|titulo|acoes"
+) |> stringr::str_c(collapse = "|")
+rx_imaterial <- c(
+  "marca|musica|inpi"
+) |> stringr::str_c(collapse = "|")
+rx_diversos <- c(
+  "sucata|caixa|bolsa|mala|colchao|carrinho|roupeiro",
+  "mochila|esmeril"
+) |> stringr::str_c(collapse = "|")
+rx_lote <- "lote"
+```
 :::
 
 ## Processo de Geração de Dados (PGD) {.smaller}

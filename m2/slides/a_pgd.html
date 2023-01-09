@@ -22,6 +22,70 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="a_pgd_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="a_pgd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -312,6 +376,9 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="a_pgd_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="a_pgd_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -328,7 +395,9 @@
 <section>
 <section id="processo-de-geração-de-dados" class="title-slide slide level1 slide-title center">
 <h1>Processo de geração de dados</h1>
+<div class="cell">
 
+</div>
 </section>
 <section id="section" class="slide level2 center">
 <h2></h2>
@@ -528,6 +597,11 @@ Total
 <h2>Processo de Geração de Dados (PGD)</h2>
 <h4 id="boas-práticas-4">Boas práticas</h4>
 <p>Se a pesquisa envolver a <strong>extração automática de dados</strong>, então devemos explicar (1) como as informações que foram raspadas foram geradas e (2) como elas foram extraídas.</p>
+</section>
+<section id="processo-de-geração-de-dados-pgd-7" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-5">Boas práticas</h4>
+<p>Se a pesquisa envolver a <strong>extração automática de dados</strong>, então devemos explicar <strong>(1) como as informações que foram raspadas foram geradas</strong> e (2) como elas foram extraídas.</p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -536,20 +610,6 @@ Total
 <p><img data-src="img/pgd_esaj_capa.png" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</div>
-</div>
-</div>
-</section>
-<section id="processo-de-geração-de-dados-pgd-7" class="slide level2 smaller">
-<h2>Processo de Geração de Dados (PGD)</h2>
-<h4 id="boas-práticas-5">Boas práticas</h4>
-<p>Se a pesquisa envolver a <strong>extração automática de dados</strong>, então devemos explicar <strong>(1) como as informações que foram raspadas foram geradas</strong> e (2) como elas foram extraídas.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/pgd_esaj_capa.png" style="width:100.0%;height:100.0%"></p>
-</figure>
 </div>
 </div>
 </div>
@@ -567,27 +627,1237 @@ Total
 <section id="processo-de-geração-de-dados-pgd-8" class="slide level2 smaller">
 <h2>Processo de Geração de Dados (PGD)</h2>
 <h4 id="boas-práticas-6">Boas práticas</h4>
+<p>Se a pesquisa envolver a <strong>extração automática de dados</strong>, então devemos explicar (1) como as informações que foram raspadas foram geradas e (2) como elas foram extraídas.</p>
+</section>
+<section id="processo-de-geração-de-dados-pgd-9" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-7">Boas práticas</h4>
 <p>Se a pesquisa envolver a <strong>extração automática de dados</strong>, então devemos explicar (1) como as informações que foram raspadas foram geradas e <strong>(2) como elas foram extraídas.</strong></p>
+<div class="fragment">
 <ul>
 <li>Normalmente, extraímos os dados por meio de uma API, ou de algum scraper (raspador de dados).</li>
 <li>APIs nunca vão alterar a estrutura dos dados originais; mas os scrapers podem.</li>
 <li>A melhor forma de documentar como extraímos os dados é compartilhando o código-fonte.</li>
 <li>Nem sempre é possível compartilhar o código-fonte, pois às vezes existem questões de privacidade e sigilo. Nestes casos, temos de dizer que criamos um scraper e explicar as questões que nos impediram de compartilhar o seu código-fonte.</li>
 </ul>
-</section>
-<section id="processo-de-geração-de-dados-pgd-9" class="slide level2 smaller">
-<h2>Processo de Geração de Dados (PGD)</h2>
-<h4 id="boas-práticas-7">Boas práticas</h4>
-<p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
-<div class="fragment">
-<ul>
-<li>Exemplo de regex que vai criar categorias para as partes.</li>
-</ul>
 </div>
 </section>
 <section id="processo-de-geração-de-dados-pgd-10" class="slide level2 smaller">
 <h2>Processo de Geração de Dados (PGD)</h2>
 <h4 id="boas-práticas-8">Boas práticas</h4>
+<p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
+<div class="fragment" style="font-size: 21px">
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="striped">
+<caption>
+<em>Tabela 3.19. Valores dos leilões por tipo de bem.</em>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de bem
+</th>
+<th style="text-align:right;">
+Quantidade
+</th>
+<th style="text-align:left;">
+Valor total
+</th>
+<th style="text-align:left;">
+% Quantidade
+</th>
+<th style="text-align:left;">
+% Valor
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Imóvel
+</td>
+<td style="text-align:right;">
+369
+</td>
+<td style="text-align:left;">
+R$ 1.013.553.475
+</td>
+<td style="text-align:left;">
+2,6%
+</td>
+<td style="text-align:left;">
+58,8%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Crédito
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+R$ 343.731.073
+</td>
+<td style="text-align:left;">
+0,3%
+</td>
+<td style="text-align:left;">
+19,9%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Imaterial
+</td>
+<td style="text-align:right;">
+545
+</td>
+<td style="text-align:left;">
+R$ 162.855.831
+</td>
+<td style="text-align:left;">
+3,9%
+</td>
+<td style="text-align:left;">
+9,5%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Outros (Lote)
+</td>
+<td style="text-align:right;">
+2497
+</td>
+<td style="text-align:left;">
+R$ 69.423.460
+</td>
+<td style="text-align:left;">
+17,9%
+</td>
+<td style="text-align:left;">
+4,0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Escritório
+</td>
+<td style="text-align:right;">
+4051
+</td>
+<td style="text-align:left;">
+R$ 60.277.118
+</td>
+<td style="text-align:left;">
+29,0%
+</td>
+<td style="text-align:left;">
+3,5%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Máquina
+</td>
+<td style="text-align:right;">
+1870
+</td>
+<td style="text-align:left;">
+R$ 43.372.379
+</td>
+<td style="text-align:left;">
+13,4%
+</td>
+<td style="text-align:left;">
+2,5%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Veículo
+</td>
+<td style="text-align:right;">
+351
+</td>
+<td style="text-align:left;">
+R$ 12.581.468
+</td>
+<td style="text-align:left;">
+2,5%
+</td>
+<td style="text-align:left;">
+0,7%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Construção
+</td>
+<td style="text-align:right;">
+490
+</td>
+<td style="text-align:left;">
+R$ 11.130.439
+</td>
+<td style="text-align:left;">
+3,5%
+</td>
+<td style="text-align:left;">
+0,6%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Outros
+</td>
+<td style="text-align:right;">
+3245
+</td>
+<td style="text-align:left;">
+R$ 5.475.020
+</td>
+<td style="text-align:left;">
+23,2%
+</td>
+<td style="text-align:left;">
+0,3%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Diversos
+</td>
+<td style="text-align:right;">
+503
+</td>
+<td style="text-align:left;">
+R$ 710.658
+</td>
+<td style="text-align:left;">
+3,6%
+</td>
+<td style="text-align:left;">
+0,0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+13957
+</td>
+<td style="text-align:left;">
+R$ 1.723.110.921
+</td>
+<td style="text-align:left;">
+100,0%
+</td>
+<td style="text-align:left;">
+100,0%
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>Fonte: ABJ. <strong>Observatório da Insolvência Fase 3: Falências no Estado de São Paulo</strong>. 2022</p>
+</div>
+</div>
+</div>
+</section>
+<section id="processo-de-geração-de-dados-pgd-11" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-9">Boas práticas</h4>
+<p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:450px; overflow-x: scroll; width:1000px; "><table class="striped table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> descricao </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> valor_avaliacao_inicial </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> TermoreguladorSKMTSJ/8 </td>
+   <td style="text-align:right;"> 1800.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Estabilizador Progressive III, Nap20005, Série 162120000376 </td>
+   <td style="text-align:right;"> 150.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Veículo tipo SEMI-REBOQUE, marca/modeloREB/RODOVIARIA, ano fabr./mod. 1975, placa IMG0270 </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gaveteiro baixo em madeira </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Prensa excentrica marca testa nº 7 </td>
+   <td style="text-align:right;"> 13000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário </td>
+   <td style="text-align:right;"> 2100.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bens de higiene e de limpeza - quantidade diversa </td>
+   <td style="text-align:right;"> 150.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TV de tubo </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Furadeira de bancada marca newtos </td>
+   <td style="text-align:right;"> 300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário Prateleira em Alumínio </td>
+   <td style="text-align:right;"> 94.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Veículo tipo SEMI-REBOQUE, marca/modelo SR/GUERRAAGSI,anofabr./mod.2007 </td>
+   <td style="text-align:right;"> 40000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Itens farmacêuticos: LOTE 81 </td>
+   <td style="text-align:right;"> 16120.58 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 58: Funil de alimentação em inox para máquinas extrusoras </td>
+   <td style="text-align:right;"> 13320.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fitas autocolantes (quantidade diversa) </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> poltrona Mini Zok Acab, especial tecido roxo Fahrer </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BALANÇA ELETRONICA "FILIZOLA" MOD. IBS, PLAT. EMBUTIDA 1.500 x 2.000 MM CAP. 1.500
+KG </td>
+   <td style="text-align:right;"> 2822.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bandeja de Saída </td>
+   <td style="text-align:right;"> 300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 37: Lote de produtos para elétrica (tomadas e espelhos 110/220) </td>
+   <td style="text-align:right;"> 3000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mesa branca com peças de dobradeira, em regular estado de conservação </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IMPRESSORA MULTIFUNCIONAL HP LASERJET PRO 400 </td>
+   <td style="text-align:right;"> 700.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Imóvel matricula nº 53.160 localizado na capela do pissarão </td>
+   <td style="text-align:right;"> 1092000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Prensa marca mecanica nº 48 </td>
+   <td style="text-align:right;"> 4000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 7: Revisora de filme plástico 300 mm (Unipac 2002) </td>
+   <td style="text-align:right;"> 28000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 14: Sanfonadeira de filme plástico (Kuko 1997) </td>
+   <td style="text-align:right;"> 75000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 1.22: Sistema Comutador para Ligação em Rede, marca: BROCADE (Rio de Janeiro/São Paulo) </td>
+   <td style="text-align:right;"> 3000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 21: Brincando com a arte de Djanira (Jefferson Galdino) </td>
+   <td style="text-align:right;"> 34.11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ESCADA DE ALUMINIO 3 DEGRAUS </td>
+   <td style="text-align:right;"> 31.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 66: Escadas de ferro uso diversos </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> filtro recuperador de tinta navetherm </td>
+   <td style="text-align:right;"> 1200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Batedores com motor </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAFETEIRAELÉTRICAFIRSTLINE </td>
+   <td style="text-align:right;"> 57.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 35: Dinamômetro universal </td>
+   <td style="text-align:right;"> 106200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 22: Sacos de guardanapo </td>
+   <td style="text-align:right;"> 300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Barra de ferro com desenho em U, em regular estado de conservação </td>
+   <td style="text-align:right;"> 10.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 61: Extensor de rede sem fio </td>
+   <td style="text-align:right;"> 270.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Aparelho de telefone s/ fio Motorola (Modelo DECT 6.0) </td>
+   <td style="text-align:right;"> 60.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Armarios tipo roupeiros com 8 portas </td>
+   <td style="text-align:right;"> 2000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote único: Bancada de aço e madeira peroba com morsa </td>
+   <td style="text-align:right;"> 200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 26: CPU, marca/modelo DELLOptPlex 759 </td>
+   <td style="text-align:right;"> 100.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> sacos com borboletas criativas </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Amário duas portas com fechadura cor cinza </td>
+   <td style="text-align:right;"> 132.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 48: Contando a arte de Peticov (Oscar D'Ambrosio) </td>
+   <td style="text-align:right;"> 124.70 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cadeira com rodizio estofada em tecido com espaldar alto e apoio para os braços cor vermelha </td>
+   <td style="text-align:right;"> 65.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Compressor marca Atlas Copco </td>
+   <td style="text-align:right;"> 6900.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TERMINAL TUBULAR PRE SOLDADO 2X1MM </td>
+   <td style="text-align:right;"> 86.37 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disjuntor 25 </td>
+   <td style="text-align:right;"> 12.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> JATO DE AREIA TECJATO (FEBRATEC), MOD. GABINETE DE PRESSÃO GPF-141314-HB </td>
+   <td style="text-align:right;"> 12261.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mesas para impressora em fórmica </td>
+   <td style="text-align:right;"> 60.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Carrinho de manutenção verde </td>
+   <td style="text-align:right;"> 208.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Máquina de solda marca Miller modelo Dimension NT-450 </td>
+   <td style="text-align:right;"> 3345.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sacola </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cadeira com rodizio estofada em courvin preto </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ARMÁRIOPEQUENOCOM1PORTA </td>
+   <td style="text-align:right;"> 113.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mola de válvula </td>
+   <td style="text-align:right;"> 75.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gabinete </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Estruturas fixas porta palets </td>
+   <td style="text-align:right;"> 10000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE Nº 198 :2 Mesa retangular. </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Itens farmacêuticos: LOTE 76 </td>
+   <td style="text-align:right;"> 23471.01 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 5: Lavatório de peças em geral/Del Cross </td>
+   <td style="text-align:right;"> 800.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário c/ 2 portas 0,80 x 0,50 x 1,47 m </td>
+   <td style="text-align:right;"> 200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Reservatório para fluido hidráulico (lote 6) </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 27: Bruxa Adolescente (Tatiana Belinky) </td>
+   <td style="text-align:right;"> 96.80 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CARTUCHOS TOWER CHINAMATE- 278A - UNIVERSAL </td>
+   <td style="text-align:right;"> 36.83 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Imóvel nº matricula 5.871 Balneario de gaivotas - nova torres SC </td>
+   <td style="text-align:right;"> 310000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SERRA CIRCULAR DE BANCADA </td>
+   <td style="text-align:right;"> 60.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 29: Talha elétrica 0.63T (Demag) </td>
+   <td style="text-align:right;"> 1290.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Veículo tipoSEMI-REBOQUE, marca/modelo NI, ano fabr./mod. NI, placa IHO-8712 </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mesa para escritório com 5 gavetas </td>
+   <td style="text-align:right;"> 68.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 254 - LOTE DE ÁGUAS MARINHAS -OVAL -DIM. 9,00 X 6,00 MM </td>
+   <td style="text-align:right;"> 141080.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> T soldaplast </td>
+   <td style="text-align:right;"> 148.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Automóvel GM/Zafira, preta, GNV, 2003/2004 </td>
+   <td style="text-align:right;"> 23088.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armários de escritório branco </td>
+   <td style="text-align:right;"> 400.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DESEMPENADEIRAMOD.ER300MM </td>
+   <td style="text-align:right;"> 1215.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Conexõeshidraulicaseanilhas
+diversas </td>
+   <td style="text-align:right;"> 1700.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário pequeno maksiva </td>
+   <td style="text-align:right;"> 95.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> INC 4 - Lote 4: Leitor de mídia (CPU) </td>
+   <td style="text-align:right;"> 27.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CÂMARA FRIGORIFICA PARA
+CONGELADOS </td>
+   <td style="text-align:right;"> 27240.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 81: Mesa de escritório cinza em L </td>
+   <td style="text-align:right;"> 150.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Arquivo em aço com quatro gavetas </td>
+   <td style="text-align:right;"> 190.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Paletadeira Manuel </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Máquina de solda marca Esab modelo ORIGO ARC 456 </td>
+   <td style="text-align:right;"> 518.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Prensa excentrica marca testa nº 40 </td>
+   <td style="text-align:right;"> 600.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Arquivo em aço com 4 gavetas </td>
+   <td style="text-align:right;"> 77.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Veículo VW modelo novo FoxTL MB 04 portas, Ano 2015/2015 </td>
+   <td style="text-align:right;"> 26650.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 100: DTX - 1800 - Cable Analyser Fluke - Networks </td>
+   <td style="text-align:right;"> 15000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 81 - HP STORAGE WORKS -BAY 14 </td>
+   <td style="text-align:right;"> 1850.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GRAMPEADOR </td>
+   <td style="text-align:right;"> 26.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bancada Lan House </td>
+   <td style="text-align:right;"> 4200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> INC 1: Ipês terreno nº 90894 (6399,14 m)(L2) </td>
+   <td style="text-align:right;"> 921476.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Aquecedo instantaneo de agua e gas </td>
+   <td style="text-align:right;"> 4560.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GRAMPEADOR </td>
+   <td style="text-align:right;"> 52.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 60: Monitor LCD 14 poegadas cinza - Samsung </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Scanner FI6140 </td>
+   <td style="text-align:right;"> 3506.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário c/ 4 portas 2 prateleiras 1,80 x 0,50 x 0,76 m </td>
+   <td style="text-align:right;"> 1000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 263-LOTE DE ESMERALDA NATURAL -GEMA SOLTA -GOTA -DIM. 10,70 X 8,50 X 4,79 MM </td>
+   <td style="text-align:right;"> 1480.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 9: ARMÁRIO C/5 GAVETAS E 1 PRATELEIRA GRANDE </td>
+   <td style="text-align:right;"> 130.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Plaina marca aliança </td>
+   <td style="text-align:right;"> 1000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 30: Vasos de vidro para a mesa </td>
+   <td style="text-align:right;"> 200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ESTABILIZADOR MARCA: SMS </td>
+   <td style="text-align:right;"> 15.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Computador LG/ monitor Sansung 15” </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+</tbody>
+</table></div>
+
+</div>
+</div>
+</section>
+<section id="processo-de-geração-de-dados-pgd-12" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-10">Boas práticas</h4>
+<p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:450px; overflow-x: scroll; width:1000px; "><table class="striped table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> descricao </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> tipo_bem </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> valor_avaliacao_inicial </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Roteador Webstar </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 80.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> furadeira de bancada </td>
+   <td style="text-align:left;"> Máquina </td>
+   <td style="text-align:right;"> 800.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Tartaruga semi automatica marca Soldas Brasil Modelo CG30 </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 345.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DOBRADEIRA 100-125 – 03 METROS – MARCA NEWTON 8715 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 18000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cadeira com rodizio estofada em courvin com espaldar alto e apoio para os bracos cor preto </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 65.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> cadeiras </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 130: Zé Pião (Ducarmo Paes) </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 32.76 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 3: Molde Spray (nº 40) - cavidades 8 - lista - redonda - medidas 30x25 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ESTACAO DE TRABALHO COM 6 LUGARES </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 280.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ar condicionado Springer 12000 BTU </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 129.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cadeiras fixas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 120.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PRATELEIRA FERRO – 2 DIVISÓRIAS – 450X45 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> injetoras] (6) </td>
+   <td style="text-align:left;"> Máquina </td>
+   <td style="text-align:right;"> 60.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PRENSA HIDRÁULICA CAP. 15 TON </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 374.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Veículo tipo EMPILHADEIRA, marca/modeloS/MARCA/DIESEL, ano fabr./mod. NI, placa NI </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 28000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gaveteiro em aço </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 140.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote único: Mesas auxiliar de produção de madeira peroba 101x101x94 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 400.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mesa c/ 5 gavetas 0,80 x 0,45 x 0,69 m cinza em aço c/tampo verde </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Carrinhos de Transporte </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 360.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 33: Empilhadeira hidráulica-manual </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1740.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PALETES DE MADEIRA DIVERSOS – SEM VALOR </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 12: Alguém pegou o meu lugar (Mirian Portela) </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 79.59 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Imóvel em Jacutinga nº matricula 8.977 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 125000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 1: Itens de escritório: 33 mesas de escritório, 14 mesas de apoio, 10 armários, 40 cadeiras, 2 ventiladores, 02 bebedouros, 02 relógios de ponto, 9 aparelhos de ar condicionado, 03 máquinas de costura sacos, 01 balança </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 30000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 2: Geladeira industrial em inox 4 portas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 11070.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 29: SETOR DE PRODUÇÃO: Compressor parafuso industrial </td>
+   <td style="text-align:left;"> Construção </td>
+   <td style="text-align:right;"> 15000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Caixa com diversos utensílios de cozinha em alumínio </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 70.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 7: Aproximadamente 700kg de motores elétricos diversos </td>
+   <td style="text-align:left;"> Máquina </td>
+   <td style="text-align:right;"> 245.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Terreno Sítio Santa Luzia - Araraquara </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 2789700.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gravura Autor: Volpi, Alfredo Gênero: Serigrafia 87/190 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 800.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> balança p/. 5 ton. </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 240.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 127: Uma família diferente (Josué Franco) </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 996.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BENS LOTE 1 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1700.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote único: Máquina de escrever eletrônica IBM 6783 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 42: Ponte rolante marca climber capacidade 3.000kg </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 2500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fritadeira FIRE e cesto para fritura </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1200.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> máquina p/. tela e suporte </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE Nº 281: 01 Coifa em Aço Inox </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 2100.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 4: Escadas com 4 degraus com plataforma </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 600.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Guilhotina para corte de chapa fobesa </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 30000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote de panelas usadas em alumínio, vários tamanhos </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 10.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DESEMPENO DE GRANITO DIM. 500 X 800 MM, COM SUPORTE </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 2196.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BENS LOTE 8 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 2350.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 14: Cadeira estofada giratoria com braços preta </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TELEVISOR SEMP DE 42 POLEGADAS, EM LCD. </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1350.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Roupeiro em aço com 8 portas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 19.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Barras de ferro quadradas mássicas pretas, em regular estado de conservação </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 15.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE Nº 163 :1 Mesa quadrada Cinza </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 100.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> INC 1: Orvalhosterreno nº 90902 (7180,23 m)(L1) </td>
+   <td style="text-align:left;"> Imóvel </td>
+   <td style="text-align:right;"> 1033953.13 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MAQUINA ELETROEROSAO POR PENETRAÇÃO "IBH" MOD. HIDROMATIC 10 CABEÇOTE H 40, N/S: 872601125 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 48132.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NOBREAK CONCEPTION TRIFÁSICO </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 945.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 20:MESA DE ESCRITÓRIO </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 225.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Balcão com 2 portas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 5: DVD Sony </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 80.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Geladeira CONSERVEX </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 2873.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Caixa de Envelopes </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 25.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> gaveta de madeira para folha A4 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cadeira com rodizio estofada em courvin preto </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IMPRESSORA MARCA: HP MODELO: DESKJET D1660 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 61: SETOR DE PRODUÇÃO: 2 armarios de aço, impressora epson, impressor termico, 1 carrinho metalico amarelo </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 1700.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gabinete </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Inversor de frequencia 0067 4T </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 4060.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 4: Prateleira em madeira </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 80.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Itens farmacêuticos: LOTE 104 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 34937.02 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armario de aço 2 portas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 60.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 81: Prateleira de madeira em L </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 186.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 2: Estrados (pallets) de madeira canafistula 80x80x12,5 </td>
+   <td style="text-align:left;"> Construção </td>
+   <td style="text-align:right;"> 390.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Imóvel nº matricula 5.869 Balneario de gaivotas - nova torres SC </td>
+   <td style="text-align:left;"> Máquina </td>
+   <td style="text-align:right;"> 310000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Lote de chapas diversos </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gabinete marca LG </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 30.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário pequeno para escritório com duas portas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 95.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 21: SALA 3: 1 Mesa para reuniao oval, 1 quadro de avisos verde, 1 quadro branco, 1 aparelho de ar condicionado, 2 mesas de escritorio, 1 armario, 2 portas. </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 1500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Prensa excentrica marca barban vicentini nº 6 - 46 </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 3000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CARRINHOSUPERMERCADO </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 149.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mesa de madeira com  gavetas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 80.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Armário </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> anel de aço carbono para cravação ½ </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 11250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 2: OBJETOS DO LAUDO DE AVALIAÇÃO </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 5530.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 150: Esmeril de bancada </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 330.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: Prensa excentrica marca mecanica nº 19 </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 4000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Exaustor com motor </td>
+   <td style="text-align:left;"> Máquina </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> QUADRO DE MAPA DIM: 120X90 CM </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 10.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ENCADERNADORA </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 1B: Armário de madeira </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 120.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Retifica manual 1/4" </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 592.32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 48: Tanque metálico 9.500 L </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 3000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PRATELEIRA,TILMARCON,AZUL </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 1: Mesa pequena retangular, cor gelo, de madeira, pé de ferro </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 115.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 79: Secadora de roupa Brastemp </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 525.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 1: FLG WN 300# RF A/C 8" </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 130.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Arquivo em aço com 4 gavetas </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 77.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lote 1: Teclado marca Dell </td>
+   <td style="text-align:left;"> Imaterial </td>
+   <td style="text-align:right;"> 15.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> telefone Panasonic KXT70030 na cor branca </td>
+   <td style="text-align:left;"> Escritório </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE DE ARMÁRIOS BAIXO COM 36 ITENS </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1080.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Prensa hidráulica - NF 1400 x 1200 mm - 3 hp </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 12500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sucataderoscasecanhãode
+injeção </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 543.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LOTE 9.9 </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 1500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Carrinhos de ferro com 4 rodas transportes de clidros </td>
+   <td style="text-align:left;"> Outros </td>
+   <td style="text-align:right;"> 150.00 </td>
+  </tr>
+</tbody>
+</table></div>
+
+</div>
+</div>
+</section>
+<section id="processo-de-geração-de-dados-pgd-13" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-11">Boas práticas</h4>
+<p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
+<div style="font-size: 20px">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>rx_veic <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="st">"veiculo|carro|motocicleta|caminh|helicoptero|bmw|automov|peugeot|montana"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="st">"civic|uno mille|fusca|vectra|carreta"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>rx_construcao <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="st">"morcas|tanque|torno|parafuso|prego|instrumento|grua|pallet|ponte"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="st">"divisorias|moldes flor|silber cutter|acessorio|solda|vigi?a|carretel"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="st">"aco carb|an?tenas|cabine"</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a>rx_maquina <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="st">"maquina|motor|trator|prensa|furadeira|balanca|catraca"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="st">"painel|tubo de aco|cilindro|secador|gerador|espirra|paleteira"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="st">"lixadeira|estufa|autoclave|fresadora|jateadora|coletores|lavador|robo"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="st">"injetora|dobradeira|empilhadeira|puch sup|rebobin|spectrom|fan-coil"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="st">"gravadora|processadora|determinadora|conica|brochad|medidor|limadora"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16"></a>  <span class="st">"exaust|laminadora|determinad|analisador|ferdimat|torre|rompedor|transformad"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="st">"raio x|elevador|pantografo|frezad|evaporador|guilhotina|ensaio de tracao"</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19"></a>rx_escritorio <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-20"><a href="#cb1-20"></a>  <span class="st">"gabinete|cal?deira|mesa|ar condicionado|arquivo|estabilizador"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21"></a>  <span class="st">"telefon|armario|mouse|bebedour|computador|bancada|forno|microondas|grampea"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="st">"impressora|etiqueta|fax|papel|rack|switch|ventilador|monitor|estante|geladeira"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23"></a>  <span class="st">"lacre|escritorio|papel|papeis"</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25"></a>rx_imovel <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-26"><a href="#cb1-26"></a>  <span class="st">"casa|terreno|imovel|predio|imoveis|fazenda|conjunto|usina"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27"></a>  <span class="st">"galpao|estacao|estufa|chacara|sitio|bloco|apartamento|hotel"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28"></a>  <span class="st">"setor de producao|loja"</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-30"><a href="#cb1-30"></a>rx_credito <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-31"><a href="#cb1-31"></a>  <span class="st">"credito|carteira|titulo|acoes"</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33"></a>rx_imaterial <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-34"><a href="#cb1-34"></a>  <span class="st">"marca|musica|inpi"</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36"></a>rx_diversos <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-37"><a href="#cb1-37"></a>  <span class="st">"sucata|caixa|bolsa|mala|colchao|carrinho|roupeiro"</span>,</span>
+<span id="cb1-38"><a href="#cb1-38"></a>  <span class="st">"mochila|esmeril"</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a>) <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">"|"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40"></a>rx_lote <span class="ot">&lt;-</span> <span class="st">"lote"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="processo-de-geração-de-dados-pgd-14" class="slide level2 smaller">
+<h2>Processo de Geração de Dados (PGD)</h2>
+<h4 id="boas-práticas-12">Boas práticas</h4>
 <p>Para cada <strong>transformação de dados</strong> também devemos dizer que mudanças nós fizemos nos dados.</p>
 <ul>
 <li><p>Existem transformações de dados que alteram o PGD e existem transformações que não o fazem. Temos de documentar apenas as alterações que mudam o PGD.</p></li>
@@ -598,12 +1868,25 @@ Total
 </ul></li>
 </ul>
 </section>
-<section id="processo-de-geração-de-dados-pgd-11" class="slide level2 smaller">
+<section id="processo-de-geração-de-dados-pgd-15" class="slide level2 smaller">
 <h2>Processo de Geração de Dados (PGD)</h2>
-<h4 id="boas-práticas-9">Boas práticas</h4>
+<h4 id="boas-práticas-13">Boas práticas</h4>
+<p>Quando <strong>utilizamos bases de dados prontas</strong>, precisamos tentar descobrir como os dados são gerados.</p>
+<div class="fragment">
 <ul>
-<li>Mas e quando a base de dados não é nossa? Temos que tentar descobrir como os dados são gerados.</li>
+<li>Podemos enviar email para a entidade/pessoa que criou a base</li>
 </ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Podemos presumir algumas informações sobre os dados</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Mas na impossibilidade de qualquer uma dessas estratégias, haverá grande incerteza subjetiva a respeito desses dados. Não será possível avaliar a confiabilidade deles.</li>
+</ul>
+</div>
 </section></section>
 <section id="section-1" class="title-slide slide level1 center" data-background="#fff">
 <h1></h1>
