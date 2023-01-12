@@ -1,0 +1,248 @@
+---
+title: "Metodologia"
+subtitle: "Uma técnica de pesquisa"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+## Ementa do curso {.smaller}
+
+# Uma técnica de pesquisa {.slide-title}
+
+## O que vamos ver?
+
+Hoje vamos ver uma técnica de pesquisa muito utilizada na ABJ. É a técnica que utilizamos nas nossas pesquisas do tipo Observatórios. 
+
+Escolhemos apresentar esta técnica de pesquisa porque: 
+
+(1) ela é fazível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados; 
+(2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui. 
+
+
+## Visão geral da técnica
+
+1. Listagem de processos
+    - Definição de escopo
+    - Amostragem
+    - Viés de seleção
+1. Classificação dos processos
+    - Processo de geração de dados (PGD)
+    - Operacionalização de conceitos
+1. Análises
+    - Técnicas de estatística
+    - Métodos mistos
+    
+# Listagem de processos  {.slide-title}
+
+## Informações iniciais {.smaller}
+
+::: {.fragment}
+- **O que é?** A listagem de processos é uma etapa da metodologia em que elaboramos uma lista com *TODOS* os processos que estão dentro do nosso escopo.
+:::
+
+::: {.fragment}
+- **Delimitação de escopo.** É na hora da listagem de processos que você precisa pensar no escopo da pesquisa, pois listar os processos pressupõe delimitar o escopo.
+  - **Pesquisa prospectiva ou retrospectiva?** Isso acontece por causa da forma como listamos os processos, isto é, por causa dos diferentes sistemas que existem para fazer isso. A depender do sistema escolhido, teremos uma pesquisa prospectiva ou retrospectiva.
+:::
+
+::: {.fragment}
+- **Amostragem** É somente a partir da listagem dos processos que podemos tomar a decisão de se vamos analisar todos os processos da base ou se vamos amostrá-la, ou seja, se a pesquisa será populacional ou amostral. 
+  - Caso a gente decida a amostrar os processos, é somente com a listagem dos processos que poderemos realizar esse procedimento, pois é somente com o número total de processos que podemos (a) estipular o número de processos que devem ser amostrados; (b) realizar uma amostragem aleatória simples.
+:::
+
+## Como listar os processos? {.smaller}
+
+A primeira etapa para listar os processo é descobrir quais são os sistemas em que se encontram os processos de interesse. 
+
+## [TJSP/CJSG - Pesquisa](https://esaj.tjsp.jus.br/cjsg/consultaCompleta.do)
+
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/cjsg-pesquisa.png")
+```
+
+## TJSP/CJSG - Resultado
+
+```{r}
+#| out.width: "80%"
+#| fig.position: 'center'
+knitr::include_graphics("img/cjsg-resultados-resumo.png")
+```
+
+## CJSG - Resultado
+
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/cjsg-resultados.png")
+```
+
+## [TJSP/DJE - Pesquisa](https://esaj.tjsp.jus.br/cdje/index.do)
+
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/dje-pesquisa.png")
+```
+
+## TJSP/DJE - Resultados
+
+::: {.center}
+<iframe src="img/dje-resultados-1.svg" width="810" height="450"></iframe>
+:::
+
+## [CVM - Pesquisa](https://conteudo.cvm.gov.br/sancionadores)
+
+::: {.center}
+```{r}
+#| out.width: "84%"
+#| fig.position: 'center'
+knitr::include_graphics("img/cvm-pesquisa.png")
+```
+:::
+
+## CVM - Resultado
+
+::: {.center}
+```{r}
+#| out.width: "66%"
+#| fig.position: 'center'
+knitr::include_graphics("img/cvm-resultados.png")
+```
+:::
+
+## [Datajud - Pesquisa](https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html)
+
+::: {.center}
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/datajud-pesquisa.png")
+```
+:::
+
+## [Datajud - Pesquisa](https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html)
+
+::: {.center}
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/datajud-pesquisa-ex.png")
+```
+:::
+## Datajud - Resultado
+
+```{r}
+#| out.width: "100%"
+#| fig.position: 'center'
+knitr::include_graphics("img/datajud-download.png")
+```
+
+## Datajud - Resultado {.smaller}
+
+```{r}
+abjData::datajud_mg |> 
+  head(20) |> 
+  knitr::kable(
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  ) |> 
+  kableExtra::kable_styling("striped", full_width = F) |> 
+  kableExtra::scroll_box(width = "1000px", height = "450px")
+```
+
+## [Datajud - Ferramenta da ABJ](https://github.com/abjur/datajudScraper)
+
+::: {.center}
+```{r}
+#| out.width: "80%"
+#| out.height: "80%"
+#| fig.position: 'center'
+knitr::include_graphics("img/datajud-abj.png")
+```
+:::
+
+## Ferramentas
+
+```{r}
+tibble::tibble(
+  `Fonte de pesquisa` = c("CJPG/CJSG", "DJE", "CVM", "Datajud"),
+  `Indexador` = c("Data da decisão", "Data de distribuição", "Data da decisão", "Data de distribuição"),
+  `Escopo temporal` = c("Retrospectivo", "Prospectivo", "Retrospectivo", "Prospectivo")
+) |> 
+  knitr::kable(
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+
+## Produto final
+
+:::: columns
+::: {.column width="20%"}
+![](img/lista-processos.png)
+:::
+
+::: {.column width="80%"}
+- A etapa de listagem de processos vai sempre resultar em uma planilha contendo *TODOS* os processos que fazem parte do escopo. 
+
+::: {.fragment}
+#### Problemas
+- Cifra oculta
+- "Lixo"
+:::
+:::
+::::
+
+## Case: Falências de SP
+
+::: {.center}
+![](img/obsFase3.png)
+:::
+
+- Listagem pelo DJE
+- TPUs do CNJ e Classe Processual
+- Cifra oculta x Lixo
+
+## Case: Falências de SP {.smaller}
+
+**Etapa 1 - Acesso ao DJE**
+
+:::: columns
+::: {.column width="70%"}
+<iframe src="img/dje-resultados-1.svg" width="810" height="550"></iframe>
+:::
+::: {.column width="30%"}
+- Baixar todos os DJEs de todos os dias dentro do escopo (jan/2010-dez/2020)
+- Transformar cada página em um texto
+- Procurar no texto por palavras que remetam a falência, por exemplo, "falida", "falência", "faliu"
+- Extrair, de todas as páginas (e da anterior e da seguinte também) que contém alguma menção a falência, o número de todos os processos
+:::
+::::
+
+## Case: Falências de SP {.smaller}
+
+**Etapa 2 - Filtragem com base nas TPUs**
+
+
+# Classificação dos processos {.slide-title}
+
+## Classificação dos processos
+
+# Análises {.slide-title}
+
+## Análises
