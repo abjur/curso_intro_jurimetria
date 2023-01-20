@@ -58,10 +58,10 @@ abjData::litigiosidade |>
 
 ## Como construir? Visão geral
 
-- Não existe na forma univariada; só existe a partir do bivariado.
-- Nos dois eixos deve haver uma variável numérica. 
-- Cada ponto no gráfico representa uma observação. Os eixos são características dessa observação.
-- Mostra a associação entre duas variáveis numéricas.
+-   Não existe na forma univariada; só existe a partir do bivariado.
+-   Nos dois eixos deve haver uma variável numérica.
+-   Cada ponto no gráfico representa uma observação. Os eixos são características dessa observação.
+-   Mostra a associação entre duas variáveis numéricas.
 
 ## Interpretações: Associação
 
@@ -110,18 +110,6 @@ patchwork::wrap_plots(p_positivo, p_negativo, ncol = 2)
 ```{r}
 #| fig-width: 11.0
 #| fig-height: 6.0
-da_final <- obsFase2::da_relatorio |> 
-  dplyr::select(
-    id_processo = n_processo,
-    divida,
-    remuneracao_liquida = remuneracao_liquida_arrumado,
-    parcelado,
-    capital,
-    deferido
-  )
-
-da_deferido <- da_final |> 
-  dplyr::filter(deferido == "Sim")
 
 si <- function(x) {
   breaks <- c(0, 10^c(M = 3, MM = 6, B = 9))
@@ -136,7 +124,18 @@ si <- function(x) {
                  suffix = suffix)
 }
 
-da_deferido |> 
+da_rjsp <- obsFase2::da_relatorio |> 
+  dplyr::select(
+    id_processo = n_processo,
+    divida,
+    remuneracao_liquida = remuneracao_liquida_arrumado,
+    parcelado,
+    capital,
+    deferido
+  ) |> 
+  dplyr::filter(deferido == "Sim")
+
+da_rjsp |> 
   dplyr::filter(!is.na(divida), !is.na(remuneracao_liquida)) |> 
   dplyr::filter(
     remuneracao_liquida > 1000
@@ -162,6 +161,83 @@ da_deferido |>
   ) +
   ggplot2::theme(legend.position = "bottom")
 ```
+
+## Interpretações: Legalidade
+
+```{r}
+viridis <- viridis::viridis(4, begin=.2, end=.8, direction=1)
+
+da_crsfn <- obsCRSFN::da_crsfn_tidy |> 
+  dplyr::filter(conhecimento == "Sim") |> 
+  dplyr::mutate(
+    modificou_cvm = dplyr::case_when(
+      recurso_tipo == "Recurso de ofício" & v_resultado %in% c("Parcialmente favorável", "Totalmente favorável") ~ "Não",
+      recurso_tipo == "Recurso de ofício" & !(v_resultado %in% c("Parcialmente favorável", "Totalmente favorável")) ~ "Sim",
+      recurso_tipo == "Recurso voluntário" & v_resultado %in% c("Parcialmente favorável", "Totalmente favorável") ~ "Sim",
+      recurso_tipo == "Recurso voluntário" & !(v_resultado %in% c("Parcialmente favorável", "Totalmente favorável")) ~ "Não"
+    )
+  ) 
+
+
+n_multa <- da_crsfn |> 
+  dplyr::select(id, modificou_cvm, v_valor_final_multa, v_multa_inicial) |> 
+  dplyr::mutate(
+    dplyr::across(
+      .cols = where(is.numeric),
+      .fns = ~ifelse(is.na(.x), 0, .x)
+    ),
+    multa_teve = dplyr::case_when(
+      v_valor_final_multa == 0 & v_multa_inicial == 0 ~ FALSE,
+      TRUE ~ TRUE
+    )
+  ) |>
+  dplyr::filter(
+    modificou_cvm == "Sim",
+    multa_teve
+  ) |>
+  nrow()
+
+da_crsfn |> 
+  dplyr::select(id, modificou_cvm, v_valor_final_multa, v_multa_inicial) |> 
+  dplyr::mutate(
+    dplyr::across(
+      .cols = where(is.numeric),
+      .fns = ~ifelse(is.na(.x), 0, .x)
+    ),
+    multa_teve = dplyr::case_when(
+      v_valor_final_multa == 0 & v_multa_inicial == 0 ~ FALSE,
+      TRUE ~ TRUE
+    ),
+    tipo_modificacao = dplyr::case_when(
+      v_valor_final_multa == 0 & v_multa_inicial > 0 ~ "Extinção da multa", #"Recurso voluntário totalmente procedente"
+      v_valor_final_multa > 0 & v_multa_inicial == 0 ~ "Condenação por multa", # "Recurso de ofício procedente"
+      v_valor_final_multa < v_multa_inicial ~ "Redução da multa", # "Recurso voluntário parcialmente procedente"
+      v_valor_final_multa == v_multa_inicial ~ "Não houve modificação" # "Recurso voluntário improcedente"
+      # Vou adicionar a categoria "Recurso de ofício improcedente" e colorir de vermelho
+    )
+  ) |> 
+  dplyr::filter(
+    modificou_cvm == "Sim",
+    multa_teve
+  ) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = v_valor_final_multa+1, y = v_multa_inicial+1, color = tipo_modificacao) +
+  ggplot2::geom_hline(yintercept = 1, color = viridis[1], linetype = 2) +
+  ggplot2::geom_vline(xintercept = 1, color = viridis[2], linetype = 2) +
+  ggplot2::geom_abline(slope = 1, intercept = 0, color = viridis[3], linetype = 2) +
+  ggplot2::geom_point(size=1.5) +
+  ggplot2::scale_x_log10(limits = c(1,10^8), breaks = c(10^(0:8)), labels = c("0", "10", "100", "1M", "10M", "100M", "1MM", "10MM", "100MM")) +
+  ggplot2::scale_y_log10(limits = c(1,10^8), breaks = c(10^(0:8)), labels = c("0", "10", "100", "1M", "10M", "100M", "1MM", "10MM", "100MM")) +
+  ggplot2::scale_colour_manual(values = viridis) +
+  ggplot2::labs(
+    x = "Multa no CRSFN",
+    y = "Multa na CVM"
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+```
+
+
 
 # {background="#fff"}
 

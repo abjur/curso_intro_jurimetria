@@ -314,7 +314,7 @@
   </style>
   <link href="a02_escopo_files/libs/panelset-0.2.6/panelset.css" rel="stylesheet">
   <script src="a02_escopo_files/libs/panelset-0.2.6/panelset.js"></script>
-  <script src="a02_escopo_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="a02_escopo_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
   <script src="a02_escopo_files/libs/viz-1.8.2/viz.js"></script>
   <link href="a02_escopo_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
   <script src="a02_escopo_files/libs/grViz-binding-1.0.9/grViz.js"></script>
@@ -562,8 +562,8 @@
 <h4 id="o-ciclo-vicioso-de-são-paulo">O ciclo vicioso de São Paulo</h4>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-ba4e24fa0b19483ab752" style="width:90%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ba4e24fa0b19483ab752">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-45d06bc5f55625c49f3a" style="width:90%;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-45d06bc5f55625c49f3a">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>

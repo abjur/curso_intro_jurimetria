@@ -51,7 +51,9 @@ Viés legislativo: "Além do viés do fato, existe outra falsa fonte de viés ju
 
 #### b) A partir destes vieses apresentados pelos autores, discorra criticamente sobre a operacionalização realizada no artigo. 
 
-A operacionalização de "viés judicial" por meio da proporção de decisões favoráveis ao devedor no STJ possui seus limites, como vimos pelos viéses. Entretanto, os autores explicitaram com muita clareza que limites são estes. A pesquisa, dessa forma, foi objetiva e honesta ao explicitar todas as suas limitações. 
+A operacionalização de "viés judicial" por meio da proporção de decisões favoráveis ao devedor no STJ possui seus limites, como vimos pelos viéses. Entretanto, é importante notar que esses limites não afetam igualmente toda e qualquer conclusão possível do artigo. Existem duas conclusões possíveis para o artigo: (1) conclusões que entendem que EXISTE viés pró-devedor e (2) conclusões que entendem que NÃO EXISTE esse viés. 
+
+No primeiro caso, por causa das limitações de operacionalização, devemos olhar com ceticismo para essa conclusão, uma vez que não é possível distinguir com tanta clareza o que seria uma conclusão real de que existe viés pró-devedor e o que seria uma conclusão equivocada de que existe viés judicial pró-devedor, enquanto na verdade os resultados encontrados se deram única e exclusivamente por causa dos viéses legislativo e do fato. Quanto ao segundo tipo de conclusão, podemos confiar totalmente nelas, uma vez que os viéses legislativo e do fato tenderiam a fazer gerar uma conclusão que atesta a existência de viés judiical pró-devedor. Ou seja, os viéses aumentam a chance de a conclusão dizer que EXISTE viés judicial pró-devedor e, portanto, se mesmo com esses viéses os resultados ainda mostrarem que não existe viés judicial pró-devedor, então essa conclusão é bem robusta. 
 
 \newpage
 
@@ -61,34 +63,30 @@ A operacionalização de "viés judicial" por meio da proporção de decisões f
 
 ### Exercício 1. Descreve as características de um JH e de um PE
 
-1. Conhecimento prévio;
-2. Expertise;
-3. Relações informais com os atores institucionais;
-4. Reputação e credibilidade;
-5. Interesse normativo. 
+O JH é um litigante que está o tempo todo no Judiciário, em litigâncias repetitivas, já o PE é um litigante que aparece de vez em quando em conflitos judiciais. 
 
 ### Exercício 2. Uma pesquisadora gostaria de realizar uma pesquisa para testar se os JHs possuem, de fato, mais vantagens que os PEs nos processos. Para isso, foi necessário operacionalizar os conceitos de Jogador Habitual e Participante Eventual. A seguir, discuta algumas possibilidades de operacionalização que a pesquisadora deseja realizar. 
 
 ### a) O CNJ, em 2012, realizou um estudo a respeito dos grandes litigantes, elencando quem são os 100 maiores litigantes dos Tribunais de Justiça. Depois, em 2015, a Associação Brasileira de Magistrados atualizou os dados (mas apenas para alguns estados). A partir destes estudos, a pesquisadora decidiu operacionalizar os JHs como as partes que aparecem nestes dois estudos [não é preciso ler os relatórios para responder a essa questão].
 
-Há várias considerações a se fazer a respeito dessa operacionalização:
+Limitação da operacionalização: a operacionalização do conceito, neste caso, é muito restritiva, de forma que existem JHs que não serão considerados como tal no estudo. Podemos dizer, com certeza, que todos os JHs considerados como tais são, de fato JHs, mas não podemos dizer que todos os JHs de fato foram considerados neste estudo. 
 
-1. O nome dos litigantes que consta nas listas pode variar a sua escrita ao longo dos processos. Então é possível que um litigante considerado como LH para essa pesquisa fique de fora na hora da operacionalização, simplesmente porque a grafia de seu nome está diferente do que consta nos relatórios. 
-2. Por mais que essas listas dos 100 maiores litigantes apresentem partes muito frequentes no Judiciário, não é em todo processo que elas aparecerem que elas serão consideradas como JHs Em alguns processos, uma parte frequente no Judiciário pode ser uma parte inédia, meramente incidental, não possuindo qualquer expertise ou interesse normativo nela. 
-3. Existem mais partes que os litigantes apresentados na lista que poderiam ser considerados como JH. 
+Implicação da operacionalização: Há duas conclusões possíveis para o estudo: (1) as vantagens dos LHs se convertem em decisões mais favoráveis aos LHs; (2) as vantagens dos LHs não gera mais decisões favoráveis a eles.
+A restritividade da operacionalização do escopo limita apenas as conclusões do tipo (2), sobre a igualdade de vantagens entre LH e PE. Isso acontece porque, se a pesquisa observar que não existe diferença significativa entre LH e PE, isso pode se dar tanto porque (i) _de fato_ não existe diferença significativa entre entre eles ou porque (ii) como foram considerados vários LHs dentro do grupo de PEs, então a igualdade de vantagens pode ter se dado simplesmente porque os dois grupos que estão sendo comparados, na verdade, são grupos parecidos, uma vez que no grupo de LHs existem apenas LHs, mas no grupo de PEs existem tanto PEs, como LHs. 
+
+Então conclusão (2) fica prejudicada, mas a conclusão oposta, isto é, a conclusão (1), não. Ou seja, mesmo se a operacionalização tenha sido muito restritiva, se o estudo encontrar que apesar dessa operacionalização ainda foi possível encontrar uma diferença significativa de vitória para PE e LH, então essa conclusão será válida!
 
 ### b) A pesquisadora coletou todos os dados para realizar a sua pesquisa, de forma que uma das informações que ela tinha era o nome de cada uma das partes. A partir disso, ela contou o número de vezes que cada um dos nomes apareciam ao longo dos processos. Como ela estava analisando apenas a Justiça Estadual, ela achou que seria razoável dizer que as partes que apareciam mais de 100 vezes seriam consideradas JHs. 
 
-O problema dessa operacionalização é o _corte_. Qual é o corte preciso para se dizer isso? Por que não consideramos que um LH é aquele que aparece em mais de 30 processos? Ou 1000? Ao mesmo tempo em que é razoável supor que, quanto mais processos uma parte aparece, mais expertise ela tem nesse tipo de judicialização e mais ela pode desenvolver uma estratégia normativa, também não podemos dizer com muita convicção qual é o número exato de processos que uma parte precisa participar para ser considerada como um JH.
+Limitação da operacionalização: Novamente, a operacionalização deste caso foi muito restritiva. Neste caso, a restritividade se deu por causa do _corte_ escolhido. Nem sempre o corte será restritivo, pois, por exemplo, seria possível considerar que um JH é aquele que participa de pelo menos 5 processos, mas neste caso foi, pois a nota de corte é muito alta. 
+
+Implicação da operacionalização: A implicação, neste caso, é exatamente a mesma do item anterior. Como a limitação foi de restritividade, então a limitação se dá em relação às conclusões de que não existe diferença significativa entre JH e PE.
 
 ### c) A pesquisadora, a partir do nome das partes, percebeu que era possível classificá-las como pessoas jurídicas de direito público, pessoas jurídicas de direito privado e pessoas físicas, sendo que as pessoas físicas seriam sempre as partes residuais (ou seja, as que não se enquadram em nenhum critério). A partir disso, ela estabeleceu que todas as pessoas jurídicas, seja de direito público, seja de direito privado, seriam consideradas como JHs; e que todo o resto, seria considerado como PE. 
 
-Há várias considerações a se fazer a respeito dessa operacionalização:
+Limitação da operacionalização: Neste caso, a operacionalização gerou o efeito inverso: ao invés de ela ser muito restritiva, ela é muito ampla, ou seja, foram considerados como JHs mais JHs do que realmente há, incluindo, sem querer, também alguns PEs no grupo de JHs. Isso acontece porque nem todas as empresas são JHs. Existem empresas pequenas, como MEs ou EPPs, e mesmo sociedades anônimas não são necessariamente JHs, mas todos esses casos foram considerados como JHs.
 
-1. Existem pequenas empresas, tais como MEs e EPPs que definitivamente não poderiam ser consideradas como JHs. 
-2. Nem toda empresa possui interesse normativo nas judicializações. 
-3. As empresas podem aparecer nos processos de forma meramente incidental, não podendo ser consideradas como JH em muitas judicializações. 
-4. Existe uma discussão importante se o Estado pode ser considerado um JH. A questão é que o Estado está submetido a uma série de regras que obstruem a adoção de uma atuação estratégica. O simples fato de existir o reexame necessário para questões envolvendo o fisco já faz com que o INSS não tenha o direito de escolher com que recursos entrar ou não. O mesmo ocorre com o Ministério Público, que, por causa do princípio da obrigatoriedade, não pode decidir em que casos atuar ou não. Uma vez identificado que determinado caso se situa entre suas atribuições constitucionais, não há margem de escolha para atuar ou não, o que também dificulta a adoção de uma atuação estratégica no Judiciário. Se o Estado não for considerado como um JH, a operacionalização estará totalmente equivocada. Quem discute melhor essas questões é Ananda Palazzin de Almeida. Para a discussão do INSS como um JH, ver: ALMEIDA, Ananda Palazzin de. A Atuação do INSS como Litigante Habitual no Recurso Extraordinário No 631.2401. **Revista Eletrônica de Direito Processual – REDP**, v. 21, n. 3, ano 14, set./dez., 2020. Para a discussão do MP como JH, ver: ALMEIDA, Ananda Palazzin de. **O Ministério Público como litigante habitual: uma atuação estratégica?** Dissertação (Mestrado em Direito) - Faculdade de Direito, Universidade de São Paulo, São Paulo, 2019.
+Implicação da operacionalização: A implicação, neste caso é igual aos itens anteriores.
 
 \newpage
 
@@ -202,6 +200,8 @@ tibble::tibble(
   )
 ```
 
+Essa diferença existe porque, ao definirmos o escopo de processos de forma retrospectiva e limitarmos também o ano de entrada dos processos, introduzimos um **viés** nos dados, pois necessariamente estamos desconsiderando os casos que demoram mais tempo para serem concluídos. Esse viés faz com que o cálculo do tempo de duração dos processos gere resultados sistematicamente subestimados. 
+
 ### Exercício 2. Em quais situações a pesquisa prospectiva e retrospectiva dariam os mesmos resultados:
 
 ### a) para analisar o resultado das decisões dos processos (favorável, desfavorável ou parcialmente favorável)
@@ -249,30 +249,14 @@ Trechos que sustentam isso:
 
 #### a) O que fica de fora com essa operacionalização?
 
-A política pode ser judicializada em outros tipos ações. Os exemplos mais significativos são as ações civis públicas e ações populares. 
+A política pode ser judicializada em outros tipos ações. Alguns exemplos são são as ações civis públicas e ações populares. Mas podemos também pensar nas ações eleitorais, bem como em todo o controle difuso de constitucionalidade. 
+
+Além disso, usar os valores de frequência absoluta de casos de ações constitucionais no STF por ano não diz muito. Primeiro porque os casos no STF podem aumentar de ano a ano simplesmente porque a quantidade total de casos a serem julgados pelo tribunal aumentou, e não porque existem mais litígios de controle de constitucionalidade. Para isso, haveria de ter um valor proporcional, do quanto que essas ações estão ocupando os julgamentos totais por ano. Em segundo lugar, não é porque o STF está julgando mais ações constitucionais que existe mais judicialização da política. 
 
 #### b) Que impactos que isso pode ter para os resultados?
 
-Retirar da análise ações civis públicas e ações populares significa retirar da análise ações cuja competência são da sociedade civil. Pelo art. 103 da Constituição Federal, são legitimados a propor ADIN e ADC:
-
-1. o Presidente da República;
-1. a Mesa do Senado Federal;
-1. a Mesa da Câmara dos Deputados;
-1. a Mesa de Assembléia Legislativa ou da Câmara Legislativa do Distrito Federal;
-1. o Governador de Estado ou do Distrito Federal;
-1. o Procurador-Geral da República;
-1. o Conselho Federal da Ordem dos Advogados do Brasil;
-1. partido político com representação no Congresso Nacional;
-1. confederação sindical ou entidade de classe de âmbito nacional.
-
-Ou seja, são legitimados a entrar com ações constitucionais apenas atores institucionais partidários. 
-
-Para ações civis públicas e para ações populares, há outros legitimados. 
-
-No art. 5, LXXIII da CF há a previsão de que "qualquer cidadão é parte legítima para propor ação popular". Já para as ações civis públicas, o art. 5, V da Lei de Ação Civil Pública (Lei 7.347/1985) prevê que "têm legitimidade para propor a ação principal e a ação cautelar: V - a associação que, concomitantemente: a) esteja constituída há pelo menos 1 (um) ano nos termos da lei civil; b) inclua, entre suas finalidades institucionais, a proteção ao patrimônio público e social, ao meio ambiente, ao consumidor, à ordem econômica, à livre concorrência, aos direitos de grupos raciais, étnicos ou religiosos ou ao patrimônio artístico, estético, histórico, turístico e paisagístico."
-
-Assim, ao se ignorar as ações civis públicas e as ações populares, a sociedade civil organizada não participa dessa "política" que está sendo analisada no estudo. Então esse estudo está avaliando a judicialização da política por atores institucionais apenas. É uma ressalva importantíssima essa. 
+Essa operacionalização é muito inconsistente. Os problemas de operacionalização são muito graves, de forma que não é possível concluir nada sobre "judicialização da política" olhando para os dados sugeridos. 
 
 #### c) A premissa para realizar essa operacionalização é forte ou fraca?
 
-Se o estudo pretende falar da política em geral, é uma premissa forte. 
+É uma premissa forte, porque, para que o estudo consiga concluir _algo_ sobre judicialização da política a partir dos dados usados, ele precisa partir de muitos pressupostos que não são fáceis. 
