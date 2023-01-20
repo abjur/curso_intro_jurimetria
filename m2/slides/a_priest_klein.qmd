@@ -1,0 +1,227 @@
+---
+title: "Metodologia"
+subtitle: "Viés de seleção em processos judiciais"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+## Ementa do curso {.smaller}
+
+# Viés de seleção {.slide-title}
+
+## O que é viés?
+
+A palavra **viés**, em estatística, pode ter múltiplos significados. Em geral, a palavra indica que existe diferença entre o que está sendo usado para fazer um estudo e o que se deseja estudar.
+
+O tipo de viés mais conhecido é o *viés do estimador*. Ele é a *diferença entre a média de um estimador e o valor que está sendo estimado*. Por exemplo, ao estudar o valor médio de pedidos de indenização por dano moral em Alagoas (números fictícios), temos:
+
+- Valor real: R\$ 5.000,00
+- Média do estimador: R\$ 5.200,00
+- Viés: R\$ 5.200,00 - R\$ 5.000,00 = R\$ 200,00
+
+## O que é viés de seleção?
+
+__Viés de seleção__ é um tipo de viés estatístico, indicando uma diferença entre os __indivíduos que estamos estudando na base de dados__ de dados e __a população que desejamos estudar__.
+
+Coloquialmente, viés de seleção é uma forma de dizer que estamos __tirando conclusões sobre bananas ao estudar maçãs__. 
+
+Muitas vezes, no entanto, não é tão claro que estamos estudando maçãs.
+
+## Mecanismo de seleção
+
+Para não concluir sobre bananas usando maçãs, é importante entender o **mecanismo de seleção** que gera os dados que observamos. 
+
+O mecanismo de seleção é o passo-a-passo que leva um indivíduo que está na população de interesse para um indivíduo que está na nossa base de dados.
+
+O conceito ficará mais claro a partir de exemplos.
+
+## Exemplo de viés de seleção (medicina)
+
+Queremos estudar a __letalidade__ da Covid-19. Para isso, precisamos calcular a razão entre a quantidade de mortes e a quantidade de pessoas infectadas.
+
+Em um país fictício, o número de pessoas infectadas é calculado a partir dos relatórios de pacientes de hospitais.
+
+A estimativa de letalidade no país fictício ficou bem maior do que a letalidade real. Por quê?
+
+::: {.incremental}
+
+Nesse caso, a letalidade estimada apresentará viés, porque as pessoas que vão ao hospital tendem a apresentar sintomas mais graves que a população em geral.
+
+O mecanismo de seleção, nesse caso, é a __entrada no hospital__: uma pessoa só entra na base de dados se for para o hospital.
+
+:::
+
+## Exemplo de viés de seleção (guerra)
+
+Aviões foram enviados para a guerra, sendo que muitos caíram e os poucos que voltaram estavam com tiros nas pontas das asas. Os engenheiros, então colocaram mais proteções nas pontas das asas dos aviões, já que, estatisticamente, era a região mais atingidas.
+
+Os aviões reforçados continuaram caindo. Por quê?
+
+::: {.incremental}
+
+Nesse caso, os aviões que caíram __foram atingidos em outros lugares__, diferentes da ponta das asas. Ou seja, os engenheiros protegeram a parte menos importante do avião!
+
+O mecanismo de seleção, nesse caso, é a __queda do avião__: o avião só entra na base de dados se sobreviver à guerra.
+
+:::
+
+## Exemplo computacional
+
+```{r}
+#| eval: true
+set.seed(3)
+
+N <- 10000 # numero de pessoas infectadas
+letalidade <- 0.01 # letalidade real
+gravidade <- runif(N) # número aleatório indicando a gravidade da doença
+morreu_real <- gravidade > 1 - letalidade # indica se a pessoa morreu
+
+# hospitalizacao proporcional à gravidade
+hospitalizacao <- as.logical(rbinom(N, 1, gravidade))
+
+morreu_observados <- morreu_real[hospitalizacao]
+
+mean(morreu_observados)
+
+mean(morreu_real)
+
+```
+
+## Tipos de viés de seleção
+
+Existem vários tipos de viés de seleção
+
+- Amostragem (exemplos anteriores)
+- Auto-seleção (viés do voluntário)
+- Intervalo de tempo (vimos no módulo 1)
+- ...
+
+# Viés de seleção em processos judiciais {.slide-title}
+
+## Condições para litigar
+
+```{r}
+tibble::tribble(
+  ~opiniao_autor, ~opiniao_reu, ~acao,
+  "Vou ganhar", "Vou perder", "Acordo",
+  "Vou ganhar", "Vou ganhar", "Julgamento",
+  "Vou perder", "Vou perder", "Sem processo*",
+  "Vou perder", "Vou ganhar", "Sem processo"
+) |> 
+  knitr::kable(
+    col.names = c("Expectativa autor", "Expectativa réu", "Ação")
+  )
+```
+
+**O processo judicial só acontece se as expectativas das partes forem diferentes.**
+
+## Interesse e custo de litigar
+
+Vamos definir alguns valores agora:
+
+- $P_p$: Probabilidade do autor ganhar, segundo o autor (*plaintiff*)
+- $P_d$: Probabilidade do autor ganhar, segundo o réu (*defendant*)
+- $C_p$: Custo de litigar do réu
+- $C_d$: Custo de litigar do autor
+- $S_p$: Custo de acordo (*settlement*) do autor
+- $S_d$: Custo de acordo do réu
+- $J$: valor a ser pago pelo réu se o autor ganhar
+
+## Valor pedido e valor oferecido
+
+Considere uma negociação hipotética entre o autor e o réu. O valor de acordo desejado pelo autor (*asking price*) é
+
+$$
+A = P_pJ - C_p + S_p
+$$
+
+O componente $P_pJ + C_d$ indica um cenário de litígio: o autor gastaria $C_p$ ganharia, em média, $P_pJ$. O componente $S_p$ indica o custo de fazer o acordo (que pode ser zero).
+
+## Valor pedido e valor oferecido
+
+Já o valor oferecido pelo réu (*bidding price*) é dado por
+
+$$
+B = P_dJ + C_d - S_d
+$$
+O componente $P_dJ + C_d$ indica um cenário de litígio: o réu gastaria, em média, $P_pJ$ mais o custo do processo $C_p$. O componente $-S_d$ indica um cenário de acordo, onde o réu gastaria $S_d$.
+
+## Condição de Landes-Posner-Gould
+
+O processo só acontece se $A > B$. Ou seja, o valor de acordo pedido é maior que o valor oferecido. Fazendo contas, é possível chegar na formulação alternativa abaixo:
+
+$$
+P_p - P_d > \frac{C_p + C_d - S_p - S_d}{J}
+$$
+
+Ou seja, o processo só ocorre se a diferença de expectativas for maior que a diferença entre os custos de processo e os custos de acordo, em relação ao valor da indenização. 
+
+## Simulação LPG
+
+```{=html}
+<iframe src="https://abjur.shinyapps.io/lpgcond/" width="1000" height="500" frameBorder="0">Browser not compatible.</iframe>
+```
+
+# Priest & Klein {.slide-title}
+
+## O artigo
+
+O artigo, de 1984, discute as implicações da condição LPG quando variamos o nível de informação das partes.
+
+Se as partes tem um nível de informação (medido pela variância das expectativas) parecido, os valores de $P_p$ e $P_d$ são, em média, iguais. 
+
+Conforme o nível de informação aumenta, $P_p$ e $P_d$ vão ficando cada vez mais próximos, fazendo com que a ocorrência de um processo fique cada vez mais improvável.
+
+## O nível de mérito
+
+O artigo assume que um conflito possui um __nível de mérito__ $y$, desconhecido, que vem de uma distribuição de probabilidades também desconhecida. 
+
+O juiz, analisando o caso, decide se $y > y*$, sendo $y*$ um valor limítrofe: se $y > y*$, a decisão é favorável ao autor. Caso contrário, é favorável ao réu.
+
+## O teorema PK
+
+O teorema PK mostra que, conforme o nível de informação aumenta, os casos que acabam indo ao tribunal acabam ficando próximos do nível de mérito limítrofe $y*$, de forma simétrica. Como efeito, a probabilidade de vitória do autor fica em torno de 50%.
+
+Ou seja, o teorema mostra que, assumindo certas condições, como simetria de informação das partes e a validade da condição LPG, as proporções de vitória observadas nos tribunais serão de 50%.
+
+## Simulação PK
+
+```{=html}
+<iframe src="https://abjur.shinyapps.io/pktheorem/" width="1200" height="800" frameBorder="0">Browser not compatible.</iframe>
+```
+
+
+## Implicações do teorema PK
+
+O teorema mostra que os casos observados do judiciário não são uma amostra aleatória dos conflitos que ocorrem na sociedade. Mais do que isso, o teorema mostra que as taxas de vitória sempre ficarão em torno de 50%.
+
+Isso pode levar a uma (falsa) ideia de que não é possível fazer inferências sobre o judiciário a partir da análise de taxas de vitória.
+
+## Inferências possíveis
+
+Taxas muito altas ou muito baixas podem significar que os custos de litigar não estão bem ajustados ou que existe assimetria de informação entre as partes. 
+
+Mudanças legislativas podem implicar em alterações temporárias nas taxas de vitória.
+
+## Conclusões
+
+O teorema tem fortes implicações na análise de processos judiciais.
+
+- Sua existência deve ser levada em estudos que envolvam análise de proporção de vitórias.
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
