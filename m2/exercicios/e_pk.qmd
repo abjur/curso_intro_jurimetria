@@ -72,6 +72,8 @@ dados_sim |>
 
 ```
 
+O aplicativo [deste link](https://abjur.shinyapps.io/pk_theorem_assimetrico/) é o mesmo apresentado em aula, mas permitindo variar o nível de informação das partes separadamente.
+
 \clearpage
 
 ## Perguntas
