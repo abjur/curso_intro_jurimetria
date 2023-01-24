@@ -181,7 +181,7 @@ Ou seja, o processo só ocorre se a diferença de expectativas for maior que a d
 
 O artigo, de 1984, discute as implicações da condição LPG quando variamos o nível de informação das partes.
 
-Se as partes tem um nível de informação (medido pela variância das expectativas) parecido, os valores de $P_p$ e $P_d$ são, em média, iguais. 
+Se as partes têm um nível de informação (medido pela variância das expectativas) parecido, os valores de $P_p$ e $P_d$ são, em média, iguais. 
 
 Conforme o nível de informação aumenta, $P_p$ e $P_d$ vão ficando cada vez mais próximos, fazendo com que a ocorrência de um processo fique cada vez mais improvável.
 
