@@ -7,7 +7,7 @@
 <link href="a_barplot_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="a_barplot_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_barplot_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.313">
 
   <title>Visualizações</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,10 +18,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="a_barplot_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="a_barplot_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -317,11 +322,14 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
+<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="quarto-title-block center">
   <h1 class="title">Visualizações</h1>
-  <p class="subtitle">Gráfico de barra</p>
-</section>
+  <p class="subtitle">Gráfico de barras</p>
 
+<div class="quarto-title-authors">
+</div>
+
+</section>
 <section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
 </section>
@@ -334,9 +342,14 @@
 </section>
 <section id="como-construir" class="slide level2">
 <h2>Como construir?</h2>
-<p>Em um eixo, ficam as categorias. No outro, fica alguma medida dessa categoria, seja a sua contagem ou sua proporção.</p>
-<p>O eixo que contém as categorias é o eixo que contém a variável que estamos descrevendo. O outro eixo é apenas uma característica dessa variável que estamos utilizando para descrever a variável de interesse.</p>
-<p>É possível haver uma segunda variável, além da categoria, que podemos representar de algumas formas distintas. Então dizemos que existem gráficos de barras univariados e os bivariados.</p>
+<ul>
+<li>Variáveis categóricas ou variáveis numéricas discretas</li>
+<li>Eixos: Variável x Contagem/Proporção
+<ul>
+<li>A contagem/proporção não é uma variável, mas é uma característica de cada categoria</li>
+</ul></li>
+<li>É possível colocar outra variável além da variável inicial no gráfico de barras. Essa nova variável deve ser uma variável categórica também. Daí a diferença de gráficos univariados (só tem uma variável representada) e bivariados (tem duas variáveis representadas)</li>
+</ul>
 </section>
 <section id="como-construir---univariados" class="slide level2">
 <h2>Como construir? - Univariados</h2>
@@ -346,12 +359,12 @@
 <h2>Como construir? - Bivariados (Empilhados)</h2>
 
 <img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="como-construir---bivariados-agrupados" class="slide level2">
-<h2>Como construir? - Bivariados (Agrupados)</h2>
+<section id="como-construir---bivariados-lado-a-lado" class="slide level2">
+<h2>Como construir? - Bivariados (lado a lado)</h2>
 
 <img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="como-construir---bivariados-em-camadas" class="slide level2">
-<h2>Como construir? - Bivariados (Em camadas)</h2>
+<section id="como-construir---bivariados-camadas" class="slide level2">
+<h2>Como construir? - Bivariados (camadas)</h2>
 
 <img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="como-construir---trivariados" class="slide level2">
@@ -372,7 +385,7 @@
 <p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
 <p><strong>(b)</strong> Gráficos empilhados permitem a comparação do valor total de cada item.</p>
 <p><strong>(c)</strong> Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.</p>
-<p><strong>(d)</strong> Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.</p>
+<p><strong>(d)</strong> Gráficos lado a lado permitem a comparação de todas as categorias dentro de um item.</p>
 </div>
 </div>
 </section>
@@ -382,14 +395,14 @@
 <p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
 </div>
 
-<img data-src="img/pie-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from Data to Viz. <strong>The Issue with Pie Chart</strong>. Disponível em: https://www.data-to-viz.com/caveat/pie.html</p></section>
+<img data-src="img/pie-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from <a href="https://www.data-to-viz.com/caveat/pie.html">Data to Viz</a>. <strong>The Issue with Pie Chart</strong>.</p></section>
 <section id="interpretações-a-1" class="slide level2">
 <h2>Interpretações (a)</h2>
 <div class="center mini-text">
 <p><strong>(a)</strong> É difícil comparar valores de diferentes categorias em gráficos de pizza.</p>
 </div>
 
-<img data-src="img/bar-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from Data to Viz. <strong>The Issue with Pie Chart</strong>. Disponível em: https://www.data-to-viz.com/caveat/pie.html</p></section>
+<img data-src="img/bar-datatoviz.png" class="r-stretch quarto-figure-center"><p class="caption">Fonte: from <a href="https://www.data-to-viz.com/caveat/pie.html">Data to Viz</a>. <strong>The Issue with Pie Chart</strong>.</p></section>
 <section id="interpretações-b" class="slide level2">
 <h2>Interpretações (b)</h2>
 <div class="center mini-text">
@@ -404,18 +417,26 @@
 <section id="interpretações-c" class="slide level2">
 <h2>Interpretações (c)</h2>
 <div class="center mini-text">
-<p><strong>(c)</strong> Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.</p>
+<p><strong>(c)</strong> Gráficos lado a lado permitem a comparação dos itens dentro de cada categoria.</p>
 </div>
 
 <img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="interpretações-d" class="slide level2">
 <h2>Interpretações (d)</h2>
 <div class="center mini-text">
-<p><strong>(d)</strong> Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.</p>
+<p><strong>(d)</strong> Gráficos por camadas permitem a comparação de todas as categorias dentro de um item.</p>
 </div>
 
-<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
-<section id="section" class="title-slide slide level1 center" data-background="#fff">
+<img data-src="a_barplot_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="quantidade-ou-proporção" class="slide level2">
+<h2>Quantidade ou proporção?</h2>
+<ul>
+<li><p>Depende do que queremos comunicar!</p></li>
+<li><p>É comum apresentar tanto a quantidade absoluta quanto a proporção, colocando a quantidade absoluta no eixo e a proporção em alguma anotação do gráfico (por exemplo, logo acima das barras)</p></li>
+<li><p>O objetivo do gráfico de barras é mostrar as diferenças entre os retângulos de forma visual. Se você perceber que está colocando muitas anotações nas barras, considere utilizar uma tabela.</p></li>
+</ul>
+</section></section>
+<section id="section" class="title-slide slide level1 center">
 <h1></h1>
 <p><img data-src="img/logo-abj-colorido.png" width="500"></p>
 <p><img src="img/logo-abj-colorido.png" class="slide-logo"></p>
@@ -640,12 +661,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -656,13 +680,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -714,7 +731,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copiada");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiada");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -744,31 +778,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

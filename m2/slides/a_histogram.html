@@ -7,7 +7,7 @@
 <link href="a_histogram_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="a_histogram_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_histogram_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.313">
 
   <title>Visualizações</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,10 +18,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="a_histogram_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="a_histogram_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -317,11 +322,14 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
+<section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="quarto-title-block center">
   <h1 class="title">Visualizações</h1>
   <p class="subtitle">Histograma</p>
-</section>
 
+<div class="quarto-title-authors">
+</div>
+
+</section>
 <section id="ementa-do-curso" class="slide level2 smaller">
 <h2>Ementa do curso</h2>
 </section>
@@ -340,18 +348,20 @@
 <h2>Como construir? Visão geral</h2>
 <ul>
 <li>Variáveis numéricas contínuas</li>
-<li>Eixos: x = variável; y = contagem</li>
+<li>Eixos: x = variável de interesse; y = contagem, criada automaticamente</li>
 <li>Podem ser bivariados, adicionando cores ao histograma</li>
 </ul>
 </section>
-<section id="como-construir-eixo-x" class="slide level2">
-<h2>Como construir? Eixo x</h2>
-<p>O eixo x contém uma linha contínua numérica. Dizemos que a linha é contínua porque ela é inteira preenchida, de forma que entre dois números, haverá sempre pelo menos um número intermediário entre eles. Por exemplo, entre 1 e 2, tem 0 1.5; entre o 1.5 e o 1, tem o 1.25. Entre o 1 e o 1.25, tem o 1.125. Entre o 1 e o 1.125, tem o 1.01. Entre o 1 e o 1.01, tem o 1.05 e assim por diante.</p>
-<p>Essa linha contém infinitos números, mas ela está delimitado a um intervalo, que vai do menor número encontrado na base, até o maior número encontrado na base. No nosso caso, o intervalo está dado entre 0 e 2000 dias</p>
+<section id="como-construir-variável-contínua" class="slide level2">
+<h2>Como construir? Variável contínua</h2>
+<p>O eixo x contém uma linha contínua numérica. Dizemos que a linha é contínua porque ela é inteira preenchida: entre dois números, sempre existe um número intermediário.</p>
+<p>Por exemplo, entre 1 e 2, tem 0 1.5; entre o 1.5 e o 1, tem o 1.25. Entre o 1 e o 1.25, tem o 1.125. Entre o 1 e o 1.125, tem o 1.01. Entre o 1 e o 1.01, tem o 1.05 e assim por diante.</p>
 </section>
 <section id="como-construir-bins-barras" class="slide level2">
 <h2>Como construir? Bins / Barras</h2>
-<p>Apesar de haver infinitos números sobre a linha do eixo x, não existem infintas barras sobre ele. Existe apenas um número finito de barras. Todas as barras possuem intervalos de igual amplitude. O tamanho de cada intervalo que dá origem às barras é calculado pela amplitude total, dividido pela quantidade de barras que teremos representadas.</p>
+<p>A linha do eixo x contém infinitos números, mas está delimitada entre o menor e o maior número encontrados na base. No nosso caso, os dados residem no intervalo entre 9 e 2049 dias.</p>
+<p>No histograma, construímos barras que possuem largura fixa, através de uma separação da linha em intervalos.</p>
+<p>Os intervalos que dão origem às barras que vamos mostrar.</p>
 </section>
 <section id="como-construir-bins-barras-1" class="slide level2 smaller">
 <h2>Como construir? Bins / Barras</h2>
@@ -363,13 +373,13 @@
 </div>
 </div>
 </div><div class="column" style="width:40%;">
-<p>No gráfico que estamos de base, o intervalo total é de 0 a 2000, o que dá uma amplitude de 2000. Se construirmos 5 barras neste histograma, teremos, os seguintes intervalos:</p>
+<p>No gráfico, os limites são de 9 a 2049. Se construirmos 5 barras de largura 500 neste intervalo, teremos, os seguintes intervalos:</p>
 <ul>
-<li>0 a 400 dias, que representamos como [0, 400)</li>
-<li>400 a 800 dias, que representamos como [400, 800)</li>
-<li>800 a 1200 dias, que representamos como [800, 1200)</li>
-<li>1200 a 1600 dias, que representamos como [1200, 1600)</li>
-<li>1600 a 2000 dias, que representamos como [1600, 2000]</li>
+<li>1 a 500 dias, representados com (0, 500]</li>
+<li>501 a 1000 dias, representados com (500, 1000]</li>
+<li>1001 a 1500 dias, representados com (1000, 1500]</li>
+<li>1501 a 2000 dias, representados com (1500, 2000]</li>
+<li>2001 a 2500 dias, representados com (2000, 2500]</li>
 </ul>
 </div>
 </div>
@@ -395,24 +405,24 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">[0, 400)</td>
-<td style="text-align: right;">877</td>
+<td style="text-align: left;">(0,500]</td>
+<td style="text-align: right;">914</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[400, 800)</td>
-<td style="text-align: right;">90</td>
+<td style="text-align: left;">(500,1000]</td>
+<td style="text-align: right;">66</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[800, 1200)</td>
-<td style="text-align: right;">21</td>
+<td style="text-align: left;">(1000,1500]</td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[1200, 1600)</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">[1600, 2000]</td>
+<td style="text-align: left;">(1500,2000]</td>
 <td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(2000,2500]</td>
+<td style="text-align: right;">1</td>
 </tr>
 </tbody>
 </table>
@@ -443,39 +453,31 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">[0,70.7)</td>
+<td style="text-align: left;">(0,70.3]</td>
 <td style="text-align: left;">514</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[70.7,141)</td>
-<td style="text-align: left;">200</td>
+<td style="text-align: left;">(70.3,141]</td>
+<td style="text-align: left;">198</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[141,212)</td>
-<td style="text-align: left;">66</td>
+<td style="text-align: left;">(141,211]</td>
+<td style="text-align: left;">68</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[212,283)</td>
-<td style="text-align: left;">43</td>
+<td style="text-align: left;">(211,281]</td>
+<td style="text-align: left;">42</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[283,353)</td>
-<td style="text-align: left;">37</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">[353,424)</td>
-<td style="text-align: left;">25</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">[424,495)</td>
-<td style="text-align: left;">25</td>
+<td style="text-align: left;">(281,352]</td>
+<td style="text-align: left;">38</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">…</td>
 <td style="text-align: left;">…</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[1929,2000]</td>
+<td style="text-align: left;">(2040,2110.3]</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
@@ -576,7 +578,6 @@
 <div class="cell">
 <div class="cell-output-display">
 <table>
-<caption>Tabela de frequência para os intervalos do histograma</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Intervalo</th>
@@ -585,24 +586,24 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">[0, 400)</td>
-<td style="text-align: right;">877</td>
+<td style="text-align: left;">(0,500]</td>
+<td style="text-align: right;">914</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[400, 800)</td>
-<td style="text-align: right;">90</td>
+<td style="text-align: left;">(500,1000]</td>
+<td style="text-align: right;">66</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[800, 1200)</td>
-<td style="text-align: right;">21</td>
+<td style="text-align: left;">(1000,1500]</td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[1200, 1600)</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">[1600, 2000]</td>
+<td style="text-align: left;">(1500,2000]</td>
 <td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(2000,2500]</td>
+<td style="text-align: right;">1</td>
 </tr>
 </tbody>
 </table>
@@ -876,12 +877,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -892,13 +896,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -950,7 +947,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copiada");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiada");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -980,31 +994,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

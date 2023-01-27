@@ -1,6 +1,6 @@
 ---
 title: "Visualizações"
-subtitle: "Gráfico de barra"
+subtitle: "Gráfico de barras"
 format: 
   revealjs:
       logo: "img/logo-abj-colorido.png"
@@ -17,6 +17,7 @@ title-slide-attributes:
   writing-mode: vertical-rl;
   preview-links: true
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE, 
@@ -42,10 +43,10 @@ cores_abj <- c("#102C68", "#AFCA0A", "#575756")
 
 ## Como construir?
 
-- Variáveis categóricas ou variáveis numéricas discretas
-- Eixos: Variável x Contagem/Proporção
-  - A contagem/proporção não é uma variável, mas é uma característica de cada categoria
-- É possível colocar outra variável além da variável inicial no gráfico de barras. Essa nova variável deve ser uma variável categórica também. Daí a diferença de gráficos univariados (só tem uma variável representada) e bivariados (tem duas variáveis representadas)
+-   Variáveis categóricas ou variáveis numéricas discretas
+-   Eixos: Variável x Contagem/Proporção
+    -   A contagem/proporção não é uma variável, mas é uma característica de cada categoria
+-   É possível colocar outra variável além da variável inicial no gráfico de barras. Essa nova variável deve ser uma variável categórica também. Daí a diferença de gráficos univariados (só tem uma variável representada) e bivariados (tem duas variáveis representadas)
 
 ## Como construir? - Univariados
 
@@ -108,7 +109,7 @@ patchwork::wrap_plots(bar_hor, bar_stack, ncol = 1) +
   )
 ```
 
-## Como construir? - Bivariados (Agrupados)
+## Como construir? - Bivariados (lado a lado)
 
 ```{r}
 bar_dodge <- consumo |>
@@ -139,7 +140,7 @@ patchwork::wrap_plots(bar_hor, bar_dodge, ncol = 1) +
   )
 ```
 
-## Como construir? - Bivariados (Em camadas)
+## Como construir? - Bivariados (camadas)
 
 ```{r}
 bar_facet <- consumo |>
@@ -186,38 +187,37 @@ consumo |>
 
 ## Interpretações
 
-:::: {.columns}
+::: columns
 ::: {.column width="70%"}
-
 ![Fonte: Marc Streit e Nils Gehlenborg. **Bar charts and box plots**. *Nature Methods*, v. 11, p. 117, 2014](img/Streit-Gehlenborg-2014.webp)
 :::
 
-::: {.column width="30%" .mini-text}
-**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+::: {.column .mini-text width="30%"}
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza.
 
 **(b)** Gráficos empilhados permitem a comparação do valor total de cada item.
 
 **(c)** Gráficos por camadas permitem a comparação dos itens dentro de cada categoria.
 
-**(d)** Gráficos agrupados permitem a comparação de todas as categorias dentro de um item.
+**(d)** Gráficos lado a lado permitem a comparação de todas as categorias dentro de um item.
 :::
-::::
+:::
 
 ## Interpretações (a)
 
 ::: {.center .mini-text}
-**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza.
 :::
 
-![Fonte: from Data to Viz. **The Issue with Pie Chart**. Disponível em: https://www.data-to-viz.com/caveat/pie.html](img/pie-datatoviz.png)
+![Fonte: from [Data to Viz](https://www.data-to-viz.com/caveat/pie.html). **The Issue with Pie Chart**.](img/pie-datatoviz.png)
 
 ## Interpretações (a)
 
 ::: {.center .mini-text}
-**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza. 
+**(a)** É difícil comparar valores de diferentes categorias em gráficos de pizza.
 :::
 
-![Fonte: from Data to Viz. **The Issue with Pie Chart**. Disponível em: https://www.data-to-viz.com/caveat/pie.html](img/bar-datatoviz.png)
+![Fonte: from [Data to Viz](https://www.data-to-viz.com/caveat/pie.html). **The Issue with Pie Chart**.](img/bar-datatoviz.png)
 
 ## Interpretações (b)
 
@@ -250,7 +250,7 @@ consumo |>
 ## Interpretações (c)
 
 ::: {.center .mini-text}
-**(c)** Gráficos agrupados permitem a comparação dos itens dentro de cada categoria.
+**(c)** Gráficos lado a lado permitem a comparação dos itens dentro de cada categoria.
 :::
 
 ```{r}
@@ -332,6 +332,14 @@ consumo |>
   ggthemes::theme_hc()
 ```
 
-#  {background="#fff"}
+## Quantidade ou proporção?
+
+-   Depende do que queremos comunicar!
+
+-   É comum apresentar tanto a quantidade absoluta quanto a proporção, colocando a quantidade absoluta no eixo e a proporção em alguma anotação do gráfico (por exemplo, logo acima das barras)
+
+-   O objetivo do gráfico de barras é mostrar as diferenças entre os retângulos de forma visual. Se você perceber que está colocando muitas anotações nas barras, considere utilizar uma tabela.
+
+# 
 
 ![](img/logo-abj-colorido.png){width="500"}

@@ -53,7 +53,7 @@ abjData::litigiosidade |>
     y = "Casos novos por 100 mil habitantes",
     x = "IDH"
   ) +
-  ggplot2::theme_minimal()
+  ggplot2::theme_minimal(14)
 ```
 
 ## Como construir? Visão geral
@@ -62,6 +62,7 @@ abjData::litigiosidade |>
 -   Nos dois eixos deve haver uma variável numérica.
 -   Cada ponto no gráfico representa uma observação. Os eixos são características dessa observação.
 -   Mostra a associação entre duas variáveis numéricas.
+-   O grau de associação também pode ser medido pela *correlação.* O gráfico de dispersão, no entanto, mostra uma informação mais rica do que a correlação consegue mostrar.
 
 ## Interpretações: Associação
 
@@ -83,7 +84,7 @@ p_positivo <- abjData::litigiosidade |>
     y = "Casos novos por 100 mil habitantes",
     x = "IDH"
   ) +
-  ggplot2::theme_minimal()
+  ggplot2::theme_minimal(12)
 
 p_negativo <- abjData::litigiosidade |>
   dplyr::filter(ano == min(ano)) |>
@@ -100,7 +101,7 @@ p_negativo <- abjData::litigiosidade |>
     y = "Casos novos por 100 mil habitantes",
     x = "Taxa de analfabetismo - 18 anos ou mais"
   ) +
-  ggplot2::theme_minimal()
+  ggplot2::theme_minimal(12)
 
 patchwork::wrap_plots(p_positivo, p_negativo, ncol = 2)
 ```
@@ -152,7 +153,7 @@ da_rjsp |>
   ggplot2::geom_abline(slope = 1, intercept = log10(0.05), colour = "black") +
   ggplot2::geom_hline(yintercept = 1e7, colour = "red", linetype = 2) +
   ggplot2::scale_colour_viridis_d(begin = 0.2, end = 0.8, direction = -1) +
-  ggplot2::theme_minimal(12) +
+  ggplot2::theme_minimal(14) +
   ggplot2::labs(
     x = "Dívida total",
     y = "Remuneração do AJ",
@@ -225,20 +226,20 @@ da_crsfn |>
   ggplot2::geom_hline(yintercept = 1, color = viridis[1], linetype = 2) +
   ggplot2::geom_vline(xintercept = 1, color = viridis[2], linetype = 2) +
   ggplot2::geom_abline(slope = 1, intercept = 0, color = viridis[3], linetype = 2) +
-  ggplot2::geom_point(size=1.5) +
+  ggplot2::geom_point(size=2.5) +
   ggplot2::scale_x_log10(limits = c(1,10^8), breaks = c(10^(0:8)), labels = c("0", "10", "100", "1M", "10M", "100M", "1MM", "10MM", "100MM")) +
   ggplot2::scale_y_log10(limits = c(1,10^8), breaks = c(10^(0:8)), labels = c("0", "10", "100", "1M", "10M", "100M", "1MM", "10MM", "100MM")) +
   ggplot2::scale_colour_manual(values = viridis) +
   ggplot2::labs(
     x = "Multa no CRSFN",
-    y = "Multa na CVM"
+    y = "Multa na CVM",
+    colour = "Tipo"
   ) +
-  ggplot2::theme_minimal() +
+  ggplot2::theme_minimal(14) +
   ggplot2::theme(legend.position = "bottom")
 ```
 
-
-
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
+

@@ -24,50 +24,49 @@ title-slide-attributes:
 
 ## O que vamos ver?
 
-Hoje vamos ver uma técnica de pesquisa muito utilizada na ABJ. É a técnica que utilizamos nas nossas pesquisas do tipo Observatórios. 
+Hoje vamos ver uma técnica de pesquisa muito utilizada na ABJ. É a técnica que utilizamos nas nossas pesquisas do tipo Observatórios.
 
-Escolhemos apresentar esta técnica de pesquisa porque: 
+Escolhemos apresentar esta técnica de pesquisa porque:
 
-(1) ela é fazível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados; 
-(2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui. 
-
+(1) ela é exequível com os conhecimentos de que você dispõe atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados;
+(2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui.
 
 ## Visão geral da técnica
 
-1. Listagem de processos
-    - Definição de escopo
-    - Amostragem
-    - Viés de seleção
-1. Classificação dos processos
-    - Processo de geração de dados (PGD)
-    - Operacionalização de conceitos
-1. Análises
-    - Técnicas de estatística
-    - Métodos mistos
-    
-# Listagem de processos  {.slide-title}
+1.  Listagem de processos
+    -   Definição de escopo
+    -   Amostragem
+    -   Viés de seleção
+2.  Classificação dos processos
+    -   Processo de geração de dados (PGD)
+    -   Operacionalização de conceitos
+3.  Análises
+    -   Técnicas de estatística
+    -   Métodos mistos
+
+# Listagem de processos {.slide-title}
 
 ## Informações iniciais {.smaller}
 
-::: {.fragment}
-- **O que é?** A listagem de processos é uma etapa da metodologia em que elaboramos uma lista com *TODOS* os processos que estão dentro do nosso escopo.
+::: fragment
+-   **O que é?** A listagem de processos é uma etapa da metodologia em que elaboramos uma lista com *TODOS* os processos que estão dentro do nosso escopo.
 :::
 
-::: {.fragment}
-- **Delimitação de escopo.** É na hora da listagem de processos que você precisa pensar no escopo da pesquisa, pois listar os processos pressupõe delimitar o escopo.
-  - **Pesquisa prospectiva ou retrospectiva?** Isso acontece por causa da forma como listamos os processos, isto é, por causa dos diferentes sistemas que existem para fazer isso. A depender do sistema escolhido, teremos uma pesquisa prospectiva ou retrospectiva.
+::: fragment
+-   **Delimitação de escopo.** É na hora da listagem de processos que você precisa pensar no escopo da pesquisa, pois listar os processos pressupõe delimitar o escopo.
+    -   **Pesquisa prospectiva ou retrospectiva?** Isso acontece por causa da forma como listamos os processos, isto é, por causa dos diferentes sistemas que existem para fazer isso. A depender do sistema escolhido, teremos uma pesquisa prospectiva ou retrospectiva.
 :::
 
-::: {.fragment}
-- **Amostragem** É somente a partir da listagem dos processos que podemos tomar a decisão de se vamos analisar todos os processos da base ou se vamos amostrá-la, ou seja, se a pesquisa será populacional ou amostral. 
-  - Caso a gente decida a amostrar os processos, é somente com a listagem dos processos que poderemos realizar esse procedimento, pois é somente com o número total de processos que podemos (a) estipular o número de processos que devem ser amostrados; (b) realizar uma amostragem aleatória simples.
+::: fragment
+-   **Amostragem.** É somente a partir da listagem dos processos que podemos tomar a decisão de se vamos analisar todos os processos da base ou se vamos amostrá-la, ou seja, se a pesquisa será populacional ou amostral.
+    -   Caso a gente decida a amostrar os processos, é somente com a listagem dos processos que poderemos realizar esse procedimento, pois é somente com o número total de processos que podemos realizar uma amostragem aleatória simples.
 :::
 
 ## Como listar os processos?
 
-- **Descobrir os sistemas.** A informação crucial para se listar processos é saber quais são os sistemas de pesquisa de processos disponíveis. 
-- **Listar uma base inicial de processos.** Com base nos sistemas disponíveis, podemos fazer um plano de extração dos processos, buscando listar todos os processos de interesse.
-- **Filtragens.** Muitas vezes, depois de extrairmos uma base inicial de processos, precisamos realizar procedimentos de filtragem.
+-   **Descobrir os sistemas.** A informação crucial para se listar processos é saber quais são os sistemas de pesquisa de processos disponíveis.
+-   **Listar uma base inicial de processos.** Com base nos sistemas disponíveis, podemos fazer um plano de extração dos processos, buscando listar todos os processos de interesse.
+-   **Filtragens.** Muitas vezes, depois de extrairmos uma base inicial de processos, precisamos realizar procedimentos de filtragem.
 
 ## [TJSP/CJSG - Pesquisa](https://esaj.tjsp.jus.br/cjsg/consultaCompleta.do)
 
@@ -77,51 +76,51 @@ Escolhemos apresentar esta técnica de pesquisa porque:
 knitr::include_graphics("img/cjsg-pesquisa.png")
 ```
 
-## TJSP/CJSG - Pesquisa 
+## TJSP/CJSG - Pesquisa
 
 #### Pesquisa Livre: definido palavras-chave
 
 ::: {style="font-size: 22px"}
 O campo que normalmente mais preenchemos é o campo da pesquisa livre. Há algumas orientações gerais para definir palavras-chave:
 
-1. **Repertório inicial de palavras.** Você deverá começar sempre de um repertório inicial de palavras-chave para encontrar os primeiros processos. Normalmente esse repertório inicial é insuficiente.
-2. **Avaliando o repertório inicial.** Para a avaliar a suficiência desse repertório inicial, você deve verificar manualmente os processos retornados. 
-    - Essa avaliação pode te mostrar que o repertório inicial está amplo demais (e, portanto, está pegando muito "lixo"), ou está restrito demais (e, portanto, está deixando muito processo de interesse de fora).
-3. **Encontrando o repertório "ideal".** Você deve balancear a parcimônia x precisão. As palavras-chave devem ser as mais genéricas e simples possíveis, a fim de não deixar nenhum processo de fora, mas elas devem também ser as mais precisas possíveis para que a listagem de processos não tenha um monte de "lixo". 
-    - É impossível de encontrar as palavras-chaves perfeitas, que vão capturar 100% dos processos de interesse, sem pegar "lixo". Na dúvida, sempre opte por escolher palavras mais genéricas do que mais restritas.
-    - Um bom repertório de palavras é aquele que consegue deixar entre 0 e 20% de processos "lixo" apenas. 
+1.  **Repertório inicial de palavras.** Você deverá começar sempre de um repertório inicial de palavras-chave para encontrar os primeiros processos. Normalmente esse repertório inicial é insuficiente.
+2.  **Avaliando o repertório inicial.** Para a avaliar a suficiência desse repertório inicial, você deve verificar manualmente os processos retornados.
+    -   Essa avaliação pode te mostrar que o repertório inicial está amplo demais (e, portanto, está pegando muito "lixo"), ou está restrito demais (e, portanto, está deixando muito processo de interesse de fora).
+3.  **Encontrando o repertório "ideal".** Você deve balancear a parcimônia x precisão. As palavras-chave devem ser as mais genéricas e simples possíveis, a fim de não deixar nenhum processo de fora, mas elas devem também ser as mais precisas possíveis para que a listagem de processos não tenha um monte de "lixo".
+    -   É impossível de encontrar as palavras-chaves perfeitas, que vão capturar 100% dos processos de interesse, sem pegar "lixo". Na dúvida, sempre opte por escolher palavras mais genéricas do que mais restritas (é melhor pegar coisas a mais do que deixar coisas de fora).
+    -   Um bom repertório de palavras é aquele que consegue deixar entre 0 e 20% de processos "lixo" apenas.
 :::
 
-## TJSP/CJSG - Pesquisa 
+## TJSP/CJSG - Pesquisa
 
 #### Classe e Assunto - TPUs
 
 ::: {style="font-size: 30px"}
-Quando a gente vai pensar em Classe e Assunto que queremos dentro do escopo, temos de saber quais são as [classes](https://www.cnj.jus.br/sgt/consulta_publica_classes.php) e [assuntos](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php) possíveis. Para isso temos as Tabelas Processuais Unificadas (TPUs). 
+Quando a gente vai pensar em Classe e Assunto que queremos dentro do escopo, temos de saber quais são as [classes](https://www.cnj.jus.br/sgt/consulta_publica_classes.php) e [assuntos](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php) possíveis. Para isso temos as Tabelas Processuais Unificadas (TPUs).
 
-Tem algumas informações que são importantes de sabermos sobre as TPUs:
+Algumas informações são importantes de saber sobre as TPUs:
 
-1. **Quem elabora as TPUs?** O CNJ (Resolução 46/2007 do CNJ)
-1. **Quem preenche as classes e assuntos de cada processo?** Os advogados
-1. **Como esse preenchimento é feito?** A partir de uma lista fechada, o advogado escolhe qualquer classe e assunto, podendo inclusive colocar classes e assuntos mais "genéricos" do que o possível.
-1. **Existe revisão desse preenchimento?** Sim, o juiz pode pedir a revisão disso
+1.  **Quem elabora as TPUs?** O CNJ (Resolução 46/2007 do CNJ)
+2.  **Quem preenche as classes e assuntos de cada processo?** Geralmente os advogados, na hora de peticionar.
+3.  **Como esse preenchimento é feito?** A partir de uma lista fechada, o advogado escolhe qualquer classe e assunto, podendo inclusive colocar classes e assuntos mais "genéricos" do que o possível.
+4.  **Existe revisão desse preenchimento?** Sim, o juiz pode pedir a revisão.
 :::
 
-## TJSP/CJSG - Pesquisa 
+## TJSP/CJSG - Pesquisa
 
 #### Classe e Assunto - Cifra Oculta
 
-::: {.fragment}
+::: fragment
 A cifra oculta é a quantidade não observada de determinado dado. Esse problema surge, quando falamos das Classes e Assuntos processuais, por causa da forma como esses dados são gerados.
 
-- [ABJ. **O problema da cifra oculta nos tribunais brasileiros**. 2020](https://lab.abj.org.br/posts/2020-12-07-cifra-oculta/)
+-   [ABJ. **O problema da cifra oculta nos tribunais brasileiros**. 2020](https://lab.abj.org.br/posts/2020-12-07-cifra-oculta/)
 :::
 
-## TJSP/CJSG - Pesquisa 
+## TJSP/CJSG - Pesquisa
 
 #### Classe e Assunto - Cifra Oculta
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "80%"
 #| fig.position: 'center'
@@ -129,11 +128,11 @@ knitr::include_graphics("img/cifra_oculta_generico.png")
 ```
 :::
 
-## TJSP/CJSG - Pesquisa 
+## TJSP/CJSG - Pesquisa
 
 #### Classe e Assunto - Cifra Oculta
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "50%"
 #| fig.position: 'center'
@@ -175,13 +174,15 @@ knitr::include_graphics("img/dje-pesquisa.png")
 
 ## TJSP/DJE - Resultados
 
-::: {.center}
-<iframe src="img/dje-resultados-1.svg" width="810" height="450"></iframe>
+::: center
+<iframe src="img/dje-resultados-1.svg" width="810" height="450">
+
+</iframe>
 :::
 
 ## [CVM - Pesquisa](https://conteudo.cvm.gov.br/sancionadores)
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "84%"
 #| fig.position: 'center'
@@ -191,7 +192,7 @@ knitr::include_graphics("img/cvm-pesquisa.png")
 
 ## CVM - Resultado
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "66%"
 #| fig.position: 'center'
@@ -201,7 +202,7 @@ knitr::include_graphics("img/cvm-resultados.png")
 
 ## [Datajud - Pesquisa](https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html)
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "100%"
 #| fig.position: 'center'
@@ -211,13 +212,14 @@ knitr::include_graphics("img/datajud-pesquisa.png")
 
 ## [Datajud - Pesquisa](https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html)
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "100%"
 #| fig.position: 'center'
 knitr::include_graphics("img/datajud-pesquisa-ex.png")
 ```
 :::
+
 ## Datajud - Resultado
 
 ```{r}
@@ -243,7 +245,7 @@ abjData::datajud_mg |>
 
 ## [Datajud - Ferramenta da ABJ](https://github.com/abjur/datajudScraper)
 
-::: {.center}
+::: center
 ```{r}
 #| out.width: "80%"
 #| out.height: "80%"
@@ -252,15 +254,15 @@ knitr::include_graphics("img/datajud-abj.png")
 ```
 :::
 
-## Resumo dos sistemas de extração de processos 
+## Resumo dos sistemas de extração de processos
 
 ::: {style="font-size: 30px"}
 ```{r}
 tibble::tibble(
   `Fonte de pesquisa` = c("CJPG/CJSG", "DJE", "CVM", "Datajud"),
   `Indexador` = c("Data da decisão", "Data de distribuição", "Data da decisão", "Data de distribuição"),
-  `Escopo temporal` = c("Retrospectivo", "Prospectivo", "Retrospectivo", "Prospectivo"),
-  `Técnicas de computação` = c("Scraper", "Scraper e tratamento de texto", "Scraper", "Não precisa")
+  `Escopo temporal` = c("Retrospectivo", "Prospectivo", "Retrospectivo", "Prospectivo e Retrospectivo"),
+  `Técnicas de computação` = c("Scraper", "Scraper e tratamento de texto", "Scraper", "Scraper ou manualmente")
 ) |> 
   knitr::kable(
     format = "html", escape = FALSE,
@@ -271,58 +273,64 @@ tibble::tibble(
 
 ## Produto final
 
-:::: columns
+::: columns
 ::: {.column width="20%"}
 ![](img/lista-processos.png)
 :::
 
 ::: {.column width="80%"}
-- A etapa de listagem de processos vai sempre resultar em uma planilha contendo *TODOS* os processos que fazem parte do escopo. 
+-   A etapa de listagem de processos vai sempre resultar em uma planilha contendo *TODOS* os processos que fazem parte do escopo.
 
-::: {.fragment}
+::: fragment
 #### Problemas
-- Cifra oculta
-- "Lixo"
+
+-   Cifra oculta
+-   "Lixo"
 :::
 :::
-::::
+:::
 
 ## Case: Falências de SP
 
-::: {.center}
+::: center
 ![](img/obsFase3.png)
 :::
 
-- Listagem pelo DJE
-- TPUs do CNJ e Classe Processual
-- Cifra oculta x Lixo
+-   Listagem pelo DJE
+-   TPUs do CNJ e Classe Processual
+-   Cifra oculta x Lixo
 
 ## Case: Falências de SP {.smaller}
 
 **Etapa 1 - Acesso ao DJE**
 
-:::: columns
+::: columns
 ::: {.column width="60%"}
-<iframe src="img/dje-resultados-1.svg" width="810" height="540"></iframe>
+<iframe src="img/dje-resultados-1.svg" width="810" height="540">
+
+</iframe>
 :::
+
 ::: {.column width="40%"}
-- Baixar todos os DJEs de todos os dias dentro do escopo (jan/2010-dez/2020)
-- Transformar cada página em um texto
-- Procurar no texto por palavras que remetam a falência, por exemplo, "falida", "falência", "faliu"
-- Extrair, de todas as páginas que contém alguma menção a falência (e da anterior e da seguinte também), o número de todos os processos
+-   Baixar todos os DJEs de todos os dias dentro do escopo (jan/2010-dez/2020)
+-   Transformar cada página em um texto
+-   Procurar no texto por palavras que remetam a falência, por exemplo, "falida", "falência", "faliu"
+-   Extrair, de todas as páginas que contém alguma menção a falência (e da anterior e da seguinte também), o número de todos os processos
 :::
-::::
+:::
 
 ## Case: Falências de SP {.smaller}
 
 **Etapa 1 - Acesso ao DJE**
 
-:::: columns
+::: columns
 ::: {.column width="60%"}
-<iframe src="img/dje-resultados-1.svg" width="810" height="540"></iframe>
-:::
-::: {.column width="40%"}
+<iframe src="img/dje-resultados-1.svg" width="810" height="540">
 
+</iframe>
+:::
+
+::: {.column width="40%"}
 ```{r}
 obsFase3::da_falencias |> 
   dplyr::select(id_processo) |> 
@@ -335,7 +343,7 @@ obsFase3::da_falencias |>
   kableExtra::scroll_box(width = "350px", height = "540px")
 ```
 :::
-::::
+:::
 
 ## Case: Falências de SP {.smaller}
 
@@ -399,7 +407,7 @@ da_cpopg |>
 
 **Etapa 2 - Filtragem com base nas TPUs**
 
-:::: columns
+::: columns
 ::: {.column width="72%"}
 ```{r}
 da_cpopg |> 
@@ -411,23 +419,24 @@ da_cpopg |>
   kableExtra::scroll_box(width = "100%", height = "530px")
 ```
 :::
+
 ::: {.column width="28%"}
-- "Falência de Empresários, Sociedades Empresáriais, Microempresas e Empresas de Pequeno Porte"
-- Isso resolve grande parte dos problemas de "lixo"
-- Mas isso não resolveu os problemas de cifra oculta
+-   "Falência de Empresários, Sociedades Empresáriais, Microempresas e Empresas de Pequeno Porte"
+-   Isso resolve grande parte dos problemas de "lixo"
+-   Mas isso não resolveu os problemas de cifra oculta
 :::
-::::
+:::
 
 ## Amostragem {.smaller}
 
-**Decisão importante.** Uma vez que temos a lista inteira de processos, precisamos tomar uma decisão antes de prosseguir à próxima fase: vamos analisar TODOS os processos encontrados, ou apenas uma parte dele? 
+**Decisão importante.** Uma vez que temos a lista inteira de processos, precisamos tomar uma decisão antes de prosseguir à próxima fase: vamos analisar TODOS os processos encontrados, ou apenas uma parte dele?
 
-- Para tomar essa decisão, devemos levar em conta: o tamanho da lista de processos, o tempo de classificar manualmente cada um desses processos e o nosso tempo disponível.
-- Muitas vezes, em bases de processos muito grandes, a melhor opção acaba sendo analisar apenas uma parte da base. Para isso, precisamos nos valer de técnicas de _amostragem_ 
+-   Para tomar essa decisão, devemos levar em conta: o tamanho da lista de processos, o tempo de classificar manualmente cada um desses processos e o nosso tempo disponível.
+-   Muitas vezes, em bases de processos muito grandes, a melhor opção acaba sendo analisar apenas uma parte da base. Para isso, precisamos nos valer de técnicas de *amostragem*
 
 #### Técnicas de amostragem
 
-- **Amostragem aleatória simples.** A técnica principal que vamos utilizar é a técnica de amostragem aleatória simples. Essa técnica consiste em escolher, aleatoriamente, um certo número de processos.
+-   **Amostragem aleatória simples.** A técnica principal que vamos utilizar é a técnica de amostragem aleatória simples. Essa técnica consiste em escolher, aleatoriamente, um certo número de processos.
 
 ```{r}
 #| eval: false
@@ -439,121 +448,124 @@ sua_base_de_processos |>
   dplyr::sample_n(n_amostral)
 ```
 
-
 # Classificação dos processos {.slide-title}
 
 ## O que vamos ver?
 
-- Criação do formulário
-- Pré-teste
-- Preenchimento do formulário
-- Controle de inconsistências
+-   Criação do formulário
+-   Pré-teste
+-   Preenchimento do formulário
+-   Controle de inconsistências
 
 ## Criação do formulário {.smaller}
 
 #### Orientações gerais
 
-- Recomendamos o uso da tecnologia Google Forms.
-- **Unidade de resposta.** É preciso pensar em qual será a unidade de resposta do formulário. Normalmente, será o processo. Neste caso, o formulário deve, necessariamente, ter uma pergunta sobre o número do processo, pois é isso que vai nos permitir identificar cada resposta.
-- **Escopo.** Recomendamos também que exista uma pergunta no formulário sobre escopo.
-  - É por causa da possibilidade de se criar esta pergunta que sugerimos, na listagem de processos, que se use palavras mais genéricas, do que palavras mais restritas. É possível classificar "limpar" 
-- **Textos livres.** Evite perguntas que sejam respondidas com textos livres. Opte, no lugar, por uma lista de respostas, com a possibilidade de inserir "Outros".
-- **Estrutura lógica.** Pense na estrutura lógica do formulário. Isso diminui a quantidade de inconsistências nos dados.
-  - Exemplo: não faz sentido perguntar se um plano de recuperação judicial foi aprovado se ainda não foi deferido o pedido de recuperação. Então construa o formulário de forma que seja impossível responder algo sobre o plano de recuperação caso não tenha sido deferido o pedido de recuperação. 
+-   **Formulário**. Recomendamos o uso de um sistema de formulários, como Google Forms, Survey Monkey, Lime Survey, Qualtrics ou similar.
+-   **Unidade de resposta.** É preciso pensar em qual será a unidade de resposta do formulário. Normalmente, será o processo. Neste caso, o formulário deve, necessariamente, ter uma pergunta sobre o número do processo, pois é isso que vai nos permitir identificar cada resposta.
+-   **Escopo.** Recomendamos também que exista uma pergunta no formulário sobre escopo.
+    -   É por causa da possibilidade de se criar esta pergunta que sugerimos, na listagem de processos, que se use palavras mais genéricas, do que palavras mais restritas.
+-   **Textos livres.** Evite perguntas que sejam respondidas com textos livres. Opte, no lugar, por uma lista de respostas, com a possibilidade de inserir "Outros".
+-   **Estrutura lógica.** Pense na estrutura lógica do formulário. Isso diminui a quantidade de inconsistências nos dados.
+    -   Exemplo: não faz sentido perguntar se um plano de recuperação judicial foi aprovado se ainda não foi deferido o pedido de recuperação. Então construa o formulário de forma que seja impossível responder algo sobre o plano de recuperação caso não tenha sido deferido o pedido de recuperação.
 
 ## Criação do formulário {.smaller}
 
 #### Orientações gerais
 
-- **Obrigatoriedade.** Tente, ao máximo, criar perguntas obrigatórias. Isso evita lacunas na pesquisa. 
-  - Para as perguntas que não serão obrigatórias, pense de antemão o que vai significar que a pergunta foi deixada *em branco*: (a) informações não encontradas? (b) a pergunta não se aplica? 
-- **Documente a construção do formulário!** Documente com muito detalhamento como o formulário está sendo construído! O formulário faz parte do *processo de geração de dados*. É por meio dele que os processos serão convertidos em dados. 
-  - Documentar isso garante maior confiança na sua pesquisa, além de permitir o controle pelos seus pares acadêmicos, bem como o aproveitamento dos seus dados por outros pesquisadores. 
+-   **Obrigatoriedade.** Tente, ao máximo, criar perguntas obrigatórias. Isso evita lacunas na pesquisa.
+    -   Para as perguntas que não serão obrigatórias, pense de antemão o que vai significar que a pergunta foi deixada *em branco*: (a) informações não encontradas? (b) a pergunta não se aplica?
+-   **Documente a construção do formulário!** Documente com muito detalhamento como o formulário está sendo construído! O formulário faz parte do *processo de geração de dados*. É por meio dele que os processos serão convertidos em dados.
+    -   Documentar isso garante maior confiança na sua pesquisa, além de permitir o controle pelos seus pares acadêmicos, bem como o aproveitamento dos seus dados por outros pesquisadores.
 
 ## Pré-teste {.smaller}
 
-Com o formulário pronto, devemos testá-lo. Fazemos isso em um procedimento chamado pré-teste. 
+Com o formulário pronto, devemos testá-lo. Fazemos isso em um procedimento chamado pré-teste.
 
 #### Orientações gerais
 
-1. Amostre entorno de 30 a 40 processos para fazer o pré-teste
-1. O pré-teste deve ser realizado por vários pesquisadores, e não só um. A ideia é que toda a equipe de pesquisa responda a todos os processos, para, ao fim, comparar as respostas de cada processo. Essa comparação dirá respeito muito mais ao formulário do que à interpretação subjetiva dos pesquisadores.
-1. A comparação deverá levar a conclusões a respeito de cada uma das perguntas do formulário. Assim, para cada pergunta, a equipe de pesquisa deverá concluir que, ou a pergunta está boa e não precisa ser alterada, ou que ela não está boa e precisa de algumas modificações. Há duas respostas possíveis que podemos dar a um problema no formulário
+1.  Amostre entre 30 a 40 processos para fazer o pré-teste. A amostra não precisa ser aleatória: você pode escolher os casos manualmente.
+2.  O pré-teste deve ser realizado por vários pesquisadores, e não só um. A ideia é que toda a equipe de pesquisa classifique os mesmos processos, para, ao fim, comparar as respostas. Essa comparação dirá respeito muito mais ao formulário do que à interpretação subjetiva dos pesquisadores.
+3.  A comparação leva a conclusões a respeito das perguntas do formulário. Para cada pergunta, a equipe de pesquisa deverá concluir que, ou a pergunta está boa e não precisa ser alterada, ou que ela não está boa e precisa de algumas modificações.
 
 ## Pré-teste {.smaller}
 
 #### O que fazer quando as perguntas não estão boas?
 
-1. **Padronização:** Mantém a pergunta igual, mas padroniza a forma como ela vai ser respondida. Essa padronização pode ficar descrita no próprio enunciado da questão, ou em um documento a parte. 
-1. **Mudanças no formulário:** Realiza alguma modificação no formulário
-    - Para perguntas de múltipla escolha é possível que no pré-teste tenham sido identificadas opções que não estavam contempladas ainda pelo formulário.
-    - A pergunta foi deixada como obrigatória, mas há casos em que não foi possível encontrar essa resposta.
-    - A pergunta era um texto aberto, mas foi possível perceber um padrão de respostas durante o pré-teste, sendo possível a substituição da pergunta em texto aberto por uma pergunta múltipla escolha.
-    - Uma pergunta foi feita quando não deveria ter sido feita, sendo necessário aprimorar o controle lógico do formulário.
+1.  **Padronização:** Mantém a pergunta igual, mas padroniza a forma como ela será respondida. Essa padronização pode ficar descrita no próprio enunciado da questão, ou em um documento a parte.
+2.  **Mudanças no formulário:** Realiza alguma modificação no formulário
+    -   Para perguntas de múltipla escolha, é possível que o pré-teste tenha identificado opções que não estavam contempladas ainda pelo formulário.
+    -   A pergunta foi deixada como obrigatória, mas há casos em que não foi possível encontrar uma resposta.
+    -   A pergunta era um texto aberto, mas foi possível perceber um padrão de respostas durante o pré-teste, sendo possível a substituição da pergunta em texto aberto por uma pergunta múltipla escolha.
+    -   Uma pergunta foi feita quando não deveria ter sido feita, sendo necessário aprimorar o controle lógico do formulário.
 
 ## Pré-teste {.smaller}
 
 #### O que fazer quando as perguntas não estão boas?
 
-1. **Padronização:** Mantém a pergunta igual, mas padroniza a forma como ela vai ser respondida. Essa padronização pode ficar descrita no próprio enunciado da questão, ou em um documento a parte. 
-1. **Mudanças no formulário:** Realiza alguma modificação no formulário
-    - A ausência de alguns documentos impossibilita o preenchimento dos formulários. Neste caso, pode ser criada uma opção para "O processo está fora do escopo?", cuja resposta seja: "Não, mas não há dcumentos para preencher", ou ainda, realiza-se dois formulários distintos. Como o problema de ausência de documentos normalmente acontece em processos físicos, então pode existir um formulário para processos digitais e outro para processos físicos. 
+1.  **Padronização:** Mantém a pergunta igual, mas padroniza a forma como ela vai ser respondida. Essa padronização pode ficar descrita no próprio enunciado da questão, ou em um documento a parte.
+2.  **Mudanças no formulário:** Realiza alguma modificação no formulário
+    -   A ausência de alguns documentos impossibilita o preenchimento dos formulários. Neste caso, pode ser criada uma opção para "O processo está fora do escopo?", cuja resposta seja: "Não, mas não há documentos para preencher", ou ainda, realiza-se dois formulários distintos. Como o problema de ausência de documentos normalmente acontece em processos físicos, então pode existir um formulário para processos digitais e outro para processos físicos.
 
 ## Preenchendo o formulário
 
-Com o formulário corrigido pelo pré-teste, iniciamos o seu preenchimento. Cada preenchimento representa um processo. Neste momento, os processos estão sendo convertidos em dados. 
+Com o formulário corrigido pelo pré-teste, iniciamos o seu preenchimento. Neste momento, os processos são convertidos em dados.
 
-Esta é a etapa mais longa da pesquisa. Ela deverá ser bem planejada, pois, caso contrário, a pesquisa não terá dados suficientes para ser realizada. 
+Esta é a etapa mais longa da pesquisa. Ela deverá ser bem planejada, pois, caso contrário, a pesquisa não terá dados suficientes para ser realizada.
+
+Evite ao máximo modificar o formulário de classificação durante a fase de classificação. Alterações no formulário no meio do caminho podem ter consequências graves, como perda de dados e problemas de padronização.
 
 ## Controle de inconsistências {.smaller}
 
-A criação do formulário, ao lado do pré-teste, devem reduzir ao máximo a quantidade de inconsistências. Entretanto, no momento do preenchimento, algumas inconsistências aparecem. A equipe de pesquisa deverá realizar um esforço para identificar e resolver essas inconsistências. A seguir temos algumas inconsistências frequentes. 
+A criação do formulário, ao lado do pré-teste, devem reduzir ao máximo a quantidade de inconsistências. Entretanto, no momento do preenchimento, algumas inconsistências aparecem. A equipe de pesquisa deverá realizar um esforço para identificar e resolver essas inconsistências. A seguir temos algumas inconsistências frequentes.
 
-1. **Datas mal preenchidas.** É possível que na hora de preencher as informações de um processo, tenha havido um erro de digitação, fazendo com que, por exemplo, a data da sentença seja _anterior_ à data de distribuição do processo. Isso precisa ser corrigido. 
-1. **Identificação de erros lógicos posteriores.** Idealmente, devemos identificar os erros lógicos na hora de elaboração do formulário. Entretanto, algum detalhe pode ter passado desapercebido, de forma que ele seja identificado somente depois ou durante o preenechimento do formulário. 
+1.  **Datas mal preenchidas.** É possível que na hora de preencher as informações de um processo, tenha havido um erro de digitação, fazendo com que, por exemplo, a data da sentença seja *anterior* à data de distribuição do processo. Isso precisa ser corrigido.
+2.  **Identificação de erros lógicos posteriores.** Idealmente, devemos identificar os erros lógicos na hora de elaboração do formulário. Entretanto, algum detalhe pode ter passado desapercebido, de forma que ele seja identificado somente depois ou durante o preenechimento do formulário.
 
-É muito importante evitar ao máximo alterar a estrutura do formulário. É possível alterar a resposta a um caso, mas não mude o formulário, isso vai mexer com a estruutra de dados. 
+É muito importante evitar ao máximo alterar a estrutura do formulário. É possível alterar a resposta a um caso, mas não mude o formulário, pois isso mexe com a estrutura de dados.
 
 # Análises {.slide-title}
 
 ## Ferramentas de análise
 
-É preciso ter algum software para analisar os dados. Na ABJ utiizamos muito o R. Mas é possível também utilizar outros sofwtares. A seguir, listamos alguns softwares comuns.
+É preciso usar algum software para analisar os dados. Na ABJ utiizamos muito o R. Mas é possível também utilizar outros softwares. A seguir, listamos alguns softwares comuns.
 
-- Excel
-- Google Sheets
-- R
-- Python
-- Stata
+-   Excel
+-   Google Sheets
+-   R
+-   Python
+-   Stata
 
-## Tipos de análise 
+## Tipos de análise
 
-:::: columns
+::: columns
 ::: column
-1. Análises quantitativas
-    - Gráfico de barras
-    - Tabelas de frequência
-    - Séries temporais
-    - Histogramas
-    - Gráficos de dispersão
-    - Análise de sobrevivência
+1.  Análises quantitativas
+    -   Gráfico de barras
+    -   Tabelas de frequência
+    -   Séries temporais
+    -   Histogramas
+    -   Gráficos de dispersão
+    -   Análise de sobrevivência
 :::
-:::: column
-2. Métodos mistos
-    - Método convergente em paralelo
-    - Método sequencial exploratório
-    - Método sequencial explanatório
+
+::: column
+2.  Métodos mistos
+    -   Método convergente em paralelo
+    -   Método sequencial exploratório
+    -   Método sequencial explanatório
 :::
-::::
-  
+:::
+
 ## Tipos de análise
 
 #### Métodos mistos (Creswell, 2013)
-1. **Método convergente em paralelo:** dados quantitativos e qualitativos são levantados ao mesmo tempo e comparados.
-1. **Método sequencial exploratório:** dados qualitativos geram perguntas que são testadas por análises quantitativas.
-1. **Método sequencial explanatório:** dados quantitativos são completados e interpretados com análises qualitativas.
 
-:::{style="font-size: 25px"}
+1.  **Método convergente em paralelo:** dados quantitativos e qualitativos são levantados ao mesmo tempo e comparados.
+2.  **Método sequencial exploratório:** dados qualitativos geram perguntas que são testadas por análises quantitativas.
+3.  **Método sequencial explanatório:** dados quantitativos são completados e interpretados com análises qualitativas.
+
+::: {style="font-size: 25px"}
 Fonte: Creswell, John W. **Research Design: Qualitative, Quantitative, and Mixed Methods Approaches**. Sage publications. 2013
 :::
 
@@ -617,6 +629,6 @@ DiagrammeR::grViz(
 }')
 ```
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
