@@ -81,7 +81,7 @@ liti |>
 
 -   Variável temporal (datas, anos)
 -   Eixos: x = tempo; y = variável numérica (discreta ou contínua)
--   Tem bivariado
+-   Pode ser bivariado
 
 ## Como construir? Bivariado
 
@@ -112,7 +112,9 @@ liti |>
 
 Usamos as séries temporais para avaliar tendências. Eles são muito utilizados para fazer previsões.
 
-![](img/ipcc.png)
+::: center
+![](https://github.com/abjur/falrec/blob/main/man/figures/README-grafico-1.png?raw=true){width="650"}
+:::
 
 #  {background="#fff"}
 

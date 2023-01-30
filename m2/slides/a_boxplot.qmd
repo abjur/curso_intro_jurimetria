@@ -71,7 +71,7 @@ tab_stats <- sub_set_consumo |>
   tidyr::pivot_wider(names_from = "rowname", values_from = "valores")
 ```
 
-## Como construir? 
+## Como construir?
 
 ```{r}
 p1 <- ggplot2::ggplot(cars) +
@@ -90,20 +90,20 @@ patchwork::wrap_plots(p1, p2)
 
 ## Como construir? Visão geral {.smaller}
 
-- Variáveis numéricas contínuas
-- Eixos: contém apenas um eixo, que é o eixo da variável contínua
-- Pode ser bivariado, adicionando categorias aos boxplots
-- O gráfico é construído a partir de estatísticas de resumo importantes. É preciso domínio sobre quantis empíricos para construir esse gráfico
-- O gráfico pode vir apresentado tanto deitado, como de pé. É mais comum vê-lo na vertical. 
-- Elementos do boxplot:
-   - Linha central
-   - Caixa
-   - Bigodes
-   - Pontos
-  
+-   Variáveis numéricas contínuas
+-   Eixos: contém apenas um eixo, que é o eixo da variável contínua
+-   Pode ser bivariado, adicionando categorias aos boxplots
+-   O gráfico é construído a partir de estatísticas-resumo importantes. É preciso ter domínio sobre quantis empíricos para construir esse gráfico
+-   O gráfico pode vir apresentado tanto deitado, como de pé.
+-   Elementos do boxplot:
+    -   **Linha central**
+    -   **Caixa**
+    -   **Bigodes**
+    -   **Pontos**
+
 ## Como construir? Passo a passo {.smaller}
 
-Começamos a fazer o boxplot pela caixa central. A caixa central é constituída dos três quartis, isto é, o quartil inferior (ou quantil de 25%), a mediana (ou quantil de 50%) e o quartil superior (ou quantil de 75%). 
+Começamos a fazer o boxplot pela **caixa** central. Ela consiste nos três quartis: o quartil inferior (ou quantil de 25%), a mediana (ou quantil de 50%) e o quartil superior (ou quantil de 75%).
 
 ```{r}
 #| fig-height: 2.8
@@ -132,9 +132,10 @@ sub_set_consumo |>
     axis.title = ggplot2::element_blank()
   )
 ```
+
 ## Como construir? Passo a passo {.smaller}
 
-Depois da caixa central, adicionamos os bigodes. Os bigodes se iniciam nos quartis inferior e superior e se estende até, no máximo 3/2*IQR depois.
+Depois da caixa central, adicionamos os **bigodes**. Os bigodes se iniciam nos quartis inferior e superior e se estende até, no máximo 3/2\*IQR depois.
 
 ```{r}
 #| fig-height: 2.8
@@ -182,7 +183,7 @@ sub_set_consumo |>
 
 ## Como construir? Passo a passo {.smaller}
 
-Apesar dos bigodes poderem se estender até 3/2*IQR unidades depois dos quartis, eles não necessariamente vão parar aí. Eles param no maior valor encontrado nos dados que esteja dentro da região potencial do bigode. 
+Apesar dos bigodes poderem se estender até 3/2\*IQR unidades depois dos quartis, eles param no **maior valor encontrado nos dados** que esteja dentro da região do bigode.
 
 ```{r}
 #| fig-height: 2.8
@@ -228,10 +229,9 @@ sub_set_consumo |>
   )
 ```
 
-
 ## Como construir? Passo a passo {.smaller}
 
-Uma vez delimitado o fim dos bigodes, podemos ir para o último elemento dos boxplots: os pontos. Os pontos são todas as observações que estão além do fim dos bigodes. 
+Uma vez delimitado o fim dos bigodes, vamos para o último elemento dos boxplots: os **pontos**. Os pontos são todas as observações que estão além do fim dos bigodes.
 
 ```{r}
 #| fig-height: 2.8
@@ -285,11 +285,12 @@ sub_set_consumo |>
 
 ## Como construir? As medidas {.smaller}
 
-:::: {.columns}
-::: {.column width='20%'}
+::: columns
+::: {.column width="20%"}
 São 5 informações de que precisamos (máximo, mínimo, mediana, quartil superior e inferior), e outras 7 medidas decorrentes dessas 5 (IQR, o limite superior do bigode, o limite inferior do bigode, o ponto superior, o ponto inferior e os potenciais outliers nos limites inferior e superior)
 :::
-::: {.column width='80%'}
+
+::: {.column width="80%"}
 ```{r}
 tab_stats |>
   dplyr::transmute(
@@ -318,7 +319,7 @@ tab_stats |>
   kableExtra::row_spec(c(1:5),bold=T,hline_after = T)
 ```
 :::
-::::
+:::
 
 ## Como construir? Bivariados {.smaller}
 
@@ -500,17 +501,17 @@ patchwork::wrap_plots(boxplot, p2, ncol = 1)
 
 Outliers são pontos que se diferem drasticamente do resto dos dados. O problema é como identificar esses outliers.
 
-:::: {.columns}
-::: {.column}
-- Existe uma nota de corte?
-- Qual é o critério de outlier para boxplots?
+::: columns
+::: column
+-   Existe uma nota de corte?
+-   Qual é o critério de outlier para boxplots?
 :::
 
-::: {.column}
-- O critério do boxplot é bom?
-- "Potenciais outliers"
+::: column
+-   O critério do boxplot é bom?
+-   "Potenciais outliers"
 :::
-::::
+:::
 
 ```{r}
 #| fig-width: 8.0

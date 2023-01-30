@@ -46,9 +46,9 @@ da <- obsFase3::da_processo_tidy |>
   dplyr::filter(data_hora <= "2021-07-13")
 ```
 
-## {.r-fit-text .center}
+##  {.r-fit-text .center}
 
-A seguir, vamos ver um exemplo. O exemplo veio de um estudo da ABJ, sobre a judicialização da saúde na Justiça Federal do Ceará. 
+A seguir, vamos ver um exemplo. O exemplo veio de um estudo da ABJ, sobre a judicialização da saúde na Justiça Federal do Ceará.
 
 ## Pergunta inicial {.center}
 
@@ -60,15 +60,15 @@ knitr::include_graphics("img/p_n_ativo1.png")
 
 ## Como esse dado foi gerado? {.smaller}
 
-- Os dados foram coletados automaticamente do site da Justiça Federal do Ceará
-- Na Justiça Federal, os dados apareciam da seguinte maneira:
+-   Os dados foram coletados automaticamente do site da Justiça Federal do Ceará
+-   Na Justiça Federal, os dados apareciam da seguinte maneira:
 
 ```{r, out.width="90%"}
 knitr::include_graphics("img/jfce_metadados_partes.png")
 ```
 
-- Então o scraper que criamos extraía o nome da parte e o seu tipo de participação
-- Consideramos como polo ativo apenas as partes classificadas como “Impetrante”, “Autor”, “Embargante”, “Parte Autora”, “Exequente” e “Requerente”.
+-   Então o scraper que criamos extraía o nome da parte e o seu tipo de participação
+-   Consideramos como polo ativo apenas as partes classificadas como "Impetrante", "Autor", "Embargante", "Parte Autora", "Exequente" e "Requerente".
 
 **Como vocês avaliaram o gráfico, então, sabendo disso?**
 
@@ -82,28 +82,28 @@ knitr::include_graphics("img/p_n_ativo2.png")
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
-- **Definição.** O processo de geração de dados é a forma, por meio da qual, determinada informação foi criada.  
-- **Importância.** Ele é importante porque:
+-   **Definição.** O processo de geração de dados é a forma por meio da qual,determinada informação foi criada.\
+-   **Importância.** Ele é importante porque:
 
 > sem essa informação, nós não podemos determinar se utilizar processos padrões de análise de dados irá produzir inferências enviesadas. Somente ao saber do processo por meio do qual os dados foram gerados é que nós conseguiremos produzir uma inferência causal ou descritiva válida.
 
-:::{style="font-size: 17px"}
-KING, G.; KEOHANE, R. O.; VERBA, S. **Designing Social Inquiry: Scientific Inference in Qualitative Research**. Princeton: Princeton University Press. 1994, p. 23. 
+::: {style="font-size: 17px"}
+KING, G.; KEOHANE, R. O.; VERBA, S. **Designing Social Inquiry: Scientific Inference in Qualitative Research**. Princeton: Princeton University Press. 1994, p. 23.
 :::
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
-- **Incerteza.** O desconhecimento do PGD gera incerteza subjetiva sobre os dados. Por isso o PGD é tão importante, porque se não o tivermos, os dados não serão _úteis_.
-- **Realidade e Dados.** O PGD é a conexão dos dados com o mundo.
-- **Boas práticas.** É extremamente importante documentar e reportar todos os processos não-probabilísticos de geração de dados, para que os pares acadêmicos possam validar a pesquisa e as escolhas metodológicas feitas nela. Então devemos explicar e documentar o PGD. A seguir, documentamos várias situações em que dados são gerados, explicando o que deve ser explicitado em cada caso.
+-   **Incerteza.** O desconhecimento do PGD gera incerteza subjetiva sobre os dados. Por isso o PGD é tão importante, porque se não o tivermos, os dados não serão *úteis*.
+-   **Realidade e Dados.** O PGD é a conexão dos dados com o mundo.
+-   **Boas práticas.** É extremamente importante documentar e reportar todos os processos não-probabilísticos de geração de dados, para que os pares acadêmicos possam validar a pesquisa e as escolhas metodológicas feitas nela. Então devemos explicar e documentar o PGD. A seguir, documentamos várias situações em que dados são gerados, explicando o que deve ser explicitado em cada caso.
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
 #### Boas práticas
 
-Se a pesquisa envolver a **classificação manual de dados**, então temos que explicar o processo de classificação.
+Se a pesquisa envolver a **classificação manual de dados**, temos de explicar o processo de classificação.
 
-::: {.fragment}
+::: fragment
 ```{r,fig.cap="Fonte: ABJ. **Observatório da Insolvência Fase 3: Falências no Estado de São Paulo**. 2022"}
 da |> 
   dplyr::filter(
@@ -133,17 +133,19 @@ da |>
 
 #### Boas práticas
 
-Se a pesquisa envolver a **classificação manual de dados**, então temos que explicar o processo de classificação.
+Se a pesquisa envolver a **classificação manual de dados**, temos de explicar o processo de classificação.
 
-::: {.center}
-<iframe src="img/pgd_sentenca.svg" width="810" height="450"></iframe>
+::: center
+<iframe src="img/pgd_sentenca.svg" width="810" height="450">
+
+</iframe>
 :::
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
 #### Boas práticas
 
-Se a pesquisa envolver a **classificação manual de dados**, então temos que explicar o processo de classificação.
+Se a pesquisa envolver a **classificação manual de dados**, temos de explicar o processo de classificação.
 
 ```{r}
 #| fig.align: 'center'
@@ -151,16 +153,17 @@ Se a pesquisa envolver a **classificação manual de dados**, então temos que e
 #| out.height: '65%'
 knitr::include_graphics("img/pgd_formulario.png",)
 ```
+
 ## Processo de Geração de Dados (PGD) {.smaller}
 
 #### Boas práticas
 
-Se a pesquisa envolver a **classificação manual de dados**, então temos que explicar o processo de classificação.
+Se a pesquisa envolver a **classificação manual de dados**, temos de explicar o processo de classificação.
 
-- Para documentar esse tipo de processo, você pode escrever na sessão de metodologia que os processos foram classificados manualmente, sendo, assim, transformados em dados;
-- Ao lado disso, você pode colocar em um Apêndice todo o formulário utilizado
-- Ou você pode, na apresentação dos resultados, reportar como que aqueles resultados foram gerados.
-- É importante saber equilibrar aqui a simplicidade com o detalhamento
+-   Para documentar esse tipo de processo, você pode escrever na sessão de metodologia que os processos foram classificados manualmente, sendo, assim, transformados em dados;
+-   Ao lado disso, você pode colocar em um Apêndice todo o formulário utilizado
+-   Ou você pode, na apresentação dos resultados, reportar como que aqueles resultados foram gerados.
+-   É importante saber equilibrar aqui a simplicidade com o detalhamento
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
@@ -174,7 +177,7 @@ Se a pesquisa envolver a **extração automática de dados**, então devemos exp
 
 Se a pesquisa envolver a **extração automática de dados**, então devemos explicar **(1) como as informações que foram raspadas foram geradas** e (2) como elas foram extraídas.
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| fig.align: 'center'
 #| out.width: '100%'
@@ -183,12 +186,12 @@ knitr::include_graphics("img/pgd_esaj_capa.png")
 ```
 :::
 
-::: {.fragment}
-- Exemplo da informação `Juiz`
+::: fragment
+-   Exemplo da informação `Juiz`
 :::
 
-::: {.fragment}
-- Exemplo da informação `Assunto`
+::: fragment
+-   Exemplo da informação `Assunto`
 :::
 
 ## Processo de Geração de Dados (PGD) {.smaller}
@@ -203,20 +206,20 @@ Se a pesquisa envolver a **extração automática de dados**, então devemos exp
 
 Se a pesquisa envolver a **extração automática de dados**, então devemos explicar (1) como as informações que foram raspadas foram geradas e **(2) como elas foram extraídas.**
 
-::: {.fragment}
-- Normalmente, extraímos os dados por meio de uma API, ou de algum scraper (raspador de dados).
-- APIs nunca vão alterar a estrutura dos dados originais; mas os scrapers podem.
-- A melhor forma de documentar como extraímos os dados é compartilhando o código-fonte.
-- Nem sempre é possível compartilhar o código-fonte, pois às vezes existem questões de privacidade e sigilo. Nestes casos, temos de dizer que criamos um scraper e explicar as questões que nos impediram de compartilhar o seu código-fonte. 
+::: fragment
+-   Normalmente, extraímos os dados por meio de uma API, ou de algum scraper (raspador de dados).
+-   APIs nunca vão alterar a estrutura dos dados originais; mas os scrapers podem.
+-   A melhor forma de documentar como extraímos os dados é compartilhando o código-fonte.
+-   Nem sempre é possível compartilhar o código-fonte, pois às vezes existem questões de privacidade e sigilo. Nestes casos, temos de dizer que criamos um scraper e explicar as questões que nos impediram de compartilhar o seu código-fonte.
 :::
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
 #### Boas práticas
 
-Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados.
 
-::: {.fragment style='font-size: 21px'}
+::: {.fragment style="font-size: 21px"}
 ```{r}
 #| fig.cap: "Fonte: ABJ. **Observatório da Insolvência Fase 3: Falências no Estado de São Paulo**. 2022"
 #| out.height: 9
@@ -318,12 +321,11 @@ aux_leilao_descricao |>
 ```
 :::
 
-
 ## Processo de Geração de Dados (PGD) {.smaller}
 
 #### Boas práticas
 
-Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados.
 
 ```{r}
 set.seed(19)
@@ -342,7 +344,7 @@ obsFase3::da_leilao_tidy |>
 
 #### Boas práticas
 
-Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados.
 
 ```{r}
 set.seed(19)
@@ -375,9 +377,9 @@ obsFase3::da_leilao_tidy |>
 
 #### Boas práticas
 
-Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados.
 
-::: {style='font-size: 20px'}
+::: {style="font-size: 20px"}
 ```{r}
 #| eval: false
 #| echo: true
@@ -428,13 +430,14 @@ rx_lote <- "lote"
 
 #### Boas práticas
 
-Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados. 
+Para cada **transformação de dados** também devemos dizer que mudanças nós fizemos nos dados.
 
-- Existem transformações de dados que alteram o PGD e existem transformações que não o fazem. Temos de documentar apenas as alterações que mudam o PGD. 
-- Há duas informações que precisamos compartilhar:
+-   Existem transformações de dados que alteram o PGD e existem transformações que não o fazem. Temos de documentar apenas as alterações que mudam o PGD.
 
-  - Decisões metodológicas que foram tomadas na hora de transformar os dados;
-  - Código-fonte.
+-   Há duas informações que precisamos compartilhar:
+
+    -   Decisões metodológicas que foram tomadas na hora de transformar os dados;
+    -   Código-fonte.
 
 ## Processo de Geração de Dados (PGD) {.smaller}
 
@@ -442,16 +445,22 @@ Para cada **transformação de dados** também devemos dizer que mudanças nós 
 
 Quando **utilizamos bases de dados prontas**, precisamos tentar descobrir como os dados são gerados.
 
-::: {.fragment}
-- Podemos enviar email para a entidade/pessoa que criou a base
-:::
-::: {.fragment}
-- Podemos presumir algumas informações sobre os dados
-:::
-::: {.fragment}
-- Mas na impossibilidade de qualquer uma dessas estratégias, haverá grande incerteza subjetiva a respeito desses dados. Não será possível avaliar a confiabilidade deles. 
+::: fragment
+-   Podemos enviar email para a entidade/pessoa que criou a base
 :::
 
-#  {background="#fff"}
+::: fragment
+-   Podemos presumir algumas informações sobre os dados
+:::
+
+::: fragment
+-   Mas na impossibilidade de qualquer uma dessas estratégias, haverá grande incerteza subjetiva a respeito desses dados. Não será possível avaliar a confiabilidade deles.
+:::
+
+::: fragment
+-   Quando os dados são abertos, é muito mais fácil ententer o processo gerador de dados, já que um dos princípios de dados abertos é a documentação das informações. Para mais detalhes, ver [este link sobre princípios de dados abertos](https://opengovdata.org/).
+:::
+
+# 
 
 ![](img/logo-abj-colorido.png){width="500"}

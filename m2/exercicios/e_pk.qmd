@@ -1,0 +1,90 @@
+---
+title: "Exercício sobre Priest & Klein"
+author: "ABJ"
+format: pdf
+lang: pt
+---
+
+## Contexto
+
+O modelo de Priest & Klein apresentado em aula parte da premissa de que existe informação simétrica entre as partes. Isso pode ser explicado pela variância introduzida nas expectativas do autor e do réu:
+
+$$
+\begin{aligned}
+y_p &= y + \epsilon_p \\
+y_d &= y + \epsilon_d
+\end{aligned}
+$$
+
+As equações apresentadas acima significam: a expectativa do mérito do caso pelo autor $y_p$ é dada pelo mérito real do processo $y$ somado com um erro aleatório $\epsilon_p$. Já a expectativa do mérito do caso pelo réu $y_d$ é dada pelo mérito real do processo $y$ somado com um erro aleatório $\epsilon_d$.
+
+A suposição de simetria é sobre as distribuições de $\epsilon_p$ e $\epsilon_d$. Na primeira parte do artigo, assume-se que $\epsilon_p$ e $\epsilon_d$ são independentes e têm distribuição normal com média zero e variância $\sigma^2$. Como $\epsilon_p$ e $\epsilon_d$ têm a mesma variância, as expectativas se comportarão de forma parecida.
+
+No entanto, é possível modificar essa condição. É possível modelar o problema considerando que $\epsilon_p$ e $\epsilon_d$ têm variâncias $\sigma_p$ e $\sigma_d$, respectivamente. A @fig-variancias mostra uma simulação de como fica a distribuição de $y_p$ e $y_d$ quando consideramos variâncias iguais (valor escolhido: 1) e variâncias diferentes (valores escolhidos: 0.5 e 2, respectivamente). O valor de $y$ foi arbitrado em 5.
+
+```{r}
+#| label: fig-variancias
+#| fig-cap: Simulação das distribuições dos valores de $y_p$ e $y_d$ em cenários de informação simétrica e assimétrica.
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+
+set.seed(1)
+y <- 5
+n_amostras <- 5000
+
+y_p_simetrico <- y + rnorm(n_amostras, mean = 0, sd = 1)
+y_d_simetrico <- y + rnorm(n_amostras, mean = 0, sd = 1)
+
+y_p_assimetrico <- y + rnorm(n_amostras, mean = 0, sd = sqrt(0.5))
+y_d_assimetrico <- y + rnorm(n_amostras, mean = 0, sd = sqrt(2))
+
+
+dados_sim <- tibble::tibble(
+  y = c(y_p_simetrico, y_p_assimetrico, y_d_simetrico, y_d_assimetrico),
+  parte = rep(c("Autor", "Réu"), each = n_amostras*2),
+  informacao = rep(rep(c("Simétrica", "Assimétrica"), each = n_amostras), 2)
+)
+
+dados_sim |> 
+  dplyr::mutate(informacao = forcats::fct_rev(factor(informacao))) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = y, fill = informacao) +
+  ggplot2::geom_density(alpha = .9) +
+  ggplot2::facet_grid(informacao ~ parte) +
+  ggplot2::scale_fill_manual(
+    values = viridis::viridis(2, 1, .2, .8)
+  ) +
+  ggplot2::scale_x_continuous(breaks = c(0,3,5,7,10)) +
+  ggplot2::geom_vline(xintercept = y, colour = 2, linetype = 2) +
+  ggthemes::theme_hc(14) +
+  ggplot2::theme(legend.position = "right") +
+  ggplot2::labs(
+    x = expression(paste(
+      "Mérito estimado pela parte (", 
+      y[p], " e ", y[d], ")", 
+      sep = ""
+    )),
+    y = "Densidade",
+    fill = "Informação"
+  )
+
+
+```
+
+O aplicativo [deste link](https://abjur.shinyapps.io/pk_theorem_assimetrico/) é o mesmo apresentado em aula, mas permitindo variar o nível de informação das partes separadamente.
+
+\clearpage
+
+## Perguntas
+
+1) Descreva qual a implicação dessa mudança de premissa no resultado do teorema de 50% de vitórias de Priest & Klein.
+
+2) Se observarmos taxas diferentes de 50% em um estudo, isso implica que a informação é assimétrica? Por quê?
+
+3) Para você, no sistema judiciário brasileiro, a informação das partes é simétrica? Se não, cite exemplos onde acredita que a informação das partes é assimétrica.
+
+4) Qual princípio jurídico está relacionado com a suposição de simetria de informação das partes? Explique.
+
+5) Que mudanças administrativas ou legislativas existem ou são necessárias para garantir que a informação das partes seja simétrica?
+

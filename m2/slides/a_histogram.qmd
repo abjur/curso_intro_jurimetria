@@ -17,6 +17,7 @@ title-slide-attributes:
   writing-mode: vertical-rl;
   preview-links: true
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE, 
@@ -60,23 +61,27 @@ consumo |>
 
 ## Como construir? Visão geral
 
-- Variáveis numéricas contínuas
-- Eixos: x = variável; y = contagem
-- Podem ser bivariados, adicionando cores ao histograma
+-   Variáveis numéricas contínuas
+-   Eixos: x = variável de interesse; y = contagem, criada automaticamente
+-   Podem ser bivariados, adicionando cores ao histograma
 
-## Como construir? Eixo x
+## Como construir? Variável contínua
 
-O eixo x contém uma linha contínua numérica. Dizemos que a linha é contínua porque ela é inteira preenchida, de forma que entre dois números, haverá sempre pelo menos um número intermediário entre eles. Por exemplo, entre 1 e 2, tem 0 1.5; entre o 1.5 e o 1, tem o 1.25. Entre o 1 e o 1.25, tem o 1.125. Entre o 1 e o 1.125, tem o 1.01. Entre o 1 e o 1.01, tem o 1.05 e assim por diante. 
+O eixo x contém uma linha contínua numérica. Dizemos que a linha é contínua porque ela é inteira preenchida: entre dois números, sempre existe um número intermediário.
 
-Essa linha contém infinitos números, mas ela está delimitado a um intervalo, que vai do menor número encontrado na base, até o maior número encontrado na base. No nosso caso, o intervalo está dado entre 0 e 2000 dias
+Por exemplo, entre 1 e 2, tem 0 1.5; entre o 1.5 e o 1, tem o 1.25. Entre o 1 e o 1.25, tem o 1.125. Entre o 1 e o 1.125, tem o 1.01. Entre o 1 e o 1.01, tem o 1.05 e assim por diante.
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
-Apesar de haver infinitos números sobre a linha do eixo x, não existem infintas barras sobre ele. Existe apenas um número finito de barras. Todas as barras possuem intervalos de igual amplitude. O tamanho de cada intervalo que dá origem às barras é calculado pela amplitude total, dividido pela quantidade de barras que teremos representadas. 
+A linha do eixo x contém infinitos números, mas está delimitada entre o menor e o maior número encontrados na base. No nosso caso, os dados residem no intervalo entre 9 e 2049 dias.
+
+No histograma, construímos barras que possuem largura fixa, através de uma separação da linha em intervalos.
+
+Os intervalos que dão origem às barras que vamos mostrar.
 
 ## Como construir? Bins / Barras {.smaller}
 
-:::: columns
+::: columns
 ::: {.column width="60%"}
 ```{r,fig.height=9}
 consumo |>
@@ -93,27 +98,31 @@ consumo |>
 :::
 
 ::: {.column width="40%"}
-No gráfico que estamos de base, o intervalo total é de 0 a 2000, o que dá uma amplitude de 2000. Se construirmos 5 barras neste histograma, teremos, os seguintes intervalos:
+No gráfico, os limites são de 9 a 2049. Se construirmos 5 barras de largura 500 neste intervalo, teremos, os seguintes intervalos:
 
-- 0 a 400 dias, que representamos como [0, 400)
-- 400 a 800 dias, que representamos como [400, 800)
-- 800 a 1200 dias, que representamos como [800, 1200)
-- 1200 a 1600 dias, que representamos como [1200, 1600)
-- 1600 a 2000 dias, que representamos como [1600, 2000]
+-   1 a 500 dias, representados com (0, 500\]
+-   501 a 1000 dias, representados com (500, 1000\]
+-   1001 a 1500 dias, representados com (1000, 1500\]
+-   1501 a 2000 dias, representados com (1500, 2000\]
+-   2001 a 2500 dias, representados com (2000, 2500\]
 :::
-::::
-
+:::
 
 ## Como construir? Bins / Barras {.smaller}
 
-:::: columns
+::: columns
 ::: {.column width="60%"}
 ```{r,fig.height=9}
 consumo |>
   ggplot2::ggplot() +
   ggplot2::aes(x = tempo) +
-  ggplot2::geom_histogram(fill = cores_abj[1], bins = 5) +
+  ggplot2::geom_histogram(
+    fill = cores_abj[1], 
+    binwidth = 500,
+    boundary = 0
+  ) +
   ggthemes::theme_hc(30) +
+  ggplot2::scale_y_continuous(breaks = seq(0, 1000, 100)) +
   ggplot2::labs(
     title = "Histograma com 5 intervalos",
     x = "Tempo (em dias)",
@@ -123,18 +132,10 @@ consumo |>
 :::
 
 ::: {.column width="40%"}
-
 ```{r,results='hold'}
 consumo |> 
   dplyr::mutate(
-    intervalo = dplyr::case_when(
-      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
-      tempo >= 400 & tempo < 800 ~ "[400, 800)",
-      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
-      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
-      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
-    ),
-    intervalo = forcats::as_factor(intervalo)
+    intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
   knitr::kable(
@@ -142,17 +143,20 @@ consumo |>
   )
 ```
 :::
-::::
+:::
 
 ## Como construir? Bins / Barras {.smaller}
 
-:::: columns
+::: columns
 ::: {.column width="60%"}
 ```{r, fig.height=9}
 consumo |>
   ggplot2::ggplot() +
   ggplot2::aes(x = tempo) +
-  ggplot2::geom_histogram(fill = cores_abj[1], bins = 30) +
+  ggplot2::geom_histogram(
+    fill = cores_abj[1], bins = 30,
+    boundary = 0
+  ) +
   ggthemes::theme_hc(30) +
   ggplot2::labs(
     title = "Histograma com 30 intervalos",
@@ -164,17 +168,19 @@ consumo |>
 :::
 
 ::: {.column width="40%"}
-Podemos alterar a quantidade de bins, de forma que formemos diferentes intervalos. Neste caso, estamos com 30 barras. 
+Podemos alterar a quantidade de bins, de forma que formemos diferentes intervalos. Neste caso, estamos com 30 barras.
 
 ```{r,results='hold'}
-intervalos <- seq(0, max(consumo$tempo), len=30)
+intervalos <- c(seq(0, max(consumo$tempo), diff(range(consumo$tempo))/29), max(consumo$tempo))
 
 consumo |> 
-  dplyr::mutate(
-    intervalo = cut(consumo$tempo, breaks = intervalos, include.lowest = F, include.highest = T)
-  ) |> 
+  dplyr::mutate(intervalo = cut(
+    consumo$tempo, 
+    breaks = intervalos, 
+    dig.lab = 1
+  )) |> 
   dplyr::count(intervalo) |> 
-  dplyr::filter(n > 20) |>
+  dplyr::filter(n > 25) |>
   dplyr::mutate(
     n = as.character(n)
   ) |> 
@@ -182,21 +188,16 @@ consumo |>
     intervalo = "...",
     n = "..."
   ) |> 
-  dplyr::mutate(
-    intervalo = stringr::str_replace_all(intervalo, "\\(", "\\["),
-    intervalo = stringr::str_replace_all(intervalo, "\\]", "\\)")
-  ) |> 
   dplyr::add_row(
-    intervalo = "[1929,2000]",
+    intervalo = "(2040,2110.3]",
     n = "1"
   ) |> 
   knitr::kable()
 ```
-
 :::
-::::
+:::
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -211,8 +212,7 @@ consumo |>
   )
 ```
 
-
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -227,7 +227,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -242,7 +242,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -257,7 +257,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -272,7 +272,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -287,7 +287,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -302,7 +302,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -317,7 +317,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -332,7 +332,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -347,7 +347,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -362,7 +362,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -377,7 +377,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -392,7 +392,7 @@ consumo |>
   )
 ```
 
-## Como construir? Bins / Barras 
+## Como construir? Bins / Barras
 
 ```{r}
 consumo |>
@@ -409,8 +409,7 @@ consumo |>
 
 ## Como construir? Histograma x Barras
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ```{r,results='hold'}
 consumo |>
@@ -429,23 +428,15 @@ consumo |>
 ```{r,results='hold'}
 consumo |> 
   dplyr::mutate(
-    intervalo = dplyr::case_when(
-      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
-      tempo >= 400 & tempo < 800 ~ "[400, 800)",
-      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
-      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
-      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
-    ),
-    intervalo = forcats::as_factor(intervalo)
+    intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
   knitr::kable(
-    caption = "Tabela de frequência para os intervalos do histograma",
     col.names = c("Intervalo", "N")
   )
 ```
 :::
-::::
+:::
 
 ## Como construir? Histograma x Barras
 
@@ -488,14 +479,7 @@ patchwork::wrap_plots(p_bar, p_hist)
 ```{r}
 p_hist_bar <- consumo |> 
   dplyr::mutate(
-    intervalo = dplyr::case_when(
-      tempo >= 0 & tempo < 400 ~ "[0, 400)", 
-      tempo >= 400 & tempo < 800 ~ "[400, 800)",
-      tempo >= 800 & tempo < 1200 ~ "[800, 1200)",
-      tempo >= 1200 & tempo < 1600 ~ "[1200, 1600)",
-      tempo >= 1600 & tempo <= max(tempo) ~ "[1600, 2000]"
-    ),
-    intervalo = forcats::as_factor(intervalo)
+    intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
   ggplot2::ggplot() +
@@ -566,10 +550,9 @@ consumo |>
   ggplot2::labs(x = "Tempo (dias)", y = "Contagem")
 ```
 
-
 ## Interpretações
 
-Interpretamos os histogramas indicando qual é a distribuição do dado. Existem alguns tipos de distribuições. 
+Interpretamos os histogramas indicando qual é a distribuição do dado. Existem alguns tipos de distribuições.
 
 ```{r}
 N <- 10000
@@ -624,9 +607,9 @@ dados_sim |>
 
 A partir desses três histogramas, podemos tirar as seguintes propriedades:
 
-- Distribuição assimétrica para esquerda: Média < Mediana
-- Distribuição simétrica: Média = Mediana
-- Distribuição assimétrica para direita: Média > Mediana
+-   Distribuição assimétrica para esquerda: Média \< Mediana
+-   Distribuição simétrica: Média = Mediana
+-   Distribuição assimétrica para direita: Média \> Mediana
 
 ```{r,fig.height=4}
 dados_sim |> 
