@@ -18,7 +18,26 @@ title-slide-attributes:
   preview-links: true
 ---
 
-## Ementa do curso {.smaller}
+## Ementa do curso
+
+:::: columns
+::: column
+#### Parte 1 - Metodologia
+1. Processo de Geração de Dados
+2. Teorema de Priest & Klein
+3. Uma técnica de pesquisa
+
+:::
+::: column
+#### Parte 2 - Visualizações
+1. Gráfico de barras
+2. Histograma
+3. Boxplot
+4. Séries temporais
+5. Gráfico de dispersão
+
+:::
+::::
 
 # Uma técnica de pesquisa {.slide-title}
 
@@ -28,7 +47,7 @@ Hoje vamos ver uma técnica de pesquisa muito utilizada na ABJ. É a técnica qu
 
 Escolhemos apresentar esta técnica de pesquisa porque: 
 
-(1) ela é fazível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados; 
+(1) ela é exequível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados; 
 (2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui. 
 
 
@@ -157,7 +176,7 @@ knitr::include_graphics("img/cjsg-pesquisa.png")
 knitr::include_graphics("img/cjsg-resultados-resumo.png")
 ```
 
-## CJSG - Resultado
+## TJSP/CJSG - Resultado
 
 ```{r}
 #| out.width: "100%"
@@ -518,7 +537,7 @@ A criação do formulário, ao lado do pré-teste, devem reduzir ao máximo a qu
 
 ## Ferramentas de análise
 
-É preciso ter algum software para analisar os dados. Na ABJ utiizamos muito o R. Mas é possível também utilizar outros sofwtares. A seguir, listamos alguns softwares comuns.
+É preciso ter algum software para analisar os dados. Na ABJ utilizamos muito o R. Mas é possível também utilizar outros sofwtares. A seguir, listamos alguns softwares comuns.
 
 - Excel
 - Google Sheets
@@ -577,7 +596,7 @@ DiagrammeR::grViz(
       node [shape = ellipse, style = filled, fillcolor = "#7AD151"]
         interp2 [label = "Interpretação\ndos Dados"]
     
-      quali2->quant2 quant2->interp2
+      quant2->quali2 quali2->interp2
     }
     
     subgraph cluster_two{
@@ -593,7 +612,7 @@ DiagrammeR::grViz(
       node [shape = ellipse, style = filled, fillcolor = "#7AD151"]
         interp1 [label = "Interpretação\ndos Dados"]
     
-      quant1->quali1 quali1->interp1
+      quali1->quant1 quant1->interp1
     }
     
     subgraph cluster_three{
