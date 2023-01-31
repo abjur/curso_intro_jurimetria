@@ -32,6 +32,26 @@ cores_abj <- c("#102C68", "#AFCA0A", "#575756")
 
 ## Ementa do curso {.smaller}
 
+:::: columns
+::: column
+#### Parte 1 - Metodologia
+1. Processo de Geração de Dados
+2. Teorema de Priest & Klein
+3. Uma técnica de pesquisa
+
+:::
+::: column
+#### Parte 2 - Visualizações
+1. Gráfico de barras
+2. Histograma
+3. Boxplot
+4. Séries temporais
+5. Gráfico de dispersão
+
+:::
+::::
+
+
 # Gráficos de dispersão {.slide-title}
 
 ## Como construir?
@@ -242,4 +262,3 @@ da_crsfn |>
 #  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
-
