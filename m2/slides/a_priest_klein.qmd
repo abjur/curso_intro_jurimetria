@@ -98,6 +98,7 @@ O mecanismo de seleção, nesse caso, é a **queda do avião**: o avião só ent
 
 ```{r}
 #| eval: true
+#| echo: true
 set.seed(3)
 
 N <- 10000 # numero de pessoas infectadas
