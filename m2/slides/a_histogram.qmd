@@ -29,7 +29,27 @@ knitr::opts_chunk$set(
 options(scipen=999)
 ```
 
-## Ementa do curso {.smaller}
+
+## Ementa do curso
+
+:::: columns
+::: column
+#### Parte 1 - Metodologia
+1. Processo de Geração de Dados
+2. Teorema de Priest & Klein
+3. Uma técnica de pesquisa
+
+:::
+::: column
+#### Parte 2 - Visualizações
+1. Gráfico de barras
+2. Histograma
+3. Boxplot
+4. Séries temporais
+5. Gráfico de dispersão
+
+:::
+::::
 
 # Histograma {.slide-title}
 
@@ -62,8 +82,9 @@ consumo |>
 ## Como construir? Visão geral
 
 -   Variáveis numéricas contínuas
--   Eixos: x = variável de interesse; y = contagem, criada automaticamente
--   Podem ser bivariados, adicionando cores ao histograma
+-   Eixos: x = variável de interesse; y = contagem / proporção
+-   Bins
+-   Podem ser bivariados
 
 ## Como construir? Variável contínua
 
@@ -77,7 +98,7 @@ A linha do eixo x contém infinitos números, mas está delimitada entre o menor
 
 No histograma, construímos barras que possuem largura fixa, através de uma separação da linha em intervalos.
 
-Os intervalos que dão origem às barras que vamos mostrar.
+Vamos ver, a seguir, como construir os intervalos que dão origem às barras. 
 
 ## Como construir? Bins / Barras {.smaller}
 
@@ -100,11 +121,11 @@ consumo |>
 ::: {.column width="40%"}
 No gráfico, os limites são de 9 a 2049. Se construirmos 5 barras de largura 500 neste intervalo, teremos, os seguintes intervalos:
 
--   1 a 500 dias, representados com (0, 500\]
--   501 a 1000 dias, representados com (500, 1000\]
--   1001 a 1500 dias, representados com (1000, 1500\]
--   1501 a 2000 dias, representados com (1500, 2000\]
--   2001 a 2500 dias, representados com (2000, 2500\]
+-   0 a 500 dias, representados com [0, 500]
+-   500 a 1000 dias, representados com (500, 1000]
+-   1000 a 1500 dias, representados com (1000, 1500]
+-   1500 a 2000 dias, representados com (1500, 2000]
+-   2000 a 2500 dias, representados com (2000, 2500]
 :::
 :::
 
@@ -138,6 +159,12 @@ consumo |>
     intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      dplyr::row_number() == 1 ~ stringr::str_replace(intervalo, "\\(", "\\["),
+      TRUE ~ intervalo
+    )
+  ) |> 
   knitr::kable(
     col.names = c("Intervalo", "N")
   )
@@ -180,6 +207,12 @@ consumo |>
     dig.lab = 1
   )) |> 
   dplyr::count(intervalo) |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      dplyr::row_number() == 1 ~ stringr::str_replace(intervalo, "\\(", "\\["),
+      TRUE ~ intervalo
+    )
+  ) |> 
   dplyr::filter(n > 25) |>
   dplyr::mutate(
     n = as.character(n)
@@ -431,6 +464,12 @@ consumo |>
     intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      dplyr::row_number() == 1 ~ stringr::str_replace(intervalo, "\\(", "\\["),
+      TRUE ~ intervalo
+    )
+  ) |> 
   knitr::kable(
     col.names = c("Intervalo", "N")
   )
@@ -482,6 +521,13 @@ p_hist_bar <- consumo |>
     intervalo = cut(tempo, seq(0, 2500, 500), dig.lab = 4)
   ) |> 
   dplyr::count(intervalo) |> 
+  dplyr::mutate(
+    intervalo = dplyr::case_when(
+      dplyr::row_number() == 1 ~ stringr::str_replace(intervalo, "\\(", "\\["),
+      TRUE ~ intervalo
+    ),
+    intervalo = forcats::fct_inorder(intervalo)
+  ) |> 
   ggplot2::ggplot() +
   ggplot2::aes(x = intervalo, y = n) +
   ggplot2::geom_col(fill = cores_abj[1]) +
@@ -491,7 +537,6 @@ p_hist_bar <- consumo |>
     x = "Intervalo de tempo (em dias)",
     y = "Quantidade de casos"
   )
-
 patchwork::wrap_plots(p_hist_bar, p_hist)
 ```
 

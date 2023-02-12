@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="a_priest_klein_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="a_priest_klein_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -330,28 +394,6 @@
 </div>
 
 </section>
-<section id="ementa-do-curso" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column">
-<h4 id="parte-1---metodologia">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Processo de Geração de Dados</li>
-<li>Teorema de Priest &amp; Klein</li>
-<li>Uma técnica de pesquisa</li>
-</ol>
-</div><div class="column">
-<h4 id="parte-2---visualizações">Parte 2 - Visualizações</h4>
-<ol type="1">
-<li>Gráfico de barras</li>
-<li>Histograma</li>
-<li>Boxplot</li>
-<li>Séries temporais</li>
-<li>Gráfico de dispersão</li>
-</ol>
-</div>
-</div>
-</section>
 <section>
 <section id="viés-de-seleção" class="title-slide slide level1 slide-title center">
 <h1>Viés de seleção</h1>
@@ -401,9 +443,23 @@
 <section id="exemplo-computacional" class="slide level2">
 <h2>Exemplo computacional</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span> <span class="co"># numero de pessoas infectadas</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>letalidade <span class="ot">&lt;-</span> <span class="fl">0.01</span> <span class="co"># letalidade real</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>gravidade <span class="ot">&lt;-</span> <span class="fu">runif</span>(N) <span class="co"># número aleatório indicando a gravidade da doença</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>morreu_real <span class="ot">&lt;-</span> gravidade <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">-</span> letalidade <span class="co"># indica se a pessoa morreu</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># hospitalizacao proporcional à gravidade</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>hospitalizacao <span class="ot">&lt;-</span> <span class="fu">as.logical</span>(<span class="fu">rbinom</span>(N, <span class="dv">1</span>, gravidade))</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>morreu_observados <span class="ot">&lt;-</span> morreu_real[hospitalizacao]</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">mean</span>(morreu_observados)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.01917316</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mean</span>(morreu_real)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.0097</code></pre>
 </div>
