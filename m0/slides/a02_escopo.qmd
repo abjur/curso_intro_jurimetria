@@ -1,0 +1,226 @@
+---
+title: "Metodologia"
+subtitle: "Definição de escopo"
+format: 
+  revealjs:
+      logo: "img/logo-abj-colorido.png"
+      footer: "Introdução à Pesquisa Jurimétrica."
+      theme: [default, css/custom-css.scss]
+      slide-number: c/t
+      show-slide-number: all
+      mainfont: Yaldevi
+editor: visual
+lang: pt
+title-slide-attributes: 
+  data-background-color: "#233262"
+  border-start-end-radius: 50%;
+  writing-mode: vertical-rl;
+  preview-links: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  out.width = "90%",
+  message = FALSE,
+  warning = FALSE
+)
+xaringanExtra::use_panelset()
+```
+
+## Estrutura da aula
+
+1.  Escopo temporal
+2.  Escopo geográfico
+
+# Escopo temporal {.slide-title}
+
+## Pesquisas retrospectivas e prospectivas {.smaller}
+
+**Pesquisas retrospectivas:** São as pesquisas cujo escopo temporal considera apenas casos *finalizados até determinada data*. Isso é feitando buscando os processos pela decisão/sentença/acórdão.
+
+**Pesquisas prospectivas:** São as pesquisas cujo escopo temporal considera todos os casos *iniciados a partir de uma data, independente de seu fim*. Isso é feito buscando os processos de acordo com a sua data de distribuição.
+
+## Fontes de dados {.smaller}
+
+A definição do escopo temporal está intrinsecamente relacionada à forma de encontrar os processsos de interesse. Existem duas fontes principais de listagem de processos:
+
+-   **Consulta de Julgados (CJPG ou CJSG):** Os sistemas de consulta de julgados são sistemas que quase todos os tribunais disponibilizam. Neles, podemos realizar pesquisas a partir de termos de interesse em "Pesquisa Livre". O resultado dessa pesquisa é sempre uma decisão. Na Consulta de Julgados de Primeiro Grau (CJPG), o resultado da pesquisa são sentenças, já na consulta de Consulta de Julgados de Segundo Grau (CJSG), o resultado da pesquisa são acórdãos. Realizando a pesquisa por qualquer um dos sistemas de consulta de julgados, teremos sermpre uma pequisa retrospectiva.
+
+![](img/cjpg.png){width="60%"}
+
+## Fontes de dados {.smaller}
+
+-   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
+
+![](img/dje_tjsp1.png)
+
+## Fontes de dados {.smaller}
+
+-   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
+
+![](img/dje_tjsp4.png)
+
+## Fontes de dados {.smaller}
+
+-   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
+
+![](img/dje_tjsp2.png)
+
+## Fontes de dados {.smaller}
+
+-   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
+
+![](img/dje_tjsp3.png)
+
+## Fontes de dados {.smaller}
+
+O que devemos perceber, então, é que para delimitar o escopo temporal, precisamos de duas informações:
+
+1.  A **janela de análise**, que é o período que iremos considerar. São sempre duas datas: a data de início do escopo temporal e a data de fim do escopo temporal. Por exemplo, as datas de referência podem ser de 01/01/2015 até 31/12/2015.
+    -   A janela de análise pode ser delimitada de forma empírica. Por exemplo, se fizermos uma pesquisa em que a janela seja "todos os processos distribuídos até 2015", parece que não não há data de início do escopo temporal, mas apenas a data de fim (31/12/2014). Neste caso, a data de início da janela de pesquisa será a data do processo mais antigo encontrado.
+2.  A **data de referência**, que é o marco temporal que utilizaremos como base para delimitar o escopo temporal. São apenas duas datas possíveis: a data de distribuição e a data da decisão.
+
+```{r}
+tibble::tibble(
+  `Fonte de pesquisa` = c("CJPG/CJSG", "DJE"),
+  `Indexador` = c("Data da decisão", "Data de distribuição"),
+  `Escopo temporal` = c("Retrospectivo", "Prospectivo")
+) |> 
+  knitr::kable(
+    format = "html", escape = FALSE,
+    table.attr = "class=\"striped\""
+  )
+```
+
+## Relaçaõ entre o escopo e os processos encontrados {.smaller}
+
+```{r}
+knitr::include_graphics("img/tempos.png")
+```
+
+::: columns
+::: {.column width="20%"}
+(1) Prospectivo e retrospectivo
+
+(2) Apenas prospectivo
+
+(3) Apenas retrospectivo
+:::
+
+::: {.column width="80%"}
+(4) Nenhum dos dois, mas poderia ser capturado por atividade no período.
+
+(5 e 6) fora do escopo.
+
+(7) Nenhum dos dois tipos e não poderia ser capturado (ficou inativo no período).
+:::
+:::
+
+# Escopo geográfico {.slide-title}
+
+## Instituições {.smaller}
+
+A escolha do escopo geográfico se liga à escolha da instituição que será analisada
+
+::: columns
+::: column
+Podemos analisar tribunais judiciais:
+
+::: columns
+::: column
+-   TJs
+-   TRF
+-   JF
+:::
+
+::: column
+-   STJ
+-   STF
+-   TRT
+:::
+:::
+
+Podemos estudar agências reguladoras
+
+-   Anvisa
+-   Aneel
+-   Anatel
+:::
+
+::: column
+Podemos estudar tribunais administrativos:
+
+-   CARF
+-   CVM
+-   CADE
+
+Podemos estudar outras instituições jurídicas:
+
+-   Defensoria Pública
+-   Ministério Público
+-   Advocacia Geral da União
+-   Procuradoria Geral
+:::
+:::
+
+Mas independente do que escolhermos estudar, precisamos pensar na sua manifestação geográfica.
+
+## O ciclo vicioso de São Paulo
+
+```{r}
+DiagrammeR::grViz("
+
+  digraph ciclo_sp {
+
+    # a 'graph' statement
+
+    graph [class = dgr_graph, rankdir = 'LR']
+
+    # several 'node' statements
+
+    node [
+      shape = oval, 
+      style = filled, 
+      fillcolor = white, 
+      color = white, 
+      fontcolor = MidnightBlue, 
+      fontname = Yaldelvi,
+      fontsize = 25
+    ]
+
+      prod [label = 'Maior produção\nde pesquisa', fontcolor = DarkGreen, rank = 1];
+      
+      demanda [label = 'Maior demanda\npor dados', rank = 2]
+
+      estrutura [label = 'Melhor estrutura\nde dados', rank = 3];
+      
+      scraper [label = 'O TJSP é mais\nfácil de scrapear', rank = 4];
+      
+      tecnologia [label = 'Existe mais tecnologia\npara pesquisar em SP', rank = 2];
+      
+      facil [label = 'Maior facilidade\nem fazer pesquisa', fontcolor = DarkGreen, rank = 4];
+      
+
+    # several 'edge' statements
+    
+    prod->demanda
+    demanda->estrutura
+    estrutura->facil
+    facil->prod
+  
+    scraper->facil
+    
+    prod->tecnologia
+    tecnologia->facil
+
+  }
+
+  ")
+
+```
+
+#  {background="#fff"}
+
+![](img/logo-abj-colorido.png){width="500"}
