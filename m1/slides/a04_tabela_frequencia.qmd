@@ -17,71 +17,14 @@ title-slide-attributes:
   writing-mode: vertical-rl;
   preview-links: true
 ---
-
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  **Medidas de variáveis categóricas: Tabelas de frequência**
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-# Medidas de variáveis categóricas {.slide-title}
-
-## Plano de aula
+## Estrutura da aula
 
 Na aula de hoje, teremos dois objetivos:
 
 1.  Aprender a interpretar as medidas de uma tabela de distribição de frequência
 2.  Aprender quando usar cada medida
+
+# Tabela de frequência {.slide-title}
 
 ##  {.smaller}
 

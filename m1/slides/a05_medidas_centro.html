@@ -322,8 +322,13 @@
   <p class="subtitle">Medidas para variáveis numéricas: medidas de centro</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
+<section id="estrutura-do-curso" class="slide level2">
+<h2>Estrutura do curso</h2>
+<ol type="1">
+<li>Média</li>
+<li>Mediana</li>
+<li>Moda</li>
+</ol>
 <div style="position:fixed; visibility: hidden">
 <p><span class="math display">\[\require{color}\definecolor{red}{rgb}{.784, .247, .361}\]</span> <span class="math display">\[\require{color}\definecolor{blue}{rgb}{.24, .51, .60}\]</span> <span class="math display">\[\require{color}\definecolor{green}{rgb}{49, 82.7, 40.4}\]</span> <span class="math display">\[\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}\]</span></p>
 </div>
@@ -341,87 +346,26 @@ MathJax.Hub.Config({
   }
 });
 </script>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li>Tipos de variáveis</li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li>Medidas de variáveis numéricas I: Medidas de centro
-<ol type="1">
-<li>Média</li>
-<li>Mediana</li>
-<li>Moda</li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="ementa-do-curso-1" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia-1">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas-1">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li>Tipos de variáveis</li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li><strong>Medidas de variáveis numéricas I: Medidas de centro</strong>
-<ol type="1">
-<li><strong>Média</strong></li>
-<li><strong>Mediana</strong></li>
-<li><strong>Moda</strong></li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
 </section>
 <section>
-<section id="medidas-de-centro" class="title-slide slide level1 center">
-<h1>Medidas de centro</h1>
+<section id="média" class="title-slide slide level1 slide-title center">
+<h1>Média</h1>
 
 </section>
-<section id="média" class="slide level2">
-<h2>Média</h2>
+<section id="fórmula" class="slide level2">
+<h2>Fórmula</h2>
 <div class="center-middle r-fit-text">
 <p><span class="math display">\[\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}\]</span></p>
 </div>
 </section>
-<section id="média-1" class="slide level2">
-<h2>Média</h2>
+<section id="fórmula-1" class="slide level2">
+<h2>Fórmula</h2>
 <div class="left-middle" style="font-size: 130%">
 <p><span class="math display">\[\green{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}\]</span></p>
 </div>
 </section>
-<section id="média---somatório" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório" class="slide level2">
+<h2>Somatório</h2>
 <div class="left-middle" style="font-size: 130%;">
 <p><span class="math display">\[\red{\sum_{i=i}^{n} x_{i}}\]</span></p>
 </div>
@@ -440,14 +384,14 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="média---somatório-1" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório-1" class="slide level2">
+<h2>Somatório</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_\green{{k=1}}^\green{5} \green{4k}\]</span></p>
 </div>
 </section>
-<section id="média---somatório-2" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório-2" class="slide level2">
+<h2>Somatório</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_\gray{{k=1}}^\gray{5} \green{4k}\]</span></p>
 </div>
@@ -455,8 +399,8 @@ MathJax.Hub.Config({
 <p>A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: <span class="math inline">\(4k\)</span>, ou seja, 4 vezes k.</p>
 </div>
 </section>
-<section id="média---somatório-3" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório-3" class="slide level2">
+<h2>Somatório</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_\green{{k=1}}^\gray{5} \gray{4k}\]</span></p>
 </div>
@@ -465,8 +409,8 @@ MathJax.Hub.Config({
 <p>A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=1\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=1\)</span>, a expressão é igual a 4.</p>
 </div>
 </section>
-<section id="média---somatório-4" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório-4" class="slide level2">
+<h2>Somatório</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_\gray{{k=1}}^\green{5} \gray{4k}\]</span></p>
 </div>
@@ -476,8 +420,8 @@ MathJax.Hub.Config({
 <p>A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando <span class="math inline">\(k=5\)</span>. Se a expressão é <span class="math inline">\(4k\)</span>, então, quando <span class="math inline">\(k=5\)</span>, a expressão é igual a 20.</p>
 </div>
 </section>
-<section id="média---somatório-5" class="slide level2">
-<h2>Média - Somatório</h2>
+<section id="somatório-5" class="slide level2">
+<h2>Somatório</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_\green{{k=1}}^\green{5} \green{4k}\]</span></p>
 </div>
@@ -488,8 +432,8 @@ MathJax.Hub.Config({
 <p>Ou seja, serão somados todos os termos de <span class="math inline">\(k=1\)</span> até <span class="math inline">\(k=5\)</span>, fazendo <span class="math inline">\(4x1 + 4x2 + 4x3 + 4x4 + 4x5\)</span></p>
 </div>
 </section>
-<section id="média---índice" class="slide level2">
-<h2>Média - Índice</h2>
+<section id="índice" class="slide level2">
+<h2>Índice</h2>
 <div class="right-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_{{k=1}}^{5} \green{4k}\]</span></p>
 </div>
@@ -500,8 +444,8 @@ MathJax.Hub.Config({
 <p><span class="math display">\[\sum_{i=1}^{n} \green{x_{i}}\]</span></p>
 </div>
 </section>
-<section id="média---índice-1" class="slide level2">
-<h2>Média - Índice</h2>
+<section id="índice-1" class="slide level2">
+<h2>Índice</h2>
 <div class="left-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_{i=1}^{10} \green{x_{i}}\]</span></p>
 </div>
@@ -578,8 +522,8 @@ MathJax.Hub.Config({
 <p>Quando o termo inicial (<em>i</em>) é 1, então a expressão a ser somada não é 1, mas é <span class="math inline">\(x_1\)</span>, o que, neste caso, significa R$ 0</p>
 </div>
 </section>
-<section id="média-2" class="slide level2">
-<h2>Média</h2>
+<section id="conclusões" class="slide level2">
+<h2>Conclusões</h2>
 <div class="left-middle" style="font-size: 50px;">
 <p><span class="math display">\[\sum_{i=i}^{n} x_{i}\]</span></p>
 </div>
@@ -591,8 +535,8 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="média-3" class="slide level2">
-<h2>Média</h2>
+<section id="conclusões-1" class="slide level2">
+<h2>Conclusões</h2>
 <div class="left-middle" style="font-size: 50px;">
 <p><span class="math display">\[\frac{1}{n} \sum_{i=i}^{n} x_{i}\]</span></p>
 </div>
@@ -602,8 +546,8 @@ MathJax.Hub.Config({
 <p>O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.</p>
 </div>
 </section>
-<section id="média-4" class="slide level2">
-<h2>Média</h2>
+<section id="conclusão" class="slide level2">
+<h2>Conclusão</h2>
 <div class="left-middle" style="font-size: 50px;">
 <p><span class="math display">\[\frac{1}{\green{n}} \sum_{i=i}^{\green{n}} x_{i}\]</span></p>
 </div>
@@ -613,15 +557,19 @@ MathJax.Hub.Config({
 <p>O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo <span class="math inline">\(n\)</span> da divisão!</p>
 </div>
 </section>
-<section id="média-5" class="slide level2">
-<h2>Média</h2>
+<section id="fórmula-2" class="slide level2">
+<h2>Fórmula</h2>
 <div class="center-middle r-fit-text">
 <p><span class="math display">\[\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}\]</span></p>
 </div>
+</section></section>
+<section>
+<section id="mediana" class="title-slide slide level1 slide-title center">
+<h1>Mediana</h1>
+
 </section>
-<section id="mediana" class="slide level2">
-<h2>Mediana</h2>
-<h4 id="conceito">Conceito</h4>
+<section id="conceito" class="slide level2">
+<h2>Conceito</h2>
 <div style="font-size: 30px;">
 <p>Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.</p>
 <div class="center">
@@ -639,9 +587,8 @@ MathJax.Hub.Config({
 </div>
 </div>
 </section>
-<section id="mediana-1" class="slide level2">
-<h2>Mediana</h2>
-<h4 id="fórmula-matemática">Fórmula matemática</h4>
+<section id="fórmula-matemática" class="slide level2">
+<h2>Fórmula matemática</h2>
 <div class="center-middle r-fit-text">
 <p><span class="math display">\[md\left(x\right)
 =\begin{cases}
@@ -687,10 +634,14 @@ MathJax.Hub.Config({
 <p>Dizemos que a mediana é mais <em>robusta</em> do que a média, porque ela não é afetada por “valores extremos”.</p>
 </div>
 </div>
+</section></section>
+<section>
+<section id="moda" class="title-slide slide level1 slide-title center">
+<h1>Moda</h1>
+
 </section>
-<section id="moda" class="slide level2">
-<h2>Moda</h2>
-<h3 id="conceito-1">Conceito</h3>
+<section id="conceito-1" class="slide level2">
+<h2>Conceito</h2>
 <div style="font-size: 30px;">
 <p>A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.</p>
 </div>

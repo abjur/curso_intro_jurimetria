@@ -32,7 +32,11 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
-## Ementa do curso {.smaller}
+## Estrutura do curso
+
+1. Média
+2. Mediana
+3. Moda
 
 ::: {style="position:fixed; visibility: hidden"}
 $$\require{color}\definecolor{red}{rgb}{.784, .247, .361}$$ $$\require{color}\definecolor{blue}{rgb}{.24, .51, .60}$$ $$\require{color}\definecolor{green}{rgb}{49, 82.7, 40.4}$$ $$\require{color}\definecolor{gray}{rgb}{0.662745098039216, 0.662745098039216, 0.662745098039216}$$
@@ -55,75 +59,21 @@ MathJax.Hub.Config({
 </script>
 ```
 
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
+# Média {.slide-title}
 
-1. Operacionalização de conceitos
-2. Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1. Operacionalização de conceitos
-2. Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  **Medidas de variáveis numéricas I: Medidas de centro**
-    1.  **Média**
-    2.  **Mediana**
-    3.  **Moda**
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-# Medidas de centro
-
-## Média
+## Fórmula
 
 ::: {.center-middle .r-fit-text}
 $$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
 :::
 
-## Média
+## Fórmula
 
 ::: {.left-middle style="font-size: 130%"}
 $$\green{\frac{1}{n}} \red{\sum_{i=i}^{n} x_{i}}$$
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.left-middle style="font-size: 130%;"}
 $$\red{\sum_{i=i}^{n} x_{i}}$$
@@ -147,13 +97,13 @@ Podemos quebrar a notação do sigma em três partes: a expressão (4k), o limit
 :::
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\green{{k=1}}^\green{5} \green{4k}$$
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\gray{5} \green{4k}$$
@@ -163,7 +113,7 @@ $$\sum_\gray{{k=1}}^\gray{5} \green{4k}$$
 A primeira parte da notação do somatório é a expressão que será somada. Neste caso em específico, a expressão que será somada é uma operação: $4k$, ou seja, 4 vezes k.
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\green{{k=1}}^\gray{5} \gray{4k}$$
@@ -175,7 +125,7 @@ A primeira parte da notação do somatório é a expressão que será somada. Ne
 A segunda parte da notação é o limite inferior da soma, isto é, o termo inicial que será somado. No caso, o primeiro valor a ser somado é o valor que a expressão assume quando $k=1$. Se a expressão é $4k$, então, quando $k=1$, a expressão é igual a 4.
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\gray{{k=1}}^\green{5} \gray{4k}$$
@@ -189,7 +139,7 @@ A segunda parte da notação é o limite inferior da soma, isto é, o termo inic
 A última parte da notação é o limite superior da soma, isto é, o termo final que será somado. No caso, o último valor a ser somado é o valor que a expressão assume quando $k=5$. Se a expressão é $4k$, então, quando $k=5$, a expressão é igual a 20.
 :::
 
-## Média - Somatório
+## Somatório
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_\green{{k=1}}^\green{5} \green{4k}$$
@@ -205,7 +155,7 @@ A última parte da notação é o limite superior da soma, isto é, o termo fina
 Ou seja, serão somados todos os termos de $k=1$ até $k=5$, fazendo $4x1 + 4x2 + 4x3 + 4x4 + 4x5$
 :::
 
-## Média - Índice
+## Índice
 
 ::: {.right-middle style="font-size: 50px;"}
 $$\sum_{{k=1}}^{5} \green{4k}$$
@@ -219,7 +169,7 @@ Na fórmula da média, há uma diferença importante: no lugar do k, temos o $x_
 $$\sum_{i=1}^{n} \green{x_{i}}$$
 :::
 
-## Média - Índice
+## Índice
 
 ::: {.left-middle style="font-size: 50px;"}
 $$\sum_{i=1}^{10} \green{x_{i}}$$
@@ -269,7 +219,7 @@ valor_bem1 <- tab$valor_avaliacao_inicial[tab$descricao == "bem 1"]
 Quando o termo inicial (*i*) é 1, então a expressão a ser somada não é 1, mas é $x_1$, o que, neste caso, significa R\$ `r valor_bem1`
 :::
 
-## Média
+## Conclusões
 
 ::: {.left-middle style="font-size: 50px;"}
 $$\sum_{i=i}^{n} x_{i}$$
@@ -285,7 +235,7 @@ O que falta agora para completar a fórmula da média é a divisão, pois, lembr
 :::
 :::
 
-## Média
+## Conclusões
 
 ::: {.left-middle style="font-size: 50px;"}
 $$\frac{1}{n} \sum_{i=i}^{n} x_{i}$$
@@ -299,7 +249,7 @@ Importa dizer que, no caso da média, o índice final ($n$) será sempre o núme
 O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório.
 :::
 
-## Média
+## Conclusão
 
 ::: {.left-middle style="font-size: 50px;"}
 $$\frac{1}{\green{n}} \sum_{i=i}^{\green{n}} x_{i}$$
@@ -313,15 +263,15 @@ Importa dizer que, no caso da média, o índice final ($n$) será sempre o núme
 O que falta agora para completar a fórmula da média é a divisão, pois, lembrando, a média é constituída pelo somatório e a divisão pelo número total de elementos que foram contados no somatório. Perceba que o índice final (n) é o mesmo $n$ da divisão!
 :::
 
-## Média
+## Fórmula
 
 ::: {.center-middle .r-fit-text}
 $$\bar{x}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=i}^{n} x_{i}$$
 :::
 
-## Mediana
+# Mediana {.slide-title}
 
-#### Conceito
+## Conceito
 
 ::: {style="font-size: 30px;"}
 Para encontrar a mediana, é preciso ordenar os números de forma crescente (do menor para o maior). A partir disso, podemos pensar na mediana. A mediana é exatamente o valor que está no meio.
@@ -343,9 +293,7 @@ Se a quantidade total de números for ímpar, então o "meio" será exatamente o
 :::
 :::
 
-## Mediana
-
-#### Fórmula matemática
+## Fórmula matemática
 
 ::: {.center-middle .r-fit-text}
 $$md\left(x\right)
@@ -397,9 +345,9 @@ Dizemos que a mediana é mais *robusta* do que a média, porque ela não é afet
 :::
 :::
 
-## Moda
+# Moda {.slide-title}
 
-### Conceito
+## Conceito
 
 ::: {style="font-size: 30px;"}
 A moda diz respeito simplesmente ao valor (ou aos valores) mais frequentes de um determinado conjunto de números. Para encontrar a moda, basta fazer a contagem dos casos e escolher aquele(s) de maior frequência.
@@ -477,6 +425,6 @@ tibble::tibble(
 
 ```
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}

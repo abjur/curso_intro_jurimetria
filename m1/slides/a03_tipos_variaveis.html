@@ -312,7 +312,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="a03_tipos_variaveis_files/libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+  <script src="a03_tipos_variaveis_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
   <script src="a03_tipos_variaveis_files/libs/viz-1.8.2/viz.js"></script>
   <link href="a03_tipos_variaveis_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
   <script src="a03_tipos_variaveis_files/libs/grViz-binding-1.0.9/grViz.js"></script>
@@ -326,93 +326,29 @@
   <p class="subtitle">Tipos de variáveis</p>
 </section>
 
-<section id="ementa-do-curso" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li>Tipos de variáveis</li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li>Medidas de variáveis numéricas I: Medidas de centro
-<ol type="1">
-<li>Média</li>
-<li>Mediana</li>
-<li>Moda</li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="ementa-do-curso-1" class="slide level2 smaller">
-<h2>Ementa do curso</h2>
-<div class="columns">
-<div class="column" style="width:32%;">
-<h4 id="parte-1---metodologia-1">Parte 1 - Metodologia</h4>
-<ol type="1">
-<li>Operacionalização de conceitos</li>
-<li>Definição de escopo</li>
-</ol>
-</div><div class="column" style="width:68%;">
-<h4 id="parte-2---técnicas-1">Parte 2 - Técnicas</h4>
-<ol type="1">
-<li><strong>Tipos de variáveis</strong></li>
-<li>Medidas de variáveis categóricas: Tabelas de frequência</li>
-<li>Medidas de variáveis numéricas I: Medidas de centro
-<ol type="1">
-<li>Média</li>
-<li>Mediana</li>
-<li>Moda</li>
-</ol></li>
-<li>Medidas de variáveis numéricas II: Medidas de dispersão
-<ol type="1">
-<li>Desvio médio</li>
-<li>Variância</li>
-<li>Desvio padrão</li>
-<li>Amplitude</li>
-<li>IQR</li>
-</ol></li>
-</ol>
-</div>
-</div>
-</section>
-<section>
-<section id="tipos-de-variáveis" class="title-slide slide level1 slide-title center">
-<h1>Tipos de variáveis</h1>
-
-</section>
-<section id="plano-de-aula" class="slide level2">
-<h2>Plano de aula</h2>
+<section id="estrutura-da-aula" class="slide level2">
+<h2>Estrutura da aula</h2>
 <p>Na aula de hoje, teremos dois objetivos:</p>
 <ol type="1">
 <li>Ver a classificação dos tipos de variáveis</li>
 <li>Ver como os tipos de variáveis se refletem em uma base de dados</li>
 </ol>
 </section>
-<section id="tipos-de-variáveis-1" class="slide level2">
+<section>
+<section id="classificação-das-variáveis" class="title-slide slide level1 slide-title center">
+<h1>Classificação das variáveis</h1>
+
+</section>
+<section id="tipos-de-variáveis" class="slide level2">
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-861ea5e7c3ba919f5a58" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-861ea5e7c3ba919f5a58">{"x":{"diagram":"\n\n  digraph tipos_variaveis {\n\n    # a \"graph\" statement\n\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n\n    # several \"node\" statements\n\n    node [shape = box]\n\n      cat [label = \"variável categórica\", rank = 1];\n\n      num [label = \"variável numérica\", rank = 2]\n\n    node [shape = box]\n\n      ord [label = \"variável ordinal\"];\n\n      nom [label = \"variável nominal\"];\n\n      cont [label = \"variável contínua\"];\n\n      disc [label = \"variável discreta\"]\n\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8c812041b8efb9be7682" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-8c812041b8efb9be7682">{"x":{"diagram":"\n  digraph tipos_variaveis {\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n    # several \"node\" statements\n    node [shape = box]\n      cat [label = \"variável categórica\", rank = 1];\n      num [label = \"variável numérica\", rank = 2]\n    node [shape = box]\n      ord [label = \"variável ordinal\"];\n      nom [label = \"variável nominal\"];\n      cont [label = \"variável contínua\"];\n      disc [label = \"variável discreta\"]\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="tipos-de-variáveis-2" class="slide level2">
+<section id="tipos-de-variáveis-1" class="slide level2">
 <h2>Tipos de variáveis</h2>
 <h3 id="variáveis-categóricas">Variáveis categóricas</h3>
 <p>Variáveis ordinais: As categorias possuem uma ordenação universal entre si</p>
@@ -421,7 +357,7 @@
 <p>Variáveis discretas: Representa números inteiros (exclui números fracionados e negativos).</p>
 <p>Variáveis contínuas: Representa números reais (inclui números fracionados e negativos)</p>
 </section>
-<section id="tipos-de-variáveis-3" class="slide level2">
+<section id="tipos-de-variáveis-2" class="slide level2">
 <h2>Tipos de variáveis</h2>
 <h3 id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
 <p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo, pois a média é uma medida de uma variável numérica, enquanto o juiz é uma variável categórica. Então é importante sabermos distinguir os tipos de variáveis para sabermos nos adequar às análises de cada caso.</p>

@@ -29,80 +29,20 @@ knitr::opts_chunk$set(
 xaringanExtra::use_panelset()
 ```
 
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  **Definição de escopo**
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-# Definição de escopo {.slide-title}
-
-## Quais escopos precisamos definir
+## Estrutura da aula
 
 1.  Escopo temporal
 2.  Escopo geográfico
 
-## Escopo temporal
+# Escopo temporal {.slide-title}
 
-#### Pesquisas retrospectivas e prospectivas
+## Pesquisas retrospectivas e prospectivas {.smaller}
 
 **Pesquisas retrospectivas:** São as pesquisas cujo escopo temporal considera apenas casos *finalizados até determinada data*. Isso é feitando buscando os processos pela decisão/sentença/acórdão.
 
 **Pesquisas prospectivas:** São as pesquisas cujo escopo temporal considera todos os casos *iniciados a partir de uma data, independente de seu fim*. Isso é feito buscando os processos de acordo com a sua data de distribuição.
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 A definição do escopo temporal está intrinsecamente relacionada à forma de encontrar os processsos de interesse. Existem duas fontes principais de listagem de processos:
 
@@ -110,41 +50,31 @@ A definição do escopo temporal está intrinsecamente relacionada à forma de e
 
 ![](img/cjpg.png){width="60%"}
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 -   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
 
 ![](img/dje_tjsp1.png)
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 -   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
 
 ![](img/dje_tjsp4.png)
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 -   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
 
 ![](img/dje_tjsp2.png)
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 -   **Diários de Justiça Eletrônico (DJE):** O outro sistema para busca de processos são os diários de justiça eletrônicos. Nos diários, encontramos os processos de acordo com a sua data de distribuição.
 
 ![](img/dje_tjsp3.png)
 
-## Escopo temporal {.smaller}
-
-#### Fontes de dados
+## Fontes de dados {.smaller}
 
 O que devemos perceber, então, é que para delimitar o escopo temporal, precisamos de duas informações:
 
@@ -164,9 +94,7 @@ tibble::tibble(
   )
 ```
 
-## Escopo temporal {.smaller}
-
-#### Relaçaõ entre o escopo e os processos encontrados
+## Relaçaõ entre o escopo e os processos encontrados {.smaller}
 
 ```{r}
 knitr::include_graphics("img/tempos.png")
@@ -190,7 +118,9 @@ knitr::include_graphics("img/tempos.png")
 :::
 :::
 
-## Escopo geográfico {.smaller}
+# Escopo geográfico {.slide-title}
+
+## Instituições {.smaller}
 
 A escolha do escopo geográfico se liga à escolha da instituição que será analisada
 
@@ -237,9 +167,7 @@ Podemos estudar outras instituições jurídicas:
 
 Mas independente do que escolhermos estudar, precisamos pensar na sua manifestação geográfica.
 
-## Escopo geográfico
-
-#### O ciclo vicioso de São Paulo
+## O ciclo vicioso de São Paulo
 
 ```{r}
 DiagrammeR::grViz("

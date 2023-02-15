@@ -32,72 +32,16 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  Medidas de variáveis numéricas II: Medidas de dispersão
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  Amplitude
-    5.  IQR
-:::
-:::
-
-## Ementa do curso {.smaller}
-
-::: columns
-::: {.column width="32%"}
-#### Parte 1 - Metodologia
-
-1.  Operacionalização de conceitos
-2.  Definição de escopo
-:::
-
-::: {.column width="68%"}
-#### Parte 2 - Técnicas
-
-1.  Tipos de variáveis
-2.  Medidas de variáveis categóricas: Tabelas de frequência
-3.  Medidas de variáveis numéricas I: Medidas de centro
-    1.  Média
-    2.  Mediana
-    3.  Moda
-4.  **Medidas de variáveis numéricas II: Medidas de dispersão**
-    1.  Desvio médio
-    2.  Variância
-    3.  Desvio padrão
-    4.  **Amplitude**
-    5.  **IQR**
-:::
-:::
-
-# Medidas de dispersão {.slide-title}
-
-## Plano de aula
+## Estrutura da aula
 
 Na aula de hoje, teremos dois objetivos:
 
 1.  Compreender o que é a amplitude, como calculá-la e para que utilizá-la
 2.  Aprender o que são e para que servem os quantis empíricos e o IQR
 
-## Amplitude
+# Amplitude {.slide-title}
+
+## Conceitos gerais
 
 #### Definição
 
@@ -111,7 +55,9 @@ $$A = max - min$$
 A amplitude é uma medida simples de ser calculada, entretanto, é importante saber que ela tem um problema potencial que é a sua **alta suscetibilidade a valores extremos, ou seja, ela é pouco robusta**, assim como a média.
 :::
 
-## IQR
+# IQR {.slide-title}
+
+## Início da conceituação
 
 A última medida de dispersão que temos é a amplitude inter-quartil (que vem do inglês *interquartile range*, de onde originou a sigla IQR). Para compreendermos o IQR, devemos compreender o que é um **quantil empírico**.
 
