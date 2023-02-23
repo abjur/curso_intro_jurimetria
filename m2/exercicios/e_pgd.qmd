@@ -22,14 +22,17 @@ options(scipen = 999)
 ## Orientações gerais
 
 - Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
-- Os grupos terão de 40 minutos a 1 hora para responder às questões;
-- Um único aluno será encarregado de anotar as respostas às questões discutidas no grupo;
+- Os grupos terão 2 horas para responder às questões;
 - Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Outro aluno, que não aquele encarregado de anotar, deverá ler as respostas quando discutidas em grupo.
+- Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
+
+{{< pagebreak >}}
 
 ## Perguntas
 
 **1) Investigando o processo de geração de dados dos assuntos (e classes) processuais. Vamos usar, para esse exercício, uma [base de dados que está no Drive](https://docs.google.com/spreadsheets/d/1W0a0MPpszNYEbS6x8ytDwYF78rcU8_qhgOO4ke22sSw/edit#gid=0)** 
+
+**Essa planilha contém a contagem de todos a contagem de todos os assuntos extraídos do Esaj do TJAM, entre os anos de 2014 e 2019. Poderíamos fazer uma planilha igual para as classes, pois o raciocínio será o mesmo.**
 
 
 ```{r r-assuntos-tjam}
@@ -43,11 +46,11 @@ assuntos_tjam <- abjData::assuntos |>
 ```
 
 
-**Essa planilha contém a contagem de todos a contagem de todos os assuntos extraídos do Esaj do TJAM, entre os anos de 2014 e 2019. Poderíamos fazer uma planilha igual para as classes, pois o raciocínio será o mesmo.**
+**Os assuntos estão padronizados, graças às [Tabelas Processuais Unificadas](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php). As TPUs são uma iniciativa do CNJ para padronizar a classificação dos processos judiciais. Existem TPUs para classes, assuntos, movimentações e documentos processuais.**
 
-**a) Os assuntos estão padronizados, ou para designar um mesmo assunto há uma série grafias distintas? Por que isso aconteceu?**
+**a) Quem escolhe os assuntos específicos de cada processo?**
 
-Os assuntos estão padronizados. Isso acontece graças às [Tabelas Processuais Unificadas](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php). As TPUs são uma iniciativa do CNJ para padronizar a classificação dos processos judiciais. Existem TPUs para classes, assuntos, movimentações e documentos processuais.
+Os advogados, na hora de protocolar uma petição inicial. 
 
 **b) Na planilha, existe uma série de células cuja informação é apenas um traço "-". O que isso significa?**
 
@@ -59,11 +62,19 @@ Isso significa que não há classificação de nível mais específico.
 knitr::include_graphics("img/assuntos.png")
 ```
 
-**Nesta imagem, o Assunto - Nome4 é o nível de assunto mais específico que essa árvore consegue chegar. O que significa o "-" nesta coluna?**
+**Nesta imagem, estamos vendo o ramo de assuntos ligados ao Ministério Público. Neste caso, o Assunto - Nome4 é o nível de assunto mais específico que esse ramo consegue chegar. Qual é o assunto com que foram classificados os processos que possuem "-" nesta coluna?** 
 
-Os casos "-" são casos que são sobre o Ministério Público, mas que não receberam classificação mais específica. 
+Os casos com "-" na coluna de "Assunto - Nome4" foram classificados como "Ministério Público" apenas.
 
-**d) Com base no que foi discutido no item anterior, discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público? O que significam os casos de cinza?**
+**d) Por que motivos um caso acaba sendo classificado como "-" e não como "Remuneração", por exemplo?**
+
+Isso acontece porque quem faz a classificação dos assuntos é quem protocola a petição inicial. Neste caso, há duas situações:
+
+1. Um caso "-" pode ser um caso de "Remuneração", mas que foi classificado apenas como "Minitério Público"
+2. Um caso "-" pode ter sido classificado dessa forma pois se trata de um assunto ligado ao Ministério Público, mas que não se liga a nenhum dos assuntos específicos que estão no nível 4. 
+
+**e) Com base no que foi discutido no item anterior, discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público? O que significam os casos de cinza?**
+
 
 ```{r fig-assuntos-mp}
 #| fig.cap: "Distribuição de sub-assuntos dentro de DIREITO ADMINISTRATIVO E OUTRAS MATÉRIA DE DIREITO PÚBLICO > Agentes Políticos > Ministério Público"
@@ -92,6 +103,11 @@ assuntos_tjam |>
 
 
 
+
+
+
+
+
 Nós não sabemos a real distribuição dos casos marcados com "-". Isso dificulta a análise. Para a gente assumir alguma distribuição dos casos "-" entre as outras categorias possíveis, temos de partir de uma forte premissa de que os casos marcados com "-" foram marcados assim de forma aleatória. Podemos nos fazer algumas perguntas para nos fazer questionar essa aleatoriedade. 
 
 Será que os casos marcados com "-" são aqueles casos que se enquadram em mais de um assunto como a combinação de dois ou mais assuntos (por exemplo, remuneração + promoção) e, justamente por não se enquadrar em um único assunto, eles foram marcados com "-"? Se este for o caso, será que o fato de esses casos representarem a combinação de mais de um assunto não indica que esses casos são mais complexos que os demais, que tratam de um único tema? E por serem casos mais complexos, será que eles não demoram mais tempo para serem resolvidos, ou são casos com menos consenso entre os juízes e, portanto, são casos com mais recursos? 
@@ -103,6 +119,8 @@ Uma outra série de perguntas possíveis é: será que todos os casos que estão
 Uma primeira resposta seria dizer que basta procurar pelo assunto "Remuneração". Entretanto, o enunciado diz que o pesquisador deseja listar _todos_ os processos relacionados à remuneração dos promotores. Nesse caso, o que acontece com os processos que foram mal classificados? O pesquisador estaria deliberadamente excluindo esses processos da análise. E teria problema excluir de forma sistemática os processos mal classificados? Novamente, aqui há um problema do que podemos assumir sobre o caso. Será que os casos mal classificados possuem características específicas, ou eles são aleatórios? Se for o caso de aleatoridade, não tem problema o pesquisador deixar de fora esses casos (apesar de ser da sua vontade pessoal listar _todos_ os processos). Mas se não tiver como o pesquisador defender a aleatoriedade da má-classificação, então talvez seja melhor ele tentar pegar os processos mal classificados. Neste caso, ele precisaria procurar pelos assuntos "Remuneração" e "Ministério Público". 
 
 Se ele quiser ser mais abrangente ainda, ele deveria pegar também os assuntos "Agentes Políticos" e "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO". Mas se ele pegar esses assuntos tão genéricos, ele vai acabar pegando muito lixo na pesquisa dele, fazendo com que muitos processos que estão fora do escopo dele entrem na análise. Aqui, então, entra uma discussão importante a respeito da parcimônia x precisão. O que está em jogo aqui é saber sopesar a simplicidade da pesquisa com a sua precisão. Escolher assuntos tão genéricos vai fazer com que tenha muito lixo na lista de processos. Se isso não for retirado da base, então a análise não vai mais ser sobre processos de Remuneração do Ministério Público, mas sim, uma análise sobre qualquer tema sobre o Ministério Público, ou sobre qualquer outro Agente Político, ou ainda sobre qualquer assunto de Direito Administrativo. Neste caso, talvez seja melhor sacrificar alguns processos que foram mal classificados, a fim de se preservar o escopo da base de dados. 
+
+{{< pagebreak >}}
 
 **2) Investigando o processo de geração de dados do valor da causa**
 
@@ -127,46 +145,45 @@ knitr::include_graphics("img/valor-da-causa.png")
 **Sabendo que essa informação estava disponível nas capas dos processos, uma pesquisadora extraiu essa informação de 100 processos escolhidos aleatoriamente. A partir disso, foi encontrado um valor médio da ação de R\$ `r media_valor_da_acao`, conforme a figura abaixo.**
 
 ```{r fig-consumo}
-
-
+#| fig.cap: "Valor da causa em ações genéricas"
 consumo |> 
   ggplot2::ggplot() +
   ggplot2::aes(x = valor) +
   ggplot2::geom_histogram(fill = cores_abj[1], bins = 70) +
   ggplot2::geom_vline(xintercept = media_valor_da_acao, color = "red", linetype = 2) +
   ggplot2::labs(
-    title = "Valor da causa em ações genéricas",
     x = "Valor da causa (em reais)",
     y = "Quantidade de casos"
   )
 ```
-**A partir disso, responda:**
+**A partir disso, responda (para algumas questões será necessário consultar o CPC):**
 
-**a) O valor da ação corresponde ao valor efetivamente pedido? E se o valor pedido na inicial for impugnado, a informação da capa irá refletir o valor originalmente pedido, o valor contestado, ou novo valor arbitrado pelo juízo?**
+**a) O valor da ação corresponde ao valor efetivamente pedido? E se o valor pedido na inicial for impugnado, a informação da capa irá refletir o valor originalmente pedido, o valor contestado, ou novo valor arbitrado pelo juiz?**
 
-O valor da ação corresponde ao pedido inicial, e não ao valor contestado, tampouco ao valor arbitrado pelo juízo. 
+O valor da ação corresponde ao pedido inicial, e não ao valor contestado, tampouco ao valor arbitrado pelo juiz. O valor arbitrado pelo juiz é o valor da condenação
 
 **b) O valor da ação é corrigido? Ou ele pode estar desatualizado?**
 
 O valor da ação pode não estar sempre corrigido. Não existe um sistema dos TJs que garanta a atualização dos valores. 
 
-**c) Se há vários pedidos alternativos, o valor da causa refletirá o primeiro deles, a soma deles ou o maior deles?**
+
+**c) Se houver pedidos cumulativos, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
+
+Pelo art. 292, VI, o valor da ação será a soma de todos os pedidos. 
+
+**d) Se há vários pedidos alternativos, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
 
 Pelo art. 292, VII, o valor da causa refletirá o pedido de maior valor.
 
-**d) Se houver pedidos subsidiários, o valor da causa refletirá apenas o valor do pedido principal ou o valor da soma de todos os pedidos?**
+**e) Se houver pedidos subsidiários, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
 
 Pelo art. 292, VIII, o valor da ação refletirá o valor do pedido principal.
-
-**e) Em caso de prestações vincendas, o valor da causa corresponde à soma total de todas as prestações que serão pagas, à soma de algum período específico (como o período de um ano), ou apenas a uma única prestação?**
-
-Em cada caso, o valor da ação pode corresponder a alguma prestação diferente. O valor pode corresponder tanto à soma de todas as prestações, bem como à soma de apenas de um ano das prestações, ou apenas a uma única prestação. Por exemplo, no caso de prestações alimentícias, pelo art. 292, III, o valor da ação corresponde à soma de 12 (doze) prestações mensais pedidas pelo autor. 
 
 **f) Se o pedido contiver um erro, o valor da ação vai refletir esse erro?**
 
 Sim, vai refletir o erro. 
 
-**g) Assumindo que a amostragem realizada pela pesquisadora não está enviesada, e que a quantidade de casos é grande o suficiente para gerar resultados consistentes, como você avalia a utilização da variável `valor da causa` para representar o valor real do pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor na realidade? Esse valor pode estar subestimado ou sobrestimado?**
+**g) Assumindo que a amostragem realizada pela pesquisadora não está enviesada, e que a quantidade de casos é grande o suficiente para gerar resultados consistentes, como você avalia a utilização da variável `valor da causa` para representar o valor real do pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor na realidade. Esse valor pode estar subestimado ou sobrestimado?**
 
 O valor da causa é um valor complicado de ser utilizado para representar o valor real do pedido. A depender do caso, ele pode ser um valor mais ou menos consistente. Por exemplo, em ações de alimentos, por causa da lei, sabe-se que os valores da causa refletem a soma de 12 meses da prestação. Neste caso, então, é possível ter mais certeza sobre o que significa o valor da ação. 
 
@@ -174,25 +191,27 @@ O valor da ação poderá estar subestimado caso existam pedidos subsidiários, 
 
 E o valor da ação poderá estar sobrestimado caso existam pedidos alternativos, e o juiz conceder o pedido de menos valor. Mesmo neste caso, o valor que irá aparecer na capa do processo é o valor do pedido do maior pedido. 
 
-**3) Investigando o processo de geração de dados da data de distribuição**
+<!-- **3) Investigando o processo de geração de dados da data de distribuição** -->
 
-**Um pesquisador pegou a data de distribuição que está no sistema, conforme a imagem abaixo.**
+<!-- **Um pesquisador pegou a data de distribuição que está no sistema, conforme a imagem abaixo.** -->
 
-```{r, out.width="100%"}
-knitr::include_graphics("img/data-distribuicao.png")
-```
+<!-- ```{r, out.width="100%"} -->
+<!-- knitr::include_graphics("img/data-distribuicao.png") -->
+<!-- ``` -->
 
-**A respeito dessa data, responda:**
+<!-- **A respeito dessa data, responda:** -->
 
-**a) A data de distribuição que aparece no sistema corresponde sempre à data de peticionamento? E se o processo for redistribuído, a data irá corresponder à data de distribuição inicial, ou à data de redistribuição?**
+<!-- **a) A data de distribuição que aparece no sistema corresponde sempre à data de peticionamento? E se o processo for redistribuído, a data irá corresponder à data de distribuição inicial, ou à data de redistribuição?** -->
 
-Em geral sim, mas isso não será verdade sempre, pois essa data representa a data mais recente de distribuição. Se houver redistribuição do processo, então a data do sistema irá representar a data de redistribuição, e não a data de distribuição. 
+<!-- Em geral sim, mas isso não será verdade sempre, pois essa data representa a data mais recente de distribuição. Se houver redistribuição do processo, então a data do sistema irá representar a data de redistribuição, e não a data de distribuição.  -->
 
-**b) Uma pesquisadora buscou calcular o tempo médio de duração de alguns processos. Para tanto, ela utilizou a data de distribuição registrado no sistema e a data das sentenças, que ela obteve manualmente. Dado o que foi respondido na questão anterior, discuta se o tempo que ela encontrou é confiável, ou se ele poderá estar subestimado ou sobrestimado. **
+<!-- **b) Uma pesquisadora buscou calcular o tempo médio de duração de alguns processos. Para tanto, ela utilizou a data de distribuição registrado no sistema e a data das sentenças, que ela obteve manualmente. Dado o que foi respondido na questão anterior, discuta se o tempo que ela encontrou é confiável, ou se ele poderá estar subestimado ou sobrestimado. ** -->
 
-Como o sistema registra a data de redistribuição, então o tempo calculado poderá estar subestimado. Em muitos casos, a redistribuição ocorre apenas alguns dias depois da distribuição, então, em geral, essa subestimação é mínima. Entretanto, pode haver casos em que a distribuição e a redistribuição é separada por meses, podendo levar a subestimações do tempo maiores. 
+<!-- Como o sistema registra a data de redistribuição, então o tempo calculado poderá estar subestimado. Em muitos casos, a redistribuição ocorre apenas alguns dias depois da distribuição, então, em geral, essa subestimação é mínima. Entretanto, pode haver casos em que a distribuição e a redistribuição é separada por meses, podendo levar a subestimações do tempo maiores.  -->
 
-**4)  Investigando o processo de geração de dados da data de liminares** 
+{{< pagebreak >}}
+
+**3)  Investigando o processo de geração de dados da data de liminares** 
 
 **Ao se estudar a Justiça Federal do Ceará, um pesquisador criou um robô para extrair todas as movimentações processuais de todos os processos de seu interesse. Essas movimentações são padronizadas pela [TPU de movimentações](https://www.cnj.jus.br/sgt/consulta_publica_movimentos.php). Ele queria calcular o tempo até as decisões de tutela antecipada dos processos. Para tanto, ele precisava de duas datas: (a) a distribuição do processo e (b) a data da decisão liminar.**
 
@@ -206,3 +225,136 @@ Existem alguns problemas que o pesquisador deve pensar:
 1. Se a petição inicial trouxe apenas um pedido liminar e, depois, em outra peça, a parte autora demanda um novo pedido liminar, podemos presumir que a primeira decisão liminar tenha julgado os pedidos da petição inicial, enquanto a última decisão liminar tenha julgado o último pedido. Neste caso, escolher a última data seria um problema muito grande, pois a pesquisa estaria calculando o tempo entre a distribuição do pedido (que normalmente corresponde à petição inicial) e a decisão que julga um pedido que NÃO foi realizado neste momento, sobrestimando demais o tempo de decisão. 
 
 Dessa forma, parece ser mais acertado escolher sempre a data da primeira liminar. 
+
+{{< pagebreak >}}
+
+**4) Exercicio sobre boxplot**
+
+**Os exercícios sobre boxplot dizem respeito aos processos administrativos sancionadores do Mercado de Capitais. Basicamente, a autarquia federal responsável por fiscalizar as infrações no mercando financeiro é a Comissão de Valores Mobiliários (CVM), tais como _insider trading_, abuso de poder, falta com os deveres de lealdade, etc. O Colegiado da CVM realiza o julgamento desses acusados para estabelecer as penalidades do mercado financeiro. As penalidades podem ser de três tipos: multas, restrições de exercício de cargo (inabilitação, suspensão e proibição) e advertências. Para todas as aplicações de penalidade, é possível entrar com recursos. Mas esses recursos são destinados, não à CVM, mas ao Conselho de Recursos do Sistema Financeiro Nacional (CRSFN). O CRSFN pode reformar as condenações aplicadas à CVM.**
+
+**Feita essa introdução ao processo administrativo sancionador no Mercado de Capitais, podemos entrar na comparação dos valores das penalidades de multas e de restrições. As multas são sempre impostas de forma pecuniária e, portanto, podem ser medidas pelo seu valor em reais; já as restrições são sempre impostas com alguma medida temporal (por exemplo, 1 ano de inabilitação para o cargo de diretor) e podem, portanto, ser medidas em anos. Assim, vemos dois boxplots a seguir nas Figuras \@ref(fig:boxplot-multas) e \@ref(fig:boxplot-restricoes), comparando os valores de multas e de restrições na CVM e no CRSFN, respectivamente.**
+
+```{r boxplot-multas}
+#| fig.cap: "Comparação do valor das multas entre CVM e no CRSFN."
+#| fig.align: "center"
+#| warning: false
+si <- function(x) {
+  breaks <- c(0, 10^c(M = 3, MM = 6, B = 9))
+  n_suffix <- cut(abs(x), breaks = c(unname(breaks), Inf), 
+                  labels = c(names(breaks)), right = FALSE)
+  n_suffix[is.na(n_suffix)] <- ""
+  suffix <- n_suffix
+  scale <- 1/breaks[n_suffix]
+  scale[which(scale %in% c(Inf, NA))] <- 1
+  scales::number(x, accuracy = 1, 
+                 scale = unname(scale), 
+                 suffix = suffix)
+}
+
+obsCRSFN::da_partes_tidy |>
+  dplyr::filter(conhecimento == "Sim") |> 
+  dplyr::mutate(
+    dplyr::across(
+      .cols = where(is.numeric),
+      .fns = ~ifelse(is.na(.x), 0, .x)
+    ),
+    multa_teve = dplyr::case_when(
+      v_valor_final_multa == 0 & v_multa_inicial == 0 ~ FALSE,
+      TRUE ~ TRUE
+    )
+  ) |> 
+  dplyr::select(id, recurso_tipo, crsfn = v_valor_final_multa, cvm = v_multa_inicial) |> 
+  tidyr::pivot_longer(names_to = "orgao", cols = c(crsfn, cvm)) |> 
+  dplyr::group_by(orgao) |> 
+  dplyr::mutate(
+    orgao = stringr::str_to_upper(orgao),
+    orgao = forcats::fct_inorder(orgao),
+    orgao = forcats::fct_relevel(orgao, "CVM", after=0L),
+    max = ifelse(value == max(value), value, NA_real_),
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(
+    max = formattable::currency(max, "R$", big.mark = ".", decimal.mark = ",")
+  ) |> 
+  dplyr::ungroup() |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = orgao, y = value, fill = orgao) +
+  ggplot2::geom_boxplot(show.legend = FALSE) +
+  ggplot2::scale_fill_manual(values = cores_abj[2:1]) +
+  ggplot2::scale_y_log10(breaks = c(10^(4:8)), labels = si) +
+  ggplot2::geom_text(ggplot2::aes(label = max), na.rm = TRUE, hjust = -0.05) +
+  ggplot2::labs(
+    x = "Órgão",
+    y = "Valor da multa"
+  ) +
+  ggplot2::theme_bw(16)
+```
+
+```{r boxplot-restricoes}
+#| fig.cap: "Comparação do tempo das restrições entre CVM e no CRSFN."
+#| fig.align: "center"
+#| warning: false
+
+obsCRSFN::da_partes_tidy |>
+  dplyr::filter(conhecimento == "Sim") |> 
+  dplyr::mutate(
+    dplyr::across(
+      .cols = where(is.numeric),
+      .fns = ~ifelse(is.na(.x), 0, .x)
+    ),
+    restricao_teve = dplyr::case_when(
+      v_outras_penas_inicial == 0 & v_outras_penas_inicial == 0 ~ FALSE,
+      TRUE ~ TRUE
+    ),
+    tipo_modificacao = dplyr::case_when(
+      v_outras_penas_final > v_outras_penas_inicial & v_outras_penas_inicial > 0 ~ "Aumento da restrição",
+      v_outras_penas_final == 0 & v_outras_penas_inicial > 0 & pena_inicial == "Restrição" & !pena_final %in% c("Restrição", "Absolvição") ~ "Convolação",
+      v_outras_penas_final > 0 & v_outras_penas_inicial == 0 & !pena_inicial %in% c("Restrição", "Absolvição") & stringr::str_detect(pena_final, "Restrição") ~ "Convolação",
+      v_outras_penas_final == 0 & v_outras_penas_inicial > 0 ~ "Extinção da restrição", #"Recurso voluntário totalmente procedente"
+      v_outras_penas_final > 0 & v_outras_penas_inicial == 0 & pena_inicial == "Absolvição" & stringr::str_detect(pena_final, "Restrição") ~ "Condenação por restrição", # "Recurso de ofício procedente"
+      v_outras_penas_final < v_outras_penas_inicial ~ "Redução da restrição", # "Recurso voluntário parcialmente procedente"
+      v_outras_penas_final == v_outras_penas_inicial ~ "Não houve modificação", # "Recurso voluntário improcedente"
+    ),
+    tipo_modificacao = factor(tipo_modificacao, levels = c("Aumento da restrição", "Redução da restrição", "Convolação", "Extinção da restrição", "Condenação por restrição", "Não houve modificação"))
+  ) |> 
+  dplyr::filter(restricao_teve) |> 
+  dplyr::select(id, recurso_tipo, crsfn = v_outras_penas_final, cvm = v_outras_penas_inicial) |> 
+  tidyr::pivot_longer(names_to = "orgao", cols = c(crsfn, cvm)) |> 
+  dplyr::group_by(orgao) |> 
+  dplyr::mutate(
+    orgao = stringr::str_to_upper(orgao),
+    orgao = forcats::fct_inorder(orgao),
+    orgao = forcats::fct_relevel(orgao, "CVM", after=0L),
+    max = ifelse(value == max(value), value, NA_integer_)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    max = tidyr::replace_na(max, 0L),
+    max = abjDash::tempo_lab(max),
+    max = ifelse(max == "0 ano", NA_character_, max)
+  ) |> 
+  ggplot2::ggplot() +
+  ggplot2::aes(x = orgao, y = value, fill = orgao) +
+  ggplot2::geom_boxplot(show.legend = FALSE) +
+  ggplot2::scale_fill_manual(values = cores_abj[2:1]) +
+  ggplot2::geom_text(ggplot2::aes(label = max), na.rm = TRUE, hjust = -0.1) +
+  ggplot2::labs(
+    x = "Órgão",
+    y = "Tempo das restrições"
+  ) +
+  ggplot2::theme_bw(16)
+```
+
+{{< pagebreak >}}
+
+**Com base nesses gráficos, responda:**
+
+**a) Olhando para os 50% dos dados centrais, qual dos dois órgãos aplicam multas mais altas? E penas de restrições?**
+
+As multas, tanto na CVM, como no CRSFN, são muito parecidas. Não é possível falar que alguma multa é maior que a outra. Mas quanto às restrições, podemos afirmar que a CVM aplica sanções mais severas.
+
+**b) Qual dois dois órgãos possui maior variabilidade quanto à aplicação de multas? E quanto às restrições? Quais elementos sustentam essas conclusões?**
+
+A CVM possui maior variabilidade quanto às penalidades de multa. Vemos isso pela quantidade de possíveis outliers que existem nela, em comparação com o CRSFN.
+
+Já na comparação das penas de restrição, podemos dizer que é o CRSFN quem possui penas mais dispersas. Podemos observar isso pelo tamanho da caixa central do boxplot. A caixa azul, do CRSFN, é muito maior que a caixa da CVM. O tamanho da caixa representa o IQR e o IQR impacta diretamente também no tamanho dos bigodes. Vemos que os bigodes do CRSFN são maiores também. 

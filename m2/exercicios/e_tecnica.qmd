@@ -1,0 +1,91 @@
+---
+title: "Exercício sobre Técnica de Pesquisa"
+author: "ABJ"
+format: pdf
+editor: visual
+---
+
+
+## Orientações gerais
+
+- Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+- Os grupos terão 2 horas para responder às questões;
+- Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+- Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
+
+{{< pagebreak >}}
+
+
+## Perguntas
+
+**Neste exercício, queremos treinar uma habilidade essencial da realização de qualquer pesquisa em jurimetria: a listagem de processos. As questões a seguir servem para guiar as alunas e os alunos no processo de listagem.**
+
+**1) Como um grupo, escolham um das perguntas abaixo para realizar uma pesquisa.**
+
+**a) Uma imobiliária quer construir um prédio novo. Ela comprou o terreno, elaborou o projeto de construção e enviou a documentação para a Prefeitura. O órgão público, por sua vez, aceitou a documentação e concedeu o alvará de construção à imobiliária. Entretanto, os moradores do bairro não querem que esse prédio seja construído e, para tanto, eles entram com uma ação no TJSP. Assim, vocẽ vai pesquisar as judicializações que acontecem entre associações de moradores de bairro contra a concessão, pela Prefeitura, do alvará de construção às imobiliárias. Vocẽ quer descobrir (i) o que leva os moradores a quererem barrar a construção de novos edifícios; (ii) o que o Judiciário responde, isto é, se os pedidos são procedentes ou improcedentes;c.**
+
+**b) Uma mãe precisa colocar o seu filho na creche para trabalhar, mas não há vagas disponíveis. Para isso, ela entra com uma ação no TJSP, buscando adquirir uma vaga na creche. Você vai pesquisar, então, a judicialização a respeito da fila de espera nas creches de São Paulo. Você quer descobrir (i) se as crianças que estão pedindo para "furar fila" tem algum motivo especial para tanto; (ii) o que o Judiciário responde a estes casos; e (iii) o tempo de resposta**
+
+**2) A partir do tema escolhido, encontre os processos referentes a ele no CJPG (Consulta de Julgados de Primeiro Grau), utilizando a Pesquisa Livre, Classe e Assunto (não é preciso utilizar todos os campos, apenas aqueles que o grupo julgar necessário). Anotem os termos pesquisados, as classes e os assuntos e respondam:**
+
+**a) Todos os processos encontrados estão dentro do escopo?**
+
+Provavelmente a resposta aqui será não, pois é difícil encontrar palavras-chave que sejam restritas o suficiente para conter única e exclusivamente os processos desejados. 
+
+**b) Existem procesoss que estão dentro do escopo, mas que não foram capturados pela sua pesquisa? Por quê? É possível melhorar?**
+
+Provavelmente sim, pois: (i) a lista de palavras escolhidas pode ter sido insuficiente; (ii) alguns processos podem estar com classes e assuntos erradas, ou simplesmente diferentes das que foram escolhidas. 
+
+**c) É possível fazer a pesquisa realizada acima sem utilizar a Pesquisa Livre, filtrando os processos apenas a partir de Classes e Assuntos? Por quê? (Essa resposta vai variar entre cada grupo).**
+
+Muito provavelmente não é possível. Isso acontece porque as Classes e Assuntos não conseguem ser tão específicas quanto queremos para uma pesquisa. Isso exige, portanto, que utilizemos a Pesquisa Livre para filtrar melhor o escopo a partir de palavras que existam na sentença.
+
+**3) Agora vamos nos perguntar sobre as informações que temos sobre cada processo.**
+
+**a) A partir da pesquisa realizada no CJPG na questão 2, responda quais são as informações que você tem de cada processo? Isto é, para cada um dos resultados que a busca gerou, sem acessar as decisões, quais informações estão disponíveis?**
+
+- Número do processo
+- Classe
+- Assunto
+- Magistrado
+- Comarca
+- Foro
+- Vara
+- Data de disponibilização
+- Ementa
+
+**b) Pegue um processo qualquer que você encontrou no CJPG e coloque o número deste processo no CPOPG (Consulta de Processos de Primeiro Grau). Quais informações por processo estão disponíveis neste sistema sem acessar os autos? Compare essas informações com aquelas encontradas no CJPG. Existem informações que existiam no CJPG e que não existem no CPOPG? E o contrário? O que é igual e o que é diferente entre cada sistema, quando às informações disponíveis?**
+
+- Número do processo
+- Classe
+- Assunto
+- Foro
+- Vara
+- Juiz
+- Data de distribuição
+- Código de controle
+- Área
+- Valor da ação
+- Nome das partes
+- Função das partes no processo
+- Nome do advogado das partes
+- Descrição das movimentações processuais
+- Data de cada movimentação
+
+**c) É possível responder às perguntas de pesquisa do exercício 1 com as meta informações disponíveis nos sistemas? Indique quais perguntas podem ser respondidas apenas com as meta-informações e, se houver, quais não podem ser respondidas dessa forma.**
+
+As perguntas sobre se o Judiciário concedeu ou não o pedido e o tempo de tramitação podem ser respondidas pelas meta-informações, mas exigem um certo tratamento dos dados. Pelas movimentações processuais, a partir das Tabelas Processuais Unificadas, podemos identificar algumas movimentações que indicam, caso tenha tido uma sentença, qual foi o sentido dessa sentença. Identificando, portanto, a movimentação que se refere à sentença, podemos pegar a data dessa movimentação e calcular a diferença de tempo entre ela e a data de distribuição para calcular o tempo de tramitação.
+
+**d) Se houver pelo menos uma pergunta que não pode ser respondida com as meta informações disponíveis nos sistemas (CPOPG e CJPG), onde você poderia encontrar essa informação? Para tanto, indique (i) onde a informação pode ser acessada, (ii) se existe algum entrave para o acesso a essa informação e (iii) se é consistente a forma de se encontrar essa informação ao longo dos processos, isto é, se todos os processos contém essa informação no mesmo lugar e com a mesma acessibilidade.**
+
+Não é possível encontrar a pergunta sobre o motivo da judicialização. Para tanto, é necessário acessar a petição inicial (i). A petição deve ser acessada dentro dos autos de cada processo. Acontece que os autos não estão disponíveis sem um login de advogado, o que representa um entrave (ii). Além disso, mesmo com o login de advogado, em alguns processos pode não ser possível encontrar a petição inicial, uma vez que, em processos antigos, os autos existem apenas fisicamente ou, se eles existirem digitalmente, a digitalização dos autos pode ter sido feita de forma precária, o que faz com que a informação não seja consistente ao longo dos processos (iii). 
+
+**4) Quanto ao escopo, responda:**
+
+**a) A pesquisa é retrospectiva ou prospectiva? Por quê?**
+
+Retrospectiva, pois usamos o CJPG para listar os processos. 
+
+**b) As perguntas de pesquisa estão adequadas ao escopo? Explique.**
+
+As perguntas referentes ao tempo de resposta não estão adequadas, pois uma pesquisa retrospectiva introduz viés de seleção no tempo de duração dos processos. 
