@@ -1,8 +1,13 @@
 ---
 title: "Exercício sobre Processo de Geração de Dados (PGD)"
 author: "ABJ"
-format: pdf
+format: 
+  pdf:
+    mainfont: Arial
+    sansfont: Arial
+pdf-engine: lualatex
 editor: visual
+lang: pt
 ---
 
 ```{r setup, include=FALSE}
@@ -21,19 +26,20 @@ options(scipen = 999)
 
 ## Orientações gerais
 
-- Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
-- Os grupos terão 2 horas para responder às questões;
-- Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
-- Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
+-   Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+-   Os grupos terão 2 horas para responder às questões;
+-   Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+-   Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
 
 {{< pagebreak >}}
 
 ## Perguntas
 
-**1) Investigando o processo de geração de dados dos assuntos (e classes) processuais. Vamos usar, para esse exercício, uma [base de dados que está no Drive](https://docs.google.com/spreadsheets/d/1W0a0MPpszNYEbS6x8ytDwYF78rcU8_qhgOO4ke22sSw/edit#gid=0)** 
+### Classes e assuntos
+
+**1) Investigando o processo de geração de dados dos assuntos (e classes) processuais. Vamos usar, para esse exercício, uma [base de dados que está no Drive](https://docs.google.com/spreadsheets/d/1W0a0MPpszNYEbS6x8ytDwYF78rcU8_qhgOO4ke22sSw/edit#gid=0).**
 
 **Essa planilha contém a contagem de todos a contagem de todos os assuntos extraídos do Esaj do TJAM, entre os anos de 2014 e 2019. Poderíamos fazer uma planilha igual para as classes, pois o raciocínio será o mesmo.**
-
 
 ```{r r-assuntos-tjam}
 assuntos_tjam <- abjData::assuntos |>
@@ -45,39 +51,31 @@ assuntos_tjam <- abjData::assuntos |>
   dplyr::ungroup()
 ```
 
+**Os assuntos estão padronizados, graças às [Tabelas Processuais Unificadas](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php). As TPUs são uma iniciativa do CNJ para padronizar a classificação dos processos judiciais. Existem TPUs para classes, assuntos e movimentações processuais.**
 
-**Os assuntos estão padronizados, graças às [Tabelas Processuais Unificadas](https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php). As TPUs são uma iniciativa do CNJ para padronizar a classificação dos processos judiciais. Existem TPUs para classes, assuntos, movimentações e documentos processuais.**
-
-**a) Quem escolhe os assuntos específicos de cada processo?**
-
-Os advogados, na hora de protocolar uma petição inicial. 
-
-**b) Na planilha, existe uma série de células cuja informação é apenas um traço "-". O que isso significa?**
-
-Isso significa que não há classificação de nível mais específico. 
-
-**c) Veja a imagem abaixo**
+**a) Veja a imagem abaixo, construída a partir da tabela:**
 
 ```{r, out.width="40%"}
 knitr::include_graphics("img/assuntos.png")
 ```
 
-**Nesta imagem, estamos vendo o ramo de assuntos ligados ao Ministério Público. Neste caso, o Assunto - Nome4 é o nível de assunto mais específico que esse ramo consegue chegar. Qual é o assunto com que foram classificados os processos que possuem "-" nesta coluna?** 
+**Nesta imagem, estamos vendo o ramo de assuntos ligados ao Ministério Público. Neste caso, o Assunto - Nome4 é o nível de assunto mais específico que esse ramo consegue chegar. Qual é o assunto com que foram classificados os processos que possuem "-" nesta coluna?**
 
 Os casos com "-" na coluna de "Assunto - Nome4" foram classificados como "Ministério Público" apenas.
 
-**d) Por que motivos um caso acaba sendo classificado como "-" e não como "Remuneração", por exemplo?**
+**b) Por que um caso acaba sendo classificado como "-" e não como "Remuneração", por exemplo?**
 
 Isso acontece porque quem faz a classificação dos assuntos é quem protocola a petição inicial. Neste caso, há duas situações:
 
-1. Um caso "-" pode ser um caso de "Remuneração", mas que foi classificado apenas como "Minitério Público"
-2. Um caso "-" pode ter sido classificado dessa forma pois se trata de um assunto ligado ao Ministério Público, mas que não se liga a nenhum dos assuntos específicos que estão no nível 4. 
+1.  Um caso "-" pode ser um caso de "Remuneração", mas que foi classificado apenas como "Minitério Público"
+2.  Um caso "-" pode ter sido classificado dessa forma pois se trata de um assunto ligado ao Ministério Público, mas que não se liga a nenhum dos assuntos específicos que estão no nível 4.
 
-**e) Com base no que foi discutido no item anterior, discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público? O que significam os casos de cinza?**
-
+**c) Com base no que foi discutido no item anterior, discuta possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que "Remuneração" é o assunto mais frequente a respeito do Ministério Público? O que significam os casos de cinza?**
 
 ```{r fig-assuntos-mp}
 #| fig.cap: "Distribuição de sub-assuntos dentro de DIREITO ADMINISTRATIVO E OUTRAS MATÉRIA DE DIREITO PÚBLICO > Agentes Políticos > Ministério Público"
+#| fig-width: 8
+#| fig-height: 4
 assuntos_tjam |> 
   dplyr::filter(assunto_nome3 == "Ministério Público") |> 
   dplyr::select(assunto_nome3, assunto = assunto_nome4, n) |> 
@@ -92,35 +90,32 @@ assuntos_tjam |>
   ggplot2::ggplot() +
   ggplot2::aes(x = assunto, y = n, fill = col_dif, label = perc) +
   ggplot2::geom_col(show.legend = FALSE) +
-  ggplot2::geom_label(fill = "white") +
+  ggplot2::geom_label(fill = "white", vjust = -.3, size = 4) +
+  ggplot2::scale_y_continuous(limits = c(0, 400)) +
   ggplot2::scale_fill_manual(values = c(cores_abj[1], "gray70")) +
   ggplot2::scale_x_discrete(labels=scales::label_wrap(20)) +
   ggplot2::labs(
     x = 'Assuntos',
     y = "Quantidade de casos"
-  )
+  ) +
+  ggthemes::theme_hc()
 ```
 
+Nós não sabemos como os casos marcados com "-" se distribuem. Para analisar os dados, temos de partir de uma premissa de que os casos marcados com "-" foram marcados assim de forma aleatória. Podemos nos fazer algumas perguntas para nos fazer questionar essa aleatoriedade.
 
+Será que os casos marcados com "-" são aqueles casos que se enquadram em mais de um assunto como a combinação de dois ou mais assuntos (por exemplo, remuneração + promoção) e, justamente por não se enquadrar em um único assunto, eles foram marcados com "-"? Se este for o caso, será que o fato de esses casos representarem a combinação de mais de um assunto não indica que esses casos são mais complexos que os demais, que tratam de um único tema? E por serem casos mais complexos, será que eles não demoram mais tempo para serem resolvidos, ou são casos com menos consenso entre os juízes e, portanto, são casos com mais recursos?
 
+Uma outra série de perguntas possíveis é: será que todos os casos que estão em "-" deveriam ser classificados como "Promoção", sendo, portanto, "Promoção" o assunto mais frequente? Será que existe algum motivo para que casos que de fato sejam de "Promoção" sejam classificados de forma mais genérica do que os outros assuntos processuais? Por exemplo, será que SEMPRE que os promotores se deparam com um caso de "Remuneração", eles registram no sistema do tribunal como o assunto "Remuneração", mas quando o caso é de "Promoção", eles registram no sistema do tribunal ou com o assunto "Promoção" ou com o assunto "Ministério Público"?
 
+**d) Um pesquisador deseja listar *todos* os processos relacionados à Remuneração dos promotores públicos. Com base na planilha deste exercício e nas discussões dos itens anteriores, quais assuntos você recomendaria a ele utilizar para filtrar a sua busca?**
 
+Uma primeira resposta seria dizer que basta procurar pelo assunto "Remuneração". Entretanto, o enunciado diz que o pesquisador deseja listar *todos* os processos relacionados à remuneração dos promotores. Nesse caso, o que acontece com os processos que foram mal classificados? O pesquisador estaria deliberadamente excluindo esses processos da análise. E teria problema excluir de forma sistemática os processos mal classificados? Novamente, aqui há um problema do que podemos assumir sobre o caso. Será que os casos mal classificados possuem características específicas, ou eles são aleatórios? Se for o caso de aleatoridade, não tem problema o pesquisador deixar de fora esses casos (apesar de ser da sua vontade pessoal listar *todos* os processos). Mas se não tiver como o pesquisador defender a aleatoriedade da má-classificação, então talvez seja melhor ele tentar pegar os processos mal classificados. Neste caso, ele precisaria procurar pelos assuntos "Remuneração" e "Ministério Público".
 
-
-
-Nós não sabemos a real distribuição dos casos marcados com "-". Isso dificulta a análise. Para a gente assumir alguma distribuição dos casos "-" entre as outras categorias possíveis, temos de partir de uma forte premissa de que os casos marcados com "-" foram marcados assim de forma aleatória. Podemos nos fazer algumas perguntas para nos fazer questionar essa aleatoriedade. 
-
-Será que os casos marcados com "-" são aqueles casos que se enquadram em mais de um assunto como a combinação de dois ou mais assuntos (por exemplo, remuneração + promoção) e, justamente por não se enquadrar em um único assunto, eles foram marcados com "-"? Se este for o caso, será que o fato de esses casos representarem a combinação de mais de um assunto não indica que esses casos são mais complexos que os demais, que tratam de um único tema? E por serem casos mais complexos, será que eles não demoram mais tempo para serem resolvidos, ou são casos com menos consenso entre os juízes e, portanto, são casos com mais recursos? 
-
-Uma outra série de perguntas possíveis é: será que todos os casos que estão em "-" deveriam ser classificados como "Promoção", sendo, portanto, "Promoção" o assunto mais frequente? Será que existe algum motivo para que casos que de fato sejam de "Promoção" sejam classificados de forma mais genérica do que os outros assuntos processuais? Por exemplo, será que SEMPRE que os promotores se deparam com um caso de "Remuneração", eles registram no sistema do tribunal como o assunto "Remuneração", mas quando o caso é de "Promoção", eles registram no sistema do tribunal ou com o assunto "Promoção" ou com o assunto "Ministério Público"? 
-
-**e) Um pesquisador deseja listar _todos_ os processos relacionados à remuneração do promotores públicos. Com base na planilha deste exercício e nas discussões dos itens anteriores, quais assuntos você recomendaria a ele utilizar para filtrar a sua busca?**
-
-Uma primeira resposta seria dizer que basta procurar pelo assunto "Remuneração". Entretanto, o enunciado diz que o pesquisador deseja listar _todos_ os processos relacionados à remuneração dos promotores. Nesse caso, o que acontece com os processos que foram mal classificados? O pesquisador estaria deliberadamente excluindo esses processos da análise. E teria problema excluir de forma sistemática os processos mal classificados? Novamente, aqui há um problema do que podemos assumir sobre o caso. Será que os casos mal classificados possuem características específicas, ou eles são aleatórios? Se for o caso de aleatoridade, não tem problema o pesquisador deixar de fora esses casos (apesar de ser da sua vontade pessoal listar _todos_ os processos). Mas se não tiver como o pesquisador defender a aleatoriedade da má-classificação, então talvez seja melhor ele tentar pegar os processos mal classificados. Neste caso, ele precisaria procurar pelos assuntos "Remuneração" e "Ministério Público". 
-
-Se ele quiser ser mais abrangente ainda, ele deveria pegar também os assuntos "Agentes Políticos" e "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO". Mas se ele pegar esses assuntos tão genéricos, ele vai acabar pegando muito lixo na pesquisa dele, fazendo com que muitos processos que estão fora do escopo dele entrem na análise. Aqui, então, entra uma discussão importante a respeito da parcimônia x precisão. O que está em jogo aqui é saber sopesar a simplicidade da pesquisa com a sua precisão. Escolher assuntos tão genéricos vai fazer com que tenha muito lixo na lista de processos. Se isso não for retirado da base, então a análise não vai mais ser sobre processos de Remuneração do Ministério Público, mas sim, uma análise sobre qualquer tema sobre o Ministério Público, ou sobre qualquer outro Agente Político, ou ainda sobre qualquer assunto de Direito Administrativo. Neste caso, talvez seja melhor sacrificar alguns processos que foram mal classificados, a fim de se preservar o escopo da base de dados. 
+Se ele quiser ser mais abrangente ainda, ele deveria pegar também os assuntos "Agentes Políticos" e "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO". Mas se ele pegar esses assuntos tão genéricos, ele vai acabar pegando muito lixo na pesquisa dele, fazendo com que muitos processos que estão fora do escopo dele entrem na análise. Aqui, então, entra uma discussão importante a respeito da parcimônia x precisão. O que está em jogo aqui é saber sopesar a simplicidade da pesquisa com a sua precisão. Escolher assuntos tão genéricos vai fazer com que tenha muito lixo na lista de processos. Se isso não for retirado da base, então a análise não vai mais ser sobre processos de Remuneração do Ministério Público, mas sim, uma análise sobre qualquer tema sobre o Ministério Público, ou sobre qualquer outro Agente Político, ou ainda sobre qualquer assunto de Direito Administrativo. Neste caso, talvez seja melhor sacrificar alguns processos que foram mal classificados, a fim de se preservar o escopo da base de dados.
 
 {{< pagebreak >}}
+
+### Valor da causa
 
 **2) Investigando o processo de geração de dados do valor da causa**
 
@@ -145,7 +140,7 @@ knitr::include_graphics("img/valor-da-causa.png")
 **Sabendo que essa informação estava disponível nas capas dos processos, uma pesquisadora extraiu essa informação de 100 processos escolhidos aleatoriamente. A partir disso, foi encontrado um valor médio da ação de R\$ `r media_valor_da_acao`, conforme a figura abaixo.**
 
 ```{r fig-consumo}
-#| fig.cap: "Valor da causa em ações genéricas"
+#| fig-cap: "Valor da causa em ações genéricas"
 consumo |> 
   ggplot2::ggplot() +
   ggplot2::aes(x = valor) +
@@ -154,49 +149,44 @@ consumo |>
   ggplot2::labs(
     x = "Valor da causa (em reais)",
     y = "Quantidade de casos"
-  )
+  ) +
+  ggplot2::theme_minimal()
 ```
+
 **A partir disso, responda (para algumas questões será necessário consultar o CPC):**
 
 **a) O valor da ação corresponde ao valor efetivamente pedido? E se o valor pedido na inicial for impugnado, a informação da capa irá refletir o valor originalmente pedido, o valor contestado, ou novo valor arbitrado pelo juiz?**
 
 O valor da ação corresponde ao pedido inicial, e não ao valor contestado, tampouco ao valor arbitrado pelo juiz. O valor arbitrado pelo juiz é o valor da condenação
 
-**b) O valor da ação é corrigido? Ou ele pode estar desatualizado?**
+**b) O valor da ação pode ser corrigido? Ele pode estar desatualizado?**
 
-O valor da ação pode não estar sempre corrigido. Não existe um sistema dos TJs que garanta a atualização dos valores. 
+O valor da ação pode não estar sempre corrigido. Não existe um sistema dos TJs que garanta a atualização dos valores.
 
+**c) Segundo art. 292 do CPC, quais aspectos podem influenciar na definição do valor da causa?**
 
-**c) Se houver pedidos cumulativos, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
+Se houver pedidos cumulativos, pelo art. 292, VI, o valor da ação será a soma de todos os pedidos.
 
-Pelo art. 292, VI, o valor da ação será a soma de todos os pedidos. 
+Se há vários pedidos alternativos, pelo art. 292, VII, o valor da causa refletirá o pedido de maior valor.
 
-**d) Se há vários pedidos alternativos, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
+Se houver pedidos subsidiários, pelo art. 292, VIII, o valor da ação refletirá o valor do pedido principal.
 
-Pelo art. 292, VII, o valor da causa refletirá o pedido de maior valor.
+**d) Supondo que a coleta dos dados foi realizada de forma adequada, como você avalia a utilização do valor da causa para aproximar o valor pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor pedido. Esse valor pode estar subestimado ou sobrestimado?**
 
-**e) Se houver pedidos subsidiários, qual será o valor da causa? O valor da causa, neste caso, está relacinado de alguma forma com a decisão do juiz?**
+O valor da causa é um valor complicado de ser utilizado para representar o valor real do pedido. A depender do caso, ele pode ser um valor mais ou menos consistente. Por exemplo, em ações de alimentos, por causa da lei, sabe-se que os valores da causa refletem a soma de 12 meses da prestação. Neste caso, então, é possível ter mais certeza sobre o que significa o valor da ação.
 
-Pelo art. 292, VIII, o valor da ação refletirá o valor do pedido principal.
+O valor da ação poderá estar subestimado caso existam pedidos subsidiários, ou no caso de o período para se pagar as prestações for superior a 1 ano.
 
-**f) Se o pedido contiver um erro, o valor da ação vai refletir esse erro?**
-
-Sim, vai refletir o erro. 
-
-**g) Assumindo que a amostragem realizada pela pesquisadora não está enviesada, e que a quantidade de casos é grande o suficiente para gerar resultados consistentes, como você avalia a utilização da variável `valor da causa` para representar o valor real do pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor na realidade. Esse valor pode estar subestimado ou sobrestimado?**
-
-O valor da causa é um valor complicado de ser utilizado para representar o valor real do pedido. A depender do caso, ele pode ser um valor mais ou menos consistente. Por exemplo, em ações de alimentos, por causa da lei, sabe-se que os valores da causa refletem a soma de 12 meses da prestação. Neste caso, então, é possível ter mais certeza sobre o que significa o valor da ação. 
-
-O valor da ação poderá estar subestimado caso existam pedidos subsidiários, ou no caso de o período para se pagar as prestações for superior a 1 ano. 
-
-E o valor da ação poderá estar sobrestimado caso existam pedidos alternativos, e o juiz conceder o pedido de menos valor. Mesmo neste caso, o valor que irá aparecer na capa do processo é o valor do pedido do maior pedido. 
+E o valor da ação poderá estar sobrestimado caso existam pedidos alternativos, se o juiz conceder o pedido de menos valor. Mesmo neste caso, o valor que irá aparecer na capa do processo é o valor do pedido do maior pedido.
 
 <!-- **3) Investigando o processo de geração de dados da data de distribuição** -->
 
 <!-- **Um pesquisador pegou a data de distribuição que está no sistema, conforme a imagem abaixo.** -->
 
 <!-- ```{r, out.width="100%"} -->
+
 <!-- knitr::include_graphics("img/data-distribuicao.png") -->
+
 <!-- ``` -->
 
 <!-- **A respeito dessa data, responda:** -->
@@ -211,32 +201,44 @@ E o valor da ação poderá estar sobrestimado caso existam pedidos alternativos
 
 {{< pagebreak >}}
 
-**3)  Investigando o processo de geração de dados da data de liminares** 
+### Datas
 
-**Ao se estudar a Justiça Federal do Ceará, um pesquisador criou um robô para extrair todas as movimentações processuais de todos os processos de seu interesse. Essas movimentações são padronizadas pela [TPU de movimentações](https://www.cnj.jus.br/sgt/consulta_publica_movimentos.php). Ele queria calcular o tempo até as decisões de tutela antecipada dos processos. Para tanto, ele precisava de duas datas: (a) a distribuição do processo e (b) a data da decisão liminar.**
+**3) Investigando o processo de geração de dados da data de liminares**
 
-**Para pegar a data de distribuição, ele pegou a data da primeira movimentação registrada no sistema da JFCE, independente de qual fosse a descrição da movimentação. E para pegar a data da decisão de tutela antecipada, o pesquisador buscou pegar as datas das movimentações que continham em sua descrição as palavras "liminar" ou "antecipação de tutela", porque essas eram as descrições das movimentações correspondentes a decisões de tutela antecipada que ele observou na TPU de movimentações.**
+**Ao se estudar a Justiça Federal do Ceará, um pesquisador criou um robô para extrair todas as movimentações processuais de todos os processos de seu interesse. Ele queria calcular o tempo até as decisões de tutela antecipada dos processos. Para tanto, ele precisava de duas datas: (a) a distribuição do processo e (b) a data da decisão liminar.**
 
-**A partir disso, o pesquisador encontrou um problema: em alguns processos havia duas ou mais movimentações identificadas por seu algoritmo como uma decisão de antecipação da tutela. A dúvida que surgiu foi qual data ele deveria pegar? A data da primeira movimentação identificada ou da última? Ajude o pesquisador a decidir qual data escolher, indicando as limitações ou os potenciais de sua decisão.**
+**Para pegar a data de distribuição, ele pegou a data da primeira movimentação registrada no sistema da JFCE, independente de qual fosse a descrição da movimentação**. 
+
+**Para pegar a data da decisão de tutela antecipada, o pesquisador buscou pegar as datas das movimentações que continham em sua descrição as palavras "liminar" ou "antecipação de tutela", por serem as decisões de tutela antecipada que ele observou na TPU de movimentações.**
+
+
+**a) Quais problemas poderiam aparecer ao pegar sempre a data da primeira movimentação como data de distribuição?**
+
+Muitas vezes, a primeira data de movimentação é uma data de migração de sistema ou uma data escrita incorretamente (por exemplo, do ano de 1899). Além disso, as datas podem não estar ordenadas na tabela de movimentações.
+
+**b) Em alguns processos havia duas ou mais movimentações de antecipação da tutela. Qual data o pesquisador deve considerar? A data da primeira movimentação ou da última? Ajude o pesquisador a decidir qual data escolher, indicando as vantagens e desvantagens de cada alternativa.**
 
 Existem alguns problemas que o pesquisador deve pensar:
 
-1. Se a petição inicial trouxer mais de um pedido liminar, esses pedidos podem ser julgados em tempos diferentes. A primeira decisão liminar pode julgar apenas uma parte dos pedidos, enquanto a última decisão liminar pode julgar o resto dos pedidos. Neste caso, escolher a primeira data, significaria escolher o tempo para se ter _alguma_ resposta judicial para o problema; enquanto escolher a última data significaria escolher o tempo para se ter uma satisfação completa dos pedidos liminares. 
-1. Se a petição inicial trouxe apenas um pedido liminar e, depois, em outra peça, a parte autora demanda um novo pedido liminar, podemos presumir que a primeira decisão liminar tenha julgado os pedidos da petição inicial, enquanto a última decisão liminar tenha julgado o último pedido. Neste caso, escolher a última data seria um problema muito grande, pois a pesquisa estaria calculando o tempo entre a distribuição do pedido (que normalmente corresponde à petição inicial) e a decisão que julga um pedido que NÃO foi realizado neste momento, sobrestimando demais o tempo de decisão. 
+1.  Se a petição inicial trouxer mais de um pedido liminar, esses pedidos podem ser julgados em tempos diferentes. A primeira decisão liminar pode julgar apenas uma parte dos pedidos, enquanto a última decisão liminar pode julgar o resto dos pedidos. Neste caso, escolher a primeira data, significaria escolher o tempo para se ter *alguma* resposta judicial para o problema; enquanto escolher a última data significaria escolher o tempo para se ter uma satisfação completa dos pedidos liminares.
+2.  Se a petição inicial trouxe apenas um pedido liminar e, depois, em outra peça, a parte autora demanda um novo pedido liminar, podemos presumir que a primeira decisão liminar tenha julgado os pedidos da petição inicial, enquanto a última decisão liminar tenha julgado o último pedido. Neste caso, escolher a última data seria um problema muito grande, pois a pesquisa estaria calculando o tempo entre a distribuição do pedido (que normalmente corresponde à petição inicial) e a decisão que julga um pedido que NÃO foi realizado neste momento, sobrestimando demais o tempo de decisão.
 
-Dessa forma, parece ser mais acertado escolher sempre a data da primeira liminar. 
+Dessa forma, parece ser mais acertado escolher sempre a data da primeira liminar.
 
 {{< pagebreak >}}
 
+### Interpretação de gráficos
+
 **4) Exercicio sobre boxplot**
 
-**Os exercícios sobre boxplot dizem respeito aos processos administrativos sancionadores do Mercado de Capitais. Basicamente, a autarquia federal responsável por fiscalizar as infrações no mercando financeiro é a Comissão de Valores Mobiliários (CVM), tais como _insider trading_, abuso de poder, falta com os deveres de lealdade, etc. O Colegiado da CVM realiza o julgamento desses acusados para estabelecer as penalidades do mercado financeiro. As penalidades podem ser de três tipos: multas, restrições de exercício de cargo (inabilitação, suspensão e proibição) e advertências. Para todas as aplicações de penalidade, é possível entrar com recursos. Mas esses recursos são destinados, não à CVM, mas ao Conselho de Recursos do Sistema Financeiro Nacional (CRSFN). O CRSFN pode reformar as condenações aplicadas à CVM.**
+**Os exercícios sobre boxplot dizem respeito aos processos administrativos sancionadores do Mercado de Capitais. Basicamente, a autarquia federal responsável por fiscalizar as infrações no mercando financeiro é a Comissão de Valores Mobiliários (CVM), tais como *insider trading*, abuso de poder, falta com os deveres de lealdade, etc. O Colegiado da CVM realiza o julgamento desses acusados para estabelecer as penalidades do mercado financeiro. As penalidades podem ser de três tipos: multas, restrições de exercício de cargo (inabilitação, suspensão e proibição) e advertências. Para todas as aplicações de penalidade, é possível entrar com recursos. Mas esses recursos são destinados, não à CVM, mas ao Conselho de Recursos do Sistema Financeiro Nacional (CRSFN). O CRSFN pode reformar as condenações aplicadas à CVM.**
 
-**Feita essa introdução ao processo administrativo sancionador no Mercado de Capitais, podemos entrar na comparação dos valores das penalidades de multas e de restrições. As multas são sempre impostas de forma pecuniária e, portanto, podem ser medidas pelo seu valor em reais; já as restrições são sempre impostas com alguma medida temporal (por exemplo, 1 ano de inabilitação para o cargo de diretor) e podem, portanto, ser medidas em anos. Assim, vemos dois boxplots a seguir nas Figuras \@ref(fig:boxplot-multas) e \@ref(fig:boxplot-restricoes), comparando os valores de multas e de restrições na CVM e no CRSFN, respectivamente.**
+**Feita essa introdução ao processo administrativo sancionador no Mercado de Capitais, podemos entrar na comparação dos valores das penalidades de multas e de restrições. As multas são sempre impostas de forma pecuniária e, portanto, podem ser medidas pelo seu valor em reais; já as restrições são sempre impostas com alguma medida temporal (por exemplo, 1 ano de inabilitação para o cargo de diretor) e podem, portanto, ser medidas em anos. Assim, vemos dois boxplots a seguir nas Figuras** [-@fig-boxplot-multas] **e** [-@fig-boxplot-restricoes]**, comparando os valores de multas e de restrições na CVM e no CRSFN, respectivamente.**
 
-```{r boxplot-multas}
-#| fig.cap: "Comparação do valor das multas entre CVM e no CRSFN."
-#| fig.align: "center"
+```{r}
+#| label: fig-boxplot-multas
+#| fig-cap: "Comparação do valor das multas entre CVM e no CRSFN."
+#| fig-align: "center"
 #| warning: false
 si <- function(x) {
   breaks <- c(0, 10^c(M = 3, MM = 6, B = 9))
@@ -291,6 +293,7 @@ obsCRSFN::da_partes_tidy |>
 ```
 
 ```{r boxplot-restricoes}
+#| label: fig-boxplot-restricoes
 #| fig.cap: "Comparação do tempo das restrições entre CVM e no CRSFN."
 #| fig.align: "center"
 #| warning: false
@@ -349,12 +352,16 @@ obsCRSFN::da_partes_tidy |>
 
 **Com base nesses gráficos, responda:**
 
-**a) Olhando para os 50% dos dados centrais, qual dos dois órgãos aplicam multas mais altas? E penas de restrições?**
+**a) Olhando a mediana, que 50% dos dados, qual dos dois órgãos aplicam multas mais altas? E penas de restrições?**
 
-As multas, tanto na CVM, como no CRSFN, são muito parecidas. Não é possível falar que alguma multa é maior que a outra. Mas quanto às restrições, podemos afirmar que a CVM aplica sanções mais severas.
+As multas, tanto na CVM, como no CRSFN, são muito parecidas. Não é possível falar que alguma multa é maior que a outra. Quanto às restrições, podemos afirmar que a CVM geralmente aplica sanções mais severas.
 
 **b) Qual dois dois órgãos possui maior variabilidade quanto à aplicação de multas? E quanto às restrições? Quais elementos sustentam essas conclusões?**
 
 A CVM possui maior variabilidade quanto às penalidades de multa. Vemos isso pela quantidade de possíveis outliers que existem nela, em comparação com o CRSFN.
 
-Já na comparação das penas de restrição, podemos dizer que é o CRSFN quem possui penas mais dispersas. Podemos observar isso pelo tamanho da caixa central do boxplot. A caixa azul, do CRSFN, é muito maior que a caixa da CVM. O tamanho da caixa representa o IQR e o IQR impacta diretamente também no tamanho dos bigodes. Vemos que os bigodes do CRSFN são maiores também. 
+Já na comparação das penas de restrição, podemos dizer que é o CRSFN quem possui penas mais dispersas. Podemos observar isso pelo tamanho da caixa central do boxplot. A caixa azul, do CRSFN, é muito maior que a caixa da CVM. O tamanho da caixa representa o IQR e o IQR impacta diretamente também no tamanho dos bigodes. Vemos que os bigodes do CRSFN são maiores também.
+
+**c) Considerando tanto a mediana quanto a variabilidade conjuntamente, o que se pode dizer sobre a comparação entre os valores de multas e restrições nos órgãos?**
+
+Olhando tanto para a mediana quanto para a variabilidade, a comparação é indecidível tanto para multas quanto para restrições. No caso das multas, a mediana é muito parecida, já no caso das restrições, a variabilidade das restrições no CRSFN é muito alta.
