@@ -328,8 +328,8 @@
   <p class="subtitle">Definição de escopo</p>
 </section>
 
-<section id="quais-escopos-precisamos-definir" class="slide level2">
-<h2>Quais escopos precisamos definir</h2>
+<section id="estrutura-da-aula" class="slide level2">
+<h2>Estrutura da aula</h2>
 <ol type="1">
 <li>Escopo temporal</li>
 <li>Escopo geográfico</li>
@@ -398,7 +398,7 @@
  <thead>
   <tr>
    <th style="text-align:left;"> Fonte de pesquisa </th>
-   <th style="text-align:left;"> Indexador </th>
+   <th style="text-align:left;"> Data de referência </th>
    <th style="text-align:left;"> Escopo temporal </th>
   </tr>
  </thead>
@@ -419,8 +419,8 @@
 </div>
 </div>
 </section>
-<section id="relaçaõ-entre-o-escopo-e-os-processos-encontrados" class="slide level2 smaller">
-<h2>Relaçaõ entre o escopo e os processos encontrados</h2>
+<section id="relação-entre-o-escopo-e-os-processos-encontrados" class="slide level2 smaller">
+<h2>Relação entre o escopo e os processos encontrados</h2>
 
 <img data-src="img/tempos.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="columns">
 <div class="column" style="width:20%;">
@@ -494,8 +494,8 @@
 <h2>O ciclo vicioso de São Paulo</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9210a0ea421142947320" style="width:90%;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-9210a0ea421142947320">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-17585d0da0ab6438bdab" style="width:90%;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-17585d0da0ab6438bdab">{"x":{"diagram":"\n\n  digraph ciclo_sp {\n\n    # a \"graph\" statement\n\n    graph [class = dgr_graph, rankdir = \"LR\"]\n\n    # several \"node\" statements\n\n    node [\n      shape = oval, \n      style = filled, \n      fillcolor = white, \n      color = white, \n      fontcolor = MidnightBlue, \n      fontname = Yaldelvi,\n      fontsize = 25\n    ]\n\n      prod [label = \"Maior produção\nde pesquisa\", fontcolor = DarkGreen, rank = 1];\n      \n      demanda [label = \"Maior demanda\npor dados\", rank = 2]\n\n      estrutura [label = \"Melhor estrutura\nde dados\", rank = 3];\n      \n      scraper [label = \"O TJSP é mais\nfácil de scrapear\", rank = 4];\n      \n      tecnologia [label = \"Existe mais tecnologia\npara pesquisar em SP\", rank = 2];\n      \n      facil [label = \"Maior facilidade\nem fazer pesquisa\", fontcolor = DarkGreen, rank = 4];\n      \n\n    # several \"edge\" statements\n    \n    prod->demanda\n    demanda->estrutura\n    estrutura->facil\n    facil->prod\n  \n    scraper->facil\n    \n    prod->tecnologia\n    tecnologia->facil\n\n  }\n\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>

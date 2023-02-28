@@ -343,8 +343,8 @@
 <h2>Tipos de variáveis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8c812041b8efb9be7682" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-8c812041b8efb9be7682">{"x":{"diagram":"\n  digraph tipos_variaveis {\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n    # several \"node\" statements\n    node [shape = box]\n      cat [label = \"variável categórica\", rank = 1];\n      num [label = \"variável numérica\", rank = 2]\n    node [shape = box]\n      ord [label = \"variável ordinal\"];\n      nom [label = \"variável nominal\"];\n      cont [label = \"variável contínua\"];\n      disc [label = \"variável discreta\"]\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d1d39b440701764a2f34" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-d1d39b440701764a2f34">{"x":{"diagram":"\n  digraph tipos_variaveis {\n    # a \"graph\" statement\n    graph [overlap = false, fontsize = 10, rankdir = LR]\n    # several \"node\" statements\n    node [shape = box]\n      cat [label = \"variável categórica\", rank = 1];\n      num [label = \"variável numérica\", rank = 2]\n    node [shape = box]\n      ord [label = \"variável ordinal\"];\n      nom [label = \"variável nominal\"];\n      cont [label = \"variável contínua\"];\n      disc [label = \"variável discreta\"]\n    # several \"edge\" statements\n    \n    subgraph {\n    rank = same; ord; nom\n    }\n    \n    cat->{ord, nom} \n    \n    num -> {cont, disc}\n    {\n    rank = same;\n    edge[style=invis];\n    ord->nom\n    disc->cont\n    rankdir = \"TB\"\n    }\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -362,6 +362,11 @@
 <h3 id="por-que-essa-classificação-importa">Por que essa classificação importa?</h3>
 <p>Para cada tipo de variável distinto, temos uma série de medidas, visualizações e modelos específicos. Não podemos, por exemplo, tirar a média de quem é o juiz que trabalha em cada processo, pois a média é uma medida de uma variável numérica, enquanto o juiz é uma variável categórica. Então é importante sabermos distinguir os tipos de variáveis para sabermos nos adequar às análises de cada caso.</p>
 </section></section>
+<section id="base-de-dados" class="title-slide slide level1 slide-title center">
+<h1>Base de dados</h1>
+
+</section>
+
 <section id="section" class="title-slide slide level1 center" data-background="#fff">
 <h1></h1>
 <p><img data-src="img/logo-abj-colorido.png" width="500"></p>

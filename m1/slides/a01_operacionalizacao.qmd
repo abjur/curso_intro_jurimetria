@@ -29,34 +29,37 @@ knitr::opts_chunk$set(
 xaringanExtra::use_panelset()
 ```
 
-
 ## O problema que queremos investigar {.smaller}
 
 ::: fragment
-- Quando nos propormos a investigar a realidade de forma quantitativa, partimos de alguma problemática inicial, de uma pergunta de pesquisa. 
+-   Quando nos propormos a investigar a realidade de forma quantitativa, partimos de alguma problemática inicial, de uma pergunta de pesquisa.
 :::
+
 ::: fragment
-- As explicações para a nossa pergunta envolvem, sempre, _conceitos_
+-   As explicações para a nossa pergunta envolvem, sempre, *conceitos*
 :::
+
 ::: fragment
-- Os conceitos são elaborações teóricas e, portanto, não são materiais, ou seja, eles não existem no mundo real, eles não podem ser tocados, sentidos. 
+-   Os conceitos são elaborações teóricas e, portanto, não são materiais, ou seja, eles não existem no mundo real, eles não podem ser tocados, sentidos.
 :::
+
 ::: fragment
-- Assim, se queremos acessar os conceitos por meio de uma investigação empírica, precisamos traduzir o conceito em algo real, palpável.
+-   Assim, se queremos acessar os conceitos por meio de uma investigação empírica, precisamos traduzir o conceito em algo real, palpável.
 :::
+
 ::: fragment
-- Disso, surge o problema que vamos investigar nessa aula:
+-   Disso, surge o problema que vamos investigar nessa aula:
 :::
 
 ::: {.fragment .center}
-_Como passar das **definições teóricas** às **definições operacionais** com a segurança de que as variáveis escolhidas medem o conceito que se quer traduzir operacionalmente?_
+*Como passar das **definições teóricas** às **definições operacionais** com a segurança de que as variáveis escolhidas medem o conceito que se quer traduzir operacionalmente?*
 :::
 
 ## Estrutura da aula
 
-1. Definição da operacionalização dos conceitos
-2. Técnicas para criar operacionalizações
-3. Implicações da operacionalização
+1.  Definição da operacionalização dos conceitos
+2.  Técnicas para criar operacionalizações
+3.  Implicações da operacionalização
 
 # Definição {.slide-title}
 
@@ -64,16 +67,16 @@ _Como passar das **definições teóricas** às **definições operacionais** co
 
 #### Os dois componentes da operacionalização
 
-- Em toda operacionalização, eu preciso ter clareza de duas coisas: (1) o que é o **conceito** e (2) o que é a **variável**:
-  - O **conceito** é sempre fruto de elaboração teórica.
-  - A **variável** é sempre uma medida.
-    - Exemplos de palavras que são usualmente encontradas para se referir às variáveis: média, proporção, razão, taxa, percentual, valor, contagem, frequência... 
-    
+-   Em toda operacionalização, eu preciso ter clareza de duas coisas: (1) o que é o **conceito** e (2) o que é a **variável**:
+    -   O **conceito** é sempre fruto de elaboração teórica.
+    -   A **variável** é sempre uma medida.
+        -   Exemplos de palavras que são usualmente encontradas para se referir às variáveis: média, proporção, razão, taxa, percentual, valor, contagem, frequência...
+
 #### A operacionalização
 
-- A operacionalização diz respeito à adequação entre a variável e o conceito. É apenas com a clareza do que é o conceito e o que é a variável que conseguimos construir a operacionalização.
-- Se olharmos apenas para o **conceito**, não estaremos olhando para a operacionalização, mas estaremos apenas em uma discussão teórica.
-- Se olharmos apenas para a **variável**, tampouco estaremos olhando para a operacionalização, mas estaremos olhando para os dados apenas. E os dados sem teoria carecem de significação.
+-   A operacionalização diz respeito à adequação entre a variável e o conceito. É apenas com a clareza do que é o conceito e o que é a variável que conseguimos construir a operacionalização.
+-   Se olharmos apenas para o **conceito**, não estaremos olhando para a operacionalização, mas estaremos apenas em uma discussão teórica.
+-   Se olharmos apenas para a **variável**, tampouco estaremos olhando para a operacionalização, mas estaremos olhando para os dados apenas. E os dados sem teoria carecem de significação.
 
 ## Do plano abstrato ao concreto
 
@@ -86,17 +89,17 @@ knitr::include_graphics("img/operacionalizacao.png")
 
 ## Como as variáveis se relacionam com os conceitos? {.smaller}
 
-- A relação que se estabelece entre as variáveis e os conceitos que elas representam é uma relação de "implicação". Dizemos que as variáveis são **implicações observáveis** dos conceitos. 
+-   A relação que se estabelece entre as variáveis e os conceitos que elas representam é uma relação de "implicação". Dizemos que as variáveis são **implicações observáveis** dos conceitos.
 
 ::: fragment
-- Dizemos que é uma implicação porque, caso o conceito exista ou se verifique na realidade, então algo que decorre dele vai se manifestar no mundo empírico. Essa manifestação do conceito no mundo empírico é material e, por isso, ela é observável.
+-   Dizemos que é uma implicação porque, caso o conceito exista ou se verifique na realidade, então algo que decorre dele vai se manifestar no mundo empírico. Essa manifestação do conceito no mundo empírico é material e, por isso, ela é observável.
 
-- Em métodos empíricos-quantitativos, nós *precisamos* de coisas que sejam observáveis para medir. Por isso é que nós medimos as definições operacionais dos conceitos, e não os conceitos em si. E com essas medições das variáveis (e não dos conceitos em si) é que queremos concluir algo sobre os conceitos que nos interessam.
+-   Em métodos empíricos-quantitativos, nós *precisamos* de coisas que sejam observáveis para medir. Por isso é que nós medimos as definições operacionais dos conceitos, e não os conceitos em si. E com essas medições das variáveis (e não dos conceitos em si) é que queremos concluir algo sobre os conceitos que nos interessam.
 :::
 
 ## Exemplo 1: Extinção dos dinossauros {.smaller}
 
-> A extinção dos dinossauros pode ser estudada cientificamente: hipóteses alternativas podem ser desenvolvidas e testadas com respeito às suas implicações observáveis. Uma hipótese sobre a extinção dos dinossuros, desenvolvida por Luis Alvarez e seus colaboradores em Berkeley no fim dos anos 1970s (W. Alvarez and Asaro, 1990), propõe que houve uma colisão cósmica: um meteorito se chocou com a Terra voando a, aproximadamente, 72.000 km/h, criando uma explosão maior do que uma guerra nuclear mundial. Se essa hipótese estiver correta, então seria uma implicação observável que o iridium (um elemento muito comum em meteoritos, mas muito raro na Terra) poderia ser encontrado em alguma camada particular da crosta terrestre que corresponoda aos sedimentos de 65 milhões de anos atrás; de fato, a descoberta de iridium nas camadas previstas tem sido usada como evidência para a teoria de Alvarez (...). Ainda existem  outras implicações observáveis. Por exemplo, deveria ser possível também encontrar uma cratera de meteorito em algum lugar da Terra (e muitas pessoas já encontraram). 
+> A extinção dos dinossauros pode ser estudada cientificamente: hipóteses alternativas podem ser desenvolvidas e testadas com respeito às suas implicações observáveis. Uma hipótese sobre a extinção dos dinossuros, desenvolvida por Luis Alvarez e seus colaboradores em Berkeley no fim dos anos 1970s (W. Alvarez and Asaro, 1990), propõe que houve uma colisão cósmica: um meteorito se chocou com a Terra voando a, aproximadamente, 72.000 km/h, criando uma explosão maior do que uma guerra nuclear mundial. Se essa hipótese estiver correta, então seria uma implicação observável que o iridium (um elemento muito comum em meteoritos, mas muito raro na Terra) poderia ser encontrado em alguma camada particular da crosta terrestre que corresponoda aos sedimentos de 65 milhões de anos atrás; de fato, a descoberta de iridium nas camadas previstas tem sido usada como evidência para a teoria de Alvarez (...). Ainda existem outras implicações observáveis. Por exemplo, deveria ser possível também encontrar uma cratera de meteorito em algum lugar da Terra (e muitas pessoas já encontraram).
 
 ::: {style="font-size: 20px"}
 **Fonte: KING, Gary; KEOHANE, Robert; VERBA, Sidney. Designing Social Inquiry: Scientific Inference in Qualitative Research. Princeton University Press. 1994**
@@ -106,49 +109,49 @@ knitr::include_graphics("img/operacionalizacao.png")
 
 Conceito de 2000, criado pela Fábrica de Cultura da Secretaria de Estado da Cultura, no município de São Paulo. A vulnerabilidade juvenil é um conceito medido a partir das seguintes variáveis:
 
-- Taxa anual de crescimento populacional entre 1991 e 2000;
-- Percentual de jovens, de 15 a 19 Anos, no total da população dos distritos;
-- Taxa de mortalidade por homicídio da população masculina de 15 a 19 anos;
-- Percentual de mães adolescentes, de 14 a 17 anos;
-- Valor do rendimento nominal médio mensal, das pessoas com rendimento, responsáveis pelos domicílios particulares permanentes;
-- Percentual de jovens de 15 a 17 anos que não frequentam a escola. 
+-   Taxa anual de crescimento populacional entre 1991 e 2000;
+-   Percentual de jovens, de 15 a 19 Anos, no total da população dos distritos;
+-   Taxa de mortalidade por homicídio da população masculina de 15 a 19 anos;
+-   Percentual de mães adolescentes, de 14 a 17 anos;
+-   Valor do rendimento nominal médio mensal, das pessoas com rendimento, responsáveis pelos domicílios particulares permanentes;
+-   Percentual de jovens de 15 a 17 anos que não frequentam a escola.
 
 ::: {style="font-size: 20px"}
-**Fonte: Márcia Lima. A operacionalização de conceitos - parte 1. Slides para a aula Métodos e Técnicas de Pesquisa I – 2015**
+**Fonte: Márcia Lima. A operacionalização de conceitos - parte 1. Slides para a aula Métodos e Técnicas de Pesquisa I -- 2015**
 :::
 
 ## Exemplo 3: Segurança jurídica
 
-Podemos pensar também um exemplo hipotético de como a gente poderia operar um conceito muito importante no Direito, a "segurança jurídica". Abaixo, tem algumas propostas de "implicações observáveis" da segunda jurídica
+Podemos pensar também um exemplo hipotético de como a gente poderia operar um conceito muito importante no Direito, a "segurança jurídica". Abaixo, tem algumas propostas de "implicações observáveis" da segurança jurídica
 
-1. Taxa de litigiosidade
-2. Tempo de duração dos contratos entre particulares e Administração Pública
+1.  Taxa de litigiosidade
+2.  Tempo de duração dos contratos entre particulares e Administração Pública
 
 # Implicações {.slide-title}
 
 ## Limitações das conclusões
 
-- Sabendo qual é a nossa operacionalização -- ou seja, tendo clareza de qual é o nosso conceito, de qual é a nossa variável e de como a variável e o conceito se relacionam -- podemos pensar nas suas implicações para as conclusões do estudo
-- Nenhuma operacionalização é perfeita/ideal, mas também não é porque a operacionalização não é ideal que devemos descartá-la por completo. 
-- A régua para julgar uma operacionalização é a confiança subjetiva que temos nas conclusões.
+-   Sabendo qual é a nossa operacionalização -- ou seja, tendo clareza de qual é o nosso conceito, de qual é a nossa variável e de como a variável e o conceito se relacionam -- podemos pensar nas suas implicações para as conclusões do estudo
+-   Nenhuma operacionalização é perfeita/ideal, mas também não é porque a operacionalização não é ideal que devemos descartá-la por completo.
+-   A régua para julgar uma operacionalização é a confiança subjetiva que temos nas conclusões.
 
 ## Exemplo: Litigante habitual (Galanter, 1941) {.smaller}
 
-**Pergunta de interesse:** Litigante Habituais estão em vantagem nos litígios judiciais? 
-  
-- **Conceito:** Vantagem em litígio pelos LHs. 
-  - O Litigante Habitual (LH) é um ator, no Judiciário, que está envolvido em muitos litígios de natureza similar. Ele se contrapõe ao Participante Eventual (PE), que aparece apenas de vez em quando em conflitos judiciais.
-- **Variável:** Taxa de vitória dos LHs.
-  - O que vamos considerar como um LH? Abaixo, seguem duas sugestões de mensuração desse conceito. 
-- **Operacionalização:**
-  - **Sugestão 1 (restritiva):** Toda parte que aparecer mais de 1.000 vezes no Judiciário é um LH. Então, iremos medir a taxa de vitória das partes que aparecem mais de 1.000 vezes no Judiciário contra partes que aparecem menos do que mil vezes. 
-  - **Sugestão 2 (ampla):** Toda pessoa jurídica de direito privado é um LH. Então iremos medir a taxa de vitória das PJs, considerando apenas litígios de PJ x PF.
+**Pergunta de interesse:** Litigante Habituais estão em vantagem nos litígios judiciais?
+
+-   **Conceito:** Vantagem em litígio pelos LHs.
+    -   O Litigante Habitual (LH) é um ator, no Judiciário, que está envolvido em muitos litígios de natureza similar. Ele se contrapõe ao Participante Eventual (PE), que aparece apenas de vez em quando em conflitos judiciais.
+-   **Variável:** Taxa de vitória dos LHs.
+    -   O que vamos considerar como um LH? Abaixo, seguem duas sugestões de mensuração desse conceito.
+-   **Operacionalização:**
+    -   **Sugestão 1 (restritiva):** Toda parte que aparecer mais de 1.000 vezes no Judiciário é um LH. Então, iremos medir a taxa de vitória das partes que aparecem mais de 1.000 vezes no Judiciário contra partes que aparecem menos do que mil vezes.
+    -   **Sugestão 2 (ampla):** Toda pessoa jurídica de direito privado é um LH. Então iremos medir a taxa de vitória das PJs, considerando apenas litígios de PJ x PF.
 
 ## Exemplo: Litigante habitual (Galanter, 1941) {.smaller}
 
 Há duas conclusões possíveis para o estudo: (1) as vantagens dos LHs se convertem em decisões mais favoráveis aos LHs; (2) as vantagens dos LHs não gera mais decisões favoráveis a eles.
 
-A sugestão restritiva de operacionalização limita apenas as conclusões do tipo (2), sobre a igualdade de vantagens entre LH e PE. Isso acontece porque, se a pesquisa observar que não existe diferença significativa entre LH e PE, isso pode se dar tanto porque (i) _de fato_ não existe diferença significativa entre entre eles ou porque (ii) como foram considerados vários LHs dentro do grupo de PEs, então a igualdade de vantagens pode ter se dado simplesmente porque os dois grupos que estão sendo comparados, na verdade, são grupos parecidos, uma vez que no grupo de LHs existem apenas LHs, mas no grupo de PEs existem tanto PEs, como LHs. 
+A sugestão restritiva de operacionalização limita apenas as conclusões do tipo (2), sobre a igualdade de vantagens entre LH e PE. Isso acontece porque, se a pesquisa observar que não existe diferença significativa entre LH e PE, isso pode se dar tanto porque (i) *de fato* não existe diferença significativa entre entre eles ou porque (ii) como foram considerados vários LHs dentro do grupo de PEs, então a igualdade de vantagens pode ter se dado simplesmente porque os dois grupos que estão sendo comparados, na verdade, são grupos parecidos, uma vez que no grupo de LHs existem apenas LHs, mas no grupo de PEs existem tanto PEs, como LHs.
 
 Então a conclusão (2) fica prejudicada, mas a conclusão oposta, isto é, a conclusão (1), não. Ou seja, mesmo se a operacionalização tenha sido muito restritiva, se o estudo encontrar que apesar dessa operacionalização ainda foi possível encontrar uma diferença significativa de vitória para PE e LH, então essa conclusão será válida.
 
@@ -166,18 +169,15 @@ A melhor prática então não é fazer uma busca incessante pela melhor operacio
 
 ## Esforço de objetivação {.smaller}
 
-- Outra forma de encarar a incerteza da operacionalização é entender que essa incerteza é um processo subjetivo, pois quanto maior for a incerteza sobre s dados, mais a interpretação deles irá depender da da pessoa que está realizando a pesquisa. 
+-   Outra forma de encarar a incerteza da operacionalização é entender que essa incerteza é um processo subjetivo, pois quanto maior for a incerteza sobre s dados, mais a interpretação deles irá depender da da pessoa que está realizando a pesquisa.
 
-- Entender a operacionalização como um processo subjetivo nos leva a ter de pensar como mitigar a subjetividade na ciência, que se pretende ser objetiva?
+-   Entender a operacionalização como um processo subjetivo nos leva a ter de pensar como mitigar a subjetividade na ciência, que se pretende ser objetiva?
 
-Para tanto, devemos também explicitar, não somente as incertezas sobre operacionalização realizada, ou as limitações a cerca das conclusões, mas também os pressupostos teóricos pessoais do pesquisador/da pesquisadora. 
+Para tanto, devemos também explicitar, não somente as incertezas sobre operacionalização realizada, ou as limitações a cerca das conclusões, mas também os pressupostos teóricos pessoais do pesquisador/da pesquisadora.
 
 ::: {style="font-size: 20px"}
 **Fonte: PIRES, Álvaro P. Sobre algumas questões epistemológicas de uma metodologia geral para as ciências sociais. In: POUPART, Jean (Org.). A pesquisa qualitativa: Enfoques epistemológicos e metodológicos. Petrópolis: Vozes. 2010**
 :::
-
-
-
 
 #  {background="#fff"}
 

@@ -85,6 +85,6 @@ Para cada tipo de variável distinto, temos uma série de medidas, visualizaçõ
 
 # Base de dados {.slide-title}
 
-# {background="#fff"}
+#  {background="#fff"}
 
 ![](img/logo-abj-colorido.png){width="500"}
