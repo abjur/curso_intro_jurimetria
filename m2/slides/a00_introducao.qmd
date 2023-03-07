@@ -326,11 +326,11 @@ cronograma_videos |>
 
 ```{r}
 tibble::tibble(
-  semana="2", 
+  semana="3", 
   aula="Síncrona",
   tipo_aula="Exercício",
   duracao="3hrs",
-  conteudo="Metodologia + Visualização"
+  conteudo="Metodologia"
 ) |> 
   knitr::kable(
     col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
@@ -339,11 +339,12 @@ tibble::tibble(
   )
 ```
 
-## Entregas
+## Entregas / Certificado
 
-Vocês terão até o dia 30 de abril para entregar as atividades. As atividades a serem entregues são as próprias atividades que vocês vão iniciar em sala de aula, a saber:
+Vocês terão até o dia **30 de abril** para entregar as atividades. As atividades a serem entregues são as próprias atividades que vocês vão iniciar em sala de aula, a saber:
+
 1. Atividade de Processo de Geração de Dados + Visualizações
-2. Atividade de Priest & Klein e viés de celeção
+2. Atividade de Priest & Klein e viés de seleção
 3. Atividade de Técnica de Pesquisa
 
 Mediante a entrega das atividades, vocês terão direito a receber o certificado.
