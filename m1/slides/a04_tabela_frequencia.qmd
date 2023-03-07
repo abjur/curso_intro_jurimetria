@@ -17,14 +17,23 @@ title-slide-attributes:
   writing-mode: vertical-rl;
   preview-links: true
 ---
+
 ## Estrutura da aula
 
 Na aula de hoje, teremos dois objetivos:
 
-1.  Aprender a interpretar as medidas de uma tabela de distribição de frequência
+1.  Aprender a calcular e a interpretar as medidas de uma tabela de frequência
 2.  Aprender quando usar cada medida
 
 # Tabela de frequência {.slide-title}
+
+## Informações iniciais
+
+- As medidas da tabela de frequência são medidas relacionadas única e exclusivamente às variáveis categóricas (nominal ou ordinal). 
+- Exemplos:
+  - Frequência (absoluta/relativa)
+  - Proporção (absoluta/relativa)
+  - Porcentagem (absoluta/relativa)
 
 ##  {.smaller}
 

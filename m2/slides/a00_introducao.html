@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt"><head>
-<script src="a04_tabela_frequencia_files/libs/clipboard/clipboard.min.js"></script>
-<script src="a04_tabela_frequencia_files/libs/quarto-html/tabby.min.js"></script>
-<script src="a04_tabela_frequencia_files/libs/quarto-html/popper.min.js"></script>
-<script src="a04_tabela_frequencia_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="a04_tabela_frequencia_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="a04_tabela_frequencia_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="a04_tabela_frequencia_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="a00_introducao_files/libs/clipboard/clipboard.min.js"></script>
+<script src="a00_introducao_files/libs/quarto-html/tabby.min.js"></script>
+<script src="a00_introducao_files/libs/quarto-html/popper.min.js"></script>
+<script src="a00_introducao_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="a00_introducao_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="a00_introducao_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="a00_introducao_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <title>Medidas</title>
+  <title>Introdução à jurimetria</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="a04_tabela_frequencia_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="a04_tabela_frequencia_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="a00_introducao_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="a00_introducao_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,11 +23,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="a04_tabela_frequencia_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="a04_tabela_frequencia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="a04_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="a04_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="a04_tabela_frequencia_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="a00_introducao_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="a00_introducao_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="a00_introducao_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="a00_introducao_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="a00_introducao_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -318,208 +318,473 @@
     <div class="slides">
 
 <section id="title-slide" border-start-end-radius="50%;" data-background-color="#233262" preview-links="true" writing-mode="vertical-rl;" class="center">
-  <h1 class="title">Medidas</h1>
-  <p class="subtitle">Tabela de frequência</p>
+  <h1 class="title">Introdução à jurimetria</h1>
 </section>
 
-<section id="estrutura-da-aula" class="slide level2">
-<h2>Estrutura da aula</h2>
-<p>Na aula de hoje, teremos dois objetivos:</p>
-<ol type="1">
-<li>Aprender a calcular e a interpretar as medidas de uma tabela de frequência</li>
-<li>Aprender quando usar cada medida</li>
-</ol>
-</section>
 <section>
-<section id="tabela-de-frequência" class="title-slide slide level1 slide-title center">
-<h1>Tabela de frequência</h1>
+<section id="nos-conhecendo-melhor" class="title-slide slide level1 center">
+<h1>Nos conhecendo melhor</h1>
 
 </section>
-<section id="informações-iniciais" class="slide level2">
-<h2>Informações iniciais</h2>
+<section id="os-professores-são-os-mesmos" class="slide level2">
+<h2>Os professores são os mesmos!</h2>
+<div class="columns">
+<div class="column">
+<h4 id="julio-trecenti">Julio Trecenti</h4>
+<p><img data-src="img/julio.jpg" width="500"></p>
+</div><div class="column">
+<h4 id="ricardo-feliz">Ricardo Feliz</h4>
+<p><img data-src="img/ricardo.jpeg" width="375"></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="sobre-o-curso" class="title-slide slide level1 center">
+<h1>Sobre o curso</h1>
+
+</section>
+<section id="o-que-mudou-do-módulo-1" class="slide level2">
+<h2>O que mudou do Módulo 1?</h2>
+<div style="font-size: 32px">
 <ul>
-<li>As medidas da tabela de frequência são medidas relacionadas única e exclusivamente às variáveis categóricas (nominal ou ordinal).</li>
-<li>Exemplos:
+<li>Tiramos as aulas de gsheets
 <ul>
-<li>Frequência (absoluta/relativa)</li>
-<li>Proporção (absoluta/relativa)</li>
-<li>Porcentagem (absoluta/relativa)</li>
+<li>Consequentemente, tiramos os exercícios de “mão na massa” de gsheets</li>
+</ul></li>
+<li>Mudamos a distribuição das aulas de metodologia/visualizações
+<ul>
+<li>Agora as duas “Partes” do curso serão dadas em paralelo</li>
+<li>Em todas as aulas, teremos vídeos e exercícios tanto de metodologia como de visualizações</li>
+</ul></li>
+<li>Mudamos os exercícios também
+<ul>
+<li>A natureza dos exercícios de visualizações mudou. Não vamos pedir para vocês produzirem gráficos. Pediremos interpretações de dados.</li>
+<li>Não terão exercícios que pressupõem a leitura de materiais</li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="ementa-do-curso" class="slide level2">
+<h2>Ementa do curso</h2>
+<div class="columns">
+<div class="column">
+<h4 id="parte-1---metodologia">Parte 1 - Metodologia</h4>
+<ol type="1">
+<li>Processo de Geração de Dados</li>
+<li>Teorema de Priest &amp; Klein</li>
+<li>Uma técnica de pesquisa</li>
+</ol>
+</div><div class="column">
+<h4 id="parte-2---visualizações">Parte 2 - Visualizações</h4>
+<ol type="1">
+<li>Gráfico de barras</li>
+<li>Histograma</li>
+<li>Boxplot</li>
+<li>Séries temporais</li>
+<li>Gráfico de dispersão</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="informações-sobre-as-aulas" class="slide level2 smaller">
+<h2>Informações sobre as aulas</h2>
+<div class="columns">
+<div class="column">
+<h3 id="aulas-assíncronas">Aulas assíncronas</h3>
+<ul>
+<li>São mais de 4 horas de gravação.</li>
+<li>São 12 materiais gravados, divididos em 9 aulas e 3 materiais extras.</li>
+<li>Os materiais ficarão disponíveis para serem assistidos a partir de hoje e poderão ser acessados a qualquer momento.</li>
+</ul>
+</div><div class="column">
+<h3 id="aulas-síncronas">Aulas síncronas</h3>
+<ul>
+<li>São 3 encontros, contando com a aula de hoje, de 3 horas de duração.</li>
+<li>Logo no início das aulas, iremos dar uma lista de exercícios.</li>
+<li>Vocês terão 2 horas para realizar os exercícios em grupos.</li>
+<li>Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.</li>
+<li>Ficará como atividade para casa refazer os exercícios e enviar uma lista <em>individual</em></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<div class="absolute" style="left: -150px; ">
-<table>
-<caption>Tabela de frequência</caption>
-<colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 21%">
-<col style="width: 20%">
-<col style="width: 22%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Variável</p>
-<span class="math inline">\(x_i\)</span></th>
-<th><p>Frequência</p>
-<span class="math inline">\(n_i\)</span></th>
-<th><p>Frequência acumulada</p>
-<span class="math inline">\(N_i\)</span></th>
-<th><p>Proporção</p>
-<span class="math inline">\(f_i\)</span></th>
-<th><p>Proporção acumulada</p>
-<span class="math inline">\(F_i\)</span></th>
-<th><p>Porcentagem</p>
-<span class="math inline">\(100 f_i\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(x_1\)</span></td>
-<td><span class="math inline">\(n_1\)</span></td>
-<td><span class="math inline">\(N_1=n_1\)</span></td>
-<td><span class="math inline">\(f_1=\frac{n_1}{n}\)</span></td>
-<td><span class="math inline">\(F_1=f_1\)</span></td>
-<td><span class="math inline">\(100f_1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(x_2\)</span></td>
-<td><span class="math inline">\(n_2\)</span></td>
-<td><span class="math inline">\(N_2=N_1+n_2\)</span></td>
-<td><span class="math inline">\(f_2=\frac{n_2}{n}\)</span></td>
-<td><span class="math inline">\(F_2=F_1+f_2\)</span></td>
-<td><span class="math inline">\(100f_2\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(x_3\)</span></td>
-<td><span class="math inline">\(n_3\)</span></td>
-<td><span class="math inline">\(N_3=N_2+n_3\)</span></td>
-<td><span class="math inline">\(f_3=\frac{n_3}{n}\)</span></td>
-<td><span class="math inline">\(F_3=F_2+f_3\)</span></td>
-<td><span class="math inline">\(100f_3\)</span></td>
-</tr>
-<tr class="even">
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(x_k\)</span></td>
-<td><span class="math inline">\(n_k\)</span></td>
-<td><span class="math inline">\(N_k=N_{k-1}+n_k=n\)</span></td>
-<td><span class="math inline">\(f_k=\frac{n_k}{n}\)</span></td>
-<td><span class="math inline">\(F_k=F_{k-1}+f_k=1,00\)</span></td>
-<td><span class="math inline">\(100f_k\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><span class="math inline">\(n\)</span></td>
-<td></td>
-<td><span class="math inline">\(1,00\)</span></td>
-<td></td>
-<td><span class="math inline">\(100%\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="quando-usar-a-informação-acumulada" class="slide level2 smaller">
-<h2>Quando usar a informação acumulada?</h2>
-<div class="cell">
-
-</div>
-
-<img data-src="a04_tabela_frequencia_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul.</p></section>
-<section id="quando-usar-a-informação-acumulada-1" class="slide level2 smaller">
-<h2>Quando usar a informação acumulada</h2>
-<div style="font-size: 90%">
-<div class="cell">
+<div class="columns">
+<div class="column" style="width:80%;">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 
 <table class="striped">
-<caption>10 maiores causas de pedir contra instituições financeiras do Rio Grande do Sul.</caption>
+<caption>Cronograma dos vídeos</caption>
  <thead>
   <tr>
-   <th style="text-align:left;"> Causa de Pedir (Assunto) </th>
-   <th style="text-align:right;"> Frequência </th>
-   <th style="text-align:right;"> Percentual </th>
-   <th style="text-align:right;"> Percentual acumulado </th>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Interpretação / Revisão de Contrato </td>
-   <td style="text-align:right;"> 112163 </td>
-   <td style="text-align:right;"> 36.40% </td>
-   <td style="text-align:right;"> 36.40% </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 39min </td>
+   <td style="text-align:left;"> Processo de geração de dados </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Bancários </td>
-   <td style="text-align:right;"> 46333 </td>
-   <td style="text-align:right;"> 15.00% </td>
-   <td style="text-align:right;"> 51.40% </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 28min </td>
+   <td style="text-align:left;"> Gráfico de barras </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Indenização por Dano Moral </td>
-   <td style="text-align:right;"> 32196 </td>
-   <td style="text-align:right;"> 10.40% </td>
-   <td style="text-align:right;"> 61.80% </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 22min </td>
+   <td style="text-align:left;"> Boxplot </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Reparação de Danos </td>
-   <td style="text-align:right;"> 30175 </td>
-   <td style="text-align:right;"> 9.80% </td>
-   <td style="text-align:right;"> 71.60% </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 37min </td>
+   <td style="text-align:left;"> Viés de seleção </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Constratos de Consumo </td>
-   <td style="text-align:right;"> 13512 </td>
-   <td style="text-align:right;"> 4.40% </td>
-   <td style="text-align:right;"> 76.00% </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 60min </td>
+   <td style="text-align:left;"> Teorema de Priest &amp; Klein </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Expurgos Inflacionários / Planos econômicos </td>
-   <td style="text-align:right;"> 13251 </td>
-   <td style="text-align:right;"> 4.30% </td>
-   <td style="text-align:right;"> 80.30% </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 18min </td>
+   <td style="text-align:left;"> Histograma </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Financiamento de Produto </td>
-   <td style="text-align:right;"> 12649 </td>
-   <td style="text-align:right;"> 4.10% </td>
-   <td style="text-align:right;"> 84.40% </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 10min </td>
+   <td style="text-align:left;"> Gráfico de dispersão </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Seguro </td>
-   <td style="text-align:right;"> 10505 </td>
-   <td style="text-align:right;"> 3.40% </td>
-   <td style="text-align:right;"> 87.80% </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 46min </td>
+   <td style="text-align:left;"> Técnica de pesquisa - Parte 1 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Inclusão Indevida em Cadastro de Inadimplentes </td>
-   <td style="text-align:right;"> 7532 </td>
-   <td style="text-align:right;"> 2.40% </td>
-   <td style="text-align:right;"> 90.20% </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 27min </td>
+   <td style="text-align:left;"> Técnica de pesquisa - Parte 2 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Indenização por Dano Material </td>
-   <td style="text-align:right;"> 7178 </td>
-   <td style="text-align:right;"> 2.30% </td>
-   <td style="text-align:right;"> 92.50% </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 15min </td>
+   <td style="text-align:left;"> Séries temporais </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> Extra </td>
+   <td style="text-align:left;"> Prática </td>
+   <td style="text-align:left;"> 50min </td>
+   <td style="text-align:left;"> Visualização de dados no R </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> Extra </td>
+   <td style="text-align:left;"> Prática </td>
+   <td style="text-align:left;"> 17min </td>
+   <td style="text-align:left;"> ggplot2 na prática </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Total </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> 369min </td>
+   <td style="text-align:left;"> - </td>
   </tr>
 </tbody>
 </table>
 
 </div>
 </div>
+</div><div class="column" style="width:20%;">
+<p><strong>Semana 1</strong></p>
+<p>de 07/03/2023 até 14/03/2023</p>
+<p><strong>Semana 2</strong></p>
+<p>de 14/03/2023 até 22/03/2023</p>
+<p><strong>Semana 3</strong></p>
+<p>de 22/03/2023 até 28/03/2023</p>
+</div>
+</div>
+</section>
+<section id="planejamento-da-semana-1" class="slide level2 smaller">
+<h2>Planejamento da Semana 1</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 39min </td>
+   <td style="text-align:left;"> Processo de geração de dados </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 28min </td>
+   <td style="text-align:left;"> Gráfico de barras </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 22min </td>
+   <td style="text-align:left;"> Boxplot </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Total </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> 89min </td>
+   <td style="text-align:left;"> - </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="center">
+<p><strong>Preparação para a aula:</strong> 07/03/2023 - 14/03/2023</p>
+<p><strong>Data e hora da aula:</strong> 14/03/2023 das 19 às 22hrs (com monitoria das 18:30 às 19:00)</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Síncrona </td>
+   <td style="text-align:left;"> Exercício </td>
+   <td style="text-align:left;"> 3hrs </td>
+   <td style="text-align:left;"> Metodologia + Visualização </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="planejamento-da-semana-2" class="slide level2 smaller">
+<h2>Planejamento da Semana 2</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 37min </td>
+   <td style="text-align:left;"> Viés de seleção </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 60min </td>
+   <td style="text-align:left;"> Teorema de Priest &amp; Klein </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 18min </td>
+   <td style="text-align:left;"> Histograma </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 10min </td>
+   <td style="text-align:left;"> Gráfico de dispersão </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Total </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> 125min </td>
+   <td style="text-align:left;"> - </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="center">
+<p><strong>Preparação para a aula:</strong> 14/03/2023 - 22/03/2023</p>
+<p><strong>Data e hora da aula:</strong> 22/03/2023 das 19 às 22hrs (com monitoria das 18:30 às 19:00)</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Síncrona </td>
+   <td style="text-align:left;"> Exercício </td>
+   <td style="text-align:left;"> 3hrs </td>
+   <td style="text-align:left;"> Metodologia + Visualização </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="planejamento-da-semana-3" class="slide level2 smaller">
+<h2>Planejamento da Semana 3</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 46min </td>
+   <td style="text-align:left;"> Técnica de pesquisa - Parte 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> Metodologia </td>
+   <td style="text-align:left;"> 27min </td>
+   <td style="text-align:left;"> Técnica de pesquisa - Parte 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> Visualização </td>
+   <td style="text-align:left;"> 15min </td>
+   <td style="text-align:left;"> Séries temporais </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Total </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> 88min </td>
+   <td style="text-align:left;"> - </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="center">
+<p><strong>Preparação para a aula:</strong> 22/03/2023 - 28/03/2023</p>
+<p><strong>Data e hora da aula:</strong> 28/03/2023 das 19 às 22hrs (com monitoria das 18:30 às 19:00)</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<table class="striped">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Sem </th>
+   <th style="text-align:left;"> Aula </th>
+   <th style="text-align:left;"> Tipo de aula </th>
+   <th style="text-align:left;"> Duração </th>
+   <th style="text-align:left;"> Conteúdo </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Síncrona </td>
+   <td style="text-align:left;"> Exercício </td>
+   <td style="text-align:left;"> 3hrs </td>
+   <td style="text-align:left;"> Metodologia + Visualização </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </section></section>
+<section id="dúvidas-comentários" class="title-slide slide level1 center">
+<h1>Dúvidas? Comentários?</h1>
+
+</section>
+
 <section id="section-1" class="title-slide slide level1 center" data-background="#fff">
 <h1></h1>
 <p><img data-src="img/logo-abj-colorido.png" width="500"></p>
@@ -532,19 +797,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="a04_tabela_frequencia_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="a00_introducao_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
