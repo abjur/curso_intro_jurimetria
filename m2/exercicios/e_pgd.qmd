@@ -207,10 +207,9 @@ E o valor da ação poderá estar sobrestimado caso existam pedidos alternativos
 
 **Ao se estudar a Justiça Federal do Ceará, um pesquisador criou um robô para extrair todas as movimentações processuais de todos os processos de seu interesse. Ele queria calcular o tempo até as decisões de tutela antecipada dos processos. Para tanto, ele precisava de duas datas: (a) a distribuição do processo e (b) a data da decisão liminar.**
 
-**Para pegar a data de distribuição, ele pegou a data da primeira movimentação registrada no sistema da JFCE, independente de qual fosse a descrição da movimentação**. 
+**Para pegar a data de distribuição, ele pegou a data da primeira movimentação registrada no sistema da JFCE, independente de qual fosse a descrição da movimentação**.
 
 **Para pegar a data da decisão de tutela antecipada, o pesquisador buscou pegar as datas das movimentações que continham em sua descrição as palavras "liminar" ou "antecipação de tutela", por serem as decisões de tutela antecipada que ele observou na TPU de movimentações.**
-
 
 **a) Quais problemas poderiam aparecer ao pegar sempre a data da primeira movimentação como data de distribuição?**
 

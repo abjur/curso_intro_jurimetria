@@ -4,6 +4,14 @@ author: "ABJ"
 format: pdf
 lang: pt
 ---
+## Orientações gerais
+
+-   Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+-   Os grupos terão 2 horas para responder às questões;
+-   Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+-   Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
+
+{{< pagebreak >}}
 
 ## Contexto
 
@@ -20,7 +28,8 @@ As equações apresentadas acima significam: a expectativa do mérito do caso pe
 
 A suposição de simetria é sobre as distribuições de $\epsilon_p$ e $\epsilon_d$. Na primeira parte do artigo, assume-se que $\epsilon_p$ e $\epsilon_d$ são independentes e têm distribuição normal com média zero e variância $\sigma^2$. Como $\epsilon_p$ e $\epsilon_d$ têm a mesma variância, as expectativas se comportarão de forma parecida.
 
-No entanto, é possível modificar essa condição. É possível modelar o problema considerando que $\epsilon_p$ e $\epsilon_d$ têm variâncias $\sigma_p$ e $\sigma_d$, respectivamente. A @fig-variancias mostra uma simulação de como fica a distribuição de $y_p$ e $y_d$ quando consideramos variâncias iguais (valor escolhido: 1) e variâncias diferentes (valores escolhidos: 0.5 e 2, respectivamente). O valor de $y$ foi arbitrado em 5.
+No entanto, é possível modificar essa condição. É possível modelar o problema considerando que $\epsilon_p$ e $\epsilon_d$ têm variâncias $\sigma_p$ e $\sigma_d$, respectivamente. A @fig-variancias mostra uma simulação de como fica a distribuição de $y_p$ e $y_d$ quando
+consideramos variâncias iguais (valor escolhido: 1) e variâncias diferentes (valores escolhidos: 0.5 e 2, respectivamente). O valor de $y$ foi arbitrado em 5.
 
 ```{r}
 #| label: fig-variancias

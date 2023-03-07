@@ -5,6 +5,16 @@ format: pdf
 lang: pt
 ---
 
+## Orientações gerais
+
+-   Formem grupos de 5 alunos. Todas as questões deverão ser respondidas nestes grupos;
+-   Os grupos terão 2 horas para responder às questões;
+-   Depois das discussões em grupo, retornaremos à sala para discutir as questões conjuntamente;
+-   Lembrem de anotar as respostas às questões em um documento compartilhado entre vocês.
+
+{{< pagebreak >}}
+
+
 ## Contexto
 
 O modelo de Priest & Klein apresentado em aula parte da premissa de que existe informação simétrica entre as partes. Isso pode ser explicado pela variância introduzida nas expectativas do autor e do réu:
