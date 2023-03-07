@@ -31,8 +31,6 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ```
 
-# Nos conhecendo melhor
-
 ## Os professores são os mesmos!
 
 ::: columns
@@ -53,15 +51,25 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 
 ## O que mudou do Módulo 1?
 
-::: {style='font-size: 32px'}
-- Tiramos as aulas de gsheets
-  - Consequentemente, tiramos os exercícios de "mão na massa" de gsheets
-- Mudamos a distribuição das aulas de metodologia/visualizações
-  - Agora as duas "Partes" do curso serão dadas em paralelo
-  - Em todas as aulas, teremos vídeos e exercícios tanto de metodologia como de visualizações
-- Mudamos os exercícios também
-  - A natureza dos exercícios de visualizações mudou. Não vamos pedir para vocês produzirem gráficos. Pediremos interpretações de dados.
-  - Não terão exercícios que pressupõem a leitura de materiais
+::: {style="font-size: 27px"}
+
+::: fragment
+-   Tiramos as aulas de gsheets
+    -   Consequentemente, tiramos os exercícios de "mão na massa" de gsheets
+:::
+
+::: fragment
+-   Mudamos a distribuição das aulas de metodologia/visualizações
+    -   Agora as duas "Partes" do curso serão dadas em paralelo
+    -   Em todas as aulas, teremos vídeos e exercícios tanto de metodologia como de visualizações
+:::
+
+::: fragment
+-   Mudamos os exercícios também
+    -   A natureza dos exercícios de estatística mudou. Não vamos pedir para vocês produzirem gráficos. Pediremos interpretações de dados no lugar. 
+    - Isso não exclui a possibilidade de, quem quiser, utilizar um software para produzir isso. Tanto que temos vídeos ensinando, mas agora os vídeos são só no R. 
+    -   Não terão exercícios que pressupõem a leitura de materiais
+:::
 :::
 
 ## Ementa do curso
@@ -86,7 +94,6 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 :::
 :::
 
-
 ## Informações sobre as aulas {.smaller}
 
 ::: columns
@@ -94,18 +101,19 @@ cores_abj <-  viridis::viridis(2, 1, .2, .8)
 ### Aulas assíncronas
 
 -   São mais de 4 horas de gravação.
--   São 12 materiais gravados, divididos em 9 aulas e 3 materiais extras.
+-   São 12 materiais gravados, divididos em 10 aulas e 2 materiais extras.
 -   Os materiais ficarão disponíveis para serem assistidos a partir de hoje e poderão ser acessados a qualquer momento.
 :::
 
 ::: column
 ### Aulas síncronas
 
--   São 3 encontros, contando com a aula de hoje, de 3 horas de duração.
+-   São 4 encontros, contando com a aula de hoje, de 3 horas de duração, das 19 às 22.
+- Mas estaremos na sala a partir das 18:30, caso alguém queira tirar dúvidas.
 -   Logo no início das aulas, iremos dar uma lista de exercícios.
 -   Vocês terão 2 horas para realizar os exercícios em grupos.
 -   Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.
--   Ficará como atividade para casa refazer os exercícios e enviar uma lista *individual*
+-   Ficará como atividade para casa refazer os exercícios e submeter as respostas de forma *individual*
 :::
 :::
 
@@ -204,7 +212,7 @@ cronograma_videos |>
   dplyr::mutate(duracao=paste0(duracao,"min")) |> 
   knitr::kable(
     caption="Cronograma dos vídeos",
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
@@ -223,7 +231,6 @@ de 14/03/2023 até 22/03/2023
 **Semana 3**
 
 de 22/03/2023 até 28/03/2023
-
 :::
 :::
 
@@ -235,7 +242,7 @@ cronograma_videos |>
   janitor::adorn_totals() |> 
   dplyr::mutate(duracao=paste0(duracao,"min")) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
@@ -256,7 +263,7 @@ tibble::tibble(
   conteudo="Metodologia + Visualização"
 ) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
@@ -270,7 +277,7 @@ cronograma_videos |>
   janitor::adorn_totals() |> 
   dplyr::mutate(duracao=paste0(duracao,"min")) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
@@ -291,12 +298,11 @@ tibble::tibble(
   conteudo="Metodologia + Visualização"
 ) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 
 ## Planejamento da Semana 3 {.smaller}
 
@@ -306,7 +312,7 @@ cronograma_videos |>
   janitor::adorn_totals() |> 
   dplyr::mutate(duracao=paste0(duracao,"min")) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
@@ -327,11 +333,20 @@ tibble::tibble(
   conteudo="Metodologia + Visualização"
 ) |> 
   knitr::kable(
-    col.names=c("Sem", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
+    col.names=c("Semana", "Aula", "Tipo de aula", "Duração", "Conteúdo"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
+
+## Entregas
+
+Vocês terão até o dia 30 de abril para entregar as atividades. As atividades a serem entregues são as próprias atividades que vocês vão iniciar em sala de aula, a saber:
+1. Atividade de Processo de Geração de Dados + Visualizações
+2. Atividade de Priest & Klein e viés de celeção
+3. Atividade de Técnica de Pesquisa
+
+Mediante a entrega das atividades, vocês terão direito a receber o certificado.
 
 # Dúvidas? Comentários?
 
