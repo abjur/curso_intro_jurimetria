@@ -1,0 +1,407 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Arial}
+  \setsansfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{portuguese}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Exercício sobre Processo de Geração de Dados (PGD) - Gabarito},
+  pdfauthor={ABJ},
+  pdflang={pt},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Exercício sobre Processo de Geração de Dados (PGD) - Gabarito}
+\author{ABJ}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, interior hidden, enhanced, breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+
+\hypertarget{orientauxe7uxf5es-gerais}{%
+\subsection{Orientações gerais}\label{orientauxe7uxf5es-gerais}}
+
+\begin{itemize}
+\tightlist
+\item
+  Formem grupos de 5 alunos. Todas as questões deverão ser respondidas
+  nestes grupos;
+\item
+  Os grupos terão 2 horas para responder às questões;
+\item
+  Depois das discussões em grupo, retornaremos à sala para discutir as
+  questões conjuntamente;
+\item
+  Lembrem de anotar as respostas às questões em um documento
+  compartilhado entre vocês.
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{perguntas}{%
+\subsection{Perguntas}\label{perguntas}}
+
+\hypertarget{classes-e-assuntos}{%
+\subsubsection{Classes e assuntos}\label{classes-e-assuntos}}
+
+\textbf{1) Investigando o processo de geração de dados dos assuntos (e
+classes) processuais. Vamos usar, para esse exercício, uma
+\href{https://docs.google.com/spreadsheets/d/1W0a0MPpszNYEbS6x8ytDwYF78rcU8_qhgOO4ke22sSw/edit\#gid=0}{base
+de dados que está no Drive}.}
+
+\textbf{Essa planilha contém a contagem de todos a contagem de todos os
+assuntos extraídos do Esaj do TJAM, entre os anos de 2014 e 2019.
+Poderíamos fazer uma planilha igual para as classes, pois o raciocínio
+será o mesmo.}
+
+\textbf{Os assuntos estão padronizados, graças às
+\href{https://www.cnj.jus.br/sgt/consulta_publica_assuntos.php}{Tabelas
+Processuais Unificadas}. As TPUs são uma iniciativa do CNJ para
+padronizar a classificação dos processos judiciais. Existem TPUs para
+classes, assuntos e movimentações processuais.}
+
+\textbf{a) Veja a imagem abaixo, construída a partir da tabela:}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\textwidth,height=\textheight]{img/assuntos.png}
+
+}
+
+\end{figure}
+
+\textbf{Nesta imagem, estamos vendo o ramo de assuntos ligados ao
+Ministério Público. Neste caso, o Assunto - Nome4 é o nível de assunto
+mais específico que esse ramo consegue chegar. Qual é o assunto com que
+foram classificados os processos que possuem ``-'' nesta coluna?}
+
+\textbf{b) Por que um caso acaba sendo classificado como ``-'' e não
+como ``Remuneração'', por exemplo?}
+
+\textbf{c) Com base no que foi discutido no item anterior, discuta
+possíveis problemas no gráfico abaixo. Podemos afirmar com certeza que
+``Remuneração'' é o assunto mais frequente a respeito do Ministério
+Público? O que significam os casos de cinza?}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{e_pgd_files/figure-pdf/fig-assuntos-mp-1.pdf}
+
+}
+
+\caption{\label{fig-assuntos-mp}Distribuição de sub-assuntos dentro de
+DIREITO ADMINISTRATIVO E OUTRAS MATÉRIA DE DIREITO PÚBLICO
+\textgreater{} Agentes Políticos \textgreater{} Ministério Público}
+
+\end{figure}
+
+\textbf{d) Um pesquisador deseja listar \emph{todos} os processos
+relacionados à Remuneração dos promotores públicos. Com base na planilha
+deste exercício e nas discussões dos itens anteriores, quais assuntos
+você recomendaria a ele utilizar para filtrar a sua busca?}
+
+\newpage{}
+
+\hypertarget{valor-da-causa}{%
+\subsubsection{Valor da causa}\label{valor-da-causa}}
+
+\textbf{2) Investigando o processo de geração de dados do valor da
+causa}
+
+\textbf{O valor da ação é uma informação que pode ser obtida nas
+informações de capa dos processos. No Esaj, essa informação aparece
+disposta da seguinte maneira:}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\textwidth,height=\textheight]{img/valor-da-causa.png}
+
+}
+
+\end{figure}
+
+\textbf{Sabendo que essa informação estava disponível nas capas dos
+processos, uma pesquisadora extraiu essa informação de 100 processos
+escolhidos aleatoriamente. A partir disso, foi encontrado um valor médio
+da ação de R\$ 17654.1, conforme a figura abaixo.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{e_pgd_files/figure-pdf/fig-consumo-1.pdf}
+
+}
+
+\caption{\label{fig-consumo}Valor da causa em ações genéricas}
+
+\end{figure}
+
+\textbf{A partir disso, responda (para algumas questões será necessário
+consultar o CPC):}
+
+\textbf{a) O valor da ação corresponde ao valor efetivamente pedido? E
+se o valor pedido na inicial for impugnado, a informação da capa irá
+refletir o valor originalmente pedido, o valor contestado, ou novo valor
+arbitrado pelo juiz?}
+
+\textbf{b) O valor da ação pode ser corrigido? Ele pode estar
+desatualizado?}
+
+\textbf{c) Segundo art. 292 do CPC, quais aspectos podem influenciar na
+definição do valor da causa?}
+
+\textbf{d) Supondo que a coleta dos dados foi realizada de forma
+adequada, como você avalia a utilização do valor da causa para aproximar
+o valor pedido? Discuta se podemos falar que o valor médio da ação
+encontrado reflete o valor pedido. Esse valor pode estar subestimado ou
+sobrestimado?}
+
+\newpage{}
+
+\hypertarget{datas}{%
+\subsubsection{Datas}\label{datas}}
+
+\textbf{3) Investigando o processo de geração de dados da data de
+liminares}
+
+\textbf{Ao se estudar a Justiça Federal do Ceará, um pesquisador criou
+um robô para extrair todas as movimentações processuais de todos os
+processos de seu interesse. Ele queria calcular o tempo até as decisões
+de tutela antecipada dos processos. Para tanto, ele precisava de duas
+datas: (a) a distribuição do processo e (b) a data da decisão liminar.}
+
+\textbf{Para pegar a data de distribuição, ele pegou a data da primeira
+movimentação registrada no sistema da JFCE, independente de qual fosse a
+descrição da movimentação}.
+
+\textbf{Para pegar a data da decisão de tutela antecipada, o pesquisador
+buscou pegar as datas das movimentações que continham em sua descrição
+as palavras ``liminar'' ou ``antecipação de tutela'', por serem as
+decisões de tutela antecipada que ele observou na TPU de movimentações.}
+
+\textbf{a) Quais problemas poderiam aparecer ao pegar sempre a data da
+primeira movimentação como data de distribuição?}
+
+\textbf{b) Em alguns processos havia duas ou mais movimentações de
+antecipação da tutela. Qual data o pesquisador deve considerar? A data
+da primeira movimentação ou da última? Ajude o pesquisador a decidir
+qual data escolher, indicando as vantagens e desvantagens de cada
+alternativa.}
+
+\newpage{}
+
+\hypertarget{interpretauxe7uxe3o-de-gruxe1ficos}{%
+\subsubsection{Interpretação de
+gráficos}\label{interpretauxe7uxe3o-de-gruxe1ficos}}
+
+\textbf{4) Exercicio sobre boxplot}
+
+\textbf{Os exercícios sobre boxplot dizem respeito aos processos
+administrativos sancionadores do Mercado de Capitais. Basicamente, a
+autarquia federal responsável por fiscalizar as infrações no mercando
+financeiro é a Comissão de Valores Mobiliários (CVM), tais como
+\emph{insider trading}, abuso de poder, falta com os deveres de
+lealdade, etc. O Colegiado da CVM realiza o julgamento desses acusados
+para estabelecer as penalidades do mercado financeiro. As penalidades
+podem ser de três tipos: multas, restrições de exercício de cargo
+(inabilitação, suspensão e proibição) e advertências. Para todas as
+aplicações de penalidade, é possível entrar com recursos. Mas esses
+recursos são destinados, não à CVM, mas ao Conselho de Recursos do
+Sistema Financeiro Nacional (CRSFN). O CRSFN pode reformar as
+condenações aplicadas à CVM.}
+
+\textbf{Feita essa introdução ao processo administrativo sancionador no
+Mercado de Capitais, podemos entrar na comparação dos valores das
+penalidades de multas e de restrições. As multas são sempre impostas de
+forma pecuniária e, portanto, podem ser medidas pelo seu valor em reais;
+já as restrições são sempre impostas com alguma medida temporal (por
+exemplo, 1 ano de inabilitação para o cargo de diretor) e podem,
+portanto, ser medidas em anos. Assim, vemos dois boxplots a seguir nas
+Figuras} \ref{fig-boxplot-multas} \textbf{e}
+\ref{fig-boxplot-restricoes}\textbf{, comparando os valores de multas e
+de restrições na CVM e no CRSFN, respectivamente.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{e_pgd_files/figure-pdf/fig-boxplot-multas-1.pdf}
+
+}
+
+\caption{\label{fig-boxplot-multas}Comparação do valor das multas entre
+CVM e no CRSFN.}
+
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{e_pgd_files/figure-pdf/fig-boxplot-restricoes-1.pdf}
+
+}
+
+\caption{\label{fig-boxplot-restricoes}Comparação do tempo das
+restrições entre CVM e no CRSFN.}
+
+\end{figure}
+
+\newpage{}
+
+\textbf{Com base nesses gráficos, responda:}
+
+\textbf{a) Olhando para a mediana qual dos dois órgãos aplicam multas
+mais altas? E penas de restrições?}
+
+\textbf{b) Qual dois dois órgãos possui maior variabilidade quanto à
+aplicação de multas? E quanto às restrições? Quais elementos sustentam
+essas conclusões?}
+
+\textbf{c) Considerando tanto a mediana quanto a variabilidade
+conjuntamente, o que se pode dizer sobre a comparação entre os valores
+de multas e restrições nos órgãos?}
+
+
+
+\end{document}
