@@ -147,26 +147,6 @@ consumo |>
 
 **d) Supondo que a coleta dos dados foi realizada de forma adequada, como você avalia a utilização do valor da causa para aproximar o valor pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor pedido. Esse valor pode estar subestimado ou sobrestimado?**
 
-<!-- **3) Investigando o processo de geração de dados da data de distribuição** -->
-
-<!-- **Um pesquisador pegou a data de distribuição que está no sistema, conforme a imagem abaixo.** -->
-
-<!-- ```{r, out.width="100%"} -->
-
-<!-- knitr::include_graphics("img/data-distribuicao.png") -->
-
-<!-- ``` -->
-
-<!-- **A respeito dessa data, responda:** -->
-
-<!-- **a) A data de distribuição que aparece no sistema corresponde sempre à data de peticionamento? E se o processo for redistribuído, a data irá corresponder à data de distribuição inicial, ou à data de redistribuição?** -->
-
-<!-- Em geral sim, mas isso não será verdade sempre, pois essa data representa a data mais recente de distribuição. Se houver redistribuição do processo, então a data do sistema irá representar a data de redistribuição, e não a data de distribuição.  -->
-
-<!-- **b) Uma pesquisadora buscou calcular o tempo médio de duração de alguns processos. Para tanto, ela utilizou a data de distribuição registrado no sistema e a data das sentenças, que ela obteve manualmente. Dado o que foi respondido na questão anterior, discuta se o tempo que ela encontrou é confiável, ou se ele poderá estar subestimado ou sobrestimado. ** -->
-
-<!-- Como o sistema registra a data de redistribuição, então o tempo calculado poderá estar subestimado. Em muitos casos, a redistribuição ocorre apenas alguns dias depois da distribuição, então, em geral, essa subestimação é mínima. Entretanto, pode haver casos em que a distribuição e a redistribuição é separada por meses, podendo levar a subestimações do tempo maiores.  -->
-
 {{< pagebreak >}}
 
 ### Datas

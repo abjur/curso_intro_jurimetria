@@ -157,19 +157,15 @@ consumo |>
 
 **a) O valor da ação corresponde ao valor efetivamente pedido? E se o valor pedido na inicial for impugnado, a informação da capa irá refletir o valor originalmente pedido, o valor contestado, ou novo valor arbitrado pelo juiz?**
 
-O valor da ação corresponde ao pedido inicial, e não ao valor contestado, tampouco ao valor arbitrado pelo juiz. O valor arbitrado pelo juiz é o valor da condenação
+O valor da ação corresponde ao pedido inicial, e não ao valor contestado, tampouco ao valor arbitrado pelo juiz. O valor arbitrado pelo juiz é o valor da condenação.
 
 **b) O valor da ação pode ser corrigido? Ele pode estar desatualizado?**
 
-O valor da ação pode não estar sempre corrigido. Não existe um sistema dos TJs que garanta a atualização dos valores.
+O valor da ação pode ser corrigido, mas isso não garante que ele sempre vai estar de fato corrigido. Não existe um sistema dos TJs que garanta a atualização dos valores.
 
 **c) Segundo art. 292 do CPC, quais aspectos podem influenciar na definição do valor da causa?**
 
-Se houver pedidos cumulativos, pelo art. 292, VI, o valor da ação será a soma de todos os pedidos.
-
-Se há vários pedidos alternativos, pelo art. 292, VII, o valor da causa refletirá o pedido de maior valor.
-
-Se houver pedidos subsidiários, pelo art. 292, VIII, o valor da ação refletirá o valor do pedido principal.
+Dois aspectos influenciam a definição do valor da causa: o tipo de ação e o tipo de pedido. A forma como os tipos de ação influenciam o valor da causa está expressa nos incisos I a V do art. 292 do CPC, enquanto a forma como os pedidos o influenciam está nos incisos VI a VIII do mesmo artigo.
 
 **d) Supondo que a coleta dos dados foi realizada de forma adequada, como você avalia a utilização do valor da causa para aproximar o valor pedido? Discuta se podemos falar que o valor médio da ação encontrado reflete o valor pedido. Esse valor pode estar subestimado ou sobrestimado?**
 
