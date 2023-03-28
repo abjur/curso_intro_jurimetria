@@ -5,11 +5,11 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       fluidRow(
-        column(6, sliderInput("infop", "Informação autor (log)", 0, 5, 1, .1)),
-        column(6, sliderInput("infod", "Informação réu (log)", 0, 5, 1, .1))
+        column(6, sliderInput("infop", "Informacao autor (log)", 0, 5, 1, .1)),
+        column(6, sliderInput("infod", "Informacao reu (log)", 0, 5, 1, .1))
       ),
       fluidRow(
-        column(12, sliderInput("n", "Quantidade de simulações", 1, 10000, step = 1000, 1000)),
+        column(12, sliderInput("n", "Quantidade de simulacoes", 1, 10000, step = 1000, 1000)),
         column(12, sliderInput("ys", "Valor limite", 0.1, 3, 1, .1))
       ),
       fluidRow(
@@ -24,7 +24,7 @@ ui <- fluidPage(
         sliderInput("j", "J", 1, 1000, 100)
       ),
       fluidRow(
-        actionButton("rodar", "Rodar simulação")
+        actionButton("rodar", "Rodar simulacao")
       )
     ),
     mainPanel(
@@ -44,13 +44,13 @@ server <- function(input, output, session) {
   }) |> bindEvent(input$rodar, input$n)
 
   pd <- shiny::reactive({
-    sig <- 1 / exp(input$infop)
+    sig <- 1 / exp(input$infod)
     yd <- rnorm(input$n, sd = sig) + y()
     pnorm((yd - input$ys) / sig)
   })
 
   pp <- shiny::reactive({
-    sig <- 1 / exp(input$infod)
+    sig <- 1 / exp(input$infop)
     yp <- rnorm(input$n, sd = sig) + y()
     pnorm((yp - input$ys) / sig)
   })
@@ -62,7 +62,7 @@ server <- function(input, output, session) {
   output$litigar <- plotly::renderPlotly({
 
     dif <- tibble::tibble(x = pp(), y = pd(), litigou = x > y + limite()) |>
-      dplyr::mutate(litigou = dplyr::if_else(litigou, "Sim", "Não")) |>
+      dplyr::mutate(litigou = dplyr::if_else(litigou, "Sim", "Nao")) |>
       ggplot2::ggplot() +
       ggplot2::aes(x, y, colour = litigou) +
       ggplot2::geom_point() +
@@ -86,16 +86,16 @@ server <- function(input, output, session) {
       x = y(),
       litigou = pp() - pd() > limite()
     ) |>
-      dplyr::mutate(litigou = dplyr::if_else(litigou, "Litigou = Sim", "Litigou = Não"))
+      dplyr::mutate(litigou = dplyr::if_else(litigou, "Litigou = Sim", "Litigou = Nao"))
 
     p <- ggplot2::ggplot(dados, ggplot2::aes(x, fill = litigou)) +
       ggplot2::geom_density(alpha = .9, show.legend = FALSE) +
       ggplot2::geom_vline(
-        ggplot2::aes(text = "Valor limítrofe", xintercept = input$ys),
+        ggplot2::aes(text = "Valor limitrofe", xintercept = input$ys),
         colour = 2, linetype = 2
       ) +
       ggplot2::labs(
-        x = "Mérito", y = "Densidade", fill = "Litigou"
+        x = "Merito", y = "Densidade", fill = "Litigou"
       ) +
       ggplot2::facet_wrap(~litigou, scales = "free_y") +
       ggplot2::scale_fill_manual(
@@ -114,7 +114,7 @@ server <- function(input, output, session) {
 
     n_litig <- sum(pp() - pd() > limite())
 
-    glue::glue("Quantidade de litígios em {input$n} simulações: {n_litig}")
+    glue::glue("Quantidade de litigios em {input$n} simulacoes: {n_litig}")
 
   })
 
@@ -122,7 +122,7 @@ server <- function(input, output, session) {
 
     litigou <- pp() - pd() > limite()
     prop_vitoria <- mean(y()[litigou] > input$ys)
-    glue::glue("Proporção de vitórias: {scales::percent(prop_vitoria)}")
+    glue::glue("Proporcao de vitorias: {scales::percent(prop_vitoria)}")
 
   })
 
