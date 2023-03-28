@@ -1,0 +1,365 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Arial}
+  \setsansfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{portuguese}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Exercício sobre Técnica de Pesquisa},
+  pdfauthor={ABJ},
+  pdflang={pt},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Exercício sobre Técnica de Pesquisa}
+\author{ABJ}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+
+\hypertarget{orientauxe7uxf5es-gerais}{%
+\subsection{Orientações gerais}\label{orientauxe7uxf5es-gerais}}
+
+\begin{itemize}
+\tightlist
+\item
+  Formem grupos de 5 alunos. Todas as questões deverão ser respondidas
+  nestes grupos;
+\item
+  Os grupos terão 2 horas para responder às questões;
+\item
+  Depois das discussões em grupo, retornaremos à sala para discutir as
+  questões conjuntamente;
+\item
+  Lembrem de anotar as respostas às questões em um documento
+  compartilhado entre vocês.
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{perguntas}{%
+\subsection{Perguntas}\label{perguntas}}
+
+\textbf{Neste exercício, queremos treinar uma habilidade essencial da
+realização de pesquisas em jurimetria: a listagem de processos. As
+questões a seguir servem para guiar as alunas e os alunos no processo de
+listagem.}
+
+\textbf{1) Como um grupo, escolham um das perguntas abaixo para realizar
+uma pesquisa.}
+
+\textbf{a) Uma imobiliária quer construir um prédio novo. Ela comprou o
+terreno, elaborou o projeto de construção e enviou a documentação para a
+Prefeitura. O órgão público, por sua vez, aceitou a documentação e
+concedeu o alvará de construção à imobiliária. Entretanto, os moradores
+do bairro não querem que esse prédio seja construído e, para tanto, eles
+entram com uma ação no TJSP. Assim, vocẽ vai pesquisar as
+judicializações que acontecem entre associações de moradores de bairro
+contra a concessão, pela Prefeitura, do alvará de construção às
+imobiliárias. Vocẽ quer descobrir (i) o que leva os moradores a quererem
+barrar a construção de novos edifícios; (ii) o que o Judiciário
+responde, isto é, se os pedidos são procedentes ou improcedentes;c.}
+
+\textbf{b) Uma mãe precisa colocar o seu filho na creche para trabalhar,
+mas não há vagas disponíveis. Para isso, ela entra com uma ação no TJSP,
+buscando adquirir uma vaga na creche. Você vai pesquisar, então, a
+judicialização a respeito da fila de espera nas creches de São Paulo.
+Você quer descobrir (i) se as crianças que estão pedindo para ``furar
+fila'' tem algum motivo especial para tanto; (ii) o que o Judiciário
+responde a estes casos; e (iii) o tempo de resposta}
+
+\hypertarget{informauxe7uxf5es-sobre-as-sentenuxe7as}{%
+\subsubsection{Informações sobre as
+sentenças}\label{informauxe7uxf5es-sobre-as-sentenuxe7as}}
+
+\textbf{2) A partir do tema escolhido, encontre os processos referentes
+a ele \href{https://esaj.tjsp.jus.br/cjpg/}{no banco de sentenças, que
+chamamos de CJPG (Consulta de Julgados de Primeiro Grau)}, utilizando a
+Pesquisa Livre, Classe e Assunto (não é preciso utilizar todos os
+campos, apenas aqueles que o grupo julgar necessário). Anotem os termos
+pesquisados, as classes e os assuntos e respondam:}
+
+\textbf{a) Todos os processos encontrados estão dentro do escopo da
+pesquisa?}
+
+Provavelmente a resposta aqui será não, pois é difícil encontrar
+palavras-chave que sejam restritas o suficiente para conter única e
+exclusivamente os processos desejados.
+
+\textbf{b) Existem procesoss que estão dentro do escopo, mas que não
+foram capturados pela sua pesquisa? Por quê? É possível melhorar?}
+
+Provavelmente sim, pois: (i) a lista de palavras escolhidas pode ter
+sido insuficiente; (ii) alguns processos podem estar com classes e
+assuntos erradas, ou simplesmente diferentes das que foram escolhidas.
+
+\textbf{c) É possível fazer a pesquisa realizada acima sem utilizar a
+Pesquisa Livre, filtrando os processos apenas a partir de Classes e
+Assuntos? Por quê? (Essa resposta vai variar entre cada grupo).}
+
+Muito provavelmente não é possível. Isso acontece porque as Classes e
+Assuntos não conseguem ser tão específicas quanto queremos para uma
+pesquisa. Isso exige, portanto, que utilizemos a Pesquisa Livre para
+filtrar melhor o escopo a partir de palavras que existam na sentença.
+
+\hypertarget{informauxe7uxf5es-sobre-os-processos}{%
+\subsubsection{Informações sobre os
+processos}\label{informauxe7uxf5es-sobre-os-processos}}
+
+\textbf{3) Agora vamos nos perguntar sobre as informações que temos
+sobre cada processo.}
+
+\textbf{a) A partir da pesquisa realizada no CJPG na questão 2,
+responda: quais são as informações que você teria de cada processo? Isto
+é, para cada um dos resultados que a busca gerou, sem acessar as
+decisões, quais informações estariam disponíveis?}
+
+\begin{itemize}
+\tightlist
+\item
+  Número do processo
+\item
+  Classe
+\item
+  Assunto
+\item
+  Magistrado
+\item
+  Comarca
+\item
+  Foro
+\item
+  Vara
+\item
+  Data de disponibilização
+\item
+  Ementa
+\end{itemize}
+
+\textbf{b) Copie o número do processo de um caso que você encontrou na
+CJPG e coloque o número deste processo
+\href{https://esaj.tjsp.jus.br/cpopg/open.do}{na CPOPG (Consulta de
+Processos de Primeiro Grau)}. Quais informações por processo estão
+disponíveis neste sistema sem acessar os autos (descreva brevemente)?
+Compare essas informações com aquelas encontradas na CJPG. Existem
+informações que existiam na CJPG e que não existem na CPOPG? E o
+contrário? O que é igual e o que é diferente entre cada sistema, quando
+às informações disponíveis?}
+
+\begin{itemize}
+\tightlist
+\item
+  Número do processo
+\item
+  Classe
+\item
+  Assunto
+\item
+  Foro
+\item
+  Vara
+\item
+  Juiz
+\item
+  Data de distribuição
+\item
+  Código de controle
+\item
+  Área
+\item
+  Valor da ação
+\item
+  Nome das partes
+\item
+  Função das partes no processo
+\item
+  Nome do advogado das partes
+\item
+  Descrição das movimentações processuais
+\item
+  Data de cada movimentação
+\end{itemize}
+
+\textbf{c) É possível responder às perguntas de pesquisa do exercício 1
+com as informações disponíveis nas consultas públicas da CJPG e CPOPG?
+Indique quais perguntas podem ser respondidas apenas com as informações
+e, se houver, quais não podem ser respondidas dessa forma.}
+
+As perguntas sobre se o Judiciário concedeu ou não o pedido e o tempo de
+tramitação podem ser respondidas pelas meta-informações, mas exigem um
+certo tratamento dos dados. Pelas movimentações processuais, a partir
+das Tabelas Processuais Unificadas, podemos identificar algumas
+movimentações que indicam, caso tenha tido uma sentença, qual foi o
+sentido dessa sentença. Identificando, portanto, a movimentação que se
+refere à sentença, podemos pegar a data dessa movimentação e calcular a
+diferença de tempo entre ela e a data de distribuição para calcular o
+tempo de tramitação.
+
+\textbf{d) Se houver pelo menos uma pergunta que não pôde ser respondida
+com as informações disponíveis nos sistemas (CPOPG e CJPG), onde você
+poderia encontrar essa informação? Para tanto, indique (i) onde a
+informação pode ser acessada, (ii) se existe algum entrave para o acesso
+a essa informação e (iii) se é consistente a forma de se encontrar essa
+informação ao longo dos processos, isto é, se todos os processos contém
+essa informação no mesmo lugar e com a mesma acessibilidade.}
+
+Não é possível encontrar a pergunta sobre o motivo da judicialização.
+Para tanto, é necessário acessar a petição inicial (i). A petição deve
+ser acessada dentro dos autos de cada processo. Acontece que os autos
+não estão disponíveis sem um login de advogado, o que representa um
+entrave (ii). Além disso, mesmo com o login de advogado, em alguns
+processos pode não ser possível encontrar a petição inicial, uma vez
+que, em processos antigos, os autos existem apenas fisicamente ou, se
+eles existirem digitalmente, a digitalização dos autos pode ter sido
+feita de forma precária, o que faz com que a informação não seja
+consistente ao longo dos processos (iii).
+
+
+
+\end{document}

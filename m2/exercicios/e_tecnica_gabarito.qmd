@@ -35,9 +35,15 @@ lang: pt
 
 **a) Todos os processos encontrados estão dentro do escopo da pesquisa?**
 
+Provavelmente a resposta aqui será não, pois é difícil encontrar palavras-chave que sejam restritas o suficiente para conter única e exclusivamente os processos desejados.
+
 **b) Existem procesoss que estão dentro do escopo, mas que não foram capturados pela sua pesquisa? Por quê? É possível melhorar?**
 
+Provavelmente sim, pois: (i) a lista de palavras escolhidas pode ter sido insuficiente; (ii) alguns processos podem estar com classes e assuntos erradas, ou simplesmente diferentes das que foram escolhidas.
+
 **c) É possível fazer a pesquisa realizada acima sem utilizar a Pesquisa Livre, filtrando os processos apenas a partir de Classes e Assuntos? Por quê? (Essa resposta vai variar entre cada grupo).**
+
+Muito provavelmente não é possível. Isso acontece porque as Classes e Assuntos não conseguem ser tão específicas quanto queremos para uma pesquisa. Isso exige, portanto, que utilizemos a Pesquisa Livre para filtrar melhor o escopo a partir de palavras que existam na sentença.
 
 ### Informações sobre os processos
 
@@ -45,9 +51,38 @@ lang: pt
 
 **a) A partir da pesquisa realizada no CJPG na questão 2, responda: quais são as informações que você teria de cada processo? Isto é, para cada um dos resultados que a busca gerou, sem acessar as decisões, quais informações estariam disponíveis?**
 
+-   Número do processo
+-   Classe
+-   Assunto
+-   Magistrado
+-   Comarca
+-   Foro
+-   Vara
+-   Data de disponibilização
+-   Ementa
+
 **b) Copie o número do processo de um caso que você encontrou na CJPG e coloque o número deste processo [na CPOPG (Consulta de Processos de Primeiro Grau)](https://esaj.tjsp.jus.br/cpopg/open.do). Quais informações por processo estão disponíveis neste sistema sem acessar os autos (descreva brevemente)? Compare essas informações com aquelas encontradas na CJPG. Existem informações que existiam na CJPG e que não existem na CPOPG? E o contrário? O que é igual e o que é diferente entre cada sistema, quando às informações disponíveis?**
+
+-   Número do processo
+-   Classe
+-   Assunto
+-   Foro
+-   Vara
+-   Juiz
+-   Data de distribuição
+-   Código de controle
+-   Área
+-   Valor da ação
+-   Nome das partes
+-   Função das partes no processo
+-   Nome do advogado das partes
+-   Descrição das movimentações processuais
+-   Data de cada movimentação
 
 **c) É possível responder às perguntas de pesquisa do exercício 1 com as informações disponíveis nas consultas públicas da CJPG e CPOPG? Indique quais perguntas podem ser respondidas apenas com as informações e, se houver, quais não podem ser respondidas dessa forma.**
 
+As perguntas sobre se o Judiciário concedeu ou não o pedido e o tempo de tramitação podem ser respondidas pelas meta-informações, mas exigem um certo tratamento dos dados. Pelas movimentações processuais, a partir das Tabelas Processuais Unificadas, podemos identificar algumas movimentações que indicam, caso tenha tido uma sentença, qual foi o sentido dessa sentença. Identificando, portanto, a movimentação que se refere à sentença, podemos pegar a data dessa movimentação e calcular a diferença de tempo entre ela e a data de distribuição para calcular o tempo de tramitação.
+
 **d) Se houver pelo menos uma pergunta que não pôde ser respondida com as informações disponíveis nos sistemas (CPOPG e CJPG), onde você poderia encontrar essa informação? Para tanto, indique (i) onde a informação pode ser acessada, (ii) se existe algum entrave para o acesso a essa informação e (iii) se é consistente a forma de se encontrar essa informação ao longo dos processos, isto é, se todos os processos contém essa informação no mesmo lugar e com a mesma acessibilidade.**
 
+Não é possível encontrar a pergunta sobre o motivo da judicialização. Para tanto, é necessário acessar a petição inicial (i). A petição deve ser acessada dentro dos autos de cada processo. Acontece que os autos não estão disponíveis sem um login de advogado, o que representa um entrave (ii). Além disso, mesmo com o login de advogado, em alguns processos pode não ser possível encontrar a petição inicial, uma vez que, em processos antigos, os autos existem apenas fisicamente ou, se eles existirem digitalmente, a digitalização dos autos pode ter sido feita de forma precária, o que faz com que a informação não seja consistente ao longo dos processos (iii).

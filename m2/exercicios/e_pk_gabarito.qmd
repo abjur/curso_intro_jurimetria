@@ -14,7 +14,6 @@ lang: pt
 
 {{< pagebreak >}}
 
-
 ## Contexto
 
 O modelo de Priest & Klein apresentado em aula parte da premissa de que existe informação simétrica entre as partes. Isso pode ser explicado pela variância introduzida nas expectativas do autor e do réu:
@@ -94,7 +93,7 @@ A implicação é que a proporção de resultados favoráveis será diferente de
 
 Não, porque existem outros fenômenos que implicam em taxas diferentes de 50%, como o tempo dos processos e variações nos incentivos à litigância.
 
-3) Para você, no sistema judiciário brasileiro, a informação das partes é simétrica? Se não, cite exemplos onde acredita que a informação das partes é assimétrica.
+3) Para você, no sistema judiciário brasileiro, a informação das partes é simétrica? Se não, cite exemplos de onde você acredita que a informação das partes seja assimétrica.
 
 Justiça trabalhista, justiça consumerista, empresarial. Caso da Uber.
 

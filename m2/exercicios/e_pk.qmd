@@ -91,7 +91,7 @@ O aplicativo [deste link](https://abjur.shinyapps.io/pk_theorem_assimetrico/) é
 
 2) Se observarmos taxas diferentes de 50% em um estudo, isso implica que a informação é assimétrica? Por quê?
 
-3) Para você, no sistema judiciário brasileiro, a informação das partes é simétrica? Se não, cite exemplos onde acredita que a informação das partes é assimétrica.
+3) Para você, no sistema judiciário brasileiro, a informação das partes é simétrica? Se não, cite exemplos onde acredita que a informação das partes seja assimétrica.
 
 4) Qual princípio jurídico está relacionado com a suposição de simetria de informação das partes? Explique.
 
