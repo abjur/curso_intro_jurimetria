@@ -21,8 +21,6 @@ quantitativa, com aplicações em temas do Direito.
 | M1     | medidas_centro       | [medidas_centro](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a05_medidas_centro.html)             |
 | M1     | medidas_dispersao_I  | [medidas_dispersao_I](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a06_medidas_dispersao_I.html)   |
 | M1     | medidas_dispersao_II | [medidas_dispersao_II](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a07_medidas_dispersao_II.html) |
-| M1     | metodologia          | [metodologia](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a_metodologia.html)                     |
-| M1     | tecnica              | [tecnica](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a_tecnica.html)                             |
 | M2     | barplot              | [barplot](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_barplot.html)                             |
 | M2     | boxplot              | [boxplot](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_boxplot.html)                             |
 | M2     | dispersao            | [dispersao](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_dispersao.html)                         |
