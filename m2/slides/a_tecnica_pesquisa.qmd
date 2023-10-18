@@ -18,37 +18,16 @@ title-slide-attributes:
   preview-links: true
 ---
 
-## Ementa do curso
-
-:::: columns
-::: column
-#### Parte 1 - Metodologia
-1. Processo de Geração de Dados
-2. Teorema de Priest & Klein
-3. Uma técnica de pesquisa
-
-:::
-::: column
-#### Parte 2 - Visualizações
-1. Gráfico de barras
-2. Histograma
-3. Boxplot
-4. Séries temporais
-5. Gráfico de dispersão
-
-:::
-::::
-
 # Uma técnica de pesquisa {.slide-title}
 
 ## O que vamos ver?
 
 Hoje vamos ver uma técnica de pesquisa muito utilizada na ABJ. É a técnica que utilizamos nas nossas pesquisas do tipo Observatórios.
 
-Escolhemos apresentar esta técnica de pesquisa porque: 
+Escolhemos apresentar esta técnica de pesquisa porque:
 
-(1) ela é exequível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados; 
-(2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui. 
+(1) ela é exequível com os conhecimentos de que vocês dispõem atualmente, uma vez que não exige conhecimentos técnicos de programação tão avançados;
+(2) ela vai suscitar várias questões de metodologia importantes, o que será bom para testarmos os conhecimentos que vimos até aqui.
 
 ## Visão geral da técnica
 
