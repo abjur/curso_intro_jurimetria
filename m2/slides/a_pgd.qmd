@@ -18,27 +18,6 @@ title-slide-attributes:
   preview-links: true
 ---
 
-## Ementa do curso
-
-::: columns
-::: column
-#### Parte 1 - Metodologia
-
-1.  Processo de Geração de Dados
-2.  Teorema de Priest & Klein
-3.  Uma técnica de pesquisa
-:::
-
-::: column
-#### Parte 2 - Visualizações
-
-1.  Gráfico de barras
-2.  Histograma
-3.  Boxplot
-4.  Séries temporais
-5.  Gráfico de dispersão
-:::
-:::
 
 # Processo de geração de dados {.slide-title}
 

@@ -29,28 +29,6 @@ knitr::opts_chunk$set(
 options(scipen=999)
 ```
 
-
-## Ementa do curso
-
-:::: columns
-::: column
-#### Parte 1 - Metodologia
-1. Processo de Geração de Dados
-2. Teorema de Priest & Klein
-3. Uma técnica de pesquisa
-
-:::
-::: column
-#### Parte 2 - Visualizações
-1. Gráfico de barras
-2. Histograma
-3. Boxplot
-4. Séries temporais
-5. Gráfico de dispersão
-
-:::
-::::
-
 # Histograma {.slide-title}
 
 ```{r base}
@@ -98,7 +76,7 @@ A linha do eixo x contém infinitos números, mas está delimitada entre o menor
 
 No histograma, construímos barras que possuem largura fixa, através de uma separação da linha em intervalos.
 
-Vamos ver, a seguir, como construir os intervalos que dão origem às barras. 
+Vamos ver, a seguir, como construir os intervalos que dão origem às barras.
 
 ## Como construir? Bins / Barras {.smaller}
 
@@ -121,11 +99,11 @@ consumo |>
 ::: {.column width="40%"}
 No gráfico, os limites são de 9 a 2049. Se construirmos 5 barras de largura 500 neste intervalo, teremos, os seguintes intervalos:
 
--   0 a 500 dias, representados com [0, 500]
--   500 a 1000 dias, representados com (500, 1000]
--   1000 a 1500 dias, representados com (1000, 1500]
--   1500 a 2000 dias, representados com (1500, 2000]
--   2000 a 2500 dias, representados com (2000, 2500]
+-   0 a 500 dias, representados com \[0, 500\]
+-   500 a 1000 dias, representados com (500, 1000\]
+-   1000 a 1500 dias, representados com (1000, 1500\]
+-   1500 a 2000 dias, representados com (1500, 2000\]
+-   2000 a 2500 dias, representados com (2000, 2500\]
 :::
 :::
 
