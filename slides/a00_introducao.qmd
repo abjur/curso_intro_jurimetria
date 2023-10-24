@@ -1,6 +1,6 @@
 ---
 title: "Introdução à jurimetria"
-format: 
+format:
   revealjs:
       logo: "img/logo-abj-colorido.png"
       footer: "Introdução à Pesquisa Jurimétrica."
@@ -10,13 +10,12 @@ format:
       mainfont: Yaldevi
 editor: visual
 lang: pt
-title-slide-attributes: 
+title-slide-attributes:
   data-background-color: "#233262"
   border-start-end-radius: 50%;
   writing-mode: vertical-rl;
   preview-links: true
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -25,49 +24,47 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE
 )
-
 cores_abj <-  viridis::viridis(2, 1, .2, .8)
 ```
-
 ```{r da-aulas}
 da_aulas <- tibble::tibble(
   semana=1,
   tipo_conteudo="",
   duracao=0,
   conteudo=""
-) |> 
+) |>
   dplyr::add_row(
     semana=2,
     tipo_conteudo="Metodologia",
     duracao=42,
     conteudo="Operacionalização de conceitos"
-  ) |> 
+  ) |>
   dplyr::add_row(
     semana=2,
     tipo_conteudo="Estatística",
     duracao=18,
     conteudo="Tipos de variáveis"
-  ) |> 
+  ) |>
   dplyr::add_row(
     semana=2,
     tipo_conteudo="Programação",
     duracao=90,
     conteudo="Introdução ao R"
-  ) |> 
+  ) |>
   dplyr::add_row(
     semana=3,
     tipo_conteudo="Metodologia",
     duracao=25,
     conteudo="Definição de escopo"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=3, 
+    semana=3,
     tipo_conteudo="Estatística",
-    duracao=27,
+    duracao=17,
     conteudo="Tabela de frequência"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=3, 
+    semana=3,
     tipo_conteudo="Técnicas",
     duracao=44,
     conteudo="Medidas de centro"
@@ -77,97 +74,97 @@ da_aulas <- tibble::tibble(
     tipo_conteudo="Programação",
     duracao=27,
     conteudo="Tabela de frequência no R"
-  ) |> 
+  ) |>
   dplyr::add_row(
     semana=4,
     tipo_conteudo="Metodologia",
     duracao=39,
     conteudo="Processo de geração de dados"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=4, 
+    semana=4,
     tipo_conteudo="Estatística",
     duracao=30,
     conteudo="Medidas de dispersão I"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=4, 
+    semana=4,
     tipo_conteudo="Estatística",
-    duracao=23,
+    duracao=24,
     conteudo="Medidas de dispersão II"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=4, 
+    semana=4,
     tipo_conteudo="Programação",
     duracao=32,
     conteudo="Como calcular medidas no R"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=5, 
+    semana=5,
     tipo_conteudo="Metodologia",
     duracao=37,
     conteudo="Viés de seleção"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=5, 
+    semana=5,
     tipo_conteudo="Metodologia",
     duracao=60,
-    conteudo="Teorem de Priest & Klein"
-  ) |> 
+    conteudo="Teorema de Priest & Klein"
+  ) |>
   dplyr::add_row(
-    semana=5, 
+    semana=5,
     tipo_conteudo="Estatística",
     duracao=28,
     conteudo="Gráfico de barras"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=5, 
+    semana=5,
     tipo_conteudo="Estatística",
     duracao=18,
     conteudo="Histograma"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=5, 
+    semana=5,
     tipo_conteudo="Programação",
     duracao=17,
     conteudo="Introdução à visualização no R (ggplot2)"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Metodologia",
     duracao=46,
     conteudo="Técnica de pesquisa I"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Metodologia",
     duracao=27,
     conteudo="Técnica de pesquisa II"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Estatística",
     duracao=22,
     conteudo="Boxplot"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Estatística",
     duracao=15,
     conteudo="Séries temporais"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Estatística",
     duracao=10,
     conteudo="Gráfico de dispersão"
-  ) |> 
+  ) |>
   dplyr::add_row(
-    semana=6, 
+    semana=6,
     tipo_conteudo="Programação",
     duracao=50,
     conteudo="Como criar as visualizações no R"
-  ) |> 
+  ) |>
   dplyr::mutate(
     semana = as.character(semana),
     extra = tipo_conteudo == "Programação",
@@ -175,12 +172,11 @@ da_aulas <- tibble::tibble(
       extra ~ "Extra",
       TRUE ~ "Aula"
     )
-  ) |> 
+  ) |>
   dplyr::select(tipo_aula, semana, conteudo, tipo_conteudo, duracao, extra)
-
-total_semanas <- da_aulas |> 
-  dplyr::filter(semana != "1", !extra) |> 
-  dplyr::group_by(semana) |> 
+total_semanas <- da_aulas |>
+  dplyr::filter(semana != "1", !extra) |>
+  dplyr::group_by(semana) |>
   dplyr::summarise(
     tipo_aula = "Total",
     semana,
@@ -188,57 +184,42 @@ total_semanas <- da_aulas |>
     tipo_conteudo = "-",
     duracao = sum(duracao),
     extra = FALSE
-  ) |> 
+  ) |>
   dplyr::distinct()
-
 datas <- c(as.Date("2023-10-24"))
 dt_aula <- datas[1]
 for(i in seq(1:5)) {
   dt_aula <- dt_aula + lubridate::days(7)
-  datas <- c(datas, dt_aula) 
+  datas <- c(datas, dt_aula)
 }
 data_semana <- tibble::tibble(
   semana = c(1:6),
   data = format(datas, "%d/%m/20%y")
 )
 ```
-
 # Nos conhecendo melhor
-
 ## Para vocês nos conhecerem melhor
-
 ::: columns
 ::: column
 #### Julio Trecenti
-
 ![](img/julio.jpg){width="500"}
 :::
-
 ::: column
 #### Ricardo Feliz
-
 ![](img/ricardo.jpeg){width="375"}
 :::
 :::
-
 ## Para nós conhecermos vocês melhor
-
 ::: center-middle
 **Respondam este formulário por favor!**
-
-<https://forms.gle/ERCmJHbfUV1G6y2C9>
-
+<https://forms.gle/bkGTyYk4UgJEWmXU9>
 Demora de 5 a 10 minutos para responder!
 :::
-
 # Sobre o curso
-
-## Ementa do curso {style='font-size: 22px'}
-
+## Ementa do curso {style="font-size: 22px"}
 ::: columns
 ::: {.column width="33%"}
 #### Metodologia
-
 1.  Operacionalização de conceitos
 2.  Definição de escopo
 3.  Processo de geração de dados
@@ -246,10 +227,8 @@ Demora de 5 a 10 minutos para responder!
 5.  Teorema de Priest & Klein
 6.  Técnica de pesquisa
 :::
-
 ::: {.column width="32%"}
 #### Estatística
-
 1.  Tipos de variáveis
 2.  Medidas de variáveis categóricas: Tabelas de frequência
 3.  Medidas de variáveis numéricas I: Medidas de centro
@@ -263,191 +242,154 @@ Demora de 5 a 10 minutos para responder!
     4.  Amplitude
     5.  IQR
 :::
-    
 ::: {.column width="32%"}
-
-5. Visualizações de variáveis categóricas
-    1. Gráfico de barras
-6. Visualizações de variáveis numéricas
-    1. Histograma
-    2. Boxplot
-    3. Séries temporais
-    4. Gráfico de dispersão
-    
+5.  Visualizações de variáveis categóricas
+    1.  Gráfico de barras
+6.  Visualizações de variáveis numéricas
+    1.  Histograma
+    2.  Boxplot
+    3.  Séries temporais
+    4.  Gráfico de dispersão
 :::
 :::
-
 ## Informações sobre as aulas {.smaller}
-
 ::: columns
 ::: {.column width="30%"}
 ### Aulas assíncronas
-
 ```{r}
-da_duracao_aulas <- da_aulas |> 
-  dplyr::group_by(extra) |> 
+da_duracao_aulas <- da_aulas |>
+  dplyr::group_by(extra) |>
   dplyr::summarise(
     n_aulas = dplyr::n(),
     duracao = sum(duracao)
   )
-
-duracao_aulas <- floor(da_duracao_aulas |> 
-  dplyr::filter(!extra) |> 
+duracao_aulas <- floor(da_duracao_aulas |>
+  dplyr::filter(!extra) |>
   dplyr::pull(duracao) / 60 )
-
-n_aulas <- da_duracao_aulas |> 
-  dplyr::filter(!extra) |> 
-  dplyr::pull(n_aulas) 
-
-n_extra <- da_duracao_aulas |> 
-  dplyr::filter(extra) |> 
-  dplyr::pull(n_aulas) 
+n_aulas <- da_duracao_aulas |>
+  dplyr::filter(!extra) |>
+  dplyr::pull(n_aulas)
+n_extra <- da_duracao_aulas |>
+  dplyr::filter(extra) |>
+  dplyr::pull(n_aulas)
 ```
-
 -   São mais de `r duracao_aulas` horas de gravação.
 -   Há `r n_aulas + n_extra` materiais gravados, divididos em `r n_aulas` aulas e `r n_extra` materiais extras.
 -   Os materiais ficarão disponíveis a partir de hoje e poderão ser acessados a qualquer momento.
 :::
-
 ::: {.column width="70%"}
 ### Aulas síncronas
-
 -   São `r max(da_aulas$semana, na.rm = TRUE)` encontros, contando com a aula de hoje, todos de 3 horas de duração.
 -   O método de aula é o Peer Instruction
     -   Logo no início das aulas, iremos dar uma lista de exercícios.
     -   Vocês terão 2 horas para realizar os exercícios em grupos.
     -   Depois, haverá um pequeno intervalo. Na volta do intervalo, iremos nos reunir para discutir a resolução dos exercícios em conjunto.
-    -  Esses exercício pressupõe que vocês tenham se preparado para assistir às aulas
+    -   Esses exercício pressupõe que vocês tenham se preparado para assistir às aulas
     -   Ficará como atividade para casa refazer os exercícios e enviar uma lista *individual*
     -   A entrega individual destes exercícios será a avaliação para receber o certificado
 :::
 :::
-
-## {.scrollable}
-
+##  {.scrollable}
 ```{r}
-da_aulas |> 
-  dplyr::select(-extra) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::select(-extra) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Semana", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ## Planejamento da Semana 2 {.smaller}
-
 ```{r}
-da_aulas |> 
-  dplyr::bind_rows(total_semanas) |> 
-  dplyr::filter(semana==2) |> 
-  dplyr::arrange(extra) |> 
-  dplyr::select(-extra, -semana) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::bind_rows(total_semanas) |>
+  dplyr::filter(semana==2) |>
+  dplyr::arrange(extra) |>
+  dplyr::select(-extra, -semana) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ::: center
 **Preparação para a aula:** `r data_semana$data[1]` - `r data_semana$data[2]`
-
 **Data e hora da aula:** `r data_semana$data[2]` das 19 às 22hrs
 :::
-
 ## Planejamento da Semana 3 {.smaller}
-
 ```{r}
-da_aulas |> 
-  dplyr::bind_rows(total_semanas) |> 
-  dplyr::filter(semana==3) |> 
-  dplyr::arrange(extra) |> 
-  dplyr::select(-extra, -semana) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::bind_rows(total_semanas) |>
+  dplyr::filter(semana==3) |>
+  dplyr::arrange(extra) |>
+  dplyr::select(-extra, -semana) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ::: center
 **Preparação para a aula:** `r data_semana$data[2]` - `r data_semana$data[3]`
-
 **Data e hora da aula:** `r data_semana$data[3]` das 19 às 22hrs
 :::
-
 ## Planejamento da Semana 4 {.smaller}
-
 ```{r}
-da_aulas |> 
-  dplyr::bind_rows(total_semanas) |> 
-  dplyr::filter(semana==4) |> 
-  dplyr::arrange(extra) |> 
-  dplyr::select(-extra, -semana) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::bind_rows(total_semanas) |>
+  dplyr::filter(semana==4) |>
+  dplyr::arrange(extra) |>
+  dplyr::select(-extra, -semana) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ::: center
 **Preparação para a aula:** `r data_semana$data[3]` - `r data_semana$data[4]`
-
 **Data e hora da aula:** `r data_semana$data[4]` das 19 às 22hrs
 :::
-
 ## Planejamento da Semana 5 {.smaller}
-
 ```{r}
-da_aulas |> 
-  dplyr::bind_rows(total_semanas) |> 
-  dplyr::filter(semana==5) |> 
-  dplyr::arrange(extra) |> 
-  dplyr::select(-extra, -semana) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::bind_rows(total_semanas) |>
+  dplyr::filter(semana==5) |>
+  dplyr::arrange(extra) |>
+  dplyr::select(-extra, -semana) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ::: center
 **Preparação para a aula:** `r data_semana$data[4]` - `r data_semana$data[5]`
-
 **Data e hora da aula:** `r data_semana$data[5]` das 19 às 22hrs
 :::
-
 ## Planejamento da Semana 6 {.smaller}
-
 ```{r}
-da_aulas |> 
-  dplyr::bind_rows(total_semanas) |> 
-  dplyr::filter(semana==6) |> 
-  dplyr::arrange(extra) |> 
-  dplyr::select(-extra, -semana) |>  
-  dplyr::mutate(duracao=paste0(duracao," min")) |> 
+da_aulas |>
+  dplyr::bind_rows(total_semanas) |>
+  dplyr::filter(semana==6) |>
+  dplyr::arrange(extra) |>
+  dplyr::select(-extra, -semana) |>
+  dplyr::mutate(duracao=paste0(duracao," min")) |>
   knitr::kable(
     col.names=c("Tipo", "Conteúdo", "Tipo de conteúdo", "Duração"),
     format = "html", escape = FALSE,
     table.attr = "class=\"striped\""
   )
 ```
-
 ::: center
 **Preparação para a aula:** `r data_semana$data[5]` - `r data_semana$data[6]`
-
 **Data e hora da aula:** `r data_semana$data[6]` das 19 às 22hrs
 :::
-
 # Dúvidas? Comentários?
-
 #  {background="#fff"}
-
 ![](img/logo-abj-colorido.png){width="500"}
