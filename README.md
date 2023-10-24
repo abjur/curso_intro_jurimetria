@@ -1,49 +1,45 @@
 
 ## Sobre o curso
 
-O objetivo da parte 1 do curso de Introdução à pesquisa Jurimétrica é
-apresentar e discutir a aplicação de métodos quantitativos no Direito. A
-ideia do curso é tratar dos limites de aplicação e elementos básicos de
-pesquisa quantitativa, com aplicações em temas do Direito.
-
-O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é
-completar a discussão com a apresentação das aplicações de métodos
-quantitativos no Direito. A ideia desta segunda parte é avançar nos
-conhecimentos sobre os limites de aplicação e elementos de pesquisa
+O objetivo do curso de Introdução à pesquisa Jurimétrica é apresentar e
+discutir a aplicação de métodos quantitativos no Direito. A ideia do
+curso é tratar dos limites de aplicação e elementos básicos de pesquisa
 quantitativa, com aplicações em temas do Direito.
 
-| Módulo | Aula                 | Link                                                                                                           |
-|:-------|:---------------------|:---------------------------------------------------------------------------------------------------------------|
-| M1     | operacionalizacao    | [operacionalizacao](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a01_operacionalizacao.html)       |
-| M1     | escopo               | [escopo](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a02_escopo.html)                             |
-| M1     | tipos_variaveis      | [tipos_variaveis](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a03_tipos_variaveis.html)           |
-| M1     | tabela_frequencia    | [tabela_frequencia](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a04_tabela_frequencia.html)       |
-| M1     | medidas_centro       | [medidas_centro](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a05_medidas_centro.html)             |
-| M1     | medidas_dispersao_I  | [medidas_dispersao_I](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a06_medidas_dispersao_I.html)   |
-| M1     | medidas_dispersao_II | [medidas_dispersao_II](https://abjur.github.io/curso_intro_jurimetria/m1/slides/a07_medidas_dispersao_II.html) |
-| M2     | barplot              | [barplot](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_barplot.html)                             |
-| M2     | boxplot              | [boxplot](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_boxplot.html)                             |
-| M2     | dispersao            | [dispersao](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_dispersao.html)                         |
-| M2     | histogram            | [histogram](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_histogram.html)                         |
-| M2     | pgd                  | [pgd](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_pgd.html)                                     |
-| M2     | priest_klein         | [priest_klein](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_priest_klein.html)                   |
-| M2     | tecnica_pesquisa     | [tecnica_pesquisa](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_tecnica_pesquisa.html)           |
-| M2     | time_series          | [time_series](https://abjur.github.io/curso_intro_jurimetria/m2/slides/a_time_series.html)                     |
+| Aula                   | Link                                                                                                          |
+| :--------------------- | :------------------------------------------------------------------------------------------------------------ |
+| operacionalizacao      | [operacionalizacao](https://abjur.github.io/curso_intro_jurimetria/slides/a01_operacionalizacao.html)         |
+| escopo                 | [escopo](https://abjur.github.io/curso_intro_jurimetria/slides/a02_escopo.html)                               |
+| tipos\_variaveis       | [tipos\_variaveis](https://abjur.github.io/curso_intro_jurimetria/slides/a03_tipos_variaveis.html)            |
+| tabela\_frequencia     | [tabela\_frequencia](https://abjur.github.io/curso_intro_jurimetria/slides/a04_tabela_frequencia.html)        |
+| medidas\_centro        | [medidas\_centro](https://abjur.github.io/curso_intro_jurimetria/slides/a05_medidas_centro.html)              |
+| medidas\_dispersao\_I  | [medidas\_dispersao\_I](https://abjur.github.io/curso_intro_jurimetria/slides/a06_medidas_dispersao_I.html)   |
+| medidas\_dispersao\_II | [medidas\_dispersao\_II](https://abjur.github.io/curso_intro_jurimetria/slides/a07_medidas_dispersao_II.html) |
+| barplot                | [barplot](https://abjur.github.io/curso_intro_jurimetria/slides/a_barplot.html)                               |
+| boxplot                | [boxplot](https://abjur.github.io/curso_intro_jurimetria/slides/a_boxplot.html)                               |
+| dispersao              | [dispersao](https://abjur.github.io/curso_intro_jurimetria/slides/a_dispersao.html)                           |
+| histogram              | [histogram](https://abjur.github.io/curso_intro_jurimetria/slides/a_histogram.html)                           |
+| metodologia            | [metodologia](https://abjur.github.io/curso_intro_jurimetria/slides/a_metodologia.html)                       |
+| pgd                    | [pgd](https://abjur.github.io/curso_intro_jurimetria/slides/a_pgd.html)                                       |
+| priest\_klein          | [priest\_klein](https://abjur.github.io/curso_intro_jurimetria/slides/a_priest_klein.html)                    |
+| tecnica                | [tecnica](https://abjur.github.io/curso_intro_jurimetria/slides/a_tecnica.html)                               |
+| tecnica\_pesquisa      | [tecnica\_pesquisa](https://abjur.github.io/curso_intro_jurimetria/slides/a_tecnica_pesquisa.html)            |
+| time\_series           | [time\_series](https://abjur.github.io/curso_intro_jurimetria/slides/a_time_series.html)                      |
 
 ## Informações importantes
 
-- Livro: <https://livro.abj.org.br>
+  - Livro: <https://livro.abj.org.br>
 
-- Blog: <https://lab.abj.org.br>
+  - Blog: <https://lab.abj.org.br>
 
-- Fórum: <https://forum.abj.org.br>
+  - Fórum: <https://forum.abj.org.br>
 
 ## Material extra
 
 Referências extras comentadas nas aulas.
 
 | nome                                                                         | links                                                               |
-|:-----------------------------------------------------------------------------|:--------------------------------------------------------------------|
+| :--------------------------------------------------------------------------- | :------------------------------------------------------------------ |
 | Case ABJ - Varas empresariais                                                | <https://abj.org.br/pesquisas/varas-empresariais/>                  |
 | Pesquisas realizadas pelo Departamento de Pesquisas Judiciárias (DPJ) do CNJ | <https://www.cnj.jus.br/pesquisas-judiciarias/>                     |
 | Tese do Marcelo Guedes Nunes                                                 | <https://tede2.pucsp.br/handle/handle/5978>                         |

@@ -4,24 +4,20 @@ output: github_document
 
 ## Sobre o curso
 
-O objetivo da parte 1 do curso de Introdução à pesquisa Jurimétrica é apresentar e discutir a aplicação de métodos quantitativos no Direito. A ideia do curso é tratar dos limites de aplicação e elementos básicos de pesquisa quantitativa, com aplicações em temas do Direito.
-
-O objetivo da parte 2 do curso de Introdução à pesquisa Jurimétrica é completar a discussão com a apresentação das aplicações de métodos quantitativos no Direito. A ideia desta segunda parte é avançar nos conhecimentos sobre os limites de aplicação e elementos de pesquisa quantitativa, com aplicações em temas do Direito.
+O objetivo do curso de Introdução à pesquisa Jurimétrica é apresentar e discutir a aplicação de métodos quantitativos no Direito. A ideia do curso é tratar dos limites de aplicação e elementos básicos de pesquisa quantitativa, com aplicações em temas do Direito.
 
 ```{r}
 #| echo: FALSE
-tibble::enframe(fs::dir_ls("m1/slides", glob = "*.html")) |> 
-  dplyr::bind_rows(tibble::enframe(fs::dir_ls("m2/slides", glob = "*.html"))) |> 
+tibble::enframe(fs::dir_ls("slides", glob = "*.html")) |>
   dplyr::filter(
     stringr::str_detect(name, "a[0-9]{0,2}_"),
     !stringr::str_detect(name, "introducao")
-  ) |> 
+  ) |>
   dplyr::transmute(
-    modulo = toupper(dirname(dirname(name))),
     aula = stringr::str_extract(value, "(?<=_)[a-z_A-Z]+"),
     slide = glue::glue("[{aula}](https://abjur.github.io/curso_intro_jurimetria/{name})")
-  ) |> 
-  knitr::kable(col.names = c("Módulo", "Aula", "Link"))
+  ) |>
+  knitr::kable(col.names = c("Aula", "Link"))
 ```
 
 
@@ -44,18 +40,18 @@ Referências extras comentadas nas aulas.
 
 tibble::tibble(
   nome = c(
-    "Case ABJ - Varas empresariais", 
-    "Pesquisas realizadas pelo Departamento de Pesquisas Judiciárias (DPJ) do CNJ", 
-    "Tese do Marcelo Guedes Nunes", 
+    "Case ABJ - Varas empresariais",
+    "Pesquisas realizadas pelo Departamento de Pesquisas Judiciárias (DPJ) do CNJ",
+    "Tese do Marcelo Guedes Nunes",
     "Lee Loevinger (1949)",
     "Lee Loevinger (1961)",
     "Lee Loevinger (1963)",
     "Society for Empirical Legal Studie (SELS)",
-    "Case ABJ - Drogas", 
-    "Cases ABJ", 
-    "Bases de dados da ABJ utilizado no curso", 
-    "Cursos sobre R", 
-    "Exemplo de Dashboard (Observatório da Litigiosidade)", 
+    "Case ABJ - Drogas",
+    "Cases ABJ",
+    "Bases de dados da ABJ utilizado no curso",
+    "Cursos sobre R",
+    "Exemplo de Dashboard (Observatório da Litigiosidade)",
     "Materiais de web scraping",
     "Priest & Klein (1984)"
   ),
@@ -75,16 +71,16 @@ tibble::tibble(
     "https://curso-r.github.io/main-web-scraping/",
     "https://www.rand.org/content/dam/rand/pubs/reports/2006/R3032.pdf"
   )
-) |> 
+) |>
   knitr::kable()
 
 # googlesheets4::gs4_deauth()
 # googlesheets4::gs4_auth("julio.trecenti@gmail.com")
-# "1TX72A4wiJqc31XvDqhVqpIBfH5YN4UpU0DmsznWESSY" |> 
+# "1TX72A4wiJqc31XvDqhVqpIBfH5YN4UpU0DmsznWESSY" |>
 #   googlesheets4::read_sheet(turma) |>
-#   dplyr::filter(aula <= num_aula) |> 
+#   dplyr::filter(aula <= num_aula) |>
 #   dplyr::mutate(link = glue::glue("[{desc}]({purrr::map_chr(url, utils::URLencode)})")) |>
 #   dplyr::select(-desc, -url) |>
-#   dplyr::arrange(aula) |> 
+#   dplyr::arrange(aula) |>
 #   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
 ```
