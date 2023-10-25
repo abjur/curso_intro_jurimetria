@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 )
 cores_abj <-  viridis::viridis(2, 1, .2, .8)
 ```
+
 ```{r da-aulas}
 da_aulas <- tibble::tibble(
   semana=1,
@@ -65,7 +66,7 @@ da_aulas <- tibble::tibble(
   ) |>
   dplyr::add_row(
     semana=3,
-    tipo_conteudo="Técnicas",
+    tipo_conteudo="Estatística",
     duracao=44,
     conteudo="Medidas de centro"
   ) |>
